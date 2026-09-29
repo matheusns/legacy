@@ -1,5 +1,5 @@
 schema_version: 1
-project: LEGACY
+project: LEGAVIA
 reference_set:
   active:
     - id: LEGACY-REF-UX-001
