@@ -1,0 +1,55 @@
+schema_version: 1
+project: LEGACY
+reference_set:
+  active:
+    - id: LEGACY-REF-UX-001
+      path: docs/reference/LEGACY_GAMIFICATION_UX_ARCHITECTURE_BASELINE_v0.1.md
+      version: "0.1"
+      status: baseline-candidate
+      research_snapshot: 2026-09-29
+      applies_to:
+        - mockup-development
+        - information-architecture
+        - interaction-design
+        - design-system
+        - gamification
+        - product-architecture
+        - requirements-engineering
+        - use-case-design
+        - verification-design
+      required_sections_by_role:
+        mockup_agent: ["5", "6", "7", "9.3", "10", "11", "12", "13", "14"]
+        architecture_agent: ["1", "5", "6", "7", "8", "9", "12", "13", "14", "15"]
+        requirements_agent: ["9", "10", "11", "12"]
+        verification_agent: ["9", "10", "11", "12"]
+      stable_id_prefixes:
+        - LEGACY-BIZ
+        - LEGACY-FNC
+        - LEGACY-UX
+        - LEGACY-NFR
+        - UC-LEGACY
+        - FVT-LEGACY
+        - SK-UX
+        - SK-QA
+        - SK-PROD
+        - SK-AI
+        - SK-SEC
+      invariants:
+        - "Default compact shell: Today / Map / Life / Insights / Me."
+        - "Gamification reinforces meaningful real-world actions and must not create mandatory game-only maintenance."
+        - "Expressive thematic/pixel-art treatment is concentrated in progression surfaces; operational surfaces remain restrained."
+        - "Shared domain grammar: Goal -> Phase -> Milestone -> Action -> Completion/Evidence."
+        - "Recovery is preferred over destructive streak reset after misses."
+        - "Social and competition mechanics are opt-in."
+        - "Essential interactions have non-drag, non-color-only, reduced-motion-accessible alternatives."
+        - "AI-generated feature evolution requires explicit human approval before baseline promotion."
+precedence:
+  - approved_requirements_and_adrs
+  - approved_use_cases_and_verification
+  - active_reference_artifacts
+  - mockups_and_prototypes
+  - agent_inference
+maintenance:
+  versioned: true
+  overwrite_historical_versions: false
+  conflict_behavior: surface_and_propose_adr_or_requirement_change
