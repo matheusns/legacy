@@ -1,10 +1,10 @@
 ---
 artifact_id: LEGACY-REF-UX-001
-title: LEGACY Gamification, UX and Product Architecture State-of-the-Art
+title: Legavia Gamification, UX and Product Architecture State-of-the-Art
 version: 0.1
 status: baseline-candidate
 research_snapshot: 2026-09-29
-owner_scope: LEGACY
+owner_scope: Legavia
 canonical_format: markdown
 agent_readable: true
 audiences:
@@ -27,7 +27,7 @@ mandatory_for:
 source_document: LEGACY_State_of_the_Art_Gamification_UX_Requirements_v0.1
 ---
 
-# LEGACY Gamification, UX and Product Architecture State-of-the-Art
+# Legavia Gamification, UX and Product Architecture State-of-the-Art
 
 > **Agent contract:** Treat this file as a cross-cutting reference artifact. It is a **baseline candidate**, not implementation truth. Before proposing a new screen, navigation pattern, gamification mechanic, shared domain entity, use case, requirement, or architecture decision, check the relevant sections here and preserve existing IDs/traceability. If a proposal intentionally conflicts with a stated design principle or P0 requirement, surface the conflict explicitly and propose an ADR/deviation instead of silently overriding it.
 
@@ -57,9 +57,9 @@ The strongest products in this space do not rely on gamification alone. They com
 
 The research evidence supports using gamification as an engagement aid, but not as a substitute for good behavior-change design. A 2024 systematic review of 36 randomized trials found only modest improvements from gamified health apps versus non-gamified comparators, while field research also shows that game mechanics can improve behavior without necessarily increasing intrinsic motivation. Competition can additionally increase stress for some users. [R11-R13]
 
-For LEGACY, the resulting design thesis is: productivity first, game second. The app should minimize manual bookkeeping, derive game state from meaningful actions, preserve progress after occasional misses, keep competition optional, and let users choose how visible the game layer is. The visual goal map can be expressive and thematic, while the operational screens should remain calm, predictable, and fast.
+For Legavia, the resulting design thesis is: productivity first, game second. The app should minimize manual bookkeeping, derive game state from meaningful actions, preserve progress after occasional misses, keep competition optional, and let users choose how visible the game layer is. The visual goal map can be expressive and thematic, while the operational screens should remain calm, predictable, and fast.
 
-Because LEGACY is a multi-domain "app of apps," the primary UX risk is navigation and cognitive overload. The recommended shell uses five or fewer top-level destinations on compact screens, preserves per-section navigation state, adapts to a sidebar on larger screens, and uses progressive disclosure for advanced functions. This aligns with current Apple HIG guidance and WCAG 2.2 accessibility requirements. [R14-R18]
+Because Legavia is a multi-domain "app of apps," the primary UX risk is navigation and cognitive overload. The recommended shell uses five or fewer top-level destinations on compact screens, preserves per-section navigation state, adapts to a sidebar on larger screens, and uses progressive disclosure for advanced functions. This aligns with current Apple HIG guidance and WCAG 2.2 accessibility requirements. [R14-R18]
 
 | **Recommended product principle:** Every interaction that increases XP, unlocks a map node, or grants a reward should correspond to a meaningful user action or verified data signal. Avoid "game chores" that exist only to feed the gamification system. |
 |------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -86,7 +86,7 @@ This study combines three evidence layers:
 
 3.  Qualitative community signals from recent user discussions. These are treated as anecdotal design input, not as representative survey data.
 
-| **Scope boundary:** This is a product and UX state-of-the-art study, not a clinical efficacy review. Health-related design claims are limited to general behavior-support patterns; LEGACY should avoid presenting wellness mechanics as medical advice. |
+| **Scope boundary:** This is a product and UX state-of-the-art study, not a clinical efficacy review. Health-related design claims are limited to general behavior-support patterns; Legavia should avoid presenting wellness mechanics as medical advice. |
 |----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 
 # 3. State of the Art - Product Landscape
@@ -125,12 +125,12 @@ Legend: ● = strong/first-class pattern; ◐ = partial or secondary; - = not a 
 
 ## 4.1 Evidence-backed observations
 
-| **Observation**                                                       | **Evidence**                                                                                                                                                                        | **Design consequence for LEGACY**                                            | **Src** |
+| **Observation**                                                       | **Evidence**                                                                                                                                                                        | **Design consequence for Legavia**                                            | **Src** |
 |-----------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------|---------|
 | Gamification can improve behavior, but effects are usually modest.    | A 2024 meta-analysis of 36 trials (n=10,079) found gamified apps produced about +489 steps/day versus non-gamified versions, with small improvements in several adiposity measures. | Use gamification as an amplifier, not the primary behavior-change mechanism. | R11     |
 | Behavior change does not guarantee stronger intrinsic motivation.     | A 2024 field experiment found gamification increased steps, while intrinsic motivation and perceived usefulness were not higher than non-gamified self-tracking.                    | The user's real goal must remain the central reason to act.                  | R12     |
 | Competition has trade-offs.                                           | Experimental work found competition-based gamification increased engagement/adherence but also stress and negative social dynamics for some users.                                  | Default to private/cooperative progression; make competitive modes opt-in.   | R13     |
-| Feedback, monitoring, goals, planning, and rewards commonly co-occur. | A systematic review of gamified health apps found self-monitoring, rewards/incentives, goals/planning, and social support were among the most frequent behavior-change techniques.  | LEGACY should combine feedback + planning + progress, not merely badges.     | R19     |
+| Feedback, monitoring, goals, planning, and rewards commonly co-occur. | A systematic review of gamified health apps found self-monitoring, rewards/incentives, goals/planning, and social support were among the most frequent behavior-change techniques.  | Legavia should combine feedback + planning + progress, not merely badges.     | R19     |
 
 ## 4.2 Recent community signals
 
@@ -145,7 +145,7 @@ Legend: ● = strong/first-class pattern; ◐ = partial or secondary; - = not a 
 | **Interpretation rule:** Community sources identify failure modes worth testing; they do not establish population-wide prevalence. |
 |------------------------------------------------------------------------------------------------------------------------------------|
 
-# 5. Design Principles for LEGACY
+# 5. Design Principles for Legavia
 
 | **ID** | **Principle**                      | **Operational meaning**                                                                                                                                                     |
 |--------|------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -220,7 +220,7 @@ On iPhone-class screens, a tab bar should represent top-level destinations rathe
 
 ## 6.3 Widgets and glanceable surfaces
 
-Apple's widget guidance emphasizes timely, glanceable content, focused interactions, and deep links to the exact app destination. LEGACY widgets should therefore expose a small number of high-value signals such as "next action," today's completion ring, hydration/health target, study session, or financial checkpoint rather than replicating a dashboard. [R16]
+Apple's widget guidance emphasizes timely, glanceable content, focused interactions, and deep links to the exact app destination. Legavia widgets should therefore expose a small number of high-value signals such as "next action," today's completion ring, hydration/health target, study session, or financial checkpoint rather than replicating a dashboard. [R16]
 
 # 7. Recommended Gamification Model
 
@@ -252,7 +252,7 @@ flowchart LR
 
 # 8. Recommended Reusable Project Skills / Agent Capabilities
 
-Rather than relying on ad-hoc prompting for each screen, LEGACY should encode the following capabilities as reusable project skills with standard inputs, outputs, and review gates. This makes UX behavior repeatable across modules and easier to baseline in the SDLC.
+Rather than relying on ad-hoc prompting for each screen, Legavia should encode the following capabilities as reusable project skills with standard inputs, outputs, and review gates. This makes UX behavior repeatable across modules and easier to baseline in the SDLC.
 
 | **ID**     | **Skill**                       | **Responsibility**                                                                                                               | **Output**                                     | **Gate**                       |
 |------------|---------------------------------|----------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------|--------------------------------|
@@ -405,7 +405,7 @@ Rather than relying on ad-hoc prompting for each screen, LEGACY should encode th
 | Private-first social          | Research on competition trade-offs; community signal | DP-06                    | FNC-024                       | UC-009         | FVT-005          |
 | Multi-app navigation          | Apple HIG tab bars/sidebar + progressive disclosure  | DP-02, DP-04             | FNC-017,018; UX-001-004,010   | UC-007         | FVT-004          |
 | Accessible game map           | WCAG 2.2 + Apple target sizing                       | DP-09                    | UX-006,008,009; NFR-001       | UC-004         | FVT-008          |
-| AI-governed evolution         | Existing LEGACY product vision                       | Human-in-loop governance | BIZ-005; FNC-025,026; NFR-006 | UC-010         | FVT-006          |
+| AI-governed evolution         | Existing Legavia product vision                       | Human-in-loop governance | BIZ-005; FNC-025,026; NFR-006 | UC-010         | FVT-006          |
 
 # 13. Suggested Release Slicing
 
