@@ -1,6 +1,12 @@
-# LEGACY Agent Guidance
+# Legavia Agent Guidance
 
 This repository uses repository-resident reference artifacts to keep mockup, UX, requirements, architecture, implementation, and verification agents aligned.
+
+## Brand and namespace stability
+
+- Use **Legavia** as the product/application name in new user-facing text and product prose.
+- Keep repository names (`legacy`, `legacy_mockups`), existing `LEGACY-*` traceability IDs, `LEGACY_*` artifact filenames, and other compatibility-sensitive technical identifiers unchanged until a dedicated namespace migration is approved.
+- Do not rewrite historical snapshots, audit IDs, or already-issued requirement/FVT identifiers solely for branding.
 
 ## Mandatory reference loading
 
