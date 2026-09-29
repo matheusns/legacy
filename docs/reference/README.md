@@ -1,6 +1,6 @@
-# LEGACY Reference Artifacts
+# Legavia Reference Artifacts
 
-This directory contains durable, agent-readable material that should influence product discovery and implementation decisions across LEGACY.
+This directory contains durable, agent-readable material that should influence product discovery and implementation decisions across Legavia.
 
 ## Current reference set
 
@@ -18,6 +18,10 @@ State-of-the-art benchmark and baseline candidate covering:
 - traceability and release slicing.
 
 **Use it when:** conceiving or reviewing mockups, adding a module, changing navigation, designing gamification mechanics, defining shared domain concepts, deriving requirements/use cases, or creating verification flows.
+
+## Brand compatibility
+
+The current product name is **Legavia**. Legacy `LEGACY-*` IDs and `LEGACY_*` filenames are compatibility identifiers and remain authoritative until a separately approved namespace migration.
 
 ## Status semantics
 
