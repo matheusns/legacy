@@ -19,6 +19,13 @@ State-of-the-art benchmark and baseline candidate covering:
 
 **Use it when:** conceiving or reviewing mockups, adding a module, changing navigation, designing gamification mechanics, defining shared domain concepts, deriving requirements/use cases, or creating verification flows.
 
+
+### LEGACY_FINANCIAL_LIFE_MANAGEMENT_USE_CASES_v0.1.md
+
+Agent-readable **candidate** for the Life → Financial view. Captures Brazil/UAE account and card management, weekly transaction reconciliation, essential/discretionary spending, monthly saving and financial forecasts, car/apartment costs, FX remittances, data import, traceable UC-013–UC-019, LEGACY-FNC-029–043, and FVT-LEGACY-009–014.
+
+**Use it when:** designing the Financial module's UX, data model, import workflows, reporting, financial projections or test plans. The user's 2026 workbook is a **pending reference** for mapping and verification. Do not store actual financial records in this repo. Candidate requirements require approval before formal baseline promotion.
+
 ## Brand compatibility
 
 The current product name is **Legavia**. Legacy `LEGACY-*` IDs and `LEGACY_*` filenames are compatibility identifiers and remain authoritative until a separately approved namespace migration.
