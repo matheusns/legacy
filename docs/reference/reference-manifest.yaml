@@ -43,6 +43,65 @@ reference_set:
         - "Social and competition mechanics are opt-in."
         - "Essential interactions have non-drag, non-color-only, reduced-motion-accessible alternatives."
         - "AI-generated feature evolution requires explicit human approval before baseline promotion."
+    - id: LEGACY-REF-FIN-001
+      path: docs/reference/LEGACY_FINANCIAL_LIFE_MANAGEMENT_USE_CASES_v0.1.md
+      version: "0.1"
+      status: baseline-candidate
+      created: 2026-10-14
+      applies_to:
+        - financial-module
+        - financial-information-architecture
+        - finance-domain-model
+        - requirements-engineering
+        - use-case-design
+        - verification-design
+        - spreadsheet-migration
+      required_sections_by_role:
+        mockup_agent: ["1", "2", "4"]
+        architecture_agent: ["1", "3", "4", "5", "7"]
+        requirements_agent: ["3", "4", "6", "7"]
+        verification_agent: ["3", "4", "5", "6", "7"]
+      stable_id_prefixes:
+        - LEGACY-FNC
+        - LEGACY-UX
+        - LEGACY-NFR
+        - UC
+        - FVT-LEGACY
+      invariants:
+        - "Financial is a Life module view; the top-level navigation shell is unchanged."
+        - "Credit-card purchases and repayments must never double-count spending."
+        - "Transfers between owned accounts do not create income or ordinary expenses."
+        - "AED and BRL native-currency entries retain amounts and FX provenance."
+        - "Imported financial data require user review and approval before ledger posting."
+        - "Personal financial data and statement contents must not be committed to GitHub."
+        - "Approval is required before candidate requirements are promoted."
+
+
+    - id: LEGACY-REF-FIN-002
+      path: docs/reference/LEGACY_FINANCIAL_WORKBOOK_MAPPING_v0.1.md
+      version: "0.1"
+      status: baseline-candidate
+      observed_at: 2026-10-14
+      applies_to:
+        - financial-module
+        - finance-domain-model
+        - financial-import
+        - workbook-migration
+        - transaction-reconciliation
+        - card-reconciliation
+        - verification-design
+      required_sections_by_role:
+        mockup_agent: ["2", "3", "7"]
+        architecture_agent: ["1", "2", "3", "5"]
+        requirements_agent: ["2", "3", "4", "6"]
+        verification_agent: ["2", "4", "5", "6"]
+      invariants:
+        - "Preserve source transaction meaning; computed worksheet summaries do not become new ledger entries."
+        - "CDC UAE card purchases and UAE monthly card payments must not be counted as duplicate expenses."
+        - "Historical opening balances are not earned income."
+        - "Workbook errors and missing dates must be flagged at import, never silently corrected."
+        - "Workbook link, raw amounts, private card identifiers, and personal transactions stay out of the repository."
+
 precedence:
   - approved_requirements_and_adrs
   - approved_use_cases_and_verification
