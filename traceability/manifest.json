@@ -1,8 +1,8 @@
 {
-  "schema_version": "1.0",
+  "schema_version": 2,
   "project": {
     "id": "LEGAVIA",
-    "name": "Legavia — Web & Mobile Life Management",
+    "name": "Legavia \u2014 Web & Mobile Life Management",
     "description": "Candidate business baseline; responsive web/mobile product; GitHub as primary VCS",
     "status": "Candidate",
     "baseline_version": "0.1.0",
@@ -11,7 +11,7 @@
   "requirements": [
     {
       "id": "LEGACY-BIZ-001",
-      "summary": "The product shall provide one unified life-management environment spanning multiple domains…",
+      "summary": "The product shall provide one unified life-management environment spanning multiple domains\u2026",
       "statement": "The product shall provide one unified life-management environment spanning multiple domains while preserving a consistent interaction model.",
       "level": "Business",
       "priority": "P0",
@@ -23,11 +23,14 @@
       "verification_method": "Architecture review",
       "verification_ids": [],
       "status": "Candidate",
-      "disposition": "Unverified"
+      "disposition": "Unverified",
+      "component_ids": [
+        "identity-access"
+      ]
     },
     {
       "id": "LEGACY-BIZ-002",
-      "summary": "Gamification shall reinforce completion of meaningful real-world objectives and shall not…",
+      "summary": "Gamification shall reinforce completion of meaningful real-world objectives and shall not\u2026",
       "statement": "Gamification shall reinforce completion of meaningful real-world objectives and shall not require separate game-only maintenance to preserve progress.",
       "level": "Business",
       "priority": "P0",
@@ -39,11 +42,14 @@
       "verification_method": "Product inspection + telemetry",
       "verification_ids": [],
       "status": "Candidate",
-      "disposition": "Unverified"
+      "disposition": "Unverified",
+      "component_ids": [
+        "gamification"
+      ]
     },
     {
       "id": "LEGACY-BIZ-003",
-      "summary": "Each user shall have a private workspace, with explicit sharing controls for family or…",
+      "summary": "Each user shall have a private workspace, with explicit sharing controls for family or\u2026",
       "statement": "Each user shall have a private workspace, with explicit sharing controls for family or collaborative features.",
       "level": "Business",
       "priority": "P0",
@@ -55,11 +61,14 @@
       "verification_method": "Security/FVT",
       "verification_ids": [],
       "status": "Candidate",
-      "disposition": "Unverified"
+      "disposition": "Unverified",
+      "component_ids": [
+        "identity-access"
+      ]
     },
     {
       "id": "LEGACY-BIZ-004",
-      "summary": "The product shall support adding new life modules without changing the top-level interaction…",
+      "summary": "The product shall support adding new life modules without changing the top-level interaction\u2026",
       "statement": "The product shall support adding new life modules without changing the top-level interaction principles or duplicating core domain entities.",
       "level": "Business",
       "priority": "P1",
@@ -71,11 +80,14 @@
       "verification_method": "Architecture test",
       "verification_ids": [],
       "status": "Candidate",
-      "disposition": "Unverified"
+      "disposition": "Unverified",
+      "component_ids": [
+        "identity-access"
+      ]
     },
     {
       "id": "LEGACY-BIZ-005",
-      "summary": "Feature requests generated from user input may be proposed by AI but shall require explicit…",
+      "summary": "Feature requests generated from user input may be proposed by AI but shall require explicit\u2026",
       "statement": "Feature requests generated from user input may be proposed by AI but shall require explicit authorized approval before becoming a production baseline item.",
       "level": "Business",
       "priority": "P1",
@@ -87,7 +99,10 @@
       "verification_method": "Workflow FVT",
       "verification_ids": [],
       "status": "Candidate",
-      "disposition": "Unverified"
+      "disposition": "Unverified",
+      "component_ids": [
+        "identity-access"
+      ]
     },
     {
       "id": "LEGACY-FNC-001",
@@ -105,11 +120,14 @@
         "FVT-LEGACY-005"
       ],
       "status": "Candidate",
-      "disposition": "Unverified"
+      "disposition": "Unverified",
+      "component_ids": [
+        "identity-access"
+      ]
     },
     {
       "id": "LEGACY-FNC-002",
-      "summary": "The Today view shall aggregate due habits, tasks, calendar context, and the next recommended…",
+      "summary": "The Today view shall aggregate due habits, tasks, calendar context, and the next recommended\u2026",
       "statement": "The Today view shall aggregate due habits, tasks, calendar context, and the next recommended action without requiring navigation into each module.",
       "level": "Functional",
       "priority": "P0",
@@ -123,11 +141,14 @@
         "FVT-LEGACY-001"
       ],
       "status": "Candidate",
-      "disposition": "Unverified"
+      "disposition": "Unverified",
+      "component_ids": [
+        "today"
+      ]
     },
     {
       "id": "LEGACY-FNC-003",
-      "summary": "The system shall represent goals using long-term, mid-term, and short-term relationships and…",
+      "summary": "The system shall represent goals using long-term, mid-term, and short-term relationships and\u2026",
       "statement": "The system shall represent goals using long-term, mid-term, and short-term relationships and allow decomposition into phases and milestones.",
       "level": "Functional",
       "priority": "P0",
@@ -142,11 +163,14 @@
         "FVT-LEGACY-002"
       ],
       "status": "Candidate",
-      "disposition": "Unverified"
+      "disposition": "Unverified",
+      "component_ids": [
+        "goals-map"
+      ]
     },
     {
       "id": "LEGACY-FNC-004",
-      "summary": "The Map view shall visualize phases/milestones as navigable nodes and indicate locked,…",
+      "summary": "The Map view shall visualize phases/milestones as navigable nodes and indicate locked,\u2026",
       "statement": "The Map view shall visualize phases/milestones as navigable nodes and indicate locked, available, in-progress, and completed states.",
       "level": "Functional",
       "priority": "P0",
@@ -160,11 +184,14 @@
         "FVT-LEGACY-002"
       ],
       "status": "Candidate",
-      "disposition": "Unverified"
+      "disposition": "Unverified",
+      "component_ids": [
+        "goals-map"
+      ]
     },
     {
       "id": "LEGACY-FNC-005",
-      "summary": "The Map shall support distinct visual themes by phase/island while retaining a consistent…",
+      "summary": "The Map shall support distinct visual themes by phase/island while retaining a consistent\u2026",
       "statement": "The Map shall support distinct visual themes by phase/island while retaining a consistent interaction grammar.",
       "level": "Functional",
       "priority": "P1",
@@ -179,11 +206,14 @@
         "FVT-LEGACY-008"
       ],
       "status": "Candidate",
-      "disposition": "Unverified"
+      "disposition": "Unverified",
+      "component_ids": [
+        "goals-map"
+      ]
     },
     {
       "id": "LEGACY-FNC-006",
-      "summary": "Users shall be able to create recurring habits using daily, selected-day, interval, and…",
+      "summary": "Users shall be able to create recurring habits using daily, selected-day, interval, and\u2026",
       "statement": "Users shall be able to create recurring habits using daily, selected-day, interval, and target-per-period schedules.",
       "level": "Functional",
       "priority": "P0",
@@ -195,11 +225,14 @@
       "verification_method": "Functional test",
       "verification_ids": [],
       "status": "Candidate",
-      "disposition": "Unverified"
+      "disposition": "Unverified",
+      "component_ids": [
+        "gamification"
+      ]
     },
     {
       "id": "LEGACY-FNC-007",
-      "summary": "Users shall be able to create one-off tasks with due date, optional checklist, priority, and…",
+      "summary": "Users shall be able to create one-off tasks with due date, optional checklist, priority, and\u2026",
       "statement": "Users shall be able to create one-off tasks with due date, optional checklist, priority, and linkage to a goal or module.",
       "level": "Functional",
       "priority": "P0",
@@ -213,7 +246,10 @@
         "FVT-LEGACY-001"
       ],
       "status": "Candidate",
-      "disposition": "Unverified"
+      "disposition": "Unverified",
+      "component_ids": [
+        "today"
+      ]
     },
     {
       "id": "LEGACY-FNC-008",
@@ -229,11 +265,14 @@
       "verification_method": "Functional test",
       "verification_ids": [],
       "status": "Candidate",
-      "disposition": "Unverified"
+      "disposition": "Unverified",
+      "component_ids": [
+        "gamification"
+      ]
     },
     {
       "id": "LEGACY-FNC-009",
-      "summary": "A completion action shall update the underlying item, relevant milestone progress, analytics,…",
+      "summary": "A completion action shall update the underlying item, relevant milestone progress, analytics,\u2026",
       "statement": "A completion action shall update the underlying item, relevant milestone progress, analytics, and gamification state atomically.",
       "level": "Functional",
       "priority": "P0",
@@ -248,7 +287,10 @@
         "FVT-LEGACY-023"
       ],
       "status": "Candidate",
-      "disposition": "Unverified"
+      "disposition": "Unverified",
+      "component_ids": [
+        "gamification"
+      ]
     },
     {
       "id": "LEGACY-FNC-010",
@@ -267,11 +309,14 @@
         "FVT-LEGACY-023"
       ],
       "status": "Candidate",
-      "disposition": "Unverified"
+      "disposition": "Unverified",
+      "component_ids": [
+        "gamification"
+      ]
     },
     {
       "id": "LEGACY-FNC-011",
-      "summary": "The system shall calculate a continuity metric that preserves historical progress after isolated…",
+      "summary": "The system shall calculate a continuity metric that preserves historical progress after isolated\u2026",
       "statement": "The system shall calculate a continuity metric that preserves historical progress after isolated misses rather than relying only on a reset-to-zero streak.",
       "level": "Functional",
       "priority": "P0",
@@ -285,11 +330,14 @@
         "FVT-LEGACY-003"
       ],
       "status": "Candidate",
-      "disposition": "Unverified"
+      "disposition": "Unverified",
+      "component_ids": [
+        "gamification"
+      ]
     },
     {
       "id": "LEGACY-FNC-012",
-      "summary": "The system may show traditional streaks in addition to the continuity metric, with…",
+      "summary": "The system may show traditional streaks in addition to the continuity metric, with\u2026",
       "statement": "The system may show traditional streaks in addition to the continuity metric, with user-configurable grace or recovery behavior.",
       "level": "Functional",
       "priority": "P1",
@@ -303,7 +351,10 @@
         "FVT-LEGACY-003"
       ],
       "status": "Candidate",
-      "disposition": "Unverified"
+      "disposition": "Unverified",
+      "component_ids": [
+        "gamification"
+      ]
     },
     {
       "id": "LEGACY-FNC-013",
@@ -321,11 +372,14 @@
         "FVT-LEGACY-001"
       ],
       "status": "Candidate",
-      "disposition": "Unverified"
+      "disposition": "Unverified",
+      "component_ids": [
+        "gamification"
+      ]
     },
     {
       "id": "LEGACY-FNC-014",
-      "summary": "The system shall support achievements and milestone unlocks with in-progress and completed…",
+      "summary": "The system shall support achievements and milestone unlocks with in-progress and completed\u2026",
       "statement": "The system shall support achievements and milestone unlocks with in-progress and completed states.",
       "level": "Functional",
       "priority": "P1",
@@ -337,11 +391,14 @@
       "verification_method": "Functional test",
       "verification_ids": [],
       "status": "Candidate",
-      "disposition": "Unverified"
+      "disposition": "Unverified",
+      "component_ids": [
+        "gamification"
+      ]
     },
     {
       "id": "LEGACY-FNC-015",
-      "summary": "The system shall support optional virtual currency and user-defined rewards without gating core…",
+      "summary": "The system shall support optional virtual currency and user-defined rewards without gating core\u2026",
       "statement": "The system shall support optional virtual currency and user-defined rewards without gating core task/habit functionality.",
       "level": "Functional",
       "priority": "P1",
@@ -353,7 +410,10 @@
       "verification_method": "Functional test",
       "verification_ids": [],
       "status": "Candidate",
-      "disposition": "Unverified"
+      "disposition": "Unverified",
+      "component_ids": [
+        "gamification"
+      ]
     },
     {
       "id": "LEGACY-FNC-016",
@@ -369,11 +429,14 @@
       "verification_method": "FVT",
       "verification_ids": [],
       "status": "Candidate",
-      "disposition": "Unverified"
+      "disposition": "Unverified",
+      "component_ids": [
+        "gamification"
+      ]
     },
     {
       "id": "LEGACY-FNC-017",
-      "summary": "Users shall be able to access Personal, Work, Health, Finance, Learning, and future modules…",
+      "summary": "Users shall be able to access Personal, Work, Health, Finance, Learning, and future modules\u2026",
       "statement": "Users shall be able to access Personal, Work, Health, Finance, Learning, and future modules through a common module hub.",
       "level": "Functional",
       "priority": "P0",
@@ -387,11 +450,14 @@
         "FVT-LEGACY-004"
       ],
       "status": "Candidate",
-      "disposition": "Unverified"
+      "disposition": "Unverified",
+      "component_ids": [
+        "app-shell"
+      ]
     },
     {
       "id": "LEGACY-FNC-018",
-      "summary": "The system shall provide a global search entry point capable of locating goals, tasks, habits,…",
+      "summary": "The system shall provide a global search entry point capable of locating goals, tasks, habits,\u2026",
       "statement": "The system shall provide a global search entry point capable of locating goals, tasks, habits, modules, lessons, and other indexed entities.",
       "level": "Functional",
       "priority": "P1",
@@ -403,11 +469,14 @@
       "verification_method": "Search FVT",
       "verification_ids": [],
       "status": "Candidate",
-      "disposition": "Unverified"
+      "disposition": "Unverified",
+      "component_ids": [
+        "app-shell"
+      ]
     },
     {
       "id": "LEGACY-FNC-019",
-      "summary": "The system shall support context-aware reminders that can be snoozed, completed, or opened…",
+      "summary": "The system shall support context-aware reminders that can be snoozed, completed, or opened\u2026",
       "statement": "The system shall support context-aware reminders that can be snoozed, completed, or opened directly to the relevant item.",
       "level": "Functional",
       "priority": "P1",
@@ -419,11 +488,14 @@
       "verification_method": "Notification test",
       "verification_ids": [],
       "status": "Candidate",
-      "disposition": "Unverified"
+      "disposition": "Unverified",
+      "component_ids": [
+        "today"
+      ]
     },
     {
       "id": "LEGACY-FNC-020",
-      "summary": "The system shall support glanceable widgets for a small set of high-value signals and deep-link…",
+      "summary": "The system shall support glanceable widgets for a small set of high-value signals and deep-link\u2026",
       "statement": "The system shall support glanceable widgets for a small set of high-value signals and deep-link widget interactions to the relevant app context.",
       "level": "Functional",
       "priority": "P1",
@@ -435,7 +507,10 @@
       "verification_method": "Widget FVT",
       "verification_ids": [],
       "status": "Candidate",
-      "disposition": "Unverified"
+      "disposition": "Unverified",
+      "component_ids": [
+        "app-shell"
+      ]
     },
     {
       "id": "LEGACY-FNC-021",
@@ -451,11 +526,14 @@
       "verification_method": "Analytics test",
       "verification_ids": [],
       "status": "Candidate",
-      "disposition": "Unverified"
+      "disposition": "Unverified",
+      "component_ids": [
+        "app-shell"
+      ]
     },
     {
       "id": "LEGACY-FNC-022",
-      "summary": "Where authorized, the system shall ingest eligible external signals such as calendar and health…",
+      "summary": "Where authorized, the system shall ingest eligible external signals such as calendar and health\u2026",
       "statement": "Where authorized, the system shall ingest eligible external signals such as calendar and health data to reduce manual logging.",
       "level": "Functional",
       "priority": "P1",
@@ -467,7 +545,10 @@
       "verification_method": "Integration test",
       "verification_ids": [],
       "status": "Candidate",
-      "disposition": "Unverified"
+      "disposition": "Unverified",
+      "component_ids": [
+        "integration"
+      ]
     },
     {
       "id": "LEGACY-FNC-023",
@@ -483,11 +564,14 @@
       "verification_method": "Export test",
       "verification_ids": [],
       "status": "Candidate",
-      "disposition": "Unverified"
+      "disposition": "Unverified",
+      "component_ids": [
+        "integration"
+      ]
     },
     {
       "id": "LEGACY-FNC-024",
-      "summary": "Family/social features shall be opt-in and support cooperative goals without requiring public…",
+      "summary": "Family/social features shall be opt-in and support cooperative goals without requiring public\u2026",
       "statement": "Family/social features shall be opt-in and support cooperative goals without requiring public leaderboard participation.",
       "level": "Functional",
       "priority": "P1",
@@ -501,11 +585,14 @@
         "FVT-LEGACY-021"
       ],
       "status": "Candidate",
-      "disposition": "Unverified"
+      "disposition": "Unverified",
+      "component_ids": [
+        "social"
+      ]
     },
     {
       "id": "LEGACY-FNC-025",
-      "summary": "Users shall be able to submit a feature request by text or voice and receive an AI-generated…",
+      "summary": "Users shall be able to submit a feature request by text or voice and receive an AI-generated\u2026",
       "statement": "Users shall be able to submit a feature request by text or voice and receive an AI-generated structured proposal containing scope, rationale, dependencies, and acceptance criteria.",
       "level": "Functional",
       "priority": "P1",
@@ -519,11 +606,14 @@
         "FVT-LEGACY-006"
       ],
       "status": "Candidate",
-      "disposition": "Unverified"
+      "disposition": "Unverified",
+      "component_ids": [
+        "ai-governance"
+      ]
     },
     {
       "id": "LEGACY-FNC-026",
-      "summary": "An authorized administrator shall be able to approve or reject an AI-generated feature proposal…",
+      "summary": "An authorized administrator shall be able to approve or reject an AI-generated feature proposal\u2026",
       "statement": "An authorized administrator shall be able to approve or reject an AI-generated feature proposal and route approved proposals into a beta/release workflow.",
       "level": "Functional",
       "priority": "P1",
@@ -537,11 +627,14 @@
         "FVT-LEGACY-006"
       ],
       "status": "Candidate",
-      "disposition": "Unverified"
+      "disposition": "Unverified",
+      "component_ids": [
+        "ai-governance"
+      ]
     },
     {
       "id": "LEGACY-FNC-027",
-      "summary": "The Learning module shall represent courses, modules, lessons, and activities and support…",
+      "summary": "The Learning module shall represent courses, modules, lessons, and activities and support\u2026",
       "statement": "The Learning module shall represent courses, modules, lessons, and activities and support importing source links for AI-assisted content extraction subject to user review.",
       "level": "Functional",
       "priority": "P1",
@@ -555,11 +648,14 @@
         "FVT-LEGACY-007"
       ],
       "status": "Candidate",
-      "disposition": "Unverified"
+      "disposition": "Unverified",
+      "component_ids": [
+        "learning"
+      ]
     },
     {
       "id": "LEGACY-FNC-028",
-      "summary": "The Finance module shall support goal-linked projections and preserve separation between…",
+      "summary": "The Finance module shall support goal-linked projections and preserve separation between\u2026",
       "statement": "The Finance module shall support goal-linked projections and preserve separation between user-entered assumptions and imported financial data.",
       "level": "Functional",
       "priority": "P1",
@@ -571,7 +667,10 @@
       "verification_method": "Finance FVT",
       "verification_ids": [],
       "status": "Candidate",
-      "disposition": "Unverified"
+      "disposition": "Unverified",
+      "component_ids": [
+        "finance"
+      ]
     },
     {
       "id": "LEGACY-UX-001",
@@ -587,11 +686,14 @@
       "verification_method": "Design inspection",
       "verification_ids": [],
       "status": "Candidate",
-      "disposition": "Unverified"
+      "disposition": "Unverified",
+      "component_ids": [
+        "app-shell"
+      ]
     },
     {
       "id": "LEGACY-UX-002",
-      "summary": "Top-level navigation controls shall navigate between sections and shall not be repurposed as…",
+      "summary": "Top-level navigation controls shall navigate between sections and shall not be repurposed as\u2026",
       "statement": "Top-level navigation controls shall navigate between sections and shall not be repurposed as action buttons.",
       "level": "UX",
       "priority": "P0",
@@ -603,7 +705,10 @@
       "verification_method": "Design inspection",
       "verification_ids": [],
       "status": "Candidate",
-      "disposition": "Unverified"
+      "disposition": "Unverified",
+      "component_ids": [
+        "app-shell"
+      ]
     },
     {
       "id": "LEGACY-UX-003",
@@ -619,11 +724,14 @@
       "verification_method": "Navigation FVT",
       "verification_ids": [],
       "status": "Candidate",
-      "disposition": "Unverified"
+      "disposition": "Unverified",
+      "component_ids": [
+        "app-shell"
+      ]
     },
     {
       "id": "LEGACY-UX-004",
-      "summary": "Advanced or infrequently used options shall be progressively disclosed rather than presented in…",
+      "summary": "Advanced or infrequently used options shall be progressively disclosed rather than presented in\u2026",
       "statement": "Advanced or infrequently used options shall be progressively disclosed rather than presented in the default daily workflow.",
       "level": "UX",
       "priority": "P0",
@@ -635,11 +743,14 @@
       "verification_method": "Usability inspection",
       "verification_ids": [],
       "status": "Candidate",
-      "disposition": "Unverified"
+      "disposition": "Unverified",
+      "component_ids": [
+        "app-shell"
+      ]
     },
     {
       "id": "LEGACY-UX-005",
-      "summary": "Each high-frequency screen shall present one clearly identifiable primary action and visually…",
+      "summary": "Each high-frequency screen shall present one clearly identifiable primary action and visually\u2026",
       "statement": "Each high-frequency screen shall present one clearly identifiable primary action and visually subordinate secondary actions.",
       "level": "UX",
       "priority": "P0",
@@ -651,12 +762,15 @@
       "verification_method": "Design inspection",
       "verification_ids": [],
       "status": "Candidate",
-      "disposition": "Unverified"
+      "disposition": "Unverified",
+      "component_ids": [
+        "app-shell"
+      ]
     },
     {
       "id": "LEGACY-UX-006",
-      "summary": "Primary touch targets shall provide at least a 44×44 pt hit region on iOS-class",
-      "statement": "Primary touch targets shall provide at least a 44×44 pt hit region on iOS-class interfaces.",
+      "summary": "Primary touch targets shall provide at least a 44\u00d744 pt hit region on iOS-class",
+      "statement": "Primary touch targets shall provide at least a 44\u00d744 pt hit region on iOS-class interfaces.",
       "level": "UX",
       "priority": "P0",
       "source": "R15",
@@ -667,11 +781,14 @@
       "verification_method": "UI audit",
       "verification_ids": [],
       "status": "Candidate",
-      "disposition": "Unverified"
+      "disposition": "Unverified",
+      "component_ids": [
+        "app-shell"
+      ]
     },
     {
       "id": "LEGACY-UX-007",
-      "summary": "The interface shall provide visible feedback for success, failure, disabled actions, and…",
+      "summary": "The interface shall provide visible feedback for success, failure, disabled actions, and\u2026",
       "statement": "The interface shall provide visible feedback for success, failure, disabled actions, and recoverable errors, including an explanation when an action cannot proceed.",
       "level": "UX",
       "priority": "P0",
@@ -683,11 +800,14 @@
       "verification_method": "FVT",
       "verification_ids": [],
       "status": "Candidate",
-      "disposition": "Unverified"
+      "disposition": "Unverified",
+      "component_ids": [
+        "app-shell"
+      ]
     },
     {
       "id": "LEGACY-UX-008",
-      "summary": "No essential state or instruction shall be communicated by color alone, and reduced-motion…",
+      "summary": "No essential state or instruction shall be communicated by color alone, and reduced-motion\u2026",
       "statement": "No essential state or instruction shall be communicated by color alone, and reduced-motion preferences shall be honored.",
       "level": "UX",
       "priority": "P0",
@@ -699,7 +819,10 @@
       "verification_method": "Accessibility audit",
       "verification_ids": [],
       "status": "Candidate",
-      "disposition": "Unverified"
+      "disposition": "Unverified",
+      "component_ids": [
+        "app-shell"
+      ]
     },
     {
       "id": "LEGACY-UX-009",
@@ -715,11 +838,14 @@
       "verification_method": "Accessibility FVT",
       "verification_ids": [],
       "status": "Candidate",
-      "disposition": "Unverified"
+      "disposition": "Unverified",
+      "component_ids": [
+        "app-shell"
+      ]
     },
     {
       "id": "LEGACY-UX-010",
-      "summary": "The user shall be able to switch between any two top-level destinations with one tap/click from…",
+      "summary": "The user shall be able to switch between any two top-level destinations with one tap/click from\u2026",
       "statement": "The user shall be able to switch between any two top-level destinations with one tap/click from the app shell.",
       "level": "UX",
       "priority": "P0",
@@ -731,11 +857,14 @@
       "verification_method": "Navigation FVT",
       "verification_ids": [],
       "status": "Candidate",
-      "disposition": "Unverified"
+      "disposition": "Unverified",
+      "component_ids": [
+        "app-shell"
+      ]
     },
     {
       "id": "LEGACY-UX-011",
-      "summary": "The interface shall support a low-gamification presentation mode that preserves productivity…",
+      "summary": "The interface shall support a low-gamification presentation mode that preserves productivity\u2026",
       "statement": "The interface shall support a low-gamification presentation mode that preserves productivity functionality while reducing decorative game elements.",
       "level": "UX",
       "priority": "P1",
@@ -747,11 +876,14 @@
       "verification_method": "Visual FVT",
       "verification_ids": [],
       "status": "Candidate",
-      "disposition": "Unverified"
+      "disposition": "Unverified",
+      "component_ids": [
+        "app-shell"
+      ]
     },
     {
       "id": "LEGACY-UX-012",
-      "summary": "Empty states shall contain an explanation and at least one valid next action when the user has…",
+      "summary": "Empty states shall contain an explanation and at least one valid next action when the user has\u2026",
       "statement": "Empty states shall contain an explanation and at least one valid next action when the user has permission to create or configure content.",
       "level": "UX",
       "priority": "P0",
@@ -763,7 +895,10 @@
       "verification_method": "State coverage test",
       "verification_ids": [],
       "status": "Candidate",
-      "disposition": "Unverified"
+      "disposition": "Unverified",
+      "component_ids": [
+        "app-shell"
+      ]
     },
     {
       "id": "LEGACY-NFR-001",
@@ -779,11 +914,14 @@
       "verification_method": "Accessibility audit",
       "verification_ids": [],
       "status": "Candidate",
-      "disposition": "Unverified"
+      "disposition": "Unverified",
+      "component_ids": [
+        "identity-access"
+      ]
     },
     {
       "id": "LEGACY-NFR-002",
-      "summary": "User and workspace authorization boundaries shall be enforced server-side for every data access…",
+      "summary": "User and workspace authorization boundaries shall be enforced server-side for every data access\u2026",
       "statement": "User and workspace authorization boundaries shall be enforced server-side for every data access path.",
       "level": "Quality",
       "priority": "P0",
@@ -795,7 +933,10 @@
       "verification_method": "Security test",
       "verification_ids": [],
       "status": "Candidate",
-      "disposition": "Unverified"
+      "disposition": "Unverified",
+      "component_ids": [
+        "identity-access"
+      ]
     },
     {
       "id": "LEGACY-NFR-003",
@@ -811,11 +952,14 @@
       "verification_method": "Security review",
       "verification_ids": [],
       "status": "Candidate",
-      "disposition": "Unverified"
+      "disposition": "Unverified",
+      "component_ids": [
+        "identity-access"
+      ]
     },
     {
       "id": "LEGACY-NFR-004",
-      "summary": "Critical daily actions shall remain usable under intermittent connectivity and synchronize…",
+      "summary": "Critical daily actions shall remain usable under intermittent connectivity and synchronize\u2026",
       "statement": "Critical daily actions shall remain usable under intermittent connectivity and synchronize safely when connectivity returns.",
       "level": "Quality",
       "priority": "P1",
@@ -827,11 +971,14 @@
       "verification_method": "Offline/sync FVT",
       "verification_ids": [],
       "status": "Candidate",
-      "disposition": "Unverified"
+      "disposition": "Unverified",
+      "component_ids": [
+        "identity-access"
+      ]
     },
     {
       "id": "LEGACY-NFR-005",
-      "summary": "Synchronization shall be idempotent for repeated completion/update requests and shall prevent…",
+      "summary": "Synchronization shall be idempotent for repeated completion/update requests and shall prevent\u2026",
       "statement": "Synchronization shall be idempotent for repeated completion/update requests and shall prevent duplicate XP/reward issuance.",
       "level": "Quality",
       "priority": "P0",
@@ -843,11 +990,14 @@
       "verification_method": "Integration test",
       "verification_ids": [],
       "status": "Candidate",
-      "disposition": "Unverified"
+      "disposition": "Unverified",
+      "component_ids": [
+        "identity-access"
+      ]
     },
     {
       "id": "LEGACY-NFR-006",
-      "summary": "The system shall keep an auditable history for admin approval of AI-generated feature proposals…",
+      "summary": "The system shall keep an auditable history for admin approval of AI-generated feature proposals\u2026",
       "statement": "The system shall keep an auditable history for admin approval of AI-generated feature proposals and beta promotion decisions.",
       "level": "Quality",
       "priority": "P1",
@@ -859,11 +1009,14 @@
       "verification_method": "Audit test",
       "verification_ids": [],
       "status": "Candidate",
-      "disposition": "Unverified"
+      "disposition": "Unverified",
+      "component_ids": [
+        "identity-access"
+      ]
     },
     {
       "id": "LEGACY-NFR-007",
-      "summary": "High-frequency completion interactions shall provide perceived feedback immediately; any…",
+      "summary": "High-frequency completion interactions shall provide perceived feedback immediately; any\u2026",
       "statement": "High-frequency completion interactions shall provide perceived feedback immediately; any longer-running operation shall expose visible progress/state.",
       "level": "Quality",
       "priority": "P0",
@@ -875,11 +1028,14 @@
       "verification_method": "Performance UX test",
       "verification_ids": [],
       "status": "Candidate",
-      "disposition": "Unverified"
+      "disposition": "Unverified",
+      "component_ids": [
+        "identity-access"
+      ]
     },
     {
       "id": "LEGACY-NFR-008",
-      "summary": "Product analytics shall minimize collection to events required for UX/product decisions and…",
+      "summary": "Product analytics shall minimize collection to events required for UX/product decisions and\u2026",
       "statement": "Product analytics shall minimize collection to events required for UX/product decisions and shall distinguish telemetry from user content.",
       "level": "Quality",
       "priority": "P1",
@@ -891,11 +1047,14 @@
       "verification_method": "Privacy review",
       "verification_ids": [],
       "status": "Candidate",
-      "disposition": "Unverified"
+      "disposition": "Unverified",
+      "component_ids": [
+        "identity-access"
+      ]
     },
     {
       "id": "LEGACY-FNC-029",
-      "summary": "Support multiple accounts/cards across UAE and Brazil with type, currency, opening balance,…",
+      "summary": "Support multiple accounts/cards across UAE and Brazil with type, currency, opening balance,\u2026",
       "statement": "Support multiple accounts/cards across UAE and Brazil with type, currency, opening balance, as-of date, status, issuer, and ownership/workspace.",
       "level": "Functional",
       "priority": "P0",
@@ -910,11 +1069,14 @@
         "FVT-LEGACY-010"
       ],
       "status": "Candidate",
-      "disposition": "Unverified"
+      "disposition": "Unverified",
+      "component_ids": [
+        "finance"
+      ]
     },
     {
       "id": "LEGACY-FNC-030",
-      "summary": "Capture, edit, split, undo and batch-create categorized transactions, with essential flag…",
+      "summary": "Capture, edit, split, undo and batch-create categorized transactions, with essential flag\u2026",
       "statement": "Capture, edit, split, undo and batch-create categorized transactions, with essential flag independent of category, payment source, date, status, and provenance.",
       "level": "Functional",
       "priority": "P0",
@@ -928,11 +1090,14 @@
         "FVT-LEGACY-009"
       ],
       "status": "Candidate",
-      "disposition": "Unverified"
+      "disposition": "Unverified",
+      "component_ids": [
+        "finance"
+      ]
     },
     {
       "id": "LEGACY-FNC-031",
-      "summary": "Support weekly review of card and account activity including duplicate preview, classification,…",
+      "summary": "Support weekly review of card and account activity including duplicate preview, classification,\u2026",
       "statement": "Support weekly review of card and account activity including duplicate preview, classification, bulk approval, and statement reconciliation.",
       "level": "Functional",
       "priority": "P0",
@@ -947,11 +1112,14 @@
         "FVT-LEGACY-013"
       ],
       "status": "Candidate",
-      "disposition": "Unverified"
+      "disposition": "Unverified",
+      "component_ids": [
+        "finance"
+      ]
     },
     {
       "id": "LEGACY-FNC-032",
-      "summary": "Correctly model credit-card purchases as expenses and card liabilities, while card payments…",
+      "summary": "Correctly model credit-card purchases as expenses and card liabilities, while card payments\u2026",
       "statement": "Correctly model credit-card purchases as expenses and card liabilities, while card payments settle liabilities without creating duplicate expenses.",
       "level": "Functional",
       "priority": "P0",
@@ -965,11 +1133,14 @@
         "FVT-LEGACY-010"
       ],
       "status": "Candidate",
-      "disposition": "Unverified"
+      "disposition": "Unverified",
+      "component_ids": [
+        "finance"
+      ]
     },
     {
       "id": "LEGACY-FNC-033",
-      "summary": "Track balances for debit/savings accounts through posted activity, transfers, adjustments, and…",
+      "summary": "Track balances for debit/savings accounts through posted activity, transfers, adjustments, and\u2026",
       "statement": "Track balances for debit/savings accounts through posted activity, transfers, adjustments, and reconciliation with independently supplied statements.",
       "level": "Functional",
       "priority": "P0",
@@ -984,11 +1155,14 @@
         "FVT-LEGACY-011"
       ],
       "status": "Candidate",
-      "disposition": "Unverified"
+      "disposition": "Unverified",
+      "component_ids": [
+        "finance"
+      ]
     },
     {
       "id": "LEGACY-FNC-034",
-      "summary": "Represent cross-border remittances and account transfers as linked legs; preserve native…",
+      "summary": "Represent cross-border remittances and account transfers as linked legs; preserve native\u2026",
       "statement": "Represent cross-border remittances and account transfers as linked legs; preserve native amounts/currencies, fees, actual conversion rate, rate timestamp/source, and FX impact.",
       "level": "Functional",
       "priority": "P0",
@@ -1002,11 +1176,14 @@
         "FVT-LEGACY-011"
       ],
       "status": "Candidate",
-      "disposition": "Unverified"
+      "disposition": "Unverified",
+      "component_ids": [
+        "finance"
+      ]
     },
     {
       "id": "LEGACY-FNC-035",
-      "summary": "Summarize monthly and annual income, expenses, savings/savings rate, budget variance and…",
+      "summary": "Summarize monthly and annual income, expenses, savings/savings rate, budget variance and\u2026",
       "statement": "Summarize monthly and annual income, expenses, savings/savings rate, budget variance and essential/non-essential spending by country, account and category.",
       "level": "Functional",
       "priority": "P0",
@@ -1020,11 +1197,14 @@
         "FVT-LEGACY-012"
       ],
       "status": "Candidate",
-      "disposition": "Unverified"
+      "disposition": "Unverified",
+      "component_ids": [
+        "finance"
+      ]
     },
     {
       "id": "LEGACY-FNC-036",
-      "summary": "Maintain monthly budgets and planned/recurring/fixed/variable/installment commitments, with…",
+      "summary": "Maintain monthly budgets and planned/recurring/fixed/variable/installment commitments, with\u2026",
       "statement": "Maintain monthly budgets and planned/recurring/fixed/variable/installment commitments, with actual vs forecast cash flow and bill reminders.",
       "level": "Functional",
       "priority": "P1",
@@ -1038,11 +1218,14 @@
         "FVT-LEGACY-012"
       ],
       "status": "Candidate",
-      "disposition": "Unverified"
+      "disposition": "Unverified",
+      "component_ids": [
+        "finance"
+      ]
     },
     {
       "id": "LEGACY-FNC-037",
-      "summary": "Track vehicle costs as ownership/rental operating expenses separately from financing principal,…",
+      "summary": "Track vehicle costs as ownership/rental operating expenses separately from financing principal,\u2026",
       "statement": "Track vehicle costs as ownership/rental operating expenses separately from financing principal, depreciation and one-time acquisition costs.",
       "level": "Functional",
       "priority": "P1",
@@ -1056,11 +1239,14 @@
         "FVT-LEGACY-014"
       ],
       "status": "Candidate",
-      "disposition": "Unverified"
+      "disposition": "Unverified",
+      "component_ids": [
+        "finance"
+      ]
     },
     {
       "id": "LEGACY-FNC-038",
-      "summary": "Track apartment-related payments, property asset valuation, related debt, equity and optional…",
+      "summary": "Track apartment-related payments, property asset valuation, related debt, equity and optional\u2026",
       "statement": "Track apartment-related payments, property asset valuation, related debt, equity and optional rental revenue while avoiding double counting.",
       "level": "Functional",
       "priority": "P1",
@@ -1074,11 +1260,14 @@
         "FVT-LEGACY-014"
       ],
       "status": "Candidate",
-      "disposition": "Unverified"
+      "disposition": "Unverified",
+      "component_ids": [
+        "finance"
+      ]
     },
     {
       "id": "LEGACY-FNC-039",
-      "summary": "Project one-to-five-year cash flow, saving potential, net worth and goal trajectories,…",
+      "summary": "Project one-to-five-year cash flow, saving potential, net worth and goal trajectories,\u2026",
       "statement": "Project one-to-five-year cash flow, saving potential, net worth and goal trajectories, supporting multiple scenarios and recorded assumptions.",
       "level": "Functional",
       "priority": "P1",
@@ -1092,11 +1281,14 @@
         "FVT-LEGACY-014"
       ],
       "status": "Candidate",
-      "disposition": "Unverified"
+      "disposition": "Unverified",
+      "component_ids": [
+        "finance"
+      ]
     },
     {
       "id": "LEGACY-FNC-040",
-      "summary": "Preview and map spreadsheet/CSV/Google Sheets financial data, support manual adjustment and…",
+      "summary": "Preview and map spreadsheet/CSV/Google Sheets financial data, support manual adjustment and\u2026",
       "statement": "Preview and map spreadsheet/CSV/Google Sheets financial data, support manual adjustment and explicit import approval, and suppress duplicate import rows.",
       "level": "Functional",
       "priority": "P0",
@@ -1110,11 +1302,14 @@
         "FVT-LEGACY-013"
       ],
       "status": "Candidate",
-      "disposition": "Unverified"
+      "disposition": "Unverified",
+      "component_ids": [
+        "finance"
+      ]
     },
     {
       "id": "LEGACY-FNC-041",
-      "summary": "Expose source/provenance, creation/edit history, reconciliation status and reversible correction…",
+      "summary": "Expose source/provenance, creation/edit history, reconciliation status and reversible correction\u2026",
       "statement": "Expose source/provenance, creation/edit history, reconciliation status and reversible correction for imported and manually entered transactions.",
       "level": "Functional",
       "priority": "P0",
@@ -1129,11 +1324,14 @@
         "FVT-LEGACY-013"
       ],
       "status": "Candidate",
-      "disposition": "Unverified"
+      "disposition": "Unverified",
+      "component_ids": [
+        "finance"
+      ]
     },
     {
       "id": "LEGACY-FNC-042",
-      "summary": "Calculate account-level balances and a consolidated balance/net-worth view in selectable…",
+      "summary": "Calculate account-level balances and a consolidated balance/net-worth view in selectable\u2026",
       "statement": "Calculate account-level balances and a consolidated balance/net-worth view in selectable presentation currency without overwriting native-currency ledger entries.",
       "level": "Functional",
       "priority": "P1",
@@ -1148,11 +1346,14 @@
         "FVT-LEGACY-014"
       ],
       "status": "Candidate",
-      "disposition": "Unverified"
+      "disposition": "Unverified",
+      "component_ids": [
+        "finance"
+      ]
     },
     {
       "id": "LEGACY-FNC-043",
-      "summary": "Distinguish earned income, refunds, reimbursements, investment profit/loss…",
+      "summary": "Distinguish earned income, refunds, reimbursements, investment profit/loss\u2026",
       "statement": "Distinguish earned income, refunds, reimbursements, investment profit/loss (realized/unrealized), internal transfers and valuation changes in reporting.",
       "level": "Functional",
       "priority": "P0",
@@ -1167,11 +1368,14 @@
         "FVT-LEGACY-012"
       ],
       "status": "Candidate",
-      "disposition": "Unverified"
+      "disposition": "Unverified",
+      "component_ids": [
+        "finance"
+      ]
     },
     {
       "id": "LEGACY-UX-013",
-      "summary": "Weekly reconciliation supports efficient multi-row review; classify multiple transactions…",
+      "summary": "Weekly reconciliation supports efficient multi-row review; classify multiple transactions\u2026",
       "statement": "Weekly reconciliation supports efficient multi-row review; classify multiple transactions without reopening a modal for every field.",
       "level": "UX",
       "priority": "P0",
@@ -1183,11 +1387,14 @@
       "verification_method": "Inspection",
       "verification_ids": [],
       "status": "Candidate",
-      "disposition": "Unverified"
+      "disposition": "Unverified",
+      "component_ids": [
+        "app-shell"
+      ]
     },
     {
       "id": "LEGACY-UX-014",
-      "summary": "Overview metrics have drill-downs to the constituent transactions, accounts and calculation…",
+      "summary": "Overview metrics have drill-downs to the constituent transactions, accounts and calculation\u2026",
       "statement": "Overview metrics have drill-downs to the constituent transactions, accounts and calculation definitions; the displayed reporting currency and FX assumptions remain visible.",
       "level": "UX",
       "priority": "P0",
@@ -1199,11 +1406,14 @@
       "verification_method": "Inspection",
       "verification_ids": [],
       "status": "Candidate",
-      "disposition": "Unverified"
+      "disposition": "Unverified",
+      "component_ids": [
+        "app-shell"
+      ]
     },
     {
       "id": "LEGACY-UX-015",
-      "summary": "Present actuals, commitments, projections and uncertainty as distinguishable states; do not…",
+      "summary": "Present actuals, commitments, projections and uncertainty as distinguishable states; do not\u2026",
       "statement": "Present actuals, commitments, projections and uncertainty as distinguishable states; do not present forecasts as account balances.",
       "level": "UX",
       "priority": "P0",
@@ -1215,11 +1425,14 @@
       "verification_method": "Inspection",
       "verification_ids": [],
       "status": "Candidate",
-      "disposition": "Unverified"
+      "disposition": "Unverified",
+      "component_ids": [
+        "app-shell"
+      ]
     },
     {
       "id": "LEGACY-UX-016",
-      "summary": "Saving, discarding and undoing a batch must have explicit feedback and guard against loss of…",
+      "summary": "Saving, discarding and undoing a batch must have explicit feedback and guard against loss of\u2026",
       "statement": "Saving, discarding and undoing a batch must have explicit feedback and guard against loss of partially reviewed work.",
       "level": "UX",
       "priority": "P0",
@@ -1231,11 +1444,14 @@
       "verification_method": "Inspection",
       "verification_ids": [],
       "status": "Candidate",
-      "disposition": "Unverified"
+      "disposition": "Unverified",
+      "component_ids": [
+        "app-shell"
+      ]
     },
     {
       "id": "LEGACY-NFR-009",
-      "summary": "Financial transactions are private by default; workspace permissions must be enforced…",
+      "summary": "Financial transactions are private by default; workspace permissions must be enforced\u2026",
       "statement": "Financial transactions are private by default; workspace permissions must be enforced server-side and data encrypted in transit and at rest.",
       "level": "Quality",
       "priority": "P0",
@@ -1247,11 +1463,14 @@
       "verification_method": "Inspection",
       "verification_ids": [],
       "status": "Candidate",
-      "disposition": "Unverified"
+      "disposition": "Unverified",
+      "component_ids": [
+        "identity-access"
+      ]
     },
     {
       "id": "LEGACY-NFR-010",
-      "summary": "Posting/importing transactions and transfer legs must be idempotent; partial failures cannot…",
+      "summary": "Posting/importing transactions and transfer legs must be idempotent; partial failures cannot\u2026",
       "statement": "Posting/importing transactions and transfer legs must be idempotent; partial failures cannot leave inconsistent account or card balances.",
       "level": "Quality",
       "priority": "P0",
@@ -1263,11 +1482,14 @@
       "verification_method": "Inspection",
       "verification_ids": [],
       "status": "Candidate",
-      "disposition": "Unverified"
+      "disposition": "Unverified",
+      "component_ids": [
+        "identity-access"
+      ]
     },
     {
       "id": "LEGACY-NFR-011",
-      "summary": "Amount arithmetic uses deterministic decimal/fixed-point values with explicit per-currency…",
+      "summary": "Amount arithmetic uses deterministic decimal/fixed-point values with explicit per-currency\u2026",
       "statement": "Amount arithmetic uses deterministic decimal/fixed-point values with explicit per-currency scale; reporting FX conversions preserve provenance and rounding.",
       "level": "Quality",
       "priority": "P0",
@@ -1279,11 +1501,14 @@
       "verification_method": "Inspection",
       "verification_ids": [],
       "status": "Candidate",
-      "disposition": "Unverified"
+      "disposition": "Unverified",
+      "component_ids": [
+        "identity-access"
+      ]
     },
     {
       "id": "LEGACY-NFR-012",
-      "summary": "Imported statements and personal finance data must not be committed to public code repositories…",
+      "summary": "Imported statements and personal finance data must not be committed to public code repositories\u2026",
       "statement": "Imported statements and personal finance data must not be committed to public code repositories or exposed through telemetry/logs; support data export and deletion.",
       "level": "Quality",
       "priority": "P0",
@@ -1295,11 +1520,14 @@
       "verification_method": "Inspection",
       "verification_ids": [],
       "status": "Candidate",
-      "disposition": "Unverified"
+      "disposition": "Unverified",
+      "component_ids": [
+        "identity-access"
+      ]
     },
     {
       "id": "LEGACY-BIZ-006",
-      "summary": "Legavia shall expose the same core user journeys through a responsive browser experience on…",
+      "summary": "Legavia shall expose the same core user journeys through a responsive browser experience on\u2026",
       "statement": "Legavia shall expose the same core user journeys through a responsive browser experience on mobile and desktop before considering native-client dependencies.",
       "level": "Business",
       "priority": "P0",
@@ -1311,11 +1539,14 @@
       "verification_method": "Independent functional verification",
       "verification_ids": [],
       "status": "Candidate",
-      "disposition": "Unverified"
+      "disposition": "Unverified",
+      "component_ids": [
+        "identity-access"
+      ]
     },
     {
       "id": "LEGACY-BIZ-007",
-      "summary": "The product shall support a coherent life-management history across productivity, focus, health,…",
+      "summary": "The product shall support a coherent life-management history across productivity, focus, health,\u2026",
       "statement": "The product shall support a coherent life-management history across productivity, focus, health, learning, media, finance and memories without requiring all modules to be enabled.",
       "level": "Business",
       "priority": "P1",
@@ -1327,11 +1558,14 @@
       "verification_method": "Independent functional verification",
       "verification_ids": [],
       "status": "Candidate",
-      "disposition": "Unverified"
+      "disposition": "Unverified",
+      "component_ids": [
+        "identity-access"
+      ]
     },
     {
       "id": "LEGACY-BIZ-008",
-      "summary": "Access to another person's data shall be granted at resource level and shall not arise…",
+      "summary": "Access to another person's data shall be granted at resource level and shall not arise\u2026",
       "statement": "Access to another person's data shall be granted at resource level and shall not arise implicitly from friendship, household membership or an invitation.",
       "level": "Business",
       "priority": "P0",
@@ -1343,11 +1577,14 @@
       "verification_method": "Independent functional verification",
       "verification_ids": [],
       "status": "Candidate",
-      "disposition": "Unverified"
+      "disposition": "Unverified",
+      "component_ids": [
+        "identity-access"
+      ]
     },
     {
       "id": "LEGACY-BIZ-009",
-      "summary": "External integrations and AI recommendations shall require explicit user authorization, show…",
+      "summary": "External integrations and AI recommendations shall require explicit user authorization, show\u2026",
       "statement": "External integrations and AI recommendations shall require explicit user authorization, show data provenance and remain usable through manual alternatives.",
       "level": "Business",
       "priority": "P1",
@@ -1359,11 +1596,14 @@
       "verification_method": "Independent functional verification",
       "verification_ids": [],
       "status": "Candidate",
-      "disposition": "Unverified"
+      "disposition": "Unverified",
+      "component_ids": [
+        "identity-access"
+      ]
     },
     {
       "id": "LEGACY-BIZ-010",
-      "summary": "The development program shall require approved use-case, requirement, UX and verification…",
+      "summary": "The development program shall require approved use-case, requirement, UX and verification\u2026",
       "statement": "The development program shall require approved use-case, requirement, UX and verification evidence before production promotion.",
       "level": "Business",
       "priority": "P0",
@@ -1375,11 +1615,14 @@
       "verification_method": "Independent functional verification",
       "verification_ids": [],
       "status": "Candidate",
-      "disposition": "Unverified"
+      "disposition": "Unverified",
+      "component_ids": [
+        "identity-access"
+      ]
     },
     {
       "id": "LEGACY-FNC-044",
-      "summary": "The Today surface shall let the user log, correct and review daily water consumption against a…",
+      "summary": "The Today surface shall let the user log, correct and review daily water consumption against a\u2026",
       "statement": "The Today surface shall let the user log, correct and review daily water consumption against a configurable daily target.",
       "level": "Functional",
       "priority": "P1",
@@ -1393,11 +1636,14 @@
         "FVT-LEGACY-019"
       ],
       "status": "Candidate",
-      "disposition": "Unverified"
+      "disposition": "Unverified",
+      "component_ids": [
+        "today"
+      ]
     },
     {
       "id": "LEGACY-FNC-045",
-      "summary": "A focus session shall have a named timer, start, pause, resume and stop actions, and optional…",
+      "summary": "A focus session shall have a named timer, start, pause, resume and stop actions, and optional\u2026",
       "statement": "A focus session shall have a named timer, start, pause, resume and stop actions, and optional association with a task or goal.",
       "level": "Functional",
       "priority": "P1",
@@ -1411,11 +1657,14 @@
         "FVT-LEGACY-015"
       ],
       "status": "Candidate",
-      "disposition": "Unverified"
+      "disposition": "Unverified",
+      "component_ids": [
+        "focus"
+      ]
     },
     {
       "id": "LEGACY-FNC-046",
-      "summary": "Completed focus time shall generate a configurable forest or plant progression projection and…",
+      "summary": "Completed focus time shall generate a configurable forest or plant progression projection and\u2026",
       "statement": "Completed focus time shall generate a configurable forest or plant progression projection and period-based focus statistics without duplicating time events.",
       "level": "Functional",
       "priority": "P1",
@@ -1429,11 +1678,14 @@
         "FVT-LEGACY-015"
       ],
       "status": "Candidate",
-      "disposition": "Unverified"
+      "disposition": "Unverified",
+      "component_ids": [
+        "focus"
+      ]
     },
     {
       "id": "LEGACY-FNC-047",
-      "summary": "The Books module shall record reading status, total pages, pages completed, dated reading events…",
+      "summary": "The Books module shall record reading status, total pages, pages completed, dated reading events\u2026",
       "statement": "The Books module shall record reading status, total pages, pages completed, dated reading events and completed-book history.",
       "level": "Functional",
       "priority": "P1",
@@ -1447,11 +1699,14 @@
         "FVT-LEGACY-016"
       ],
       "status": "Candidate",
-      "disposition": "Unverified"
+      "disposition": "Unverified",
+      "component_ids": [
+        "media-library"
+      ]
     },
     {
       "id": "LEGACY-FNC-048",
-      "summary": "The Games module shall maintain a game library and distinct start, pause, resume and stop…",
+      "summary": "The Games module shall maintain a game library and distinct start, pause, resume and stop\u2026",
       "statement": "The Games module shall maintain a game library and distinct start, pause, resume and stop playtime events with aggregated playtime.",
       "level": "Functional",
       "priority": "P2",
@@ -1463,11 +1718,14 @@
       "verification_method": "Independent functional verification",
       "verification_ids": [],
       "status": "Candidate",
-      "disposition": "Unverified"
+      "disposition": "Unverified",
+      "component_ids": [
+        "media-library"
+      ]
     },
     {
       "id": "LEGACY-FNC-049",
-      "summary": "The Movies module shall capture a recommendation, recommender, recommendation date and watching…",
+      "summary": "The Movies module shall capture a recommendation, recommender, recommendation date and watching\u2026",
       "statement": "The Movies module shall capture a recommendation, recommender, recommendation date and watching status through text or reviewed voice capture.",
       "level": "Functional",
       "priority": "P1",
@@ -1481,11 +1739,14 @@
         "FVT-LEGACY-017"
       ],
       "status": "Candidate",
-      "disposition": "Unverified"
+      "disposition": "Unverified",
+      "component_ids": [
+        "media-library"
+      ]
     },
     {
       "id": "LEGACY-FNC-050",
-      "summary": "The Memory module shall accept text, voice, photos and linked note sources and support…",
+      "summary": "The Memory module shall accept text, voice, photos and linked note sources and support\u2026",
       "statement": "The Memory module shall accept text, voice, photos and linked note sources and support navigating memories through a searchable timeline and mind-map projection.",
       "level": "Functional",
       "priority": "P1",
@@ -1499,11 +1760,14 @@
         "FVT-LEGACY-018"
       ],
       "status": "Candidate",
-      "disposition": "Unverified"
+      "disposition": "Unverified",
+      "component_ids": [
+        "memory"
+      ]
     },
     {
       "id": "LEGACY-FNC-051",
-      "summary": "The user shall be able to maintain an interactive CV or portfolio with evidence-linked…",
+      "summary": "The user shall be able to maintain an interactive CV or portfolio with evidence-linked\u2026",
       "statement": "The user shall be able to maintain an interactive CV or portfolio with evidence-linked achievements and explicitly approved updates generated from milestones.",
       "level": "Functional",
       "priority": "P2",
@@ -1515,11 +1779,14 @@
       "verification_method": "Independent functional verification",
       "verification_ids": [],
       "status": "Candidate",
-      "disposition": "Unverified"
+      "disposition": "Unverified",
+      "component_ids": [
+        "profile"
+      ]
     },
     {
       "id": "LEGACY-FNC-052",
-      "summary": "The Health module shall track user-entered exercise and wellness events and optionally ingest…",
+      "summary": "The Health module shall track user-entered exercise and wellness events and optionally ingest\u2026",
       "statement": "The Health module shall track user-entered exercise and wellness events and optionally ingest authorized health signals without making diagnostic claims.",
       "level": "Functional",
       "priority": "P1",
@@ -1531,11 +1798,14 @@
       "verification_method": "Independent functional verification",
       "verification_ids": [],
       "status": "Candidate",
-      "disposition": "Unverified"
+      "disposition": "Unverified",
+      "component_ids": [
+        "health"
+      ]
     },
     {
       "id": "LEGACY-FNC-053",
-      "summary": "The user shall be able to view task schedules alongside authorized calendar events and plan…",
+      "summary": "The user shall be able to view task schedules alongside authorized calendar events and plan\u2026",
       "statement": "The user shall be able to view task schedules alongside authorized calendar events and plan daily or weekly actions without silently editing the external calendar.",
       "level": "Functional",
       "priority": "P1",
@@ -1547,11 +1817,14 @@
       "verification_method": "Independent functional verification",
       "verification_ids": [],
       "status": "Candidate",
-      "disposition": "Unverified"
+      "disposition": "Unverified",
+      "component_ids": [
+        "today"
+      ]
     },
     {
       "id": "LEGACY-FNC-054",
-      "summary": "Text or voice commands shall create reviewable proposals for tasks, goals, habits or journal…",
+      "summary": "Text or voice commands shall create reviewable proposals for tasks, goals, habits or journal\u2026",
       "statement": "Text or voice commands shall create reviewable proposals for tasks, goals, habits or journal entries; no persistent change shall occur until confirmed by an authorized user.",
       "level": "Functional",
       "priority": "P1",
@@ -1566,11 +1839,14 @@
         "FVT-LEGACY-022"
       ],
       "status": "Candidate",
-      "disposition": "Unverified"
+      "disposition": "Unverified",
+      "component_ids": [
+        "ai-governance"
+      ]
     },
     {
       "id": "LEGACY-FNC-055",
-      "summary": "AI-proposed changes shall have preview, modify, approve and reject states and an auditable…",
+      "summary": "AI-proposed changes shall have preview, modify, approve and reject states and an auditable\u2026",
       "statement": "AI-proposed changes shall have preview, modify, approve and reject states and an auditable provenance record.",
       "level": "Functional",
       "priority": "P1",
@@ -1585,11 +1861,14 @@
         "FVT-LEGACY-022"
       ],
       "status": "Candidate",
-      "disposition": "Unverified"
+      "disposition": "Unverified",
+      "component_ids": [
+        "ai-governance"
+      ]
     },
     {
       "id": "LEGACY-FNC-056",
-      "summary": "The application shall expose user-configurable permissions for optional family or shared…",
+      "summary": "The application shall expose user-configurable permissions for optional family or shared\u2026",
       "statement": "The application shall expose user-configurable permissions for optional family or shared workspaces and enforce invitations, revocation and isolation.",
       "level": "Functional",
       "priority": "P1",
@@ -1604,11 +1883,14 @@
         "FVT-LEGACY-021"
       ],
       "status": "Candidate",
-      "disposition": "Unverified"
+      "disposition": "Unverified",
+      "component_ids": [
+        "identity-access"
+      ]
     },
     {
       "id": "LEGACY-FNC-057",
-      "summary": "Shared goals, social events and challenges shall use explicit resource-level visibility…",
+      "summary": "Shared goals, social events and challenges shall use explicit resource-level visibility\u2026",
       "statement": "Shared goals, social events and challenges shall use explicit resource-level visibility (private, selected users, friends, party or public) with private as default.",
       "level": "Functional",
       "priority": "P2",
@@ -1622,11 +1904,14 @@
         "FVT-LEGACY-021"
       ],
       "status": "Candidate",
-      "disposition": "Unverified"
+      "disposition": "Unverified",
+      "component_ids": [
+        "social"
+      ]
     },
     {
       "id": "LEGACY-FNC-058",
-      "summary": "Administrators shall be able to enable and roll back approved features for designated beta…",
+      "summary": "Administrators shall be able to enable and roll back approved features for designated beta\u2026",
       "statement": "Administrators shall be able to enable and roll back approved features for designated beta cohorts without exposing unauthorized workspace content.",
       "level": "Functional",
       "priority": "P2",
@@ -1641,11 +1926,14 @@
         "FVT-LEGACY-024"
       ],
       "status": "Candidate",
-      "disposition": "Unverified"
+      "disposition": "Unverified",
+      "component_ids": [
+        "ai-governance"
+      ]
     },
     {
       "id": "LEGACY-FNC-059",
-      "summary": "Administrators shall be able to monitor configured per-user storage quotas and manage retention…",
+      "summary": "Administrators shall be able to monitor configured per-user storage quotas and manage retention\u2026",
       "statement": "Administrators shall be able to monitor configured per-user storage quotas and manage retention without seeing users' private content by default.",
       "level": "Functional",
       "priority": "P2",
@@ -1659,11 +1947,14 @@
         "FVT-LEGACY-024"
       ],
       "status": "Candidate",
-      "disposition": "Unverified"
+      "disposition": "Unverified",
+      "component_ids": [
+        "identity-access"
+      ]
     },
     {
       "id": "LEGACY-FNC-060",
-      "summary": "The user shall be able to switch an explicit Auto, Mobile or Desktop presentation mode, with…",
+      "summary": "The user shall be able to switch an explicit Auto, Mobile or Desktop presentation mode, with\u2026",
       "statement": "The user shall be able to switch an explicit Auto, Mobile or Desktop presentation mode, with Auto adapting to viewport and input characteristics.",
       "level": "Functional",
       "priority": "P0",
@@ -1679,11 +1970,14 @@
         "FVT-LEGACY-020"
       ],
       "status": "Candidate",
-      "disposition": "Unverified"
+      "disposition": "Unverified",
+      "component_ids": [
+        "app-shell"
+      ]
     },
     {
       "id": "LEGACY-FNC-061",
-      "summary": "Users shall be able to create and manage separate personal and invited workspaces with a…",
+      "summary": "Users shall be able to create and manage separate personal and invited workspaces with a\u2026",
       "statement": "Users shall be able to create and manage separate personal and invited workspaces with a documented owner, member and administrator role model.",
       "level": "Functional",
       "priority": "P0",
@@ -1698,11 +1992,14 @@
         "FVT-LEGACY-024"
       ],
       "status": "Candidate",
-      "disposition": "Unverified"
+      "disposition": "Unverified",
+      "component_ids": [
+        "identity-access"
+      ]
     },
     {
       "id": "LEGACY-FNC-062",
-      "summary": "The application shall support user-controlled export and deletion requests for supported…",
+      "summary": "The application shall support user-controlled export and deletion requests for supported\u2026",
       "statement": "The application shall support user-controlled export and deletion requests for supported personal data and attachments, subject to disclosed retention constraints.",
       "level": "Functional",
       "priority": "P1",
@@ -1716,11 +2013,14 @@
         "FVT-LEGACY-018"
       ],
       "status": "Candidate",
-      "disposition": "Unverified"
+      "disposition": "Unverified",
+      "component_ids": [
+        "identity-access"
+      ]
     },
     {
       "id": "LEGACY-FNC-063",
-      "summary": "Notifications and reminders shall be permission-based, user-configurable and deep-link to the…",
+      "summary": "Notifications and reminders shall be permission-based, user-configurable and deep-link to the\u2026",
       "statement": "Notifications and reminders shall be permission-based, user-configurable and deep-link to the related entity when supported.",
       "level": "Functional",
       "priority": "P1",
@@ -1732,11 +2032,14 @@
       "verification_method": "Independent functional verification",
       "verification_ids": [],
       "status": "Candidate",
-      "disposition": "Unverified"
+      "disposition": "Unverified",
+      "component_ids": [
+        "today"
+      ]
     },
     {
       "id": "LEGACY-FNC-064",
-      "summary": "The web application shall provide installable mobile-friendly behavior and preserve session…",
+      "summary": "The web application shall provide installable mobile-friendly behavior and preserve session\u2026",
       "statement": "The web application shall provide installable mobile-friendly behavior and preserve session navigation and allowed local draft state on reload.",
       "level": "Functional",
       "priority": "P0",
@@ -1751,11 +2054,14 @@
         "FVT-LEGACY-020"
       ],
       "status": "Candidate",
-      "disposition": "Unverified"
+      "disposition": "Unverified",
+      "component_ids": [
+        "app-shell"
+      ]
     },
     {
       "id": "LEGACY-FNC-065",
-      "summary": "An invited user shall be able to participate in a selected collaborative challenge without…",
+      "summary": "An invited user shall be able to participate in a selected collaborative challenge without\u2026",
       "statement": "An invited user shall be able to participate in a selected collaborative challenge without gaining access to other private modules.",
       "level": "Functional",
       "priority": "P2",
@@ -1767,11 +2073,14 @@
       "verification_method": "Independent functional verification",
       "verification_ids": [],
       "status": "Candidate",
-      "disposition": "Unverified"
+      "disposition": "Unverified",
+      "component_ids": [
+        "social"
+      ]
     },
     {
       "id": "LEGACY-FNC-066",
-      "summary": "An authorized GitHub connection may suggest daily or weekly tasks from selected project issues,…",
+      "summary": "An authorized GitHub connection may suggest daily or weekly tasks from selected project issues,\u2026",
       "statement": "An authorized GitHub connection may suggest daily or weekly tasks from selected project issues, with source links and explicit approval before importing them.",
       "level": "Functional",
       "priority": "P2",
@@ -1785,11 +2094,14 @@
         "FVT-LEGACY-022"
       ],
       "status": "Candidate",
-      "disposition": "Unverified"
+      "disposition": "Unverified",
+      "component_ids": [
+        "ai-governance"
+      ]
     },
     {
       "id": "LEGACY-FNC-067",
-      "summary": "The Learning module shall capture course progress and permit reviewed AI extraction of modules…",
+      "summary": "The Learning module shall capture course progress and permit reviewed AI extraction of modules\u2026",
       "statement": "The Learning module shall capture course progress and permit reviewed AI extraction of modules and lessons from approved links or supplied materials.",
       "level": "Functional",
       "priority": "P1",
@@ -1803,11 +2115,14 @@
         "FVT-LEGACY-007"
       ],
       "status": "Candidate",
-      "disposition": "Unverified"
+      "disposition": "Unverified",
+      "component_ids": [
+        "learning"
+      ]
     },
     {
       "id": "LEGACY-FNC-068",
-      "summary": "Habits shall support positive or negative polarity, configurable severity, recovery policy and…",
+      "summary": "Habits shall support positive or negative polarity, configurable severity, recovery policy and\u2026",
       "statement": "Habits shall support positive or negative polarity, configurable severity, recovery policy and transparent non-destructive consequences.",
       "level": "Functional",
       "priority": "P1",
@@ -1821,11 +2136,14 @@
         "FVT-LEGACY-003"
       ],
       "status": "Candidate",
-      "disposition": "Unverified"
+      "disposition": "Unverified",
+      "component_ids": [
+        "gamification"
+      ]
     },
     {
       "id": "LEGACY-FNC-069",
-      "summary": "XP, levels, badges and virtual currency shall be computed from a deterministic event ledger with…",
+      "summary": "XP, levels, badges and virtual currency shall be computed from a deterministic event ledger with\u2026",
       "statement": "XP, levels, badges and virtual currency shall be computed from a deterministic event ledger with visible explanations of rewards and reversals.",
       "level": "Functional",
       "priority": "P0",
@@ -1839,11 +2157,14 @@
         "FVT-LEGACY-015"
       ],
       "status": "Candidate",
-      "disposition": "Unverified"
+      "disposition": "Unverified",
+      "component_ids": [
+        "gamification"
+      ]
     },
     {
       "id": "LEGACY-FNC-070",
-      "summary": "The Books module shall recalculate an estimated reading completion date from dated page-progress…",
+      "summary": "The Books module shall recalculate an estimated reading completion date from dated page-progress\u2026",
       "statement": "The Books module shall recalculate an estimated reading completion date from dated page-progress observations and show insufficient-data uncertainty.",
       "level": "Functional",
       "priority": "P1",
@@ -1857,11 +2178,14 @@
         "FVT-LEGACY-016"
       ],
       "status": "Candidate",
-      "disposition": "Unverified"
+      "disposition": "Unverified",
+      "component_ids": [
+        "media-library"
+      ]
     },
     {
       "id": "LEGACY-FNC-071",
-      "summary": "The Movies watchlist may rank candidate titles by a timestamped external rating when licensed…",
+      "summary": "The Movies watchlist may rank candidate titles by a timestamped external rating when licensed\u2026",
       "statement": "The Movies watchlist may rank candidate titles by a timestamped external rating when licensed data is available, retaining a manual order fallback.",
       "level": "Functional",
       "priority": "P2",
@@ -1875,11 +2199,14 @@
         "FVT-LEGACY-017"
       ],
       "status": "Candidate",
-      "disposition": "Unverified"
+      "disposition": "Unverified",
+      "component_ids": [
+        "media-library"
+      ]
     },
     {
       "id": "LEGACY-FNC-072",
-      "summary": "The user shall be able to record goal-linked financial objectives without mistaking projections…",
+      "summary": "The user shall be able to record goal-linked financial objectives without mistaking projections\u2026",
       "statement": "The user shall be able to record goal-linked financial objectives without mistaking projections for actual account balances.",
       "level": "Functional",
       "priority": "P1",
@@ -1891,11 +2218,14 @@
       "verification_method": "Independent functional verification",
       "verification_ids": [],
       "status": "Candidate",
-      "disposition": "Unverified"
+      "disposition": "Unverified",
+      "component_ids": [
+        "finance"
+      ]
     },
     {
       "id": "LEGACY-FNC-073",
-      "summary": "The Today dashboard shall let the user see assigned actions, reminders, active focus session and…",
+      "summary": "The Today dashboard shall let the user see assigned actions, reminders, active focus session and\u2026",
       "statement": "The Today dashboard shall let the user see assigned actions, reminders, active focus session and hydration status without entering individual modules.",
       "level": "Functional",
       "priority": "P1",
@@ -1909,11 +2239,14 @@
         "FVT-LEGACY-019"
       ],
       "status": "Candidate",
-      "disposition": "Unverified"
+      "disposition": "Unverified",
+      "component_ids": [
+        "today"
+      ]
     },
     {
       "id": "LEGACY-FNC-074",
-      "summary": "Every domain mutation affecting progress or finances shall retain a stable event identity,…",
+      "summary": "Every domain mutation affecting progress or finances shall retain a stable event identity,\u2026",
       "statement": "Every domain mutation affecting progress or finances shall retain a stable event identity, origin and reversible or compensating correction history.",
       "level": "Functional",
       "priority": "P0",
@@ -1929,11 +2262,14 @@
         "FVT-LEGACY-023"
       ],
       "status": "Candidate",
-      "disposition": "Unverified"
+      "disposition": "Unverified",
+      "component_ids": [
+        "identity-access"
+      ]
     },
     {
       "id": "LEGACY-UX-017",
-      "summary": "Pixel-art fantasy RPG theming shall closely follow the accepted Legavia visual references on…",
+      "summary": "Pixel-art fantasy RPG theming shall closely follow the accepted Legavia visual references on\u2026",
       "statement": "Pixel-art fantasy RPG theming shall closely follow the accepted Legavia visual references on progression surfaces while preserving readable, accessible operational views.",
       "level": "UX",
       "priority": "P0",
@@ -1945,11 +2281,14 @@
       "verification_method": "Visual inspection and interaction test",
       "verification_ids": [],
       "status": "Candidate",
-      "disposition": "Unverified"
+      "disposition": "Unverified",
+      "component_ids": [
+        "app-shell"
+      ]
     },
     {
       "id": "LEGACY-UX-018",
-      "summary": "The app shall provide consistent responsive layouts for mobile and desktop, including a…",
+      "summary": "The app shall provide consistent responsive layouts for mobile and desktop, including a\u2026",
       "statement": "The app shall provide consistent responsive layouts for mobile and desktop, including a persistent Auto/Mobile/Desktop preview override.",
       "level": "UX",
       "priority": "P0",
@@ -1961,11 +2300,14 @@
       "verification_method": "Visual inspection and interaction test",
       "verification_ids": [],
       "status": "Candidate",
-      "disposition": "Unverified"
+      "disposition": "Unverified",
+      "component_ids": [
+        "app-shell"
+      ]
     },
     {
       "id": "LEGACY-UX-019",
-      "summary": "The design system shall define typography, contrast, icon scale, artwork placement, spacing,…",
+      "summary": "The design system shall define typography, contrast, icon scale, artwork placement, spacing,\u2026",
       "statement": "The design system shall define typography, contrast, icon scale, artwork placement, spacing, focus states and reusable components; decorative icons shall not crowd core controls.",
       "level": "UX",
       "priority": "P0",
@@ -1977,11 +2319,14 @@
       "verification_method": "Visual inspection and interaction test",
       "verification_ids": [],
       "status": "Candidate",
-      "disposition": "Unverified"
+      "disposition": "Unverified",
+      "component_ids": [
+        "app-shell"
+      ]
     },
     {
       "id": "LEGACY-UX-020",
-      "summary": "Every approved journey shall have matching mobile and desktop UX states and…",
+      "summary": "Every approved journey shall have matching mobile and desktop UX states and\u2026",
       "statement": "Every approved journey shall have matching mobile and desktop UX states and reference-versus-actual visual-regression evidence.",
       "level": "UX",
       "priority": "P0",
@@ -1993,11 +2338,14 @@
       "verification_method": "Visual inspection and interaction test",
       "verification_ids": [],
       "status": "Candidate",
-      "disposition": "Unverified"
+      "disposition": "Unverified",
+      "component_ids": [
+        "app-shell"
+      ]
     },
     {
       "id": "LEGACY-UX-021",
-      "summary": "Gamification state shall always expose a textual explanation for progression, currency and…",
+      "summary": "Gamification state shall always expose a textual explanation for progression, currency and\u2026",
       "statement": "Gamification state shall always expose a textual explanation for progression, currency and penalties.",
       "level": "UX",
       "priority": "P1",
@@ -2009,11 +2357,14 @@
       "verification_method": "Visual inspection and interaction test",
       "verification_ids": [],
       "status": "Candidate",
-      "disposition": "Unverified"
+      "disposition": "Unverified",
+      "component_ids": [
+        "app-shell"
+      ]
     },
     {
       "id": "LEGACY-UX-022",
-      "summary": "Permission requests for microphone, camera, health and calendar integrations shall be…",
+      "summary": "Permission requests for microphone, camera, health and calendar integrations shall be\u2026",
       "statement": "Permission requests for microphone, camera, health and calendar integrations shall be contextual, revocable and accompanied by a manual fallback.",
       "level": "UX",
       "priority": "P1",
@@ -2025,11 +2376,14 @@
       "verification_method": "Visual inspection and interaction test",
       "verification_ids": [],
       "status": "Candidate",
-      "disposition": "Unverified"
+      "disposition": "Unverified",
+      "component_ids": [
+        "app-shell"
+      ]
     },
     {
       "id": "LEGACY-UX-023",
-      "summary": "User-selected low-gamification and reduced-motion presentation preferences shall not alter…",
+      "summary": "User-selected low-gamification and reduced-motion presentation preferences shall not alter\u2026",
       "statement": "User-selected low-gamification and reduced-motion presentation preferences shall not alter domain correctness.",
       "level": "UX",
       "priority": "P1",
@@ -2041,11 +2395,14 @@
       "verification_method": "Visual inspection and interaction test",
       "verification_ids": [],
       "status": "Candidate",
-      "disposition": "Unverified"
+      "disposition": "Unverified",
+      "component_ids": [
+        "app-shell"
+      ]
     },
     {
       "id": "LEGACY-NFR-013",
-      "summary": "Authentication and authorization tests shall cover every API and storage lookup, including…",
+      "summary": "Authentication and authorization tests shall cover every API and storage lookup, including\u2026",
       "statement": "Authentication and authorization tests shall cover every API and storage lookup, including nested object access and workspace reassignment attempts.",
       "level": "Quality",
       "priority": "P0",
@@ -2057,11 +2414,14 @@
       "verification_method": "Independent quality and security verification",
       "verification_ids": [],
       "status": "Candidate",
-      "disposition": "Unverified"
+      "disposition": "Unverified",
+      "component_ids": [
+        "identity-access"
+      ]
     },
     {
       "id": "LEGACY-NFR-014",
-      "summary": "Repeated completion, focus and financial event submissions shall produce one logical event and…",
+      "summary": "Repeated completion, focus and financial event submissions shall produce one logical event and\u2026",
       "statement": "Repeated completion, focus and financial event submissions shall produce one logical event and one reward or ledger effect.",
       "level": "Quality",
       "priority": "P0",
@@ -2073,11 +2433,14 @@
       "verification_method": "Independent quality and security verification",
       "verification_ids": [],
       "status": "Candidate",
-      "disposition": "Unverified"
+      "disposition": "Unverified",
+      "component_ids": [
+        "identity-access"
+      ]
     },
     {
       "id": "LEGACY-NFR-015",
-      "summary": "Imported files and private media shall be segregated from public code repositories, development…",
+      "summary": "Imported files and private media shall be segregated from public code repositories, development\u2026",
       "statement": "Imported files and private media shall be segregated from public code repositories, development fixtures and observability logs.",
       "level": "Quality",
       "priority": "P0",
@@ -2089,11 +2452,14 @@
       "verification_method": "Independent quality and security verification",
       "verification_ids": [],
       "status": "Candidate",
-      "disposition": "Unverified"
+      "disposition": "Unverified",
+      "component_ids": [
+        "identity-access"
+      ]
     },
     {
       "id": "LEGACY-NFR-016",
-      "summary": "The product shall offer a recoverable draft or retry state for interrupted network requests and…",
+      "summary": "The product shall offer a recoverable draft or retry state for interrupted network requests and\u2026",
       "statement": "The product shall offer a recoverable draft or retry state for interrupted network requests and shall not claim offline synchronization until independently verified.",
       "level": "Quality",
       "priority": "P0",
@@ -2105,11 +2471,14 @@
       "verification_method": "Independent quality and security verification",
       "verification_ids": [],
       "status": "Candidate",
-      "disposition": "Unverified"
+      "disposition": "Unverified",
+      "component_ids": [
+        "identity-access"
+      ]
     },
     {
       "id": "LEGACY-NFR-017",
-      "summary": "Production infrastructure shall document backup, restore, retention and recovery testing before…",
+      "summary": "Production infrastructure shall document backup, restore, retention and recovery testing before\u2026",
       "statement": "Production infrastructure shall document backup, restore, retention and recovery testing before storing irreplaceable personal memories or financial records.",
       "level": "Quality",
       "priority": "P0",
@@ -2121,11 +2490,14 @@
       "verification_method": "Independent quality and security verification",
       "verification_ids": [],
       "status": "Candidate",
-      "disposition": "Unverified"
+      "disposition": "Unverified",
+      "component_ids": [
+        "identity-access"
+      ]
     },
     {
       "id": "LEGACY-NFR-018",
-      "summary": "The team shall establish measured mobile/desktop interaction and startup performance budgets…",
+      "summary": "The team shall establish measured mobile/desktop interaction and startup performance budgets\u2026",
       "statement": "The team shall establish measured mobile/desktop interaction and startup performance budgets using representative devices before release acceptance.",
       "level": "Quality",
       "priority": "P1",
@@ -2137,11 +2509,14 @@
       "verification_method": "Independent quality and security verification",
       "verification_ids": [],
       "status": "Candidate",
-      "disposition": "Unverified"
+      "disposition": "Unverified",
+      "component_ids": [
+        "identity-access"
+      ]
     },
     {
       "id": "LEGACY-NFR-019",
-      "summary": "AI providers shall receive only authorized minimum necessary content and shall not hold…",
+      "summary": "AI providers shall receive only authorized minimum necessary content and shall not hold\u2026",
       "statement": "AI providers shall receive only authorized minimum necessary content and shall not hold privileged direct-write credentials to production data.",
       "level": "Quality",
       "priority": "P1",
@@ -2153,11 +2528,14 @@
       "verification_method": "Independent quality and security verification",
       "verification_ids": [],
       "status": "Candidate",
-      "disposition": "Unverified"
+      "disposition": "Unverified",
+      "component_ids": [
+        "identity-access"
+      ]
     },
     {
       "id": "LEGACY-NFR-020",
-      "summary": "Development releases shall include automated build, unit, integration, authorization and…",
+      "summary": "Development releases shall include automated build, unit, integration, authorization and\u2026",
       "statement": "Development releases shall include automated build, unit, integration, authorization and representative mobile/desktop visual tests with candidate fingerprints.",
       "level": "Quality",
       "priority": "P0",
@@ -2169,11 +2547,14 @@
       "verification_method": "Independent quality and security verification",
       "verification_ids": [],
       "status": "Candidate",
-      "disposition": "Unverified"
+      "disposition": "Unverified",
+      "component_ids": [
+        "identity-access"
+      ]
     },
     {
       "id": "LEGACY-NFR-021",
-      "summary": "Attachment quotas, virus/content validation and bounded upload size shall be enforced before…",
+      "summary": "Attachment quotas, virus/content validation and bounded upload size shall be enforced before\u2026",
       "statement": "Attachment quotas, virus/content validation and bounded upload size shall be enforced before files become available to other users.",
       "level": "Quality",
       "priority": "P1",
@@ -2185,11 +2566,14 @@
       "verification_method": "Independent quality and security verification",
       "verification_ids": [],
       "status": "Candidate",
-      "disposition": "Unverified"
+      "disposition": "Unverified",
+      "component_ids": [
+        "identity-access"
+      ]
     },
     {
       "id": "LEGACY-NFR-022",
-      "summary": "The system shall store timestamps with timezone semantics and handle DST, local-date scheduling,…",
+      "summary": "The system shall store timestamps with timezone semantics and handle DST, local-date scheduling,\u2026",
       "statement": "The system shall store timestamps with timezone semantics and handle DST, local-date scheduling, currency precision and historical revisions deterministically.",
       "level": "Quality",
       "priority": "P0",
@@ -2201,7 +2585,10 @@
       "verification_method": "Independent quality and security verification",
       "verification_ids": [],
       "status": "Candidate",
-      "disposition": "Unverified"
+      "disposition": "Unverified",
+      "component_ids": [
+        "identity-access"
+      ]
     }
   ],
   "functionalities": [
@@ -2255,7 +2642,10 @@
       ],
       "status": "Candidate",
       "owner": "Product/Systems Engineering",
-      "allocation_rationale": "Legavia application component; GUI legacy scope remains all until configurable application filters ship"
+      "allocation_rationale": "Candidate business capability allocated to the declared application component; repository and device coverage are separate.",
+      "component_ids": [
+        "identity-access"
+      ]
     },
     {
       "id": "LEGACY-CAP-002",
@@ -2279,7 +2669,10 @@
       ],
       "status": "Candidate",
       "owner": "Product/Systems Engineering",
-      "allocation_rationale": "Legavia application component; GUI legacy scope remains all until configurable application filters ship"
+      "allocation_rationale": "Candidate business capability allocated to the declared application component; repository and device coverage are separate.",
+      "component_ids": [
+        "today"
+      ]
     },
     {
       "id": "LEGACY-CAP-003",
@@ -2299,7 +2692,10 @@
       ],
       "status": "Candidate",
       "owner": "Product/Systems Engineering",
-      "allocation_rationale": "Legavia application component; GUI legacy scope remains all until configurable application filters ship"
+      "allocation_rationale": "Candidate business capability allocated to the declared application component; repository and device coverage are separate.",
+      "component_ids": [
+        "goals-map"
+      ]
     },
     {
       "id": "LEGACY-CAP-004",
@@ -2330,7 +2726,10 @@
       ],
       "status": "Candidate",
       "owner": "Product/Systems Engineering",
-      "allocation_rationale": "Legavia application component; GUI legacy scope remains all until configurable application filters ship"
+      "allocation_rationale": "Candidate business capability allocated to the declared application component; repository and device coverage are separate.",
+      "component_ids": [
+        "gamification"
+      ]
     },
     {
       "id": "LEGACY-CAP-005",
@@ -2376,7 +2775,10 @@
       ],
       "status": "Candidate",
       "owner": "Product/Systems Engineering",
-      "allocation_rationale": "Legavia application component; GUI legacy scope remains all until configurable application filters ship"
+      "allocation_rationale": "Candidate business capability allocated to the declared application component; repository and device coverage are separate.",
+      "component_ids": [
+        "app-shell"
+      ]
     },
     {
       "id": "LEGACY-CAP-006",
@@ -2410,7 +2812,10 @@
       ],
       "status": "Candidate",
       "owner": "Product/Systems Engineering",
-      "allocation_rationale": "Legavia application component; GUI legacy scope remains all until configurable application filters ship"
+      "allocation_rationale": "Candidate business capability allocated to the declared application component; repository and device coverage are separate.",
+      "component_ids": [
+        "finance"
+      ]
     },
     {
       "id": "LEGACY-CAP-007",
@@ -2429,7 +2834,10 @@
       ],
       "status": "Candidate",
       "owner": "Product/Systems Engineering",
-      "allocation_rationale": "Legavia application component; GUI legacy scope remains all until configurable application filters ship"
+      "allocation_rationale": "Candidate business capability allocated to the declared application component; repository and device coverage are separate.",
+      "component_ids": [
+        "learning"
+      ]
     },
     {
       "id": "LEGACY-CAP-008",
@@ -2448,7 +2856,10 @@
       ],
       "status": "Candidate",
       "owner": "Product/Systems Engineering",
-      "allocation_rationale": "Legavia application component; GUI legacy scope remains all until configurable application filters ship"
+      "allocation_rationale": "Candidate business capability allocated to the declared application component; repository and device coverage are separate.",
+      "component_ids": [
+        "focus"
+      ]
     },
     {
       "id": "LEGACY-CAP-009",
@@ -2470,7 +2881,10 @@
       ],
       "status": "Candidate",
       "owner": "Product/Systems Engineering",
-      "allocation_rationale": "Legavia application component; GUI legacy scope remains all until configurable application filters ship"
+      "allocation_rationale": "Candidate business capability allocated to the declared application component; repository and device coverage are separate.",
+      "component_ids": [
+        "media-library"
+      ]
     },
     {
       "id": "LEGACY-CAP-010",
@@ -2488,7 +2902,10 @@
       ],
       "status": "Candidate",
       "owner": "Product/Systems Engineering",
-      "allocation_rationale": "Legavia application component; GUI legacy scope remains all until configurable application filters ship"
+      "allocation_rationale": "Candidate business capability allocated to the declared application component; repository and device coverage are separate.",
+      "component_ids": [
+        "memory"
+      ]
     },
     {
       "id": "LEGACY-CAP-011",
@@ -2506,7 +2923,10 @@
       ],
       "status": "Candidate",
       "owner": "Product/Systems Engineering",
-      "allocation_rationale": "Legavia application component; GUI legacy scope remains all until configurable application filters ship"
+      "allocation_rationale": "Candidate business capability allocated to the declared application component; repository and device coverage are separate.",
+      "component_ids": [
+        "profile"
+      ]
     },
     {
       "id": "LEGACY-CAP-012",
@@ -2524,7 +2944,10 @@
       ],
       "status": "Candidate",
       "owner": "Product/Systems Engineering",
-      "allocation_rationale": "Legavia application component; GUI legacy scope remains all until configurable application filters ship"
+      "allocation_rationale": "Candidate business capability allocated to the declared application component; repository and device coverage are separate.",
+      "component_ids": [
+        "health"
+      ]
     },
     {
       "id": "LEGACY-CAP-013",
@@ -2547,7 +2970,10 @@
       ],
       "status": "Candidate",
       "owner": "Product/Systems Engineering",
-      "allocation_rationale": "Legavia application component; GUI legacy scope remains all until configurable application filters ship"
+      "allocation_rationale": "Candidate business capability allocated to the declared application component; repository and device coverage are separate.",
+      "component_ids": [
+        "ai-governance"
+      ]
     },
     {
       "id": "LEGACY-CAP-014",
@@ -2567,7 +2993,10 @@
       ],
       "status": "Candidate",
       "owner": "Product/Systems Engineering",
-      "allocation_rationale": "Legavia application component; GUI legacy scope remains all until configurable application filters ship"
+      "allocation_rationale": "Candidate business capability allocated to the declared application component; repository and device coverage are separate.",
+      "component_ids": [
+        "social"
+      ]
     },
     {
       "id": "LEGACY-CAP-015",
@@ -2586,7 +3015,10 @@
       ],
       "status": "Candidate",
       "owner": "Product/Systems Engineering",
-      "allocation_rationale": "Legavia application component; GUI legacy scope remains all until configurable application filters ship"
+      "allocation_rationale": "Candidate business capability allocated to the declared application component; repository and device coverage are separate.",
+      "component_ids": [
+        "integration"
+      ]
     }
   ],
   "work_packages": [
@@ -2614,7 +3046,22 @@
         "required": false,
         "rationale": "Systems Engineering controlled-document review; no executable unit test applicable.",
         "test_description": "Evidence-driven document review"
-      }
+      },
+      "repository_ids": [
+        "control"
+      ],
+      "repository_access": {
+        "control": "write"
+      },
+      "component_ids": [
+        "identity-access",
+        "app-shell"
+      ],
+      "executor_agent_id": "architecture",
+      "target_profile_ids": [
+        "desktop-browser",
+        "mobile-browser"
+      ]
     },
     {
       "id": "LEGACY-WORK-002",
@@ -2643,7 +3090,23 @@
         "required": false,
         "rationale": "Systems Engineering controlled-document review; no executable unit test applicable.",
         "test_description": "Evidence-driven document review"
-      }
+      },
+      "repository_ids": [
+        "control"
+      ],
+      "repository_access": {
+        "control": "write"
+      },
+      "component_ids": [
+        "identity-access",
+        "goals-map",
+        "gamification"
+      ],
+      "executor_agent_id": "architecture",
+      "target_profile_ids": [
+        "desktop-browser",
+        "mobile-browser"
+      ]
     },
     {
       "id": "LEGACY-WORK-003",
@@ -2673,7 +3136,24 @@
         "required": true,
         "rationale": "Independent candidate-bound application unit tests required before acceptance.",
         "test_description": "Run deterministic application unit suite on candidate."
-      }
+      },
+      "repository_ids": [
+        "app",
+        "verification"
+      ],
+      "repository_access": {
+        "app": "write",
+        "verification": "verify_only"
+      },
+      "component_ids": [
+        "identity-access",
+        "app-shell"
+      ],
+      "executor_agent_id": "development",
+      "target_profile_ids": [
+        "desktop-browser",
+        "mobile-browser"
+      ]
     },
     {
       "id": "LEGACY-WORK-004",
@@ -2703,7 +3183,26 @@
         "required": true,
         "rationale": "Independent candidate-bound application unit tests required before acceptance.",
         "test_description": "Run deterministic application unit suite on candidate."
-      }
+      },
+      "repository_ids": [
+        "app",
+        "ux",
+        "verification"
+      ],
+      "repository_access": {
+        "app": "write",
+        "ux": "write",
+        "verification": "verify_only"
+      },
+      "component_ids": [
+        "app-shell",
+        "today"
+      ],
+      "executor_agent_id": "ux",
+      "target_profile_ids": [
+        "desktop-browser",
+        "mobile-browser"
+      ]
     },
     {
       "id": "LEGACY-WORK-005",
@@ -2732,7 +3231,24 @@
         "required": true,
         "rationale": "Independent candidate-bound application unit tests required before acceptance.",
         "test_description": "Run deterministic application unit suite on candidate."
-      }
+      },
+      "repository_ids": [
+        "app",
+        "verification"
+      ],
+      "repository_access": {
+        "app": "write",
+        "verification": "verify_only"
+      },
+      "component_ids": [
+        "goals-map",
+        "today"
+      ],
+      "executor_agent_id": "development",
+      "target_profile_ids": [
+        "desktop-browser",
+        "mobile-browser"
+      ]
     },
     {
       "id": "LEGACY-WORK-006",
@@ -2762,7 +3278,25 @@
         "required": true,
         "rationale": "Independent candidate-bound application unit tests required before acceptance.",
         "test_description": "Run deterministic application unit suite on candidate."
-      }
+      },
+      "repository_ids": [
+        "app",
+        "verification"
+      ],
+      "repository_access": {
+        "app": "write",
+        "verification": "verify_only"
+      },
+      "component_ids": [
+        "gamification",
+        "goals-map",
+        "today"
+      ],
+      "executor_agent_id": "development",
+      "target_profile_ids": [
+        "desktop-browser",
+        "mobile-browser"
+      ]
     },
     {
       "id": "LEGACY-WORK-007",
@@ -2794,7 +3328,26 @@
         "required": true,
         "rationale": "Independent candidate-bound application unit tests required before acceptance.",
         "test_description": "Run deterministic application unit suite on candidate."
-      }
+      },
+      "repository_ids": [
+        "app",
+        "verification"
+      ],
+      "repository_access": {
+        "app": "write",
+        "verification": "verify_only"
+      },
+      "component_ids": [
+        "today",
+        "goals-map",
+        "gamification",
+        "app-shell"
+      ],
+      "executor_agent_id": "development",
+      "target_profile_ids": [
+        "desktop-browser",
+        "mobile-browser"
+      ]
     },
     {
       "id": "LEGACY-WORK-008",
@@ -2823,7 +3376,24 @@
         "required": true,
         "rationale": "Independent candidate-bound application unit tests required before acceptance.",
         "test_description": "Run deterministic application unit suite on candidate."
-      }
+      },
+      "repository_ids": [
+        "app",
+        "verification"
+      ],
+      "repository_access": {
+        "app": "write",
+        "verification": "verify_only"
+      },
+      "component_ids": [
+        "gamification",
+        "today"
+      ],
+      "executor_agent_id": "development",
+      "target_profile_ids": [
+        "desktop-browser",
+        "mobile-browser"
+      ]
     },
     {
       "id": "LEGACY-WORK-009",
@@ -2852,7 +3422,23 @@
         "required": true,
         "rationale": "Independent candidate-bound application unit tests required before acceptance.",
         "test_description": "Run deterministic application unit suite on candidate."
-      }
+      },
+      "repository_ids": [
+        "verification",
+        "gui"
+      ],
+      "repository_access": {
+        "verification": "write",
+        "gui": "write"
+      },
+      "component_ids": [
+        "app-shell"
+      ],
+      "executor_agent_id": "verification",
+      "target_profile_ids": [
+        "desktop-browser",
+        "mobile-browser"
+      ]
     },
     {
       "id": "LEGACY-WORK-010",
@@ -2880,7 +3466,23 @@
         "required": true,
         "rationale": "Independent candidate-bound application unit tests required before acceptance.",
         "test_description": "Run deterministic application unit suite on candidate."
-      }
+      },
+      "repository_ids": [
+        "app",
+        "verification"
+      ],
+      "repository_access": {
+        "app": "write",
+        "verification": "verify_only"
+      },
+      "component_ids": [
+        "finance"
+      ],
+      "executor_agent_id": "development",
+      "target_profile_ids": [
+        "desktop-browser",
+        "mobile-browser"
+      ]
     },
     {
       "id": "LEGACY-WORK-011",
@@ -2910,7 +3512,25 @@
         "required": true,
         "rationale": "Independent candidate-bound application unit tests required before acceptance.",
         "test_description": "Run deterministic application unit suite on candidate."
-      }
+      },
+      "repository_ids": [
+        "app",
+        "verification"
+      ],
+      "repository_access": {
+        "app": "write",
+        "verification": "verify_only"
+      },
+      "component_ids": [
+        "focus",
+        "today",
+        "media-library"
+      ],
+      "executor_agent_id": "development",
+      "target_profile_ids": [
+        "desktop-browser",
+        "mobile-browser"
+      ]
     },
     {
       "id": "LEGACY-WORK-012",
@@ -2939,7 +3559,24 @@
         "required": true,
         "rationale": "Independent candidate-bound application unit tests required before acceptance.",
         "test_description": "Run deterministic application unit suite on candidate."
-      }
+      },
+      "repository_ids": [
+        "app",
+        "verification"
+      ],
+      "repository_access": {
+        "app": "write",
+        "verification": "verify_only"
+      },
+      "component_ids": [
+        "ai-governance",
+        "integration"
+      ],
+      "executor_agent_id": "development",
+      "target_profile_ids": [
+        "desktop-browser",
+        "mobile-browser"
+      ]
     },
     {
       "id": "LEGACY-WORK-013",
@@ -2969,7 +3606,27 @@
         "required": true,
         "rationale": "GUI changes require native test suite and web UI regression evidence.",
         "test_description": "Execute GUI unit/UI tests, control manifest ingestion and mock GitHub review/status adapter tests."
-      }
+      },
+      "repository_ids": [
+        "gui",
+        "control",
+        "verification"
+      ],
+      "repository_access": {
+        "gui": "write",
+        "control": "write",
+        "verification": "write"
+      },
+      "component_ids": [
+        "identity-access",
+        "app-shell"
+      ],
+      "executor_agent_id": "development",
+      "target_profile_ids": [
+        "desktop-browser",
+        "mobile-browser"
+      ],
+      "migration_note": "Approved dedicated-fork adaptation uses schema 2. Old schema-1 inputs require explicit migration; issued business IDs, wording, candidate status and dependencies are preserved. This record is not auto-accepted by the implementation PR."
     }
   ],
   "artifacts": [
@@ -3078,7 +3735,689 @@
     "use_case_catalog": "traceability/business_baseline.json",
     "conops": "docs/business/CONOPS.md",
     "visual_baseline_status": "pending reference approval",
-    "execution_runner_status": "not configured",
-    "scope_mapping": "all until GUI dynamic component scopes are implemented"
+    "execution_runner_status": "packaged role adapters configured; host provider authentication and product commands still required",
+    "scope_mapping": "component_ids reference declared native application components; scope=all retains cross-cutting visibility"
+  },
+  "runtime_directory": ".sdlc/runtime",
+  "agent_roles": {
+    "architecture": {
+      "label": "Systems Engineering executor",
+      "provider": "codex",
+      "mode": "write",
+      "contract": "agents/systems-engineering.md",
+      "timeout_seconds": 1800,
+      "providers": {
+        "codex": {
+          "command": [
+            "codex",
+            "--ask-for-approval",
+            "never",
+            "exec",
+            "--sandbox",
+            "workspace-write",
+            "--json",
+            "-"
+          ],
+          "models": [],
+          "model_argument": [
+            "--model",
+            "{model}"
+          ],
+          "write_directory_argument": [
+            "--add-dir",
+            "{path}"
+          ]
+        }
+      }
+    },
+    "ux": {
+      "label": "UX designer and UI implementer",
+      "provider": "codex",
+      "mode": "write",
+      "contract": "agents/ux.md",
+      "timeout_seconds": 1800,
+      "providers": {
+        "codex": {
+          "command": [
+            "codex",
+            "--ask-for-approval",
+            "never",
+            "exec",
+            "--sandbox",
+            "workspace-write",
+            "--json",
+            "-"
+          ],
+          "models": [],
+          "model_argument": [
+            "--model",
+            "{model}"
+          ],
+          "write_directory_argument": [
+            "--add-dir",
+            "{path}"
+          ]
+        }
+      },
+      "allowed_paths": [
+        "src/ui/**",
+        "src/components/**",
+        "src/screens/**",
+        "src/styles/**",
+        "src/app/**",
+        "public/**",
+        "web/**",
+        "tests/ui/**"
+      ],
+      "allowed_paths_by_repository": {
+        "ux": [
+          "*.html",
+          "*.css",
+          "*.js",
+          "*.png",
+          "*.svg",
+          "*.webp",
+          "assets/**",
+          "docs/ux/**"
+        ]
+      }
+    },
+    "development": {
+      "label": "Application developer",
+      "provider": "codex",
+      "mode": "write",
+      "contract": "agents/development.md",
+      "timeout_seconds": 1800,
+      "providers": {
+        "codex": {
+          "command": [
+            "codex",
+            "--ask-for-approval",
+            "never",
+            "exec",
+            "--sandbox",
+            "workspace-write",
+            "--json",
+            "-"
+          ],
+          "models": [],
+          "model_argument": [
+            "--model",
+            "{model}"
+          ],
+          "write_directory_argument": [
+            "--add-dir",
+            "{path}"
+          ]
+        }
+      }
+    },
+    "verification": {
+      "label": "Independent verification implementer",
+      "provider": "codex",
+      "mode": "write",
+      "contract": "agents/verification.md",
+      "timeout_seconds": 1800,
+      "providers": {
+        "codex": {
+          "command": [
+            "codex",
+            "--ask-for-approval",
+            "never",
+            "exec",
+            "--sandbox",
+            "workspace-write",
+            "--json",
+            "-"
+          ],
+          "models": [],
+          "model_argument": [
+            "--model",
+            "{model}"
+          ],
+          "write_directory_argument": [
+            "--add-dir",
+            "{path}"
+          ]
+        }
+      }
+    },
+    "architecture_review": {
+      "label": "Architecture reviewer",
+      "provider": "codex",
+      "mode": "read_only",
+      "contract": "agents/architecture-review.md",
+      "timeout_seconds": 600,
+      "providers": {
+        "codex": {
+          "command": [
+            "codex",
+            "--ask-for-approval",
+            "never",
+            "exec",
+            "--sandbox",
+            "read-only",
+            "--json",
+            "-"
+          ],
+          "models": [],
+          "model_argument": [
+            "--model",
+            "{model}"
+          ],
+          "write_directory_argument": [
+            "--add-dir",
+            "{path}"
+          ]
+        }
+      }
+    },
+    "ux_review": {
+      "label": "UX fidelity reviewer",
+      "provider": "codex",
+      "mode": "read_only",
+      "contract": "agents/ux-review.md",
+      "timeout_seconds": 600,
+      "providers": {
+        "codex": {
+          "command": [
+            "codex",
+            "--ask-for-approval",
+            "never",
+            "exec",
+            "--sandbox",
+            "read-only",
+            "--json",
+            "-"
+          ],
+          "models": [],
+          "model_argument": [
+            "--model",
+            "{model}"
+          ],
+          "write_directory_argument": [
+            "--add-dir",
+            "{path}"
+          ]
+        }
+      }
+    },
+    "code_style": {
+      "label": "Code quality reviewer",
+      "provider": "codex",
+      "mode": "read_only",
+      "contract": "agents/code-review.md",
+      "timeout_seconds": 600,
+      "providers": {
+        "codex": {
+          "command": [
+            "codex",
+            "--ask-for-approval",
+            "never",
+            "exec",
+            "--sandbox",
+            "read-only",
+            "--json",
+            "-"
+          ],
+          "models": [],
+          "model_argument": [
+            "--model",
+            "{model}"
+          ],
+          "write_directory_argument": [
+            "--add-dir",
+            "{path}"
+          ]
+        }
+      }
+    },
+    "design": {
+      "label": "Design and integration reviewer",
+      "provider": "codex",
+      "mode": "read_only",
+      "contract": "agents/architecture-review.md",
+      "timeout_seconds": 600,
+      "providers": {
+        "codex": {
+          "command": [
+            "codex",
+            "--ask-for-approval",
+            "never",
+            "exec",
+            "--sandbox",
+            "read-only",
+            "--json",
+            "-"
+          ],
+          "models": [],
+          "model_argument": [
+            "--model",
+            "{model}"
+          ],
+          "write_directory_argument": [
+            "--add-dir",
+            "{path}"
+          ]
+        }
+      }
+    }
+  },
+  "application": {
+    "name": "Legavia",
+    "delivery_target": "responsive_web_pwa",
+    "status": "architecture_pending",
+    "preview": {},
+    "repository_ids": [
+      "app"
+    ]
+  },
+  "ux": {
+    "reference_status": "approval_pending",
+    "capture_command": {
+      "repository_id": "verification",
+      "working_directory": ".",
+      "command": [
+        "node",
+        "harness/capture.cjs"
+      ],
+      "required_paths": [
+        "harness/capture.cjs",
+        "node_modules/playwright"
+      ],
+      "supported_kinds": [
+        "emulated_browser"
+      ],
+      "timeout_seconds": 90
+    },
+    "screens": [
+      {
+        "id": "today",
+        "title": "Today",
+        "route": "/",
+        "target_profile_ids": [
+          "desktop-browser",
+          "mobile-browser"
+        ],
+        "functionality_ids": [
+          "LEGACY-CAP-002"
+        ],
+        "status": "candidate",
+        "reference_status": "unconfigured",
+        "locale": "en-US",
+        "timezone": "UTC",
+        "clock": "2026-01-01T12:00:00Z",
+        "fixture": "First-slice controlled fixture pending"
+      },
+      {
+        "id": "map",
+        "title": "Map",
+        "route": "/map",
+        "target_profile_ids": [
+          "desktop-browser",
+          "mobile-browser"
+        ],
+        "functionality_ids": [
+          "LEGACY-CAP-003"
+        ],
+        "status": "candidate",
+        "reference_status": "unconfigured",
+        "locale": "en-US",
+        "timezone": "UTC",
+        "clock": "2026-01-01T12:00:00Z",
+        "fixture": "First-slice controlled fixture pending"
+      },
+      {
+        "id": "life",
+        "title": "Life",
+        "route": "/life",
+        "target_profile_ids": [
+          "desktop-browser",
+          "mobile-browser"
+        ],
+        "functionality_ids": [
+          "LEGACY-CAP-005"
+        ],
+        "status": "candidate",
+        "reference_status": "unconfigured",
+        "locale": "en-US",
+        "timezone": "UTC",
+        "clock": "2026-01-01T12:00:00Z",
+        "fixture": "First-slice controlled fixture pending"
+      },
+      {
+        "id": "insights",
+        "title": "Insights",
+        "route": "/insights",
+        "target_profile_ids": [
+          "desktop-browser",
+          "mobile-browser"
+        ],
+        "functionality_ids": [
+          "LEGACY-CAP-005"
+        ],
+        "status": "candidate",
+        "reference_status": "unconfigured",
+        "locale": "en-US",
+        "timezone": "UTC",
+        "clock": "2026-01-01T12:00:00Z",
+        "fixture": "First-slice controlled fixture pending"
+      },
+      {
+        "id": "me",
+        "title": "Me",
+        "route": "/me",
+        "target_profile_ids": [
+          "desktop-browser",
+          "mobile-browser"
+        ],
+        "functionality_ids": [
+          "LEGACY-CAP-011"
+        ],
+        "status": "candidate",
+        "reference_status": "unconfigured",
+        "locale": "en-US",
+        "timezone": "UTC",
+        "clock": "2026-01-01T12:00:00Z",
+        "fixture": "First-slice controlled fixture pending"
+      }
+    ],
+    "baselines": []
+  },
+  "verification_execution": {
+    "suites": [
+      {
+        "id": "tooling-fixture",
+        "label": "Tooling fixture \u00b7 desktop and phone",
+        "kind": "integration",
+        "repository_id": "verification",
+        "component_ids": [
+          "verification"
+        ],
+        "target_profile_ids": [
+          "desktop-browser",
+          "mobile-browser"
+        ],
+        "command": [
+          "node",
+          "harness/verify-fixture.cjs"
+        ],
+        "required_paths": [
+          "harness/verify-fixture.cjs",
+          "node_modules/playwright"
+        ],
+        "source_repository_ids": [
+          "verification"
+        ],
+        "result_file": "result.json",
+        "timeout_seconds": 120
+      }
+    ]
+  },
+  "development_execution": {
+    "runtime_dir": ".sdlc/runtime/development",
+    "agent_id": "development",
+    "default_agent_provider": "codex",
+    "requires_clean_repositories": true,
+    "agent_providers": [
+      {
+        "id": "codex",
+        "label": "Codex CLI",
+        "binary": "codex",
+        "model_candidates": [
+          {
+            "id": "default",
+            "label": "Host configured model"
+          }
+        ]
+      }
+    ],
+    "developer_agent_v2": {
+      "enabled": true,
+      "verification_strategy": "registered_commands",
+      "repair_attempts": 0,
+      "max_context_chars": 48000
+    }
+  },
+  "collaboration_execution": {
+    "enabled": true,
+    "runtime_dir": ".sdlc/runtime/reviews",
+    "agents": [
+      {
+        "id": "code_style",
+        "label": "Code quality",
+        "contract": "agents/code-review.md"
+      },
+      {
+        "id": "design",
+        "label": "Architecture and integration",
+        "contract": "agents/architecture-review.md"
+      },
+      {
+        "id": "architecture",
+        "label": "Architecture planning",
+        "contract": "agents/architecture-review.md"
+      }
+    ]
+  },
+  "review_role_mapping": {
+    "architecture": "architecture_review"
+  },
+  "architecture_workspace": {
+    "enabled": true,
+    "agent_id": "architecture",
+    "model_file": "architecture/model.json",
+    "layout_file": "architecture/layout.json",
+    "documents": [
+      "docs/engineering/WORKFLOW.md"
+    ]
+  },
+  "control_git_sync": {
+    "enabled": false
+  },
+  "components": [
+    {
+      "id": "identity-access",
+      "label": "Identity Access"
+    },
+    {
+      "id": "today",
+      "label": "Today"
+    },
+    {
+      "id": "goals-map",
+      "label": "Goals Map"
+    },
+    {
+      "id": "gamification",
+      "label": "Gamification"
+    },
+    {
+      "id": "app-shell",
+      "label": "App Shell"
+    },
+    {
+      "id": "finance",
+      "label": "Finance"
+    },
+    {
+      "id": "learning",
+      "label": "Learning"
+    },
+    {
+      "id": "focus",
+      "label": "Focus"
+    },
+    {
+      "id": "media-library",
+      "label": "Media Library"
+    },
+    {
+      "id": "memory",
+      "label": "Memory"
+    },
+    {
+      "id": "profile",
+      "label": "Profile"
+    },
+    {
+      "id": "health",
+      "label": "Health"
+    },
+    {
+      "id": "ai-governance",
+      "label": "Ai Governance"
+    },
+    {
+      "id": "social",
+      "label": "Social"
+    },
+    {
+      "id": "integration",
+      "label": "Integration"
+    },
+    {
+      "id": "verification",
+      "label": "Verification tooling"
+    }
+  ],
+  "repositories": [
+    {
+      "id": "control",
+      "name": "Product requirements, agents, manifest and WP",
+      "path": ".",
+      "remote": "matheusns/legacy"
+    },
+    {
+      "id": "gui",
+      "name": "Local SDLC workbench",
+      "path": "../legavia_sdlc_gui",
+      "remote": "matheusns/legavia_sdlc_gui"
+    },
+    {
+      "id": "app",
+      "name": "Production responsive web/mobile app",
+      "path": "../legacy_app",
+      "remote": "matheusns/legacy_app"
+    },
+    {
+      "id": "ux",
+      "name": "Visual references and UX proposals",
+      "path": "../legacy_mockups",
+      "remote": "matheusns/legacy_mockups"
+    },
+    {
+      "id": "verification",
+      "name": "Independent application/browser tests",
+      "path": "../legacy_verification_tooling",
+      "remote": "matheusns/legacy_verification_tooling"
+    }
+  ],
+  "target_profiles": [
+    {
+      "id": "desktop-browser",
+      "label": "Desktop browser",
+      "kind": "emulated_browser",
+      "browser": "chromium",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "device_scale_factor": 1,
+      "has_touch": false
+    },
+    {
+      "id": "mobile-browser",
+      "label": "Phone browser",
+      "kind": "emulated_browser",
+      "browser": "chromium",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "device_scale_factor": 1,
+      "has_touch": true,
+      "is_mobile": true
+    },
+    {
+      "id": "mobile-pwa",
+      "label": "Installed mobile PWA \u00b7 adapter pending",
+      "kind": "installed_pwa",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "has_touch": true
+    }
+  ],
+  "code_review_execution": {
+    "enabled": true,
+    "runtime_dir": ".sdlc/runtime/code-review",
+    "repositories": [
+      {
+        "id": "control",
+        "name": "Product requirements, agents, manifest and WP",
+        "repository": "matheusns/legacy"
+      },
+      {
+        "id": "gui",
+        "name": "Local SDLC workbench",
+        "repository": "matheusns/legavia_sdlc_gui"
+      },
+      {
+        "id": "app",
+        "name": "Production responsive web/mobile app",
+        "repository": "matheusns/legacy_app"
+      },
+      {
+        "id": "ux",
+        "name": "Visual references and UX proposals",
+        "repository": "matheusns/legacy_mockups"
+      },
+      {
+        "id": "verification",
+        "name": "Independent application/browser tests",
+        "repository": "matheusns/legacy_verification_tooling"
+      }
+    ]
+  },
+  "project_state_snapshots": {
+    "tag_prefix": "legavia-state",
+    "repositories": [
+      {
+        "id": "control",
+        "label": "Product requirements, agents, manifest and WP",
+        "repository_id": "control"
+      },
+      {
+        "id": "gui",
+        "label": "Local SDLC workbench",
+        "repository_id": "gui"
+      },
+      {
+        "id": "app",
+        "label": "Production responsive web/mobile app",
+        "repository_id": "app"
+      },
+      {
+        "id": "ux",
+        "label": "Visual references and UX proposals",
+        "repository_id": "ux"
+      },
+      {
+        "id": "verification",
+        "label": "Independent application/browser tests",
+        "repository_id": "verification"
+      }
+    ]
+  },
+  "application_execution_gate": {
+    "work_package_id": "LEGACY-WORK-013",
+    "required_status": "Done",
+    "product_repository_ids": [
+      "app",
+      "ux"
+    ],
+    "reason": "Product execution requires Systems Engineering acceptance of the GUI adaptation. Tooling fixture execution does not grant product approval."
   }
 }

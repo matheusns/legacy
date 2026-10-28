@@ -48,3 +48,11 @@ Do not silently change a baseline invariant to make an implementation easier. Su
 ## Controlled business definition and traceability
 
 Before making product changes, agents must read `docs/business/README.md`, `docs/business/CONOPS.md`, `docs/business/REQUIREMENTS.md`, `docs/business/USE_CASES.md`, `docs/business/UX_CONTRACT.md` and `traceability/manifest.json`. The machine-readable `traceability/business_baseline.json` defines use-case and planned FVT links. Validate both with `python3 tools/validate_business_baseline.py` before submitting a contract change. All business records are candidate; they must not be treated as approved without an explicit SE review record. Do not place real personal finance data, media, health records, or credentials in code repositories. Work Package IDs must remain in SDLC/control artifacts, not production source or product PR titles.
+
+
+## Local engineering execution
+
+The canonical website/phone engineering manifest is `traceability/manifest.json`. Read `docs/engineering/WORKFLOW.md` and the selected `agents/` contract before execution. Repository allocation, component allocation, and target-profile coverage are separate. The local workbench is `legavia_sdlc_gui`; production code is `legacy_app`; independent verification is `legacy_verification_tooling`. GitHub is the primary remote.
+
+The UX implementer is responsible for fidelity to the approved screen/state/interaction contract within explicitly assigned presentation files. A separate read-only UX reviewer inspects the running result. Systems Engineering owns contract promotion; independent checks and operator acceptance retain their own dispositions. Unapproved visual candidates and tooling-fixture passes must never be presented as product acceptance.
+

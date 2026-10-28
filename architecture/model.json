@@ -1,0 +1,264 @@
+{
+  "schema_version": 2,
+  "baseline_status": "Candidate",
+  "source": "docs/business/FUNCTIONALITIES.md",
+  "nodes": [
+    {
+      "id": "capability.identity-access",
+      "label": "Identity, workspace isolation and data governance",
+      "kind": "capability",
+      "scope": "identity-access",
+      "functionality_ids": [
+        "LEGACY-CAP-001"
+      ],
+      "status": "Candidate"
+    },
+    {
+      "id": "capability.today",
+      "label": "Today, schedule and daily execution",
+      "kind": "capability",
+      "scope": "today",
+      "functionality_ids": [
+        "LEGACY-CAP-002"
+      ],
+      "status": "Candidate"
+    },
+    {
+      "id": "capability.goals-map",
+      "label": "Goals, phases, milestones and map navigation",
+      "kind": "capability",
+      "scope": "goals-map",
+      "functionality_ids": [
+        "LEGACY-CAP-003"
+      ],
+      "status": "Candidate"
+    },
+    {
+      "id": "capability.gamification",
+      "label": "Habits, completion, continuity and gamification",
+      "kind": "capability",
+      "scope": "gamification",
+      "functionality_ids": [
+        "LEGACY-CAP-004"
+      ],
+      "status": "Candidate"
+    },
+    {
+      "id": "capability.app-shell",
+      "label": "Shell navigation, search and insights",
+      "kind": "capability",
+      "scope": "app-shell",
+      "functionality_ids": [
+        "LEGACY-CAP-005"
+      ],
+      "status": "Candidate"
+    },
+    {
+      "id": "capability.finance",
+      "label": "Financial accounts, ledgers, budgets and forecasts",
+      "kind": "capability",
+      "scope": "finance",
+      "functionality_ids": [
+        "LEGACY-CAP-006"
+      ],
+      "status": "Candidate"
+    },
+    {
+      "id": "capability.learning",
+      "label": "Learning and course progress",
+      "kind": "capability",
+      "scope": "learning",
+      "functionality_ids": [
+        "LEGACY-CAP-007"
+      ],
+      "status": "Candidate"
+    },
+    {
+      "id": "capability.focus",
+      "label": "Focus and time tracking",
+      "kind": "capability",
+      "scope": "focus",
+      "functionality_ids": [
+        "LEGACY-CAP-008"
+      ],
+      "status": "Candidate"
+    },
+    {
+      "id": "capability.media-library",
+      "label": "Books, games and movies",
+      "kind": "capability",
+      "scope": "media-library",
+      "functionality_ids": [
+        "LEGACY-CAP-009"
+      ],
+      "status": "Candidate"
+    },
+    {
+      "id": "capability.memory",
+      "label": "Memories and knowledge timeline",
+      "kind": "capability",
+      "scope": "memory",
+      "functionality_ids": [
+        "LEGACY-CAP-010"
+      ],
+      "status": "Candidate"
+    },
+    {
+      "id": "capability.profile",
+      "label": "CV and achievement evidence",
+      "kind": "capability",
+      "scope": "profile",
+      "functionality_ids": [
+        "LEGACY-CAP-011"
+      ],
+      "status": "Candidate"
+    },
+    {
+      "id": "capability.health",
+      "label": "Health and wellness activity",
+      "kind": "capability",
+      "scope": "health",
+      "functionality_ids": [
+        "LEGACY-CAP-012"
+      ],
+      "status": "Candidate"
+    },
+    {
+      "id": "capability.ai-governance",
+      "label": "AI-assisted capture, suggestions and feature approval",
+      "kind": "capability",
+      "scope": "ai-governance",
+      "functionality_ids": [
+        "LEGACY-CAP-013"
+      ],
+      "status": "Candidate"
+    },
+    {
+      "id": "capability.social",
+      "label": "Family and opt-in social collaboration",
+      "kind": "capability",
+      "scope": "social",
+      "functionality_ids": [
+        "LEGACY-CAP-014"
+      ],
+      "status": "Candidate"
+    },
+    {
+      "id": "capability.integration",
+      "label": "External data and portability integrations",
+      "kind": "capability",
+      "scope": "integration",
+      "functionality_ids": [
+        "LEGACY-CAP-015"
+      ],
+      "status": "Candidate"
+    }
+  ],
+  "edges": [
+    {
+      "id": "LEGACY-CAP-002.LEGACY-CAP-001",
+      "from": "capability.today",
+      "to": "capability.identity-access",
+      "kind": "depends_on",
+      "label": "candidate dependency"
+    },
+    {
+      "id": "LEGACY-CAP-003.LEGACY-CAP-001",
+      "from": "capability.goals-map",
+      "to": "capability.identity-access",
+      "kind": "depends_on",
+      "label": "candidate dependency"
+    },
+    {
+      "id": "LEGACY-CAP-004.LEGACY-CAP-002",
+      "from": "capability.gamification",
+      "to": "capability.today",
+      "kind": "depends_on",
+      "label": "candidate dependency"
+    },
+    {
+      "id": "LEGACY-CAP-004.LEGACY-CAP-003",
+      "from": "capability.gamification",
+      "to": "capability.goals-map",
+      "kind": "depends_on",
+      "label": "candidate dependency"
+    },
+    {
+      "id": "LEGACY-CAP-005.LEGACY-CAP-001",
+      "from": "capability.app-shell",
+      "to": "capability.identity-access",
+      "kind": "depends_on",
+      "label": "candidate dependency"
+    },
+    {
+      "id": "LEGACY-CAP-006.LEGACY-CAP-001",
+      "from": "capability.finance",
+      "to": "capability.identity-access",
+      "kind": "depends_on",
+      "label": "candidate dependency"
+    },
+    {
+      "id": "LEGACY-CAP-007.LEGACY-CAP-001",
+      "from": "capability.learning",
+      "to": "capability.identity-access",
+      "kind": "depends_on",
+      "label": "candidate dependency"
+    },
+    {
+      "id": "LEGACY-CAP-008.LEGACY-CAP-002",
+      "from": "capability.focus",
+      "to": "capability.today",
+      "kind": "depends_on",
+      "label": "candidate dependency"
+    },
+    {
+      "id": "LEGACY-CAP-009.LEGACY-CAP-001",
+      "from": "capability.media-library",
+      "to": "capability.identity-access",
+      "kind": "depends_on",
+      "label": "candidate dependency"
+    },
+    {
+      "id": "LEGACY-CAP-010.LEGACY-CAP-001",
+      "from": "capability.memory",
+      "to": "capability.identity-access",
+      "kind": "depends_on",
+      "label": "candidate dependency"
+    },
+    {
+      "id": "LEGACY-CAP-011.LEGACY-CAP-003",
+      "from": "capability.profile",
+      "to": "capability.goals-map",
+      "kind": "depends_on",
+      "label": "candidate dependency"
+    },
+    {
+      "id": "LEGACY-CAP-012.LEGACY-CAP-001",
+      "from": "capability.health",
+      "to": "capability.identity-access",
+      "kind": "depends_on",
+      "label": "candidate dependency"
+    },
+    {
+      "id": "LEGACY-CAP-013.LEGACY-CAP-001",
+      "from": "capability.ai-governance",
+      "to": "capability.identity-access",
+      "kind": "depends_on",
+      "label": "candidate dependency"
+    },
+    {
+      "id": "LEGACY-CAP-014.LEGACY-CAP-001",
+      "from": "capability.social",
+      "to": "capability.identity-access",
+      "kind": "depends_on",
+      "label": "candidate dependency"
+    },
+    {
+      "id": "LEGACY-CAP-015.LEGACY-CAP-001",
+      "from": "capability.integration",
+      "to": "capability.identity-access",
+      "kind": "depends_on",
+      "label": "candidate dependency"
+    }
+  ]
+}
