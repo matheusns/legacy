@@ -2658,7 +2658,8 @@
         "LEGACY-CAP-005"
       ],
       "depends_on": [
-        "LEGACY-WORK-002"
+        "LEGACY-WORK-002",
+        "LEGACY-WORK-013"
       ],
       "target_repositories": [
         "matheusns/legacy_app",
@@ -2836,7 +2837,8 @@
         "LEGACY-CAP-005"
       ],
       "depends_on": [
-        "LEGACY-WORK-002"
+        "LEGACY-WORK-002",
+        "LEGACY-WORK-013"
       ],
       "target_repositories": [
         "matheusns/legacy_verification_tooling",
@@ -2937,6 +2939,36 @@
         "required": true,
         "rationale": "Independent candidate-bound application unit tests required before acceptance.",
         "test_description": "Run deterministic application unit suite on candidate."
+      }
+    },
+    {
+      "id": "LEGACY-WORK-013",
+      "title": "Adapt SDLC GUI application profiles and GitHub execution workflow",
+      "summary": "Implement Legavia application component/device filters and GitHub-backed development, verification, review and evidence integration.",
+      "scope": "all",
+      "work_package_type": "technical",
+      "status": "Backlog",
+      "priority": "P0",
+      "functionality_ids": [
+        "LEGACY-CAP-001",
+        "LEGACY-CAP-005"
+      ],
+      "depends_on": [
+        "LEGACY-WORK-002"
+      ],
+      "target_repositories": [
+        "matheusns/legavia_sdlc_gui",
+        "matheusns/legacy",
+        "matheusns/legacy_verification_tooling"
+      ],
+      "path": "docs/work_packages/LEGACY-WORK-013.md",
+      "acceptance_criteria": [
+        "GUI displays native application components and mobile/desktop profiles without ROS/library/node semantics; reads and links business use cases, ConOps and controlled requirement documents; GitHub PR/status adapters replace GitLab defaults; deterministic application test runners and candidate-stamped evidence are registered; legacy manifest validation remains supported."
+      ],
+      "unit_test_gate": {
+        "required": true,
+        "rationale": "GUI changes require native test suite and web UI regression evidence.",
+        "test_description": "Execute GUI unit/UI tests, control manifest ingestion and mock GitHub review/status adapter tests."
       }
     }
   ],

@@ -14,6 +14,9 @@ review_gate: Systems Engineering approval required
 ## Source of truth
 The product definition is owned by `matheusns/legacy`. `traceability/manifest.json` is a direct input to the existing GUI loader; it contains `schema_version`, `project`, `requirements[]`, `functionalities[]`, `work_packages[]` and `artifacts[]`. `traceability/business_baseline.json` carries actor-level use cases, FVT definition records and release governance metadata that the current GUI does **not yet display natively**.
 
+## Workflow adoption prerequisite
+Before executing application Work Packages from the GUI, implement and accept **LEGACY-WORK-013** (project component/device filters, native use-case/ConOps panels, GitHub PR provider and application runner integration). Read-only manifest visualization is possible independently; the historical ROS/GitLab execution behavior is not an approved Legavia workflow.
+
 ## Compatibility boundary
 The upstream GUI currently recognizes scopes `all/library/node`, and some views continue to label library and ROS node. **All Legavia business records have `scope=all`**, preventing misleading assignment to an unrelated robotics component. The future adapter shall use `legavia_extension.application_components` and `legavia_extension.target_profiles` for filters and show native Use Cases/ConOps tabs. The new namespaced metadata is preserved without assuming it is currently interpreted.
 

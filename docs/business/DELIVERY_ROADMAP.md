@@ -41,13 +41,14 @@ Incorrect permission scopes, silently duplicated XP or finance postings, visual 
 | --- | --- | --- | --- |
 | LEGACY-WORK-001 | systems_engineering | — | legacy |
 | LEGACY-WORK-002 | systems_engineering | LEGACY-WORK-001 | legacy |
-| LEGACY-WORK-003 | technical | LEGACY-WORK-002 | legacy_app, legacy_verification_tooling |
+| LEGACY-WORK-013 | technical | LEGACY-WORK-002 | legavia_sdlc_gui, legacy, legacy_verification_tooling |
+| LEGACY-WORK-003 | technical | LEGACY-WORK-002, LEGACY-WORK-013 | legacy_app, legacy_verification_tooling |
 | LEGACY-WORK-004 | technical | LEGACY-WORK-003 | legacy_app, legacy_mockups, legacy_verification_tooling |
 | LEGACY-WORK-005 | technical | LEGACY-WORK-003 | legacy_app, legacy_verification_tooling |
 | LEGACY-WORK-006 | technical | LEGACY-WORK-005 | legacy_app, legacy_verification_tooling |
 | LEGACY-WORK-007 | technical | LEGACY-WORK-004, LEGACY-WORK-006 | legacy_app, legacy_verification_tooling |
 | LEGACY-WORK-008 | technical | LEGACY-WORK-007 | legacy_app, legacy_verification_tooling |
-| LEGACY-WORK-009 | technical | LEGACY-WORK-002 | legacy_verification_tooling, legavia_sdlc_gui |
+| LEGACY-WORK-009 | technical | LEGACY-WORK-002, LEGACY-WORK-013 | legacy_verification_tooling, legavia_sdlc_gui |
 | LEGACY-WORK-010 | technical | LEGACY-WORK-003 | legacy_app, legacy_verification_tooling |
 | LEGACY-WORK-011 | technical | LEGACY-WORK-007 | legacy_app, legacy_verification_tooling |
 | LEGACY-WORK-012 | technical | LEGACY-WORK-007 | legacy_app, legacy_verification_tooling |
