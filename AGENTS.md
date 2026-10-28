@@ -44,3 +44,7 @@ Do not silently change a baseline invariant to make an implementation easier. Su
 - Model user/workspace/permission isolation as a cross-cutting concern.
 - Maintain provenance for imported/automated data and explicit approval for AI-generated project evolution.
 - Preserve traceability IDs when promoting candidates into the formal baseline.
+
+## Controlled business definition and traceability
+
+Before making product changes, agents must read `docs/business/README.md`, `docs/business/CONOPS.md`, `docs/business/REQUIREMENTS.md`, `docs/business/USE_CASES.md`, `docs/business/UX_CONTRACT.md` and `traceability/manifest.json`. The machine-readable `traceability/business_baseline.json` defines use-case and planned FVT links. Validate both with `python3 tools/validate_business_baseline.py` before submitting a contract change. All business records are candidate; they must not be treated as approved without an explicit SE review record. Do not place real personal finance data, media, health records, or credentials in code repositories. Work Package IDs must remain in SDLC/control artifacts, not production source or product PR titles.

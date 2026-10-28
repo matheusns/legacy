@@ -1,0 +1,1315 @@
+{
+  "schema_version": "0.1.0",
+  "project": "LEGAVIA",
+  "status": "Candidate",
+  "control_date": "2026-10-29",
+  "authority": "Systems Engineering review pending",
+  "use_cases": [
+    {
+      "id": "UC-LEGACY-001",
+      "title": "Open Today and execute the next action",
+      "primary_actor": "User",
+      "preconditions": [
+        "User is authenticated."
+      ],
+      "main_flow": [
+        "System loads today's cross-module agenda; user completes/starts an action; state and progress update."
+      ],
+      "source": "docs/reference/LEGACY_GAMIFICATION_UX_ARCHITECTURE_BASELINE_v0.1.md",
+      "requirements": [
+        "LEGACY-FNC-002",
+        "LEGACY-FNC-009",
+        "LEGACY-FNC-010",
+        "LEGACY-FNC-013",
+        "LEGACY-FNC-074"
+      ],
+      "postconditions": [
+        "The action has one committed event ID, updated projections and an available undo operation."
+      ],
+      "alternate_flows": [
+        "Show recoverable failure; retain draft; deny unauthorized access and avoid partial persistence."
+      ],
+      "acceptance": "Independent acceptance shall verify the happy path, authorization boundary, duplicate/retry handling and the listed alternate flow.",
+      "functionality_ids": [
+        "LEGACY-CAP-002",
+        "LEGACY-CAP-004",
+        "LEGACY-CAP-001"
+      ]
+    },
+    {
+      "id": "UC-LEGACY-002",
+      "title": "Create a habit or routine",
+      "primary_actor": "User",
+      "preconditions": [
+        "Workspace active."
+      ],
+      "main_flow": [
+        "User selects context, schedule/target, reminder/integration, and optional goal link; system validates and saves."
+      ],
+      "source": "docs/reference/LEGACY_GAMIFICATION_UX_ARCHITECTURE_BASELINE_v0.1.md",
+      "requirements": [
+        "LEGACY-FNC-006",
+        "LEGACY-FNC-008",
+        "LEGACY-FNC-019"
+      ],
+      "postconditions": [
+        "Only authorized, explicitly confirmed effects are persisted; traceable evidence is recorded."
+      ],
+      "alternate_flows": [
+        "Show recoverable failure; retain draft; deny unauthorized access and avoid partial persistence."
+      ],
+      "acceptance": "Independent acceptance shall verify the happy path, authorization boundary, duplicate/retry handling and the listed alternate flow.",
+      "functionality_ids": [
+        "LEGACY-CAP-004",
+        "LEGACY-CAP-002"
+      ]
+    },
+    {
+      "id": "UC-LEGACY-003",
+      "title": "Create a long-term goal and phases",
+      "primary_actor": "User",
+      "preconditions": [
+        "Workspace active."
+      ],
+      "main_flow": [
+        "User creates goal, phases, milestones, success criteria, and optional linked habits/tasks."
+      ],
+      "source": "docs/reference/LEGACY_GAMIFICATION_UX_ARCHITECTURE_BASELINE_v0.1.md",
+      "requirements": [
+        "LEGACY-FNC-003",
+        "LEGACY-FNC-004"
+      ],
+      "postconditions": [
+        "Only authorized, explicitly confirmed effects are persisted; traceable evidence is recorded."
+      ],
+      "alternate_flows": [
+        "Show recoverable failure; retain draft; deny unauthorized access and avoid partial persistence."
+      ],
+      "acceptance": "Independent acceptance shall verify the happy path, authorization boundary, duplicate/retry handling and the listed alternate flow.",
+      "functionality_ids": [
+        "LEGACY-CAP-003"
+      ]
+    },
+    {
+      "id": "UC-LEGACY-004",
+      "title": "Navigate the goal map",
+      "primary_actor": "User",
+      "preconditions": [
+        "At least one goal exists."
+      ],
+      "main_flow": [
+        "User opens Map, selects an island/phase, inspects milestone status, and continues the next available step."
+      ],
+      "source": "docs/reference/LEGACY_GAMIFICATION_UX_ARCHITECTURE_BASELINE_v0.1.md",
+      "requirements": [
+        "LEGACY-FNC-004",
+        "LEGACY-FNC-005"
+      ],
+      "postconditions": [
+        "Only authorized, explicitly confirmed effects are persisted; traceable evidence is recorded."
+      ],
+      "alternate_flows": [
+        "Show recoverable failure; retain draft; deny unauthorized access and avoid partial persistence."
+      ],
+      "acceptance": "Independent acceptance shall verify the happy path, authorization boundary, duplicate/retry handling and the listed alternate flow.",
+      "functionality_ids": [
+        "LEGACY-CAP-003"
+      ]
+    },
+    {
+      "id": "UC-LEGACY-005",
+      "title": "Recover after missed activity",
+      "primary_actor": "User",
+      "preconditions": [
+        "One or more scheduled actions were missed."
+      ],
+      "main_flow": [
+        "System shows a recovery summary, preserves historical continuity, and lets user resume, reschedule, or intentionally skip."
+      ],
+      "source": "docs/reference/LEGACY_GAMIFICATION_UX_ARCHITECTURE_BASELINE_v0.1.md",
+      "requirements": [
+        "LEGACY-FNC-011",
+        "LEGACY-FNC-012"
+      ],
+      "postconditions": [
+        "Only authorized, explicitly confirmed effects are persisted; traceable evidence is recorded."
+      ],
+      "alternate_flows": [
+        "Show recoverable failure; retain draft; deny unauthorized access and avoid partial persistence."
+      ],
+      "acceptance": "Independent acceptance shall verify the happy path, authorization boundary, duplicate/retry handling and the listed alternate flow.",
+      "functionality_ids": [
+        "LEGACY-CAP-004"
+      ]
+    },
+    {
+      "id": "UC-LEGACY-006",
+      "title": "Review progress and insights",
+      "primary_actor": "User",
+      "preconditions": [
+        "History exists."
+      ],
+      "main_flow": [
+        "User selects time range/domain; system shows consistency, milestone progress, trends, and recommended review points."
+      ],
+      "source": "docs/reference/LEGACY_GAMIFICATION_UX_ARCHITECTURE_BASELINE_v0.1.md",
+      "requirements": [
+        "LEGACY-FNC-021"
+      ],
+      "postconditions": [
+        "Only authorized, explicitly confirmed effects are persisted; traceable evidence is recorded."
+      ],
+      "alternate_flows": [
+        "Show recoverable failure; retain draft; deny unauthorized access and avoid partial persistence."
+      ],
+      "acceptance": "Independent acceptance shall verify the happy path, authorization boundary, duplicate/retry handling and the listed alternate flow.",
+      "functionality_ids": [
+        "LEGACY-CAP-005"
+      ]
+    },
+    {
+      "id": "UC-LEGACY-007",
+      "title": "Switch life modules without losing context",
+      "primary_actor": "User",
+      "preconditions": [
+        "Multiple modules enabled."
+      ],
+      "main_flow": [
+        "User switches from one top-level/module context to another and later returns to the prior state."
+      ],
+      "source": "docs/reference/LEGACY_GAMIFICATION_UX_ARCHITECTURE_BASELINE_v0.1.md",
+      "requirements": [
+        "LEGACY-FNC-017",
+        "LEGACY-FNC-060"
+      ],
+      "postconditions": [
+        "Only authorized, explicitly confirmed effects are persisted; traceable evidence is recorded."
+      ],
+      "alternate_flows": [
+        "Show recoverable failure; retain draft; deny unauthorized access and avoid partial persistence."
+      ],
+      "acceptance": "Independent acceptance shall verify the happy path, authorization boundary, duplicate/retry handling and the listed alternate flow.",
+      "functionality_ids": [
+        "LEGACY-CAP-005"
+      ]
+    },
+    {
+      "id": "UC-LEGACY-008",
+      "title": "Use external data to auto-complete progress",
+      "primary_actor": "User",
+      "preconditions": [
+        "Integration authorized."
+      ],
+      "main_flow": [
+        "System ingests eligible external signal, maps it to a tracked item, updates progress once, and exposes provenance."
+      ],
+      "source": "docs/reference/LEGACY_GAMIFICATION_UX_ARCHITECTURE_BASELINE_v0.1.md",
+      "requirements": [
+        "LEGACY-FNC-022",
+        "LEGACY-FNC-074"
+      ],
+      "postconditions": [
+        "Only authorized, explicitly confirmed effects are persisted; traceable evidence is recorded."
+      ],
+      "alternate_flows": [
+        "Show recoverable failure; retain draft; deny unauthorized access and avoid partial persistence."
+      ],
+      "acceptance": "Independent acceptance shall verify the happy path, authorization boundary, duplicate/retry handling and the listed alternate flow.",
+      "functionality_ids": [
+        "LEGACY-CAP-015",
+        "LEGACY-CAP-001"
+      ]
+    },
+    {
+      "id": "UC-LEGACY-009",
+      "title": "Collaborate with family on an opt-in goal",
+      "primary_actor": "User / invited family member",
+      "preconditions": [
+        "Sharing explicitly enabled."
+      ],
+      "main_flow": [
+        "Owner shares selected goal; collaborator sees only authorized data and contributes progress."
+      ],
+      "source": "docs/reference/LEGACY_GAMIFICATION_UX_ARCHITECTURE_BASELINE_v0.1.md",
+      "requirements": [
+        "LEGACY-FNC-024",
+        "LEGACY-FNC-056"
+      ],
+      "postconditions": [
+        "Only authorized, explicitly confirmed effects are persisted; traceable evidence is recorded."
+      ],
+      "alternate_flows": [
+        "Show recoverable failure; retain draft; deny unauthorized access and avoid partial persistence."
+      ],
+      "acceptance": "Independent acceptance shall verify the happy path, authorization boundary, duplicate/retry handling and the listed alternate flow.",
+      "functionality_ids": [
+        "LEGACY-CAP-014",
+        "LEGACY-CAP-001"
+      ]
+    },
+    {
+      "id": "UC-LEGACY-010",
+      "title": "Submit and approve an AI-generated feature request",
+      "primary_actor": "User / Admin",
+      "preconditions": [
+        "AI capture and admin role available."
+      ],
+      "main_flow": [
+        "User records request; AI creates structured proposal; admin edits/approves/rejects; approved item enters beta workflow with audit trail."
+      ],
+      "source": "docs/reference/LEGACY_GAMIFICATION_UX_ARCHITECTURE_BASELINE_v0.1.md",
+      "requirements": [
+        "LEGACY-FNC-025",
+        "LEGACY-FNC-026",
+        "LEGACY-FNC-055"
+      ],
+      "postconditions": [
+        "Only authorized, explicitly confirmed effects are persisted; traceable evidence is recorded."
+      ],
+      "alternate_flows": [
+        "Show recoverable failure; retain draft; deny unauthorized access and avoid partial persistence."
+      ],
+      "acceptance": "Independent acceptance shall verify the happy path, authorization boundary, duplicate/retry handling and the listed alternate flow.",
+      "functionality_ids": [
+        "LEGACY-CAP-013"
+      ]
+    },
+    {
+      "id": "UC-LEGACY-011",
+      "title": "Import a learning course",
+      "primary_actor": "User",
+      "preconditions": [
+        "Learning module enabled."
+      ],
+      "main_flow": [
+        "User supplies source links; AI extracts candidate modules/lessons/activities; user reviews before saving."
+      ],
+      "source": "docs/reference/LEGACY_GAMIFICATION_UX_ARCHITECTURE_BASELINE_v0.1.md",
+      "requirements": [
+        "LEGACY-FNC-027",
+        "LEGACY-FNC-067"
+      ],
+      "postconditions": [
+        "Only authorized, explicitly confirmed effects are persisted; traceable evidence is recorded."
+      ],
+      "alternate_flows": [
+        "Show recoverable failure; retain draft; deny unauthorized access and avoid partial persistence."
+      ],
+      "acceptance": "Independent acceptance shall verify the happy path, authorization boundary, duplicate/retry handling and the listed alternate flow.",
+      "functionality_ids": [
+        "LEGACY-CAP-007"
+      ]
+    },
+    {
+      "id": "UC-LEGACY-012",
+      "title": "Review financial goal projection",
+      "primary_actor": "User",
+      "preconditions": [
+        "Finance module enabled."
+      ],
+      "main_flow": [
+        "User opens a financial goal, reviews current assumptions/imported values and projected trajectory, and updates assumptions explicitly."
+      ],
+      "source": "docs/reference/LEGACY_GAMIFICATION_UX_ARCHITECTURE_BASELINE_v0.1.md",
+      "requirements": [
+        "LEGACY-FNC-028",
+        "LEGACY-FNC-039"
+      ],
+      "postconditions": [
+        "Only authorized, explicitly confirmed effects are persisted; traceable evidence is recorded."
+      ],
+      "alternate_flows": [
+        "Show recoverable failure; retain draft; deny unauthorized access and avoid partial persistence."
+      ],
+      "acceptance": "Independent acceptance shall verify the happy path, authorization boundary, duplicate/retry handling and the listed alternate flow.",
+      "functionality_ids": [
+        "LEGACY-CAP-006"
+      ]
+    },
+    {
+      "id": "UC-LEGACY-013",
+      "title": "Record and reconcile weekly transactions",
+      "primary_actor": "User",
+      "preconditions": [
+        "Finance workspace active"
+      ],
+      "main_flow": [
+        "Review card and account activity; stage transactions; classify category and essentiality; detect duplicates; approve and reconcile with statement."
+      ],
+      "alternate_flows": [
+        "Reject conflicting duplicates, keep staged rows, report balance mismatch."
+      ],
+      "requirements": [
+        "LEGACY-FNC-029",
+        "LEGACY-FNC-030",
+        "LEGACY-FNC-031",
+        "LEGACY-FNC-041"
+      ],
+      "source": "Financial discovery branch (candidate)",
+      "postconditions": [
+        "Only authorized, explicitly confirmed effects are persisted; traceable evidence is recorded."
+      ],
+      "acceptance": "Independent acceptance shall verify the happy path, authorization boundary, duplicate/retry handling and the listed alternate flow.",
+      "functionality_ids": [
+        "LEGACY-CAP-006"
+      ]
+    },
+    {
+      "id": "UC-LEGACY-014",
+      "title": "Manage bank accounts, credit cards and invoices",
+      "primary_actor": "User",
+      "preconditions": [
+        "Account and currency defined"
+      ],
+      "main_flow": [
+        "Create debit, savings and credit accounts; enter purchases and payments; reconcile statements."
+      ],
+      "alternate_flows": [
+        "Card payment settles liability but is not a second consumption expense."
+      ],
+      "requirements": [
+        "LEGACY-FNC-029",
+        "LEGACY-FNC-032",
+        "LEGACY-FNC-033"
+      ],
+      "source": "Financial discovery branch (candidate)",
+      "postconditions": [
+        "Only authorized, explicitly confirmed effects are persisted; traceable evidence is recorded."
+      ],
+      "acceptance": "Independent acceptance shall verify the happy path, authorization boundary, duplicate/retry handling and the listed alternate flow.",
+      "functionality_ids": [
+        "LEGACY-CAP-006"
+      ]
+    },
+    {
+      "id": "UC-LEGACY-015",
+      "title": "Review savings, budget performance and financial trajectory",
+      "primary_actor": "User",
+      "preconditions": [
+        "Financial entries available"
+      ],
+      "main_flow": [
+        "Choose period and country; inspect income, spending, savings, cash flow and net-worth projections; drill into source entries."
+      ],
+      "alternate_flows": [
+        "Distinguish cash flow, gains and net worth; show FX sources and assumptions."
+      ],
+      "requirements": [
+        "LEGACY-FNC-035",
+        "LEGACY-FNC-036",
+        "LEGACY-FNC-039",
+        "LEGACY-FNC-043"
+      ],
+      "source": "Financial discovery branch (candidate)",
+      "postconditions": [
+        "Only authorized, explicitly confirmed effects are persisted; traceable evidence is recorded."
+      ],
+      "acceptance": "Independent acceptance shall verify the happy path, authorization boundary, duplicate/retry handling and the listed alternate flow.",
+      "functionality_ids": [
+        "LEGACY-CAP-006"
+      ]
+    },
+    {
+      "id": "UC-LEGACY-016",
+      "title": "Remit money between UAE and Brazil",
+      "primary_actor": "User",
+      "preconditions": [
+        "Two account currencies available"
+      ],
+      "main_flow": [
+        "Record source and destination transfer legs with FX rate, fees and settlement dates; reconcile both accounts."
+      ],
+      "alternate_flows": [
+        "Owned-account transfers are not earned income; pending/partial settlement remains visible."
+      ],
+      "requirements": [
+        "LEGACY-FNC-033",
+        "LEGACY-FNC-034",
+        "LEGACY-FNC-042"
+      ],
+      "source": "Financial discovery branch (candidate)",
+      "postconditions": [
+        "Only authorized, explicitly confirmed effects are persisted; traceable evidence is recorded."
+      ],
+      "acceptance": "Independent acceptance shall verify the happy path, authorization boundary, duplicate/retry handling and the listed alternate flow.",
+      "functionality_ids": [
+        "LEGACY-CAP-006"
+      ]
+    },
+    {
+      "id": "UC-LEGACY-017",
+      "title": "Plan vehicle, property and recurring obligations",
+      "primary_actor": "User",
+      "preconditions": [
+        "Financial workspace active"
+      ],
+      "main_flow": [
+        "Record vehicle, apartment, subscriptions, loans and recurring commitments; select a scenario; compare 1–5 year effects."
+      ],
+      "alternate_flows": [
+        "Separate principal, expense, depreciation, asset valuation and cash flow."
+      ],
+      "requirements": [
+        "LEGACY-FNC-036",
+        "LEGACY-FNC-037",
+        "LEGACY-FNC-038",
+        "LEGACY-FNC-039"
+      ],
+      "source": "Financial discovery branch (candidate)",
+      "postconditions": [
+        "Only authorized, explicitly confirmed effects are persisted; traceable evidence is recorded."
+      ],
+      "acceptance": "Independent acceptance shall verify the happy path, authorization boundary, duplicate/retry handling and the listed alternate flow.",
+      "functionality_ids": [
+        "LEGACY-CAP-006"
+      ]
+    },
+    {
+      "id": "UC-LEGACY-018",
+      "title": "Import a reference financial workbook",
+      "primary_actor": "User",
+      "preconditions": [
+        "File or authorized sheet available"
+      ],
+      "main_flow": [
+        "Select workbook or sheet; map columns; preview normalized rows; review duplicates; approve import and reconcile."
+      ],
+      "alternate_flows": [
+        "Unmapped or private data never enters the ledger without approval."
+      ],
+      "requirements": [
+        "LEGACY-FNC-030",
+        "LEGACY-FNC-040",
+        "LEGACY-FNC-041"
+      ],
+      "source": "Financial discovery branch (candidate)",
+      "postconditions": [
+        "Only authorized, explicitly confirmed effects are persisted; traceable evidence is recorded."
+      ],
+      "acceptance": "Independent acceptance shall verify the happy path, authorization boundary, duplicate/retry handling and the listed alternate flow.",
+      "functionality_ids": [
+        "LEGACY-CAP-006"
+      ]
+    },
+    {
+      "id": "UC-LEGACY-019",
+      "title": "Correct and audit a transaction",
+      "primary_actor": "User",
+      "preconditions": [
+        "Transaction already exists"
+      ],
+      "main_flow": [
+        "Open transaction; inspect provenance and dependencies; apply correction or reversal; recompute affected reports."
+      ],
+      "alternate_flows": [
+        "Preserve revision history; avoid orphaned transfer legs and duplicate expense."
+      ],
+      "requirements": [
+        "LEGACY-FNC-030",
+        "LEGACY-FNC-041",
+        "LEGACY-FNC-074"
+      ],
+      "source": "Financial discovery branch (candidate)",
+      "postconditions": [
+        "Only authorized, explicitly confirmed effects are persisted; traceable evidence is recorded."
+      ],
+      "acceptance": "Independent acceptance shall verify the happy path, authorization boundary, duplicate/retry handling and the listed alternate flow.",
+      "functionality_ids": [
+        "LEGACY-CAP-006",
+        "LEGACY-CAP-001"
+      ]
+    },
+    {
+      "id": "UC-LEGACY-020",
+      "title": "Log hydration on Today",
+      "primary_actor": "User",
+      "preconditions": [
+        "Authenticated workspace"
+      ],
+      "main_flow": [
+        "Set target; add or correct water intake; inspect totals."
+      ],
+      "alternate_flows": [
+        "Handle duplicated tap and timezone-bound day changes."
+      ],
+      "requirements": [
+        "LEGACY-FNC-044",
+        "LEGACY-FNC-073"
+      ],
+      "source": "Legavia product discovery",
+      "postconditions": [
+        "Only authorized, explicitly confirmed effects are persisted; traceable evidence is recorded."
+      ],
+      "acceptance": "Independent acceptance shall verify the happy path, authorization boundary, duplicate/retry handling and the listed alternate flow.",
+      "functionality_ids": [
+        "LEGACY-CAP-002"
+      ]
+    },
+    {
+      "id": "UC-LEGACY-021",
+      "title": "Run a named focus session",
+      "primary_actor": "User",
+      "preconditions": [
+        "Task optional"
+      ],
+      "main_flow": [
+        "Name session; start/pause/resume/stop timer; save duration; optionally earn a plant."
+      ],
+      "alternate_flows": [
+        "Crash/reconnect must not double-count duration."
+      ],
+      "requirements": [
+        "LEGACY-FNC-045",
+        "LEGACY-FNC-046",
+        "LEGACY-FNC-074"
+      ],
+      "source": "Legavia product discovery",
+      "postconditions": [
+        "Only authorized, explicitly confirmed effects are persisted; traceable evidence is recorded."
+      ],
+      "acceptance": "Independent acceptance shall verify the happy path, authorization boundary, duplicate/retry handling and the listed alternate flow.",
+      "functionality_ids": [
+        "LEGACY-CAP-008",
+        "LEGACY-CAP-001"
+      ]
+    },
+    {
+      "id": "UC-LEGACY-022",
+      "title": "Track reading and predict completion",
+      "primary_actor": "User",
+      "preconditions": [
+        "Book and pages defined"
+      ],
+      "main_flow": [
+        "Add dated page update; show remaining pages, trend and estimated completion date."
+      ],
+      "alternate_flows": [
+        "Show no confident estimate with insufficient history; reject pages above total."
+      ],
+      "requirements": [
+        "LEGACY-FNC-047",
+        "LEGACY-FNC-070"
+      ],
+      "source": "Legavia product discovery",
+      "postconditions": [
+        "Only authorized, explicitly confirmed effects are persisted; traceable evidence is recorded."
+      ],
+      "acceptance": "Independent acceptance shall verify the happy path, authorization boundary, duplicate/retry handling and the listed alternate flow.",
+      "functionality_ids": [
+        "LEGACY-CAP-009"
+      ]
+    },
+    {
+      "id": "UC-LEGACY-023",
+      "title": "Track game playtime",
+      "primary_actor": "User",
+      "preconditions": [
+        "Game in library"
+      ],
+      "main_flow": [
+        "Start and stop named game session; inspect total hours."
+      ],
+      "alternate_flows": [
+        "Recover interrupted timer and avoid double stop."
+      ],
+      "requirements": [
+        "LEGACY-FNC-048",
+        "LEGACY-FNC-074"
+      ],
+      "source": "Legavia product discovery",
+      "postconditions": [
+        "Only authorized, explicitly confirmed effects are persisted; traceable evidence is recorded."
+      ],
+      "acceptance": "Independent acceptance shall verify the happy path, authorization boundary, duplicate/retry handling and the listed alternate flow.",
+      "functionality_ids": [
+        "LEGACY-CAP-009",
+        "LEGACY-CAP-001"
+      ]
+    },
+    {
+      "id": "UC-LEGACY-024",
+      "title": "Capture a movie recommendation by voice",
+      "primary_actor": "User",
+      "preconditions": [
+        "Recording permitted or text fallback"
+      ],
+      "main_flow": [
+        "Record suggestion; review transcript/title/recommender/date; approve watchlist entry."
+      ],
+      "alternate_flows": [
+        "Missing IMDb information falls back to manual order."
+      ],
+      "requirements": [
+        "LEGACY-FNC-049",
+        "LEGACY-FNC-054",
+        "LEGACY-FNC-071"
+      ],
+      "source": "Legavia product discovery",
+      "postconditions": [
+        "Only authorized, explicitly confirmed effects are persisted; traceable evidence is recorded."
+      ],
+      "acceptance": "Independent acceptance shall verify the happy path, authorization boundary, duplicate/retry handling and the listed alternate flow.",
+      "functionality_ids": [
+        "LEGACY-CAP-009",
+        "LEGACY-CAP-013"
+      ]
+    },
+    {
+      "id": "UC-LEGACY-025",
+      "title": "Capture memory with attachments and mind map",
+      "primary_actor": "User",
+      "preconditions": [
+        "Workspace authorized"
+      ],
+      "main_flow": [
+        "Save text, photo, voice or linked document; tag relations; browse timeline or mind-map projection."
+      ],
+      "alternate_flows": [
+        "Denied media permission still permits text; attachments remain private."
+      ],
+      "requirements": [
+        "LEGACY-FNC-050",
+        "LEGACY-FNC-062"
+      ],
+      "source": "Legavia product discovery",
+      "postconditions": [
+        "Only authorized, explicitly confirmed effects are persisted; traceable evidence is recorded."
+      ],
+      "acceptance": "Independent acceptance shall verify the happy path, authorization boundary, duplicate/retry handling and the listed alternate flow.",
+      "functionality_ids": [
+        "LEGACY-CAP-010",
+        "LEGACY-CAP-001"
+      ]
+    },
+    {
+      "id": "UC-LEGACY-026",
+      "title": "Maintain evidence-linked CV",
+      "primary_actor": "User",
+      "preconditions": [
+        "Achievement/milestone exists"
+      ],
+      "main_flow": [
+        "Select completed milestones and evidence; preview proposed CV change; approve and publish to selected visibility."
+      ],
+      "alternate_flows": [
+        "Unapproved or private milestones are not published."
+      ],
+      "requirements": [
+        "LEGACY-FNC-051",
+        "LEGACY-FNC-055"
+      ],
+      "source": "Legavia product discovery",
+      "postconditions": [
+        "Only authorized, explicitly confirmed effects are persisted; traceable evidence is recorded."
+      ],
+      "acceptance": "Independent acceptance shall verify the happy path, authorization boundary, duplicate/retry handling and the listed alternate flow.",
+      "functionality_ids": [
+        "LEGACY-CAP-011",
+        "LEGACY-CAP-013"
+      ]
+    },
+    {
+      "id": "UC-LEGACY-027",
+      "title": "Plan activities using calendar signals",
+      "primary_actor": "User",
+      "preconditions": [
+        "Calendar permission optional"
+      ],
+      "main_flow": [
+        "Authorize calendar read; review conflicts and proposed daily tasks; approve schedule."
+      ],
+      "alternate_flows": [
+        "Revoke integration and continue manually."
+      ],
+      "requirements": [
+        "LEGACY-FNC-053",
+        "LEGACY-FNC-022"
+      ],
+      "source": "Legavia product discovery",
+      "postconditions": [
+        "Only authorized, explicitly confirmed effects are persisted; traceable evidence is recorded."
+      ],
+      "acceptance": "Independent acceptance shall verify the happy path, authorization boundary, duplicate/retry handling and the listed alternate flow.",
+      "functionality_ids": [
+        "LEGACY-CAP-002",
+        "LEGACY-CAP-015"
+      ]
+    },
+    {
+      "id": "UC-LEGACY-028",
+      "title": "Propose an activity by natural language",
+      "primary_actor": "User",
+      "preconditions": [
+        "AI integration allowed"
+      ],
+      "main_flow": [
+        "Record or type intent; inspect structured draft and destination; accept correction or reject."
+      ],
+      "alternate_flows": [
+        "Provider unavailable yields manual entry; no silent persistent write."
+      ],
+      "requirements": [
+        "LEGACY-FNC-054",
+        "LEGACY-FNC-055"
+      ],
+      "source": "Legavia product discovery",
+      "postconditions": [
+        "Only authorized, explicitly confirmed effects are persisted; traceable evidence is recorded."
+      ],
+      "acceptance": "Independent acceptance shall verify the happy path, authorization boundary, duplicate/retry handling and the listed alternate flow.",
+      "functionality_ids": [
+        "LEGACY-CAP-013"
+      ]
+    },
+    {
+      "id": "UC-LEGACY-029",
+      "title": "Request and release a new feature",
+      "primary_actor": "User, administrator",
+      "preconditions": [
+        "Authorized roles"
+      ],
+      "main_flow": [
+        "Submit idea; create structured candidate; review impact; approve; release to beta; record audit decision."
+      ],
+      "alternate_flows": [
+        "Unapproved candidate never reaches production baseline."
+      ],
+      "requirements": [
+        "LEGACY-FNC-025",
+        "LEGACY-FNC-026",
+        "LEGACY-FNC-058"
+      ],
+      "source": "Legavia product discovery",
+      "postconditions": [
+        "Only authorized, explicitly confirmed effects are persisted; traceable evidence is recorded."
+      ],
+      "acceptance": "Independent acceptance shall verify the happy path, authorization boundary, duplicate/retry handling and the listed alternate flow.",
+      "functionality_ids": [
+        "LEGACY-CAP-013"
+      ]
+    },
+    {
+      "id": "UC-LEGACY-030",
+      "title": "Invite collaborator to selected goal",
+      "primary_actor": "Owner and invitee",
+      "preconditions": [
+        "Sharing enabled"
+      ],
+      "main_flow": [
+        "Select goal and visibility; invite collaborator; record acceptance; authorize limited contribution."
+      ],
+      "alternate_flows": [
+        "Revocation removes access immediately; other private data stays inaccessible."
+      ],
+      "requirements": [
+        "LEGACY-FNC-024",
+        "LEGACY-FNC-056",
+        "LEGACY-FNC-057"
+      ],
+      "source": "Legavia product discovery",
+      "postconditions": [
+        "Only authorized, explicitly confirmed effects are persisted; traceable evidence is recorded."
+      ],
+      "acceptance": "Independent acceptance shall verify the happy path, authorization boundary, duplicate/retry handling and the listed alternate flow.",
+      "functionality_ids": [
+        "LEGACY-CAP-014",
+        "LEGACY-CAP-001"
+      ]
+    },
+    {
+      "id": "UC-LEGACY-031",
+      "title": "Switch Auto, Mobile and Desktop UI",
+      "primary_actor": "User",
+      "preconditions": [
+        "Browser loaded"
+      ],
+      "main_flow": [
+        "Choose display override; preserve working state; reload and verify chosen layout."
+      ],
+      "alternate_flows": [
+        "Forced desktop view retains accessibility and keyboard support."
+      ],
+      "requirements": [
+        "LEGACY-FNC-060",
+        "LEGACY-FNC-064"
+      ],
+      "source": "Legavia product discovery",
+      "postconditions": [
+        "Only authorized, explicitly confirmed effects are persisted; traceable evidence is recorded."
+      ],
+      "acceptance": "Independent acceptance shall verify the happy path, authorization boundary, duplicate/retry handling and the listed alternate flow.",
+      "functionality_ids": [
+        "LEGACY-CAP-005"
+      ]
+    },
+    {
+      "id": "UC-LEGACY-032",
+      "title": "Manage household workspaces and quotas",
+      "primary_actor": "Owner / administrator",
+      "preconditions": [
+        "Role verified"
+      ],
+      "main_flow": [
+        "Invite user; assign role; inspect usage metadata; change quota or revoke membership."
+      ],
+      "alternate_flows": [
+        "Administrator cannot automatically inspect private content."
+      ],
+      "requirements": [
+        "LEGACY-FNC-059",
+        "LEGACY-FNC-061"
+      ],
+      "source": "Legavia product discovery",
+      "postconditions": [
+        "Only authorized, explicitly confirmed effects are persisted; traceable evidence is recorded."
+      ],
+      "acceptance": "Independent acceptance shall verify the happy path, authorization boundary, duplicate/retry handling and the listed alternate flow.",
+      "functionality_ids": [
+        "LEGACY-CAP-001"
+      ]
+    },
+    {
+      "id": "UC-LEGACY-033",
+      "title": "Import GitHub issues into a weekly plan",
+      "primary_actor": "User",
+      "preconditions": [
+        "GitHub project connected"
+      ],
+      "main_flow": [
+        "Select repository/issue subset; preview suggested actions and references; approve candidate tasks."
+      ],
+      "alternate_flows": [
+        "No issue is modified or task created without permission."
+      ],
+      "requirements": [
+        "LEGACY-FNC-066",
+        "LEGACY-FNC-054"
+      ],
+      "source": "Legavia product discovery",
+      "postconditions": [
+        "Only authorized, explicitly confirmed effects are persisted; traceable evidence is recorded."
+      ],
+      "acceptance": "Independent acceptance shall verify the happy path, authorization boundary, duplicate/retry handling and the listed alternate flow.",
+      "functionality_ids": [
+        "LEGACY-CAP-013"
+      ]
+    },
+    {
+      "id": "UC-LEGACY-034",
+      "title": "Review health or exercise trends",
+      "primary_actor": "User",
+      "preconditions": [
+        "Health module available"
+      ],
+      "main_flow": [
+        "Add workout or authorize source; inspect dated activity and goal trends."
+      ],
+      "alternate_flows": [
+        "Avoid diagnostic inferences; show missing/uncertain data."
+      ],
+      "requirements": [
+        "LEGACY-FNC-052",
+        "LEGACY-FNC-022"
+      ],
+      "source": "Legavia product discovery",
+      "postconditions": [
+        "Only authorized, explicitly confirmed effects are persisted; traceable evidence is recorded."
+      ],
+      "acceptance": "Independent acceptance shall verify the happy path, authorization boundary, duplicate/retry handling and the listed alternate flow.",
+      "functionality_ids": [
+        "LEGACY-CAP-012",
+        "LEGACY-CAP-015"
+      ]
+    },
+    {
+      "id": "UC-LEGACY-035",
+      "title": "Recover from an offline or failed edit",
+      "primary_actor": "User",
+      "preconditions": [
+        "Intermittent network"
+      ],
+      "main_flow": [
+        "Queue or save draft; show unsynced state; retry with same event ID; reconcile visible state."
+      ],
+      "alternate_flows": [
+        "No duplicate completion/XP or lost personal content."
+      ],
+      "requirements": [
+        "LEGACY-FNC-009",
+        "LEGACY-FNC-010",
+        "LEGACY-FNC-074"
+      ],
+      "source": "Legavia product discovery",
+      "postconditions": [
+        "Only authorized, explicitly confirmed effects are persisted; traceable evidence is recorded."
+      ],
+      "acceptance": "Independent acceptance shall verify the happy path, authorization boundary, duplicate/retry handling and the listed alternate flow.",
+      "functionality_ids": [
+        "LEGACY-CAP-004",
+        "LEGACY-CAP-001"
+      ]
+    }
+  ],
+  "verification_definitions": [
+    {
+      "id": "FVT-LEGACY-001",
+      "title": "Goal-linked Today completion and XP",
+      "stimulus": "Create task linked to milestone; complete from Today twice with same operation ID.",
+      "expected_result": "One task completion, one XP grant and correct milestone progress; undo reverses only the matching effects.",
+      "requirement_ids": [
+        "LEGACY-FNC-002",
+        "LEGACY-FNC-003",
+        "LEGACY-FNC-007",
+        "LEGACY-FNC-009",
+        "LEGACY-FNC-010",
+        "LEGACY-FNC-013",
+        "LEGACY-FNC-074"
+      ],
+      "method": "Automated integration / UX evidence as applicable",
+      "status": "Planned - not executable",
+      "test_repository": "matheusns/legacy_verification_tooling"
+    },
+    {
+      "id": "FVT-LEGACY-002",
+      "title": "Map progression and non-drag access",
+      "stimulus": "Create phases with milestones and evaluate transitions.",
+      "expected_result": "Locked/available/active/completed states follow prerequisites; accessible controls work without drag.",
+      "requirement_ids": [
+        "LEGACY-FNC-003",
+        "LEGACY-FNC-004",
+        "LEGACY-FNC-005"
+      ],
+      "method": "Automated integration / UX evidence as applicable",
+      "status": "Planned - not executable",
+      "test_repository": "matheusns/legacy_verification_tooling"
+    },
+    {
+      "id": "FVT-LEGACY-003",
+      "title": "Missed-day recovery",
+      "stimulus": "Miss multiple planned days and revisit.",
+      "expected_result": "Historical events retained; recovery and continuity behavior available.",
+      "requirement_ids": [
+        "LEGACY-FNC-011",
+        "LEGACY-FNC-012",
+        "LEGACY-FNC-068"
+      ],
+      "method": "Automated integration / UX evidence as applicable",
+      "status": "Planned - not executable",
+      "test_repository": "matheusns/legacy_verification_tooling"
+    },
+    {
+      "id": "FVT-LEGACY-004",
+      "title": "Cross-module navigation",
+      "stimulus": "Navigate among three modules on mobile and desktop.",
+      "expected_result": "State preserved; one-step shell access and responsive override respected.",
+      "requirement_ids": [
+        "LEGACY-FNC-017",
+        "LEGACY-FNC-060",
+        "LEGACY-FNC-064"
+      ],
+      "method": "Automated integration / UX evidence as applicable",
+      "status": "Planned - not executable",
+      "test_repository": "matheusns/legacy_verification_tooling"
+    },
+    {
+      "id": "FVT-LEGACY-005",
+      "title": "Workspace isolation",
+      "stimulus": "Create two workspaces and varied sharing roles; request unauthorized objects.",
+      "expected_result": "No cross-workspace exposure even through direct API and nested resources.",
+      "requirement_ids": [
+        "LEGACY-FNC-001",
+        "LEGACY-FNC-056",
+        "LEGACY-FNC-061"
+      ],
+      "method": "Automated integration / UX evidence as applicable",
+      "status": "Planned - not executable",
+      "test_repository": "matheusns/legacy_verification_tooling"
+    },
+    {
+      "id": "FVT-LEGACY-006",
+      "title": "AI change governance",
+      "stimulus": "Create, reject, revise, approve and beta-route a proposed feature.",
+      "expected_result": "No unapproved baseline mutation; complete audit evidence.",
+      "requirement_ids": [
+        "LEGACY-FNC-025",
+        "LEGACY-FNC-026",
+        "LEGACY-FNC-055",
+        "LEGACY-FNC-058"
+      ],
+      "method": "Automated integration / UX evidence as applicable",
+      "status": "Planned - not executable",
+      "test_repository": "matheusns/legacy_verification_tooling"
+    },
+    {
+      "id": "FVT-LEGACY-007",
+      "title": "Learning import",
+      "stimulus": "Import a sample course and edit extracted lessons.",
+      "expected_result": "Candidate content saved only after explicit approval.",
+      "requirement_ids": [
+        "LEGACY-FNC-027",
+        "LEGACY-FNC-067"
+      ],
+      "method": "Automated integration / UX evidence as applicable",
+      "status": "Planned - not executable",
+      "test_repository": "matheusns/legacy_verification_tooling"
+    },
+    {
+      "id": "FVT-LEGACY-008",
+      "title": "Accessibility and visual fidelity",
+      "stimulus": "Run keyboard, screen-reader, small-screen, contrast and approved screenshot comparison.",
+      "expected_result": "Applicable WCAG 2.2 AA criteria and reference comparison accepted.",
+      "requirement_ids": [
+        "LEGACY-FNC-005",
+        "LEGACY-FNC-060"
+      ],
+      "method": "Automated integration / UX evidence as applicable",
+      "status": "Planned - not executable",
+      "test_repository": "matheusns/legacy_verification_tooling"
+    },
+    {
+      "id": "FVT-LEGACY-009",
+      "title": "Finance transactions and batches",
+      "stimulus": "Ingest duplicate batch and review classification.",
+      "expected_result": "One approved ledger mutation per row; provenance retained.",
+      "requirement_ids": [
+        "LEGACY-FNC-029",
+        "LEGACY-FNC-030",
+        "LEGACY-FNC-031",
+        "LEGACY-FNC-041"
+      ],
+      "method": "Automated integration / UX evidence as applicable",
+      "status": "Planned - not executable",
+      "test_repository": "matheusns/legacy_verification_tooling"
+    },
+    {
+      "id": "FVT-LEGACY-010",
+      "title": "Card liability and account balances",
+      "stimulus": "Purchase, settle card, reverse and reconcile account.",
+      "expected_result": "No duplicated expenses; assets/liabilities balanced.",
+      "requirement_ids": [
+        "LEGACY-FNC-029",
+        "LEGACY-FNC-032",
+        "LEGACY-FNC-033"
+      ],
+      "method": "Automated integration / UX evidence as applicable",
+      "status": "Planned - not executable",
+      "test_repository": "matheusns/legacy_verification_tooling"
+    },
+    {
+      "id": "FVT-LEGACY-011",
+      "title": "Cross-border transfer and FX",
+      "stimulus": "Transfer AED to BRL with fees and partial settlement.",
+      "expected_result": "Two linked legs, correct currency, fees and no income duplication.",
+      "requirement_ids": [
+        "LEGACY-FNC-033",
+        "LEGACY-FNC-034",
+        "LEGACY-FNC-042",
+        "LEGACY-FNC-043"
+      ],
+      "method": "Automated integration / UX evidence as applicable",
+      "status": "Planned - not executable",
+      "test_repository": "matheusns/legacy_verification_tooling"
+    },
+    {
+      "id": "FVT-LEGACY-012",
+      "title": "Finance savings and budgets",
+      "stimulus": "Compute period actuals versus budget with refunds, gains and transfers.",
+      "expected_result": "Source-drilldowns reconcile; correct financial classification.",
+      "requirement_ids": [
+        "LEGACY-FNC-035",
+        "LEGACY-FNC-036",
+        "LEGACY-FNC-043"
+      ],
+      "method": "Automated integration / UX evidence as applicable",
+      "status": "Planned - not executable",
+      "test_repository": "matheusns/legacy_verification_tooling"
+    },
+    {
+      "id": "FVT-LEGACY-013",
+      "title": "Financial workbook approved import",
+      "stimulus": "Load synthetic workbook mapping including duplicated rows.",
+      "expected_result": "Preview, review, approve; deduplicate and reconcile.",
+      "requirement_ids": [
+        "LEGACY-FNC-031",
+        "LEGACY-FNC-040",
+        "LEGACY-FNC-041"
+      ],
+      "method": "Automated integration / UX evidence as applicable",
+      "status": "Planned - not executable",
+      "test_repository": "matheusns/legacy_verification_tooling"
+    },
+    {
+      "id": "FVT-LEGACY-014",
+      "title": "Vehicle and apartment scenarios",
+      "stimulus": "Compare ownership/rental, cash flows and liabilities over one to five years.",
+      "expected_result": "Principal, operating expense, debt and valuation properly distinguished.",
+      "requirement_ids": [
+        "LEGACY-FNC-037",
+        "LEGACY-FNC-038",
+        "LEGACY-FNC-039",
+        "LEGACY-FNC-042"
+      ],
+      "method": "Automated integration / UX evidence as applicable",
+      "status": "Planned - not executable",
+      "test_repository": "matheusns/legacy_verification_tooling"
+    },
+    {
+      "id": "FVT-LEGACY-015",
+      "title": "Focus and XP idempotency",
+      "stimulus": "Start/pause/stop focus session; replay stop command.",
+      "expected_result": "Session duration and reward computed once; linked task remains consistent.",
+      "requirement_ids": [
+        "LEGACY-FNC-045",
+        "LEGACY-FNC-046",
+        "LEGACY-FNC-069",
+        "LEGACY-FNC-074"
+      ],
+      "method": "Automated integration / UX evidence as applicable",
+      "status": "Planned - not executable",
+      "test_repository": "matheusns/legacy_verification_tooling"
+    },
+    {
+      "id": "FVT-LEGACY-016",
+      "title": "Book prediction",
+      "stimulus": "Record three dated reading updates and an insufficient-data case.",
+      "expected_result": "Predicted finish updates with evidence and uncertainty; invalid page input rejected.",
+      "requirement_ids": [
+        "LEGACY-FNC-047",
+        "LEGACY-FNC-070"
+      ],
+      "method": "Automated integration / UX evidence as applicable",
+      "status": "Planned - not executable",
+      "test_repository": "matheusns/legacy_verification_tooling"
+    },
+    {
+      "id": "FVT-LEGACY-017",
+      "title": "Movie/audio intake",
+      "stimulus": "Use text fallback and a simulated transcript; external ratings unavailable.",
+      "expected_result": "User reviews before save; recommender/date retained; manual ranking works.",
+      "requirement_ids": [
+        "LEGACY-FNC-049",
+        "LEGACY-FNC-054",
+        "LEGACY-FNC-071"
+      ],
+      "method": "Automated integration / UX evidence as applicable",
+      "status": "Planned - not executable",
+      "test_repository": "matheusns/legacy_verification_tooling"
+    },
+    {
+      "id": "FVT-LEGACY-018",
+      "title": "Memory privacy and export",
+      "stimulus": "Create photo and voice entries; revoke access; export workspace.",
+      "expected_result": "Attachments scoped to owner, exported correctly, deleted/revoked per policy.",
+      "requirement_ids": [
+        "LEGACY-FNC-050",
+        "LEGACY-FNC-062"
+      ],
+      "method": "Automated integration / UX evidence as applicable",
+      "status": "Planned - not executable",
+      "test_repository": "matheusns/legacy_verification_tooling"
+    },
+    {
+      "id": "FVT-LEGACY-019",
+      "title": "Water logging",
+      "stimulus": "Add, retry and undo hydration update; test midnight boundary.",
+      "expected_result": "Correct target totals, no duplicate and local day semantics.",
+      "requirement_ids": [
+        "LEGACY-FNC-044",
+        "LEGACY-FNC-073"
+      ],
+      "method": "Automated integration / UX evidence as applicable",
+      "status": "Planned - not executable",
+      "test_repository": "matheusns/legacy_verification_tooling"
+    },
+    {
+      "id": "FVT-LEGACY-020",
+      "title": "Display mode responsive visuals",
+      "stimulus": "Check Auto/Mobile/Desktop on sample phone and desktop profiles.",
+      "expected_result": "Accepted layout capture and UX states; no inaccessible primary actions.",
+      "requirement_ids": [
+        "LEGACY-FNC-060",
+        "LEGACY-FNC-064"
+      ],
+      "method": "Automated integration / UX evidence as applicable",
+      "status": "Planned - not executable",
+      "test_repository": "matheusns/legacy_verification_tooling"
+    },
+    {
+      "id": "FVT-LEGACY-021",
+      "title": "Social resource permissions",
+      "stimulus": "Share one goal with one friend then revoke.",
+      "expected_result": "Only selected resources accessible, zero implicit friend/household access.",
+      "requirement_ids": [
+        "LEGACY-FNC-024",
+        "LEGACY-FNC-056",
+        "LEGACY-FNC-057"
+      ],
+      "method": "Automated integration / UX evidence as applicable",
+      "status": "Planned - not executable",
+      "test_repository": "matheusns/legacy_verification_tooling"
+    },
+    {
+      "id": "FVT-LEGACY-022",
+      "title": "AI consent and external issue suggestions",
+      "stimulus": "Submit text/voice task and candidate GitHub issue suggestion.",
+      "expected_result": "Explicit review and authorization; no silent writes to either service.",
+      "requirement_ids": [
+        "LEGACY-FNC-054",
+        "LEGACY-FNC-055",
+        "LEGACY-FNC-066"
+      ],
+      "method": "Automated integration / UX evidence as applicable",
+      "status": "Planned - not executable",
+      "test_repository": "matheusns/legacy_verification_tooling"
+    },
+    {
+      "id": "FVT-LEGACY-023",
+      "title": "Recovery and data integrity",
+      "stimulus": "Interrupt network mid mutation and replay with same event ID.",
+      "expected_result": "Exactly-once ledger effects and understandable reconciliation state.",
+      "requirement_ids": [
+        "LEGACY-FNC-009",
+        "LEGACY-FNC-010",
+        "LEGACY-FNC-074"
+      ],
+      "method": "Automated integration / UX evidence as applicable",
+      "status": "Planned - not executable",
+      "test_repository": "matheusns/legacy_verification_tooling"
+    },
+    {
+      "id": "FVT-LEGACY-024",
+      "title": "Administrative beta and quota",
+      "stimulus": "Roll out beta to one cohort and test other workspaces; trigger upload quota.",
+      "expected_result": "Correct feature flags, no data disclosure and safe upload rejection.",
+      "requirement_ids": [
+        "LEGACY-FNC-058",
+        "LEGACY-FNC-059",
+        "LEGACY-FNC-061"
+      ],
+      "method": "Automated integration / UX evidence as applicable",
+      "status": "Planned - not executable",
+      "test_repository": "matheusns/legacy_verification_tooling"
+    }
+  ],
+  "required_decisions": [
+    "ADR-CAND-001",
+    "ADR-CAND-002",
+    "ADR-CAND-003",
+    "ADR-CAND-004",
+    "ADR-CAND-005",
+    "ADR-CAND-006",
+    "ADR-CAND-007"
+  ],
+  "source_refs": [
+    "docs/reference/LEGACY_GAMIFICATION_UX_ARCHITECTURE_BASELINE_v0.1.md",
+    "matheusns/legacy#feature/financial-life-management-use-cases-20261014"
+  ],
+  "release_slices": [
+    "S0",
+    "S1",
+    "S2",
+    "S3",
+    "S4",
+    "S5"
+  ]
+}

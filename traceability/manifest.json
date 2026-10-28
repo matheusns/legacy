@@ -1,0 +1,3052 @@
+{
+  "schema_version": "1.0",
+  "project": {
+    "id": "LEGAVIA",
+    "name": "Legavia — Web & Mobile Life Management",
+    "description": "Candidate business baseline; responsive web/mobile product; GitHub as primary VCS",
+    "status": "Candidate",
+    "baseline_version": "0.1.0",
+    "controlled_at": "2026-10-29"
+  },
+  "requirements": [
+    {
+      "id": "LEGACY-BIZ-001",
+      "summary": "The product shall provide one unified life-management environment spanning multiple domains…",
+      "statement": "The product shall provide one unified life-management environment spanning multiple domains while preserving a consistent interaction model.",
+      "level": "Business",
+      "priority": "P0",
+      "source": "Project vision; DP-02",
+      "scope": "all",
+      "functionality_ids": [
+        "LEGACY-CAP-001"
+      ],
+      "verification_method": "Architecture review",
+      "verification_ids": [],
+      "status": "Candidate",
+      "disposition": "Unverified"
+    },
+    {
+      "id": "LEGACY-BIZ-002",
+      "summary": "Gamification shall reinforce completion of meaningful real-world objectives and shall not…",
+      "statement": "Gamification shall reinforce completion of meaningful real-world objectives and shall not require separate game-only maintenance to preserve progress.",
+      "level": "Business",
+      "priority": "P0",
+      "source": "R11-R13; DP-01",
+      "scope": "all",
+      "functionality_ids": [
+        "LEGACY-CAP-004"
+      ],
+      "verification_method": "Product inspection + telemetry",
+      "verification_ids": [],
+      "status": "Candidate",
+      "disposition": "Unverified"
+    },
+    {
+      "id": "LEGACY-BIZ-003",
+      "summary": "Each user shall have a private workspace, with explicit sharing controls for family or…",
+      "statement": "Each user shall have a private workspace, with explicit sharing controls for family or collaborative features.",
+      "level": "Business",
+      "priority": "P0",
+      "source": "Project vision; DP-06",
+      "scope": "all",
+      "functionality_ids": [
+        "LEGACY-CAP-001"
+      ],
+      "verification_method": "Security/FVT",
+      "verification_ids": [],
+      "status": "Candidate",
+      "disposition": "Unverified"
+    },
+    {
+      "id": "LEGACY-BIZ-004",
+      "summary": "The product shall support adding new life modules without changing the top-level interaction…",
+      "statement": "The product shall support adding new life modules without changing the top-level interaction principles or duplicating core domain entities.",
+      "level": "Business",
+      "priority": "P1",
+      "source": "DP-02",
+      "scope": "all",
+      "functionality_ids": [
+        "LEGACY-CAP-001"
+      ],
+      "verification_method": "Architecture test",
+      "verification_ids": [],
+      "status": "Candidate",
+      "disposition": "Unverified"
+    },
+    {
+      "id": "LEGACY-BIZ-005",
+      "summary": "Feature requests generated from user input may be proposed by AI but shall require explicit…",
+      "statement": "Feature requests generated from user input may be proposed by AI but shall require explicit authorized approval before becoming a production baseline item.",
+      "level": "Business",
+      "priority": "P1",
+      "source": "Project vision; SK-AI-01",
+      "scope": "all",
+      "functionality_ids": [
+        "LEGACY-CAP-001"
+      ],
+      "verification_method": "Workflow FVT",
+      "verification_ids": [],
+      "status": "Candidate",
+      "disposition": "Unverified"
+    },
+    {
+      "id": "LEGACY-FNC-001",
+      "summary": "The system shall authenticate users and load only the data authorized for the active",
+      "statement": "The system shall authenticate users and load only the data authorized for the active workspace.",
+      "level": "Functional",
+      "priority": "P0",
+      "source": "BIZ-003",
+      "scope": "all",
+      "functionality_ids": [
+        "LEGACY-CAP-001"
+      ],
+      "verification_method": "Security/FVT",
+      "verification_ids": [
+        "FVT-LEGACY-005"
+      ],
+      "status": "Candidate",
+      "disposition": "Unverified"
+    },
+    {
+      "id": "LEGACY-FNC-002",
+      "summary": "The Today view shall aggregate due habits, tasks, calendar context, and the next recommended…",
+      "statement": "The Today view shall aggregate due habits, tasks, calendar context, and the next recommended action without requiring navigation into each module.",
+      "level": "Functional",
+      "priority": "P0",
+      "source": "DP-01; IA",
+      "scope": "all",
+      "functionality_ids": [
+        "LEGACY-CAP-002"
+      ],
+      "verification_method": "FVT",
+      "verification_ids": [
+        "FVT-LEGACY-001"
+      ],
+      "status": "Candidate",
+      "disposition": "Unverified"
+    },
+    {
+      "id": "LEGACY-FNC-003",
+      "summary": "The system shall represent goals using long-term, mid-term, and short-term relationships and…",
+      "statement": "The system shall represent goals using long-term, mid-term, and short-term relationships and allow decomposition into phases and milestones.",
+      "level": "Functional",
+      "priority": "P0",
+      "source": "Project vision",
+      "scope": "all",
+      "functionality_ids": [
+        "LEGACY-CAP-003"
+      ],
+      "verification_method": "FVT",
+      "verification_ids": [
+        "FVT-LEGACY-001",
+        "FVT-LEGACY-002"
+      ],
+      "status": "Candidate",
+      "disposition": "Unverified"
+    },
+    {
+      "id": "LEGACY-FNC-004",
+      "summary": "The Map view shall visualize phases/milestones as navigable nodes and indicate locked,…",
+      "statement": "The Map view shall visualize phases/milestones as navigable nodes and indicate locked, available, in-progress, and completed states.",
+      "level": "Functional",
+      "priority": "P0",
+      "source": "R7,R9; project map concept",
+      "scope": "all",
+      "functionality_ids": [
+        "LEGACY-CAP-003"
+      ],
+      "verification_method": "Visual FVT",
+      "verification_ids": [
+        "FVT-LEGACY-002"
+      ],
+      "status": "Candidate",
+      "disposition": "Unverified"
+    },
+    {
+      "id": "LEGACY-FNC-005",
+      "summary": "The Map shall support distinct visual themes by phase/island while retaining a consistent…",
+      "statement": "The Map shall support distinct visual themes by phase/island while retaining a consistent interaction grammar.",
+      "level": "Functional",
+      "priority": "P1",
+      "source": "R22; DP-09",
+      "scope": "all",
+      "functionality_ids": [
+        "LEGACY-CAP-003"
+      ],
+      "verification_method": "Visual inspection",
+      "verification_ids": [
+        "FVT-LEGACY-002",
+        "FVT-LEGACY-008"
+      ],
+      "status": "Candidate",
+      "disposition": "Unverified"
+    },
+    {
+      "id": "LEGACY-FNC-006",
+      "summary": "Users shall be able to create recurring habits using daily, selected-day, interval, and…",
+      "statement": "Users shall be able to create recurring habits using daily, selected-day, interval, and target-per-period schedules.",
+      "level": "Functional",
+      "priority": "P0",
+      "source": "R4-R6",
+      "scope": "all",
+      "functionality_ids": [
+        "LEGACY-CAP-004"
+      ],
+      "verification_method": "Functional test",
+      "verification_ids": [],
+      "status": "Candidate",
+      "disposition": "Unverified"
+    },
+    {
+      "id": "LEGACY-FNC-007",
+      "summary": "Users shall be able to create one-off tasks with due date, optional checklist, priority, and…",
+      "statement": "Users shall be able to create one-off tasks with due date, optional checklist, priority, and linkage to a goal or module.",
+      "level": "Functional",
+      "priority": "P0",
+      "source": "R1; core model",
+      "scope": "all",
+      "functionality_ids": [
+        "LEGACY-CAP-002"
+      ],
+      "verification_method": "Functional test",
+      "verification_ids": [
+        "FVT-LEGACY-001"
+      ],
+      "status": "Candidate",
+      "disposition": "Unverified"
+    },
+    {
+      "id": "LEGACY-FNC-008",
+      "summary": "Users shall be able to group ordered habits/actions into reusable",
+      "statement": "Users shall be able to group ordered habits/actions into reusable routines.",
+      "level": "Functional",
+      "priority": "P1",
+      "source": "R3",
+      "scope": "all",
+      "functionality_ids": [
+        "LEGACY-CAP-004"
+      ],
+      "verification_method": "Functional test",
+      "verification_ids": [],
+      "status": "Candidate",
+      "disposition": "Unverified"
+    },
+    {
+      "id": "LEGACY-FNC-009",
+      "summary": "A completion action shall update the underlying item, relevant milestone progress, analytics,…",
+      "statement": "A completion action shall update the underlying item, relevant milestone progress, analytics, and gamification state atomically.",
+      "level": "Functional",
+      "priority": "P0",
+      "source": "DP-02",
+      "scope": "all",
+      "functionality_ids": [
+        "LEGACY-CAP-004"
+      ],
+      "verification_method": "Integration FVT",
+      "verification_ids": [
+        "FVT-LEGACY-001",
+        "FVT-LEGACY-023"
+      ],
+      "status": "Candidate",
+      "disposition": "Unverified"
+    },
+    {
+      "id": "LEGACY-FNC-010",
+      "summary": "Users shall be able to undo an accidental completion without losing unrelated",
+      "statement": "Users shall be able to undo an accidental completion without losing unrelated progress.",
+      "level": "Functional",
+      "priority": "P0",
+      "source": "R16",
+      "scope": "all",
+      "functionality_ids": [
+        "LEGACY-CAP-004"
+      ],
+      "verification_method": "Functional test",
+      "verification_ids": [
+        "FVT-LEGACY-001",
+        "FVT-LEGACY-023"
+      ],
+      "status": "Candidate",
+      "disposition": "Unverified"
+    },
+    {
+      "id": "LEGACY-FNC-011",
+      "summary": "The system shall calculate a continuity metric that preserves historical progress after isolated…",
+      "statement": "The system shall calculate a continuity metric that preserves historical progress after isolated misses rather than relying only on a reset-to-zero streak.",
+      "level": "Functional",
+      "priority": "P0",
+      "source": "R5; DP-03",
+      "scope": "all",
+      "functionality_ids": [
+        "LEGACY-CAP-004"
+      ],
+      "verification_method": "Algorithm test",
+      "verification_ids": [
+        "FVT-LEGACY-003"
+      ],
+      "status": "Candidate",
+      "disposition": "Unverified"
+    },
+    {
+      "id": "LEGACY-FNC-012",
+      "summary": "The system may show traditional streaks in addition to the continuity metric, with…",
+      "statement": "The system may show traditional streaks in addition to the continuity metric, with user-configurable grace or recovery behavior.",
+      "level": "Functional",
+      "priority": "P1",
+      "source": "R4,R5,R9",
+      "scope": "all",
+      "functionality_ids": [
+        "LEGACY-CAP-004"
+      ],
+      "verification_method": "Functional test",
+      "verification_ids": [
+        "FVT-LEGACY-003"
+      ],
+      "status": "Candidate",
+      "disposition": "Unverified"
+    },
+    {
+      "id": "LEGACY-FNC-013",
+      "summary": "Verified actions shall award configurable XP to a global level and one or more domain",
+      "statement": "Verified actions shall award configurable XP to a global level and one or more domain skills.",
+      "level": "Functional",
+      "priority": "P0",
+      "source": "R1,R7,R9",
+      "scope": "all",
+      "functionality_ids": [
+        "LEGACY-CAP-004"
+      ],
+      "verification_method": "Functional test",
+      "verification_ids": [
+        "FVT-LEGACY-001"
+      ],
+      "status": "Candidate",
+      "disposition": "Unverified"
+    },
+    {
+      "id": "LEGACY-FNC-014",
+      "summary": "The system shall support achievements and milestone unlocks with in-progress and completed…",
+      "statement": "The system shall support achievements and milestone unlocks with in-progress and completed states.",
+      "level": "Functional",
+      "priority": "P1",
+      "source": "R7,R10",
+      "scope": "all",
+      "functionality_ids": [
+        "LEGACY-CAP-004"
+      ],
+      "verification_method": "Functional test",
+      "verification_ids": [],
+      "status": "Candidate",
+      "disposition": "Unverified"
+    },
+    {
+      "id": "LEGACY-FNC-015",
+      "summary": "The system shall support optional virtual currency and user-defined rewards without gating core…",
+      "statement": "The system shall support optional virtual currency and user-defined rewards without gating core task/habit functionality.",
+      "level": "Functional",
+      "priority": "P1",
+      "source": "R1,R7",
+      "scope": "all",
+      "functionality_ids": [
+        "LEGACY-CAP-004"
+      ],
+      "verification_method": "Functional test",
+      "verification_ids": [],
+      "status": "Candidate",
+      "disposition": "Unverified"
+    },
+    {
+      "id": "LEGACY-FNC-016",
+      "summary": "The system shall support finite daily/weekly quests derived from current goals and",
+      "statement": "The system shall support finite daily/weekly quests derived from current goals and habits.",
+      "level": "Functional",
+      "priority": "P1",
+      "source": "R2,R9",
+      "scope": "all",
+      "functionality_ids": [
+        "LEGACY-CAP-004"
+      ],
+      "verification_method": "FVT",
+      "verification_ids": [],
+      "status": "Candidate",
+      "disposition": "Unverified"
+    },
+    {
+      "id": "LEGACY-FNC-017",
+      "summary": "Users shall be able to access Personal, Work, Health, Finance, Learning, and future modules…",
+      "statement": "Users shall be able to access Personal, Work, Health, Finance, Learning, and future modules through a common module hub.",
+      "level": "Functional",
+      "priority": "P0",
+      "source": "Project vision; IA",
+      "scope": "all",
+      "functionality_ids": [
+        "LEGACY-CAP-005"
+      ],
+      "verification_method": "Navigation FVT",
+      "verification_ids": [
+        "FVT-LEGACY-004"
+      ],
+      "status": "Candidate",
+      "disposition": "Unverified"
+    },
+    {
+      "id": "LEGACY-FNC-018",
+      "summary": "The system shall provide a global search entry point capable of locating goals, tasks, habits,…",
+      "statement": "The system shall provide a global search entry point capable of locating goals, tasks, habits, modules, lessons, and other indexed entities.",
+      "level": "Functional",
+      "priority": "P1",
+      "source": "R14; IA",
+      "scope": "all",
+      "functionality_ids": [
+        "LEGACY-CAP-005"
+      ],
+      "verification_method": "Search FVT",
+      "verification_ids": [],
+      "status": "Candidate",
+      "disposition": "Unverified"
+    },
+    {
+      "id": "LEGACY-FNC-019",
+      "summary": "The system shall support context-aware reminders that can be snoozed, completed, or opened…",
+      "statement": "The system shall support context-aware reminders that can be snoozed, completed, or opened directly to the relevant item.",
+      "level": "Functional",
+      "priority": "P1",
+      "source": "R5,R6",
+      "scope": "all",
+      "functionality_ids": [
+        "LEGACY-CAP-002"
+      ],
+      "verification_method": "Notification test",
+      "verification_ids": [],
+      "status": "Candidate",
+      "disposition": "Unverified"
+    },
+    {
+      "id": "LEGACY-FNC-020",
+      "summary": "The system shall support glanceable widgets for a small set of high-value signals and deep-link…",
+      "statement": "The system shall support glanceable widgets for a small set of high-value signals and deep-link widget interactions to the relevant app context.",
+      "level": "Functional",
+      "priority": "P1",
+      "source": "R16",
+      "scope": "all",
+      "functionality_ids": [
+        "LEGACY-CAP-005"
+      ],
+      "verification_method": "Widget FVT",
+      "verification_ids": [],
+      "status": "Candidate",
+      "disposition": "Unverified"
+    },
+    {
+      "id": "LEGACY-FNC-021",
+      "summary": "The system shall provide history and analytics by day, week, month, and selected life",
+      "statement": "The system shall provide history and analytics by day, week, month, and selected life domain.",
+      "level": "Functional",
+      "priority": "P0",
+      "source": "R4-R8",
+      "scope": "all",
+      "functionality_ids": [
+        "LEGACY-CAP-005"
+      ],
+      "verification_method": "Analytics test",
+      "verification_ids": [],
+      "status": "Candidate",
+      "disposition": "Unverified"
+    },
+    {
+      "id": "LEGACY-FNC-022",
+      "summary": "Where authorized, the system shall ingest eligible external signals such as calendar and health…",
+      "statement": "Where authorized, the system shall ingest eligible external signals such as calendar and health data to reduce manual logging.",
+      "level": "Functional",
+      "priority": "P1",
+      "source": "R4,R6,R10; DP-05",
+      "scope": "all",
+      "functionality_ids": [
+        "LEGACY-CAP-015"
+      ],
+      "verification_method": "Integration test",
+      "verification_ids": [],
+      "status": "Candidate",
+      "disposition": "Unverified"
+    },
+    {
+      "id": "LEGACY-FNC-023",
+      "summary": "The system shall provide export of user-owned structured data in at least one portable",
+      "statement": "The system shall provide export of user-owned structured data in at least one portable format.",
+      "level": "Functional",
+      "priority": "P1",
+      "source": "R5; privacy principle",
+      "scope": "all",
+      "functionality_ids": [
+        "LEGACY-CAP-015"
+      ],
+      "verification_method": "Export test",
+      "verification_ids": [],
+      "status": "Candidate",
+      "disposition": "Unverified"
+    },
+    {
+      "id": "LEGACY-FNC-024",
+      "summary": "Family/social features shall be opt-in and support cooperative goals without requiring public…",
+      "statement": "Family/social features shall be opt-in and support cooperative goals without requiring public leaderboard participation.",
+      "level": "Functional",
+      "priority": "P1",
+      "source": "R13,R22; DP-06",
+      "scope": "all",
+      "functionality_ids": [
+        "LEGACY-CAP-014"
+      ],
+      "verification_method": "Permission + FVT",
+      "verification_ids": [
+        "FVT-LEGACY-021"
+      ],
+      "status": "Candidate",
+      "disposition": "Unverified"
+    },
+    {
+      "id": "LEGACY-FNC-025",
+      "summary": "Users shall be able to submit a feature request by text or voice and receive an AI-generated…",
+      "statement": "Users shall be able to submit a feature request by text or voice and receive an AI-generated structured proposal containing scope, rationale, dependencies, and acceptance criteria.",
+      "level": "Functional",
+      "priority": "P1",
+      "source": "Project vision; SK-AI-01",
+      "scope": "all",
+      "functionality_ids": [
+        "LEGACY-CAP-013"
+      ],
+      "verification_method": "Workflow FVT",
+      "verification_ids": [
+        "FVT-LEGACY-006"
+      ],
+      "status": "Candidate",
+      "disposition": "Unverified"
+    },
+    {
+      "id": "LEGACY-FNC-026",
+      "summary": "An authorized administrator shall be able to approve or reject an AI-generated feature proposal…",
+      "statement": "An authorized administrator shall be able to approve or reject an AI-generated feature proposal and route approved proposals into a beta/release workflow.",
+      "level": "Functional",
+      "priority": "P1",
+      "source": "Project vision",
+      "scope": "all",
+      "functionality_ids": [
+        "LEGACY-CAP-013"
+      ],
+      "verification_method": "Workflow FVT",
+      "verification_ids": [
+        "FVT-LEGACY-006"
+      ],
+      "status": "Candidate",
+      "disposition": "Unverified"
+    },
+    {
+      "id": "LEGACY-FNC-027",
+      "summary": "The Learning module shall represent courses, modules, lessons, and activities and support…",
+      "statement": "The Learning module shall represent courses, modules, lessons, and activities and support importing source links for AI-assisted content extraction subject to user review.",
+      "level": "Functional",
+      "priority": "P1",
+      "source": "Project vision",
+      "scope": "all",
+      "functionality_ids": [
+        "LEGACY-CAP-007"
+      ],
+      "verification_method": "Learning FVT",
+      "verification_ids": [
+        "FVT-LEGACY-007"
+      ],
+      "status": "Candidate",
+      "disposition": "Unverified"
+    },
+    {
+      "id": "LEGACY-FNC-028",
+      "summary": "The Finance module shall support goal-linked projections and preserve separation between…",
+      "statement": "The Finance module shall support goal-linked projections and preserve separation between user-entered assumptions and imported financial data.",
+      "level": "Functional",
+      "priority": "P1",
+      "source": "Project vision",
+      "scope": "all",
+      "functionality_ids": [
+        "LEGACY-CAP-006"
+      ],
+      "verification_method": "Finance FVT",
+      "verification_ids": [],
+      "status": "Candidate",
+      "disposition": "Unverified"
+    },
+    {
+      "id": "LEGACY-UX-001",
+      "summary": "The compact/mobile shell shall expose no more than five default top-level",
+      "statement": "The compact/mobile shell shall expose no more than five default top-level destinations.",
+      "level": "UX",
+      "priority": "P0",
+      "source": "R14",
+      "scope": "all",
+      "functionality_ids": [
+        "LEGACY-CAP-005"
+      ],
+      "verification_method": "Design inspection",
+      "verification_ids": [],
+      "status": "Candidate",
+      "disposition": "Unverified"
+    },
+    {
+      "id": "LEGACY-UX-002",
+      "summary": "Top-level navigation controls shall navigate between sections and shall not be repurposed as…",
+      "statement": "Top-level navigation controls shall navigate between sections and shall not be repurposed as action buttons.",
+      "level": "UX",
+      "priority": "P0",
+      "source": "R14",
+      "scope": "all",
+      "functionality_ids": [
+        "LEGACY-CAP-005"
+      ],
+      "verification_method": "Design inspection",
+      "verification_ids": [],
+      "status": "Candidate",
+      "disposition": "Unverified"
+    },
+    {
+      "id": "LEGACY-UX-003",
+      "summary": "Switching top-level destinations shall preserve the navigation state of each",
+      "statement": "Switching top-level destinations shall preserve the navigation state of each destination.",
+      "level": "UX",
+      "priority": "P0",
+      "source": "R14",
+      "scope": "all",
+      "functionality_ids": [
+        "LEGACY-CAP-005"
+      ],
+      "verification_method": "Navigation FVT",
+      "verification_ids": [],
+      "status": "Candidate",
+      "disposition": "Unverified"
+    },
+    {
+      "id": "LEGACY-UX-004",
+      "summary": "Advanced or infrequently used options shall be progressively disclosed rather than presented in…",
+      "statement": "Advanced or infrequently used options shall be progressively disclosed rather than presented in the default daily workflow.",
+      "level": "UX",
+      "priority": "P0",
+      "source": "R18",
+      "scope": "all",
+      "functionality_ids": [
+        "LEGACY-CAP-005"
+      ],
+      "verification_method": "Usability inspection",
+      "verification_ids": [],
+      "status": "Candidate",
+      "disposition": "Unverified"
+    },
+    {
+      "id": "LEGACY-UX-005",
+      "summary": "Each high-frequency screen shall present one clearly identifiable primary action and visually…",
+      "statement": "Each high-frequency screen shall present one clearly identifiable primary action and visually subordinate secondary actions.",
+      "level": "UX",
+      "priority": "P0",
+      "source": "R15",
+      "scope": "all",
+      "functionality_ids": [
+        "LEGACY-CAP-005"
+      ],
+      "verification_method": "Design inspection",
+      "verification_ids": [],
+      "status": "Candidate",
+      "disposition": "Unverified"
+    },
+    {
+      "id": "LEGACY-UX-006",
+      "summary": "Primary touch targets shall provide at least a 44×44 pt hit region on iOS-class",
+      "statement": "Primary touch targets shall provide at least a 44×44 pt hit region on iOS-class interfaces.",
+      "level": "UX",
+      "priority": "P0",
+      "source": "R15",
+      "scope": "all",
+      "functionality_ids": [
+        "LEGACY-CAP-005"
+      ],
+      "verification_method": "UI audit",
+      "verification_ids": [],
+      "status": "Candidate",
+      "disposition": "Unverified"
+    },
+    {
+      "id": "LEGACY-UX-007",
+      "summary": "The interface shall provide visible feedback for success, failure, disabled actions, and…",
+      "statement": "The interface shall provide visible feedback for success, failure, disabled actions, and recoverable errors, including an explanation when an action cannot proceed.",
+      "level": "UX",
+      "priority": "P0",
+      "source": "R16",
+      "scope": "all",
+      "functionality_ids": [
+        "LEGACY-CAP-005"
+      ],
+      "verification_method": "FVT",
+      "verification_ids": [],
+      "status": "Candidate",
+      "disposition": "Unverified"
+    },
+    {
+      "id": "LEGACY-UX-008",
+      "summary": "No essential state or instruction shall be communicated by color alone, and reduced-motion…",
+      "statement": "No essential state or instruction shall be communicated by color alone, and reduced-motion preferences shall be honored.",
+      "level": "UX",
+      "priority": "P0",
+      "source": "R17",
+      "scope": "all",
+      "functionality_ids": [
+        "LEGACY-CAP-005"
+      ],
+      "verification_method": "Accessibility audit",
+      "verification_ids": [],
+      "status": "Candidate",
+      "disposition": "Unverified"
+    },
+    {
+      "id": "LEGACY-UX-009",
+      "summary": "All drag-based nonessential interactions shall have a single-pointer non-drag",
+      "statement": "All drag-based nonessential interactions shall have a single-pointer non-drag alternative.",
+      "level": "UX",
+      "priority": "P0",
+      "source": "R17",
+      "scope": "all",
+      "functionality_ids": [
+        "LEGACY-CAP-005"
+      ],
+      "verification_method": "Accessibility FVT",
+      "verification_ids": [],
+      "status": "Candidate",
+      "disposition": "Unverified"
+    },
+    {
+      "id": "LEGACY-UX-010",
+      "summary": "The user shall be able to switch between any two top-level destinations with one tap/click from…",
+      "statement": "The user shall be able to switch between any two top-level destinations with one tap/click from the app shell.",
+      "level": "UX",
+      "priority": "P0",
+      "source": "IA",
+      "scope": "all",
+      "functionality_ids": [
+        "LEGACY-CAP-005"
+      ],
+      "verification_method": "Navigation FVT",
+      "verification_ids": [],
+      "status": "Candidate",
+      "disposition": "Unverified"
+    },
+    {
+      "id": "LEGACY-UX-011",
+      "summary": "The interface shall support a low-gamification presentation mode that preserves productivity…",
+      "statement": "The interface shall support a low-gamification presentation mode that preserves productivity functionality while reducing decorative game elements.",
+      "level": "UX",
+      "priority": "P1",
+      "source": "R20-R23; DP-09",
+      "scope": "all",
+      "functionality_ids": [
+        "LEGACY-CAP-005"
+      ],
+      "verification_method": "Visual FVT",
+      "verification_ids": [],
+      "status": "Candidate",
+      "disposition": "Unverified"
+    },
+    {
+      "id": "LEGACY-UX-012",
+      "summary": "Empty states shall contain an explanation and at least one valid next action when the user has…",
+      "statement": "Empty states shall contain an explanation and at least one valid next action when the user has permission to create or configure content.",
+      "level": "UX",
+      "priority": "P0",
+      "source": "Community signal",
+      "scope": "all",
+      "functionality_ids": [
+        "LEGACY-CAP-005"
+      ],
+      "verification_method": "State coverage test",
+      "verification_ids": [],
+      "status": "Candidate",
+      "disposition": "Unverified"
+    },
+    {
+      "id": "LEGACY-NFR-001",
+      "summary": "Web surfaces shall conform to WCAG 2.2 Level AA for applicable success",
+      "statement": "Web surfaces shall conform to WCAG 2.2 Level AA for applicable success criteria.",
+      "level": "Quality",
+      "priority": "P0",
+      "source": "R17",
+      "scope": "all",
+      "functionality_ids": [
+        "LEGACY-CAP-001"
+      ],
+      "verification_method": "Accessibility audit",
+      "verification_ids": [],
+      "status": "Candidate",
+      "disposition": "Unverified"
+    },
+    {
+      "id": "LEGACY-NFR-002",
+      "summary": "User and workspace authorization boundaries shall be enforced server-side for every data access…",
+      "statement": "User and workspace authorization boundaries shall be enforced server-side for every data access path.",
+      "level": "Quality",
+      "priority": "P0",
+      "source": "BIZ-003",
+      "scope": "all",
+      "functionality_ids": [
+        "LEGACY-CAP-001"
+      ],
+      "verification_method": "Security test",
+      "verification_ids": [],
+      "status": "Candidate",
+      "disposition": "Unverified"
+    },
+    {
+      "id": "LEGACY-NFR-003",
+      "summary": "Sensitive user data shall be encrypted in transit and at rest using platform-standard",
+      "statement": "Sensitive user data shall be encrypted in transit and at rest using platform-standard mechanisms.",
+      "level": "Quality",
+      "priority": "P0",
+      "source": "Security baseline",
+      "scope": "all",
+      "functionality_ids": [
+        "LEGACY-CAP-001"
+      ],
+      "verification_method": "Security review",
+      "verification_ids": [],
+      "status": "Candidate",
+      "disposition": "Unverified"
+    },
+    {
+      "id": "LEGACY-NFR-004",
+      "summary": "Critical daily actions shall remain usable under intermittent connectivity and synchronize…",
+      "statement": "Critical daily actions shall remain usable under intermittent connectivity and synchronize safely when connectivity returns.",
+      "level": "Quality",
+      "priority": "P1",
+      "source": "R5,R8",
+      "scope": "all",
+      "functionality_ids": [
+        "LEGACY-CAP-001"
+      ],
+      "verification_method": "Offline/sync FVT",
+      "verification_ids": [],
+      "status": "Candidate",
+      "disposition": "Unverified"
+    },
+    {
+      "id": "LEGACY-NFR-005",
+      "summary": "Synchronization shall be idempotent for repeated completion/update requests and shall prevent…",
+      "statement": "Synchronization shall be idempotent for repeated completion/update requests and shall prevent duplicate XP/reward issuance.",
+      "level": "Quality",
+      "priority": "P0",
+      "source": "Gamification integrity",
+      "scope": "all",
+      "functionality_ids": [
+        "LEGACY-CAP-001"
+      ],
+      "verification_method": "Integration test",
+      "verification_ids": [],
+      "status": "Candidate",
+      "disposition": "Unverified"
+    },
+    {
+      "id": "LEGACY-NFR-006",
+      "summary": "The system shall keep an auditable history for admin approval of AI-generated feature proposals…",
+      "statement": "The system shall keep an auditable history for admin approval of AI-generated feature proposals and beta promotion decisions.",
+      "level": "Quality",
+      "priority": "P1",
+      "source": "BIZ-005",
+      "scope": "all",
+      "functionality_ids": [
+        "LEGACY-CAP-001"
+      ],
+      "verification_method": "Audit test",
+      "verification_ids": [],
+      "status": "Candidate",
+      "disposition": "Unverified"
+    },
+    {
+      "id": "LEGACY-NFR-007",
+      "summary": "High-frequency completion interactions shall provide perceived feedback immediately; any…",
+      "statement": "High-frequency completion interactions shall provide perceived feedback immediately; any longer-running operation shall expose visible progress/state.",
+      "level": "Quality",
+      "priority": "P0",
+      "source": "R16",
+      "scope": "all",
+      "functionality_ids": [
+        "LEGACY-CAP-001"
+      ],
+      "verification_method": "Performance UX test",
+      "verification_ids": [],
+      "status": "Candidate",
+      "disposition": "Unverified"
+    },
+    {
+      "id": "LEGACY-NFR-008",
+      "summary": "Product analytics shall minimize collection to events required for UX/product decisions and…",
+      "statement": "Product analytics shall minimize collection to events required for UX/product decisions and shall distinguish telemetry from user content.",
+      "level": "Quality",
+      "priority": "P1",
+      "source": "Privacy principle",
+      "scope": "all",
+      "functionality_ids": [
+        "LEGACY-CAP-001"
+      ],
+      "verification_method": "Privacy review",
+      "verification_ids": [],
+      "status": "Candidate",
+      "disposition": "Unverified"
+    },
+    {
+      "id": "LEGACY-FNC-029",
+      "summary": "Support multiple accounts/cards across UAE and Brazil with type, currency, opening balance,…",
+      "statement": "Support multiple accounts/cards across UAE and Brazil with type, currency, opening balance, as-of date, status, issuer, and ownership/workspace.",
+      "level": "Functional",
+      "priority": "P0",
+      "source": "FVT-LEGACY-009,010",
+      "scope": "all",
+      "functionality_ids": [
+        "LEGACY-CAP-006"
+      ],
+      "verification_method": "Inspection",
+      "verification_ids": [
+        "FVT-LEGACY-009",
+        "FVT-LEGACY-010"
+      ],
+      "status": "Candidate",
+      "disposition": "Unverified"
+    },
+    {
+      "id": "LEGACY-FNC-030",
+      "summary": "Capture, edit, split, undo and batch-create categorized transactions, with essential flag…",
+      "statement": "Capture, edit, split, undo and batch-create categorized transactions, with essential flag independent of category, payment source, date, status, and provenance.",
+      "level": "Functional",
+      "priority": "P0",
+      "source": "FVT-LEGACY-009",
+      "scope": "all",
+      "functionality_ids": [
+        "LEGACY-CAP-006"
+      ],
+      "verification_method": "Inspection",
+      "verification_ids": [
+        "FVT-LEGACY-009"
+      ],
+      "status": "Candidate",
+      "disposition": "Unverified"
+    },
+    {
+      "id": "LEGACY-FNC-031",
+      "summary": "Support weekly review of card and account activity including duplicate preview, classification,…",
+      "statement": "Support weekly review of card and account activity including duplicate preview, classification, bulk approval, and statement reconciliation.",
+      "level": "Functional",
+      "priority": "P0",
+      "source": "FVT-LEGACY-009,013",
+      "scope": "all",
+      "functionality_ids": [
+        "LEGACY-CAP-006"
+      ],
+      "verification_method": "Inspection",
+      "verification_ids": [
+        "FVT-LEGACY-009",
+        "FVT-LEGACY-013"
+      ],
+      "status": "Candidate",
+      "disposition": "Unverified"
+    },
+    {
+      "id": "LEGACY-FNC-032",
+      "summary": "Correctly model credit-card purchases as expenses and card liabilities, while card payments…",
+      "statement": "Correctly model credit-card purchases as expenses and card liabilities, while card payments settle liabilities without creating duplicate expenses.",
+      "level": "Functional",
+      "priority": "P0",
+      "source": "FVT-LEGACY-010",
+      "scope": "all",
+      "functionality_ids": [
+        "LEGACY-CAP-006"
+      ],
+      "verification_method": "Inspection",
+      "verification_ids": [
+        "FVT-LEGACY-010"
+      ],
+      "status": "Candidate",
+      "disposition": "Unverified"
+    },
+    {
+      "id": "LEGACY-FNC-033",
+      "summary": "Track balances for debit/savings accounts through posted activity, transfers, adjustments, and…",
+      "statement": "Track balances for debit/savings accounts through posted activity, transfers, adjustments, and reconciliation with independently supplied statements.",
+      "level": "Functional",
+      "priority": "P0",
+      "source": "FVT-LEGACY-010",
+      "scope": "all",
+      "functionality_ids": [
+        "LEGACY-CAP-006"
+      ],
+      "verification_method": "Inspection",
+      "verification_ids": [
+        "FVT-LEGACY-010",
+        "FVT-LEGACY-011"
+      ],
+      "status": "Candidate",
+      "disposition": "Unverified"
+    },
+    {
+      "id": "LEGACY-FNC-034",
+      "summary": "Represent cross-border remittances and account transfers as linked legs; preserve native…",
+      "statement": "Represent cross-border remittances and account transfers as linked legs; preserve native amounts/currencies, fees, actual conversion rate, rate timestamp/source, and FX impact.",
+      "level": "Functional",
+      "priority": "P0",
+      "source": "FVT-LEGACY-011",
+      "scope": "all",
+      "functionality_ids": [
+        "LEGACY-CAP-006"
+      ],
+      "verification_method": "Inspection",
+      "verification_ids": [
+        "FVT-LEGACY-011"
+      ],
+      "status": "Candidate",
+      "disposition": "Unverified"
+    },
+    {
+      "id": "LEGACY-FNC-035",
+      "summary": "Summarize monthly and annual income, expenses, savings/savings rate, budget variance and…",
+      "statement": "Summarize monthly and annual income, expenses, savings/savings rate, budget variance and essential/non-essential spending by country, account and category.",
+      "level": "Functional",
+      "priority": "P0",
+      "source": "FVT-LEGACY-012",
+      "scope": "all",
+      "functionality_ids": [
+        "LEGACY-CAP-006"
+      ],
+      "verification_method": "Inspection",
+      "verification_ids": [
+        "FVT-LEGACY-012"
+      ],
+      "status": "Candidate",
+      "disposition": "Unverified"
+    },
+    {
+      "id": "LEGACY-FNC-036",
+      "summary": "Maintain monthly budgets and planned/recurring/fixed/variable/installment commitments, with…",
+      "statement": "Maintain monthly budgets and planned/recurring/fixed/variable/installment commitments, with actual vs forecast cash flow and bill reminders.",
+      "level": "Functional",
+      "priority": "P1",
+      "source": "FVT-LEGACY-012,014",
+      "scope": "all",
+      "functionality_ids": [
+        "LEGACY-CAP-006"
+      ],
+      "verification_method": "Inspection",
+      "verification_ids": [
+        "FVT-LEGACY-012"
+      ],
+      "status": "Candidate",
+      "disposition": "Unverified"
+    },
+    {
+      "id": "LEGACY-FNC-037",
+      "summary": "Track vehicle costs as ownership/rental operating expenses separately from financing principal,…",
+      "statement": "Track vehicle costs as ownership/rental operating expenses separately from financing principal, depreciation and one-time acquisition costs.",
+      "level": "Functional",
+      "priority": "P1",
+      "source": "FVT-LEGACY-014",
+      "scope": "all",
+      "functionality_ids": [
+        "LEGACY-CAP-006"
+      ],
+      "verification_method": "Inspection",
+      "verification_ids": [
+        "FVT-LEGACY-014"
+      ],
+      "status": "Candidate",
+      "disposition": "Unverified"
+    },
+    {
+      "id": "LEGACY-FNC-038",
+      "summary": "Track apartment-related payments, property asset valuation, related debt, equity and optional…",
+      "statement": "Track apartment-related payments, property asset valuation, related debt, equity and optional rental revenue while avoiding double counting.",
+      "level": "Functional",
+      "priority": "P1",
+      "source": "FVT-LEGACY-014",
+      "scope": "all",
+      "functionality_ids": [
+        "LEGACY-CAP-006"
+      ],
+      "verification_method": "Inspection",
+      "verification_ids": [
+        "FVT-LEGACY-014"
+      ],
+      "status": "Candidate",
+      "disposition": "Unverified"
+    },
+    {
+      "id": "LEGACY-FNC-039",
+      "summary": "Project one-to-five-year cash flow, saving potential, net worth and goal trajectories,…",
+      "statement": "Project one-to-five-year cash flow, saving potential, net worth and goal trajectories, supporting multiple scenarios and recorded assumptions.",
+      "level": "Functional",
+      "priority": "P1",
+      "source": "FVT-LEGACY-014; existing FNC-028",
+      "scope": "all",
+      "functionality_ids": [
+        "LEGACY-CAP-006"
+      ],
+      "verification_method": "Inspection",
+      "verification_ids": [
+        "FVT-LEGACY-014"
+      ],
+      "status": "Candidate",
+      "disposition": "Unverified"
+    },
+    {
+      "id": "LEGACY-FNC-040",
+      "summary": "Preview and map spreadsheet/CSV/Google Sheets financial data, support manual adjustment and…",
+      "statement": "Preview and map spreadsheet/CSV/Google Sheets financial data, support manual adjustment and explicit import approval, and suppress duplicate import rows.",
+      "level": "Functional",
+      "priority": "P0",
+      "source": "FVT-LEGACY-013",
+      "scope": "all",
+      "functionality_ids": [
+        "LEGACY-CAP-006"
+      ],
+      "verification_method": "Inspection",
+      "verification_ids": [
+        "FVT-LEGACY-013"
+      ],
+      "status": "Candidate",
+      "disposition": "Unverified"
+    },
+    {
+      "id": "LEGACY-FNC-041",
+      "summary": "Expose source/provenance, creation/edit history, reconciliation status and reversible correction…",
+      "statement": "Expose source/provenance, creation/edit history, reconciliation status and reversible correction for imported and manually entered transactions.",
+      "level": "Functional",
+      "priority": "P0",
+      "source": "FVT-LEGACY-009,013",
+      "scope": "all",
+      "functionality_ids": [
+        "LEGACY-CAP-006"
+      ],
+      "verification_method": "Inspection",
+      "verification_ids": [
+        "FVT-LEGACY-009",
+        "FVT-LEGACY-013"
+      ],
+      "status": "Candidate",
+      "disposition": "Unverified"
+    },
+    {
+      "id": "LEGACY-FNC-042",
+      "summary": "Calculate account-level balances and a consolidated balance/net-worth view in selectable…",
+      "statement": "Calculate account-level balances and a consolidated balance/net-worth view in selectable presentation currency without overwriting native-currency ledger entries.",
+      "level": "Functional",
+      "priority": "P1",
+      "source": "FVT-LEGACY-011,014",
+      "scope": "all",
+      "functionality_ids": [
+        "LEGACY-CAP-006"
+      ],
+      "verification_method": "Inspection",
+      "verification_ids": [
+        "FVT-LEGACY-011",
+        "FVT-LEGACY-014"
+      ],
+      "status": "Candidate",
+      "disposition": "Unverified"
+    },
+    {
+      "id": "LEGACY-FNC-043",
+      "summary": "Distinguish earned income, refunds, reimbursements, investment profit/loss…",
+      "statement": "Distinguish earned income, refunds, reimbursements, investment profit/loss (realized/unrealized), internal transfers and valuation changes in reporting.",
+      "level": "Functional",
+      "priority": "P0",
+      "source": "FVT-LEGACY-011,012",
+      "scope": "all",
+      "functionality_ids": [
+        "LEGACY-CAP-006"
+      ],
+      "verification_method": "Inspection",
+      "verification_ids": [
+        "FVT-LEGACY-011",
+        "FVT-LEGACY-012"
+      ],
+      "status": "Candidate",
+      "disposition": "Unverified"
+    },
+    {
+      "id": "LEGACY-UX-013",
+      "summary": "Weekly reconciliation supports efficient multi-row review; classify multiple transactions…",
+      "statement": "Weekly reconciliation supports efficient multi-row review; classify multiple transactions without reopening a modal for every field.",
+      "level": "UX",
+      "priority": "P0",
+      "source": "Prior project definition",
+      "scope": "all",
+      "functionality_ids": [
+        "LEGACY-CAP-005"
+      ],
+      "verification_method": "Inspection",
+      "verification_ids": [],
+      "status": "Candidate",
+      "disposition": "Unverified"
+    },
+    {
+      "id": "LEGACY-UX-014",
+      "summary": "Overview metrics have drill-downs to the constituent transactions, accounts and calculation…",
+      "statement": "Overview metrics have drill-downs to the constituent transactions, accounts and calculation definitions; the displayed reporting currency and FX assumptions remain visible.",
+      "level": "UX",
+      "priority": "P0",
+      "source": "Prior project definition",
+      "scope": "all",
+      "functionality_ids": [
+        "LEGACY-CAP-005"
+      ],
+      "verification_method": "Inspection",
+      "verification_ids": [],
+      "status": "Candidate",
+      "disposition": "Unverified"
+    },
+    {
+      "id": "LEGACY-UX-015",
+      "summary": "Present actuals, commitments, projections and uncertainty as distinguishable states; do not…",
+      "statement": "Present actuals, commitments, projections and uncertainty as distinguishable states; do not present forecasts as account balances.",
+      "level": "UX",
+      "priority": "P0",
+      "source": "Prior project definition",
+      "scope": "all",
+      "functionality_ids": [
+        "LEGACY-CAP-005"
+      ],
+      "verification_method": "Inspection",
+      "verification_ids": [],
+      "status": "Candidate",
+      "disposition": "Unverified"
+    },
+    {
+      "id": "LEGACY-UX-016",
+      "summary": "Saving, discarding and undoing a batch must have explicit feedback and guard against loss of…",
+      "statement": "Saving, discarding and undoing a batch must have explicit feedback and guard against loss of partially reviewed work.",
+      "level": "UX",
+      "priority": "P0",
+      "source": "Prior project definition",
+      "scope": "all",
+      "functionality_ids": [
+        "LEGACY-CAP-005"
+      ],
+      "verification_method": "Inspection",
+      "verification_ids": [],
+      "status": "Candidate",
+      "disposition": "Unverified"
+    },
+    {
+      "id": "LEGACY-NFR-009",
+      "summary": "Financial transactions are private by default; workspace permissions must be enforced…",
+      "statement": "Financial transactions are private by default; workspace permissions must be enforced server-side and data encrypted in transit and at rest.",
+      "level": "Quality",
+      "priority": "P0",
+      "source": "Prior project definition",
+      "scope": "all",
+      "functionality_ids": [
+        "LEGACY-CAP-001"
+      ],
+      "verification_method": "Inspection",
+      "verification_ids": [],
+      "status": "Candidate",
+      "disposition": "Unverified"
+    },
+    {
+      "id": "LEGACY-NFR-010",
+      "summary": "Posting/importing transactions and transfer legs must be idempotent; partial failures cannot…",
+      "statement": "Posting/importing transactions and transfer legs must be idempotent; partial failures cannot leave inconsistent account or card balances.",
+      "level": "Quality",
+      "priority": "P0",
+      "source": "Prior project definition",
+      "scope": "all",
+      "functionality_ids": [
+        "LEGACY-CAP-001"
+      ],
+      "verification_method": "Inspection",
+      "verification_ids": [],
+      "status": "Candidate",
+      "disposition": "Unverified"
+    },
+    {
+      "id": "LEGACY-NFR-011",
+      "summary": "Amount arithmetic uses deterministic decimal/fixed-point values with explicit per-currency…",
+      "statement": "Amount arithmetic uses deterministic decimal/fixed-point values with explicit per-currency scale; reporting FX conversions preserve provenance and rounding.",
+      "level": "Quality",
+      "priority": "P0",
+      "source": "Prior project definition",
+      "scope": "all",
+      "functionality_ids": [
+        "LEGACY-CAP-001"
+      ],
+      "verification_method": "Inspection",
+      "verification_ids": [],
+      "status": "Candidate",
+      "disposition": "Unverified"
+    },
+    {
+      "id": "LEGACY-NFR-012",
+      "summary": "Imported statements and personal finance data must not be committed to public code repositories…",
+      "statement": "Imported statements and personal finance data must not be committed to public code repositories or exposed through telemetry/logs; support data export and deletion.",
+      "level": "Quality",
+      "priority": "P0",
+      "source": "Prior project definition",
+      "scope": "all",
+      "functionality_ids": [
+        "LEGACY-CAP-001"
+      ],
+      "verification_method": "Inspection",
+      "verification_ids": [],
+      "status": "Candidate",
+      "disposition": "Unverified"
+    },
+    {
+      "id": "LEGACY-BIZ-006",
+      "summary": "Legavia shall expose the same core user journeys through a responsive browser experience on…",
+      "statement": "Legavia shall expose the same core user journeys through a responsive browser experience on mobile and desktop before considering native-client dependencies.",
+      "level": "Business",
+      "priority": "P0",
+      "source": "Legavia product discovery 2026-09 to 2026-10",
+      "scope": "all",
+      "functionality_ids": [
+        "LEGACY-CAP-001"
+      ],
+      "verification_method": "Independent functional verification",
+      "verification_ids": [],
+      "status": "Candidate",
+      "disposition": "Unverified"
+    },
+    {
+      "id": "LEGACY-BIZ-007",
+      "summary": "The product shall support a coherent life-management history across productivity, focus, health,…",
+      "statement": "The product shall support a coherent life-management history across productivity, focus, health, learning, media, finance and memories without requiring all modules to be enabled.",
+      "level": "Business",
+      "priority": "P1",
+      "source": "Legavia product discovery 2026-09 to 2026-10",
+      "scope": "all",
+      "functionality_ids": [
+        "LEGACY-CAP-001"
+      ],
+      "verification_method": "Independent functional verification",
+      "verification_ids": [],
+      "status": "Candidate",
+      "disposition": "Unverified"
+    },
+    {
+      "id": "LEGACY-BIZ-008",
+      "summary": "Access to another person's data shall be granted at resource level and shall not arise…",
+      "statement": "Access to another person's data shall be granted at resource level and shall not arise implicitly from friendship, household membership or an invitation.",
+      "level": "Business",
+      "priority": "P0",
+      "source": "Legavia product discovery 2026-09 to 2026-10",
+      "scope": "all",
+      "functionality_ids": [
+        "LEGACY-CAP-001"
+      ],
+      "verification_method": "Independent functional verification",
+      "verification_ids": [],
+      "status": "Candidate",
+      "disposition": "Unverified"
+    },
+    {
+      "id": "LEGACY-BIZ-009",
+      "summary": "External integrations and AI recommendations shall require explicit user authorization, show…",
+      "statement": "External integrations and AI recommendations shall require explicit user authorization, show data provenance and remain usable through manual alternatives.",
+      "level": "Business",
+      "priority": "P1",
+      "source": "Legavia product discovery 2026-09 to 2026-10",
+      "scope": "all",
+      "functionality_ids": [
+        "LEGACY-CAP-001"
+      ],
+      "verification_method": "Independent functional verification",
+      "verification_ids": [],
+      "status": "Candidate",
+      "disposition": "Unverified"
+    },
+    {
+      "id": "LEGACY-BIZ-010",
+      "summary": "The development program shall require approved use-case, requirement, UX and verification…",
+      "statement": "The development program shall require approved use-case, requirement, UX and verification evidence before production promotion.",
+      "level": "Business",
+      "priority": "P0",
+      "source": "Legavia product discovery 2026-09 to 2026-10",
+      "scope": "all",
+      "functionality_ids": [
+        "LEGACY-CAP-001"
+      ],
+      "verification_method": "Independent functional verification",
+      "verification_ids": [],
+      "status": "Candidate",
+      "disposition": "Unverified"
+    },
+    {
+      "id": "LEGACY-FNC-044",
+      "summary": "The Today surface shall let the user log, correct and review daily water consumption against a…",
+      "statement": "The Today surface shall let the user log, correct and review daily water consumption against a configurable daily target.",
+      "level": "Functional",
+      "priority": "P1",
+      "source": "Legavia product discovery 2026-09 to 2026-10",
+      "scope": "all",
+      "functionality_ids": [
+        "LEGACY-CAP-002"
+      ],
+      "verification_method": "Independent functional verification",
+      "verification_ids": [
+        "FVT-LEGACY-019"
+      ],
+      "status": "Candidate",
+      "disposition": "Unverified"
+    },
+    {
+      "id": "LEGACY-FNC-045",
+      "summary": "A focus session shall have a named timer, start, pause, resume and stop actions, and optional…",
+      "statement": "A focus session shall have a named timer, start, pause, resume and stop actions, and optional association with a task or goal.",
+      "level": "Functional",
+      "priority": "P1",
+      "source": "Legavia product discovery 2026-09 to 2026-10",
+      "scope": "all",
+      "functionality_ids": [
+        "LEGACY-CAP-008"
+      ],
+      "verification_method": "Independent functional verification",
+      "verification_ids": [
+        "FVT-LEGACY-015"
+      ],
+      "status": "Candidate",
+      "disposition": "Unverified"
+    },
+    {
+      "id": "LEGACY-FNC-046",
+      "summary": "Completed focus time shall generate a configurable forest or plant progression projection and…",
+      "statement": "Completed focus time shall generate a configurable forest or plant progression projection and period-based focus statistics without duplicating time events.",
+      "level": "Functional",
+      "priority": "P1",
+      "source": "Legavia product discovery 2026-09 to 2026-10",
+      "scope": "all",
+      "functionality_ids": [
+        "LEGACY-CAP-008"
+      ],
+      "verification_method": "Independent functional verification",
+      "verification_ids": [
+        "FVT-LEGACY-015"
+      ],
+      "status": "Candidate",
+      "disposition": "Unverified"
+    },
+    {
+      "id": "LEGACY-FNC-047",
+      "summary": "The Books module shall record reading status, total pages, pages completed, dated reading events…",
+      "statement": "The Books module shall record reading status, total pages, pages completed, dated reading events and completed-book history.",
+      "level": "Functional",
+      "priority": "P1",
+      "source": "Legavia product discovery 2026-09 to 2026-10",
+      "scope": "all",
+      "functionality_ids": [
+        "LEGACY-CAP-009"
+      ],
+      "verification_method": "Independent functional verification",
+      "verification_ids": [
+        "FVT-LEGACY-016"
+      ],
+      "status": "Candidate",
+      "disposition": "Unverified"
+    },
+    {
+      "id": "LEGACY-FNC-048",
+      "summary": "The Games module shall maintain a game library and distinct start, pause, resume and stop…",
+      "statement": "The Games module shall maintain a game library and distinct start, pause, resume and stop playtime events with aggregated playtime.",
+      "level": "Functional",
+      "priority": "P2",
+      "source": "Legavia product discovery 2026-09 to 2026-10",
+      "scope": "all",
+      "functionality_ids": [
+        "LEGACY-CAP-009"
+      ],
+      "verification_method": "Independent functional verification",
+      "verification_ids": [],
+      "status": "Candidate",
+      "disposition": "Unverified"
+    },
+    {
+      "id": "LEGACY-FNC-049",
+      "summary": "The Movies module shall capture a recommendation, recommender, recommendation date and watching…",
+      "statement": "The Movies module shall capture a recommendation, recommender, recommendation date and watching status through text or reviewed voice capture.",
+      "level": "Functional",
+      "priority": "P1",
+      "source": "Legavia product discovery 2026-09 to 2026-10",
+      "scope": "all",
+      "functionality_ids": [
+        "LEGACY-CAP-009"
+      ],
+      "verification_method": "Independent functional verification",
+      "verification_ids": [
+        "FVT-LEGACY-017"
+      ],
+      "status": "Candidate",
+      "disposition": "Unverified"
+    },
+    {
+      "id": "LEGACY-FNC-050",
+      "summary": "The Memory module shall accept text, voice, photos and linked note sources and support…",
+      "statement": "The Memory module shall accept text, voice, photos and linked note sources and support navigating memories through a searchable timeline and mind-map projection.",
+      "level": "Functional",
+      "priority": "P1",
+      "source": "Legavia product discovery 2026-09 to 2026-10",
+      "scope": "all",
+      "functionality_ids": [
+        "LEGACY-CAP-010"
+      ],
+      "verification_method": "Independent functional verification",
+      "verification_ids": [
+        "FVT-LEGACY-018"
+      ],
+      "status": "Candidate",
+      "disposition": "Unverified"
+    },
+    {
+      "id": "LEGACY-FNC-051",
+      "summary": "The user shall be able to maintain an interactive CV or portfolio with evidence-linked…",
+      "statement": "The user shall be able to maintain an interactive CV or portfolio with evidence-linked achievements and explicitly approved updates generated from milestones.",
+      "level": "Functional",
+      "priority": "P2",
+      "source": "Legavia product discovery 2026-09 to 2026-10",
+      "scope": "all",
+      "functionality_ids": [
+        "LEGACY-CAP-011"
+      ],
+      "verification_method": "Independent functional verification",
+      "verification_ids": [],
+      "status": "Candidate",
+      "disposition": "Unverified"
+    },
+    {
+      "id": "LEGACY-FNC-052",
+      "summary": "The Health module shall track user-entered exercise and wellness events and optionally ingest…",
+      "statement": "The Health module shall track user-entered exercise and wellness events and optionally ingest authorized health signals without making diagnostic claims.",
+      "level": "Functional",
+      "priority": "P1",
+      "source": "Legavia product discovery 2026-09 to 2026-10",
+      "scope": "all",
+      "functionality_ids": [
+        "LEGACY-CAP-012"
+      ],
+      "verification_method": "Independent functional verification",
+      "verification_ids": [],
+      "status": "Candidate",
+      "disposition": "Unverified"
+    },
+    {
+      "id": "LEGACY-FNC-053",
+      "summary": "The user shall be able to view task schedules alongside authorized calendar events and plan…",
+      "statement": "The user shall be able to view task schedules alongside authorized calendar events and plan daily or weekly actions without silently editing the external calendar.",
+      "level": "Functional",
+      "priority": "P1",
+      "source": "Legavia product discovery 2026-09 to 2026-10",
+      "scope": "all",
+      "functionality_ids": [
+        "LEGACY-CAP-002"
+      ],
+      "verification_method": "Independent functional verification",
+      "verification_ids": [],
+      "status": "Candidate",
+      "disposition": "Unverified"
+    },
+    {
+      "id": "LEGACY-FNC-054",
+      "summary": "Text or voice commands shall create reviewable proposals for tasks, goals, habits or journal…",
+      "statement": "Text or voice commands shall create reviewable proposals for tasks, goals, habits or journal entries; no persistent change shall occur until confirmed by an authorized user.",
+      "level": "Functional",
+      "priority": "P1",
+      "source": "Legavia product discovery 2026-09 to 2026-10",
+      "scope": "all",
+      "functionality_ids": [
+        "LEGACY-CAP-013"
+      ],
+      "verification_method": "Independent functional verification",
+      "verification_ids": [
+        "FVT-LEGACY-017",
+        "FVT-LEGACY-022"
+      ],
+      "status": "Candidate",
+      "disposition": "Unverified"
+    },
+    {
+      "id": "LEGACY-FNC-055",
+      "summary": "AI-proposed changes shall have preview, modify, approve and reject states and an auditable…",
+      "statement": "AI-proposed changes shall have preview, modify, approve and reject states and an auditable provenance record.",
+      "level": "Functional",
+      "priority": "P1",
+      "source": "Legavia product discovery 2026-09 to 2026-10",
+      "scope": "all",
+      "functionality_ids": [
+        "LEGACY-CAP-013"
+      ],
+      "verification_method": "Independent functional verification",
+      "verification_ids": [
+        "FVT-LEGACY-006",
+        "FVT-LEGACY-022"
+      ],
+      "status": "Candidate",
+      "disposition": "Unverified"
+    },
+    {
+      "id": "LEGACY-FNC-056",
+      "summary": "The application shall expose user-configurable permissions for optional family or shared…",
+      "statement": "The application shall expose user-configurable permissions for optional family or shared workspaces and enforce invitations, revocation and isolation.",
+      "level": "Functional",
+      "priority": "P1",
+      "source": "Legavia product discovery 2026-09 to 2026-10",
+      "scope": "all",
+      "functionality_ids": [
+        "LEGACY-CAP-001"
+      ],
+      "verification_method": "Independent functional verification",
+      "verification_ids": [
+        "FVT-LEGACY-005",
+        "FVT-LEGACY-021"
+      ],
+      "status": "Candidate",
+      "disposition": "Unverified"
+    },
+    {
+      "id": "LEGACY-FNC-057",
+      "summary": "Shared goals, social events and challenges shall use explicit resource-level visibility…",
+      "statement": "Shared goals, social events and challenges shall use explicit resource-level visibility (private, selected users, friends, party or public) with private as default.",
+      "level": "Functional",
+      "priority": "P2",
+      "source": "Legavia product discovery 2026-09 to 2026-10",
+      "scope": "all",
+      "functionality_ids": [
+        "LEGACY-CAP-014"
+      ],
+      "verification_method": "Independent functional verification",
+      "verification_ids": [
+        "FVT-LEGACY-021"
+      ],
+      "status": "Candidate",
+      "disposition": "Unverified"
+    },
+    {
+      "id": "LEGACY-FNC-058",
+      "summary": "Administrators shall be able to enable and roll back approved features for designated beta…",
+      "statement": "Administrators shall be able to enable and roll back approved features for designated beta cohorts without exposing unauthorized workspace content.",
+      "level": "Functional",
+      "priority": "P2",
+      "source": "Legavia product discovery 2026-09 to 2026-10",
+      "scope": "all",
+      "functionality_ids": [
+        "LEGACY-CAP-013"
+      ],
+      "verification_method": "Independent functional verification",
+      "verification_ids": [
+        "FVT-LEGACY-006",
+        "FVT-LEGACY-024"
+      ],
+      "status": "Candidate",
+      "disposition": "Unverified"
+    },
+    {
+      "id": "LEGACY-FNC-059",
+      "summary": "Administrators shall be able to monitor configured per-user storage quotas and manage retention…",
+      "statement": "Administrators shall be able to monitor configured per-user storage quotas and manage retention without seeing users' private content by default.",
+      "level": "Functional",
+      "priority": "P2",
+      "source": "Legavia product discovery 2026-09 to 2026-10",
+      "scope": "all",
+      "functionality_ids": [
+        "LEGACY-CAP-001"
+      ],
+      "verification_method": "Independent functional verification",
+      "verification_ids": [
+        "FVT-LEGACY-024"
+      ],
+      "status": "Candidate",
+      "disposition": "Unverified"
+    },
+    {
+      "id": "LEGACY-FNC-060",
+      "summary": "The user shall be able to switch an explicit Auto, Mobile or Desktop presentation mode, with…",
+      "statement": "The user shall be able to switch an explicit Auto, Mobile or Desktop presentation mode, with Auto adapting to viewport and input characteristics.",
+      "level": "Functional",
+      "priority": "P0",
+      "source": "Legavia product discovery 2026-09 to 2026-10",
+      "scope": "all",
+      "functionality_ids": [
+        "LEGACY-CAP-005"
+      ],
+      "verification_method": "Independent functional verification",
+      "verification_ids": [
+        "FVT-LEGACY-004",
+        "FVT-LEGACY-008",
+        "FVT-LEGACY-020"
+      ],
+      "status": "Candidate",
+      "disposition": "Unverified"
+    },
+    {
+      "id": "LEGACY-FNC-061",
+      "summary": "Users shall be able to create and manage separate personal and invited workspaces with a…",
+      "statement": "Users shall be able to create and manage separate personal and invited workspaces with a documented owner, member and administrator role model.",
+      "level": "Functional",
+      "priority": "P0",
+      "source": "Legavia product discovery 2026-09 to 2026-10",
+      "scope": "all",
+      "functionality_ids": [
+        "LEGACY-CAP-001"
+      ],
+      "verification_method": "Independent functional verification",
+      "verification_ids": [
+        "FVT-LEGACY-005",
+        "FVT-LEGACY-024"
+      ],
+      "status": "Candidate",
+      "disposition": "Unverified"
+    },
+    {
+      "id": "LEGACY-FNC-062",
+      "summary": "The application shall support user-controlled export and deletion requests for supported…",
+      "statement": "The application shall support user-controlled export and deletion requests for supported personal data and attachments, subject to disclosed retention constraints.",
+      "level": "Functional",
+      "priority": "P1",
+      "source": "Legavia product discovery 2026-09 to 2026-10",
+      "scope": "all",
+      "functionality_ids": [
+        "LEGACY-CAP-001"
+      ],
+      "verification_method": "Independent functional verification",
+      "verification_ids": [
+        "FVT-LEGACY-018"
+      ],
+      "status": "Candidate",
+      "disposition": "Unverified"
+    },
+    {
+      "id": "LEGACY-FNC-063",
+      "summary": "Notifications and reminders shall be permission-based, user-configurable and deep-link to the…",
+      "statement": "Notifications and reminders shall be permission-based, user-configurable and deep-link to the related entity when supported.",
+      "level": "Functional",
+      "priority": "P1",
+      "source": "Legavia product discovery 2026-09 to 2026-10",
+      "scope": "all",
+      "functionality_ids": [
+        "LEGACY-CAP-002"
+      ],
+      "verification_method": "Independent functional verification",
+      "verification_ids": [],
+      "status": "Candidate",
+      "disposition": "Unverified"
+    },
+    {
+      "id": "LEGACY-FNC-064",
+      "summary": "The web application shall provide installable mobile-friendly behavior and preserve session…",
+      "statement": "The web application shall provide installable mobile-friendly behavior and preserve session navigation and allowed local draft state on reload.",
+      "level": "Functional",
+      "priority": "P0",
+      "source": "Legavia product discovery 2026-09 to 2026-10",
+      "scope": "all",
+      "functionality_ids": [
+        "LEGACY-CAP-005"
+      ],
+      "verification_method": "Independent functional verification",
+      "verification_ids": [
+        "FVT-LEGACY-004",
+        "FVT-LEGACY-020"
+      ],
+      "status": "Candidate",
+      "disposition": "Unverified"
+    },
+    {
+      "id": "LEGACY-FNC-065",
+      "summary": "An invited user shall be able to participate in a selected collaborative challenge without…",
+      "statement": "An invited user shall be able to participate in a selected collaborative challenge without gaining access to other private modules.",
+      "level": "Functional",
+      "priority": "P2",
+      "source": "Legavia product discovery 2026-09 to 2026-10",
+      "scope": "all",
+      "functionality_ids": [
+        "LEGACY-CAP-014"
+      ],
+      "verification_method": "Independent functional verification",
+      "verification_ids": [],
+      "status": "Candidate",
+      "disposition": "Unverified"
+    },
+    {
+      "id": "LEGACY-FNC-066",
+      "summary": "An authorized GitHub connection may suggest daily or weekly tasks from selected project issues,…",
+      "statement": "An authorized GitHub connection may suggest daily or weekly tasks from selected project issues, with source links and explicit approval before importing them.",
+      "level": "Functional",
+      "priority": "P2",
+      "source": "Legavia product discovery 2026-09 to 2026-10",
+      "scope": "all",
+      "functionality_ids": [
+        "LEGACY-CAP-013"
+      ],
+      "verification_method": "Independent functional verification",
+      "verification_ids": [
+        "FVT-LEGACY-022"
+      ],
+      "status": "Candidate",
+      "disposition": "Unverified"
+    },
+    {
+      "id": "LEGACY-FNC-067",
+      "summary": "The Learning module shall capture course progress and permit reviewed AI extraction of modules…",
+      "statement": "The Learning module shall capture course progress and permit reviewed AI extraction of modules and lessons from approved links or supplied materials.",
+      "level": "Functional",
+      "priority": "P1",
+      "source": "Legavia product discovery 2026-09 to 2026-10",
+      "scope": "all",
+      "functionality_ids": [
+        "LEGACY-CAP-007"
+      ],
+      "verification_method": "Independent functional verification",
+      "verification_ids": [
+        "FVT-LEGACY-007"
+      ],
+      "status": "Candidate",
+      "disposition": "Unverified"
+    },
+    {
+      "id": "LEGACY-FNC-068",
+      "summary": "Habits shall support positive or negative polarity, configurable severity, recovery policy and…",
+      "statement": "Habits shall support positive or negative polarity, configurable severity, recovery policy and transparent non-destructive consequences.",
+      "level": "Functional",
+      "priority": "P1",
+      "source": "Legavia product discovery 2026-09 to 2026-10",
+      "scope": "all",
+      "functionality_ids": [
+        "LEGACY-CAP-004"
+      ],
+      "verification_method": "Independent functional verification",
+      "verification_ids": [
+        "FVT-LEGACY-003"
+      ],
+      "status": "Candidate",
+      "disposition": "Unverified"
+    },
+    {
+      "id": "LEGACY-FNC-069",
+      "summary": "XP, levels, badges and virtual currency shall be computed from a deterministic event ledger with…",
+      "statement": "XP, levels, badges and virtual currency shall be computed from a deterministic event ledger with visible explanations of rewards and reversals.",
+      "level": "Functional",
+      "priority": "P0",
+      "source": "Legavia product discovery 2026-09 to 2026-10",
+      "scope": "all",
+      "functionality_ids": [
+        "LEGACY-CAP-004"
+      ],
+      "verification_method": "Independent functional verification",
+      "verification_ids": [
+        "FVT-LEGACY-015"
+      ],
+      "status": "Candidate",
+      "disposition": "Unverified"
+    },
+    {
+      "id": "LEGACY-FNC-070",
+      "summary": "The Books module shall recalculate an estimated reading completion date from dated page-progress…",
+      "statement": "The Books module shall recalculate an estimated reading completion date from dated page-progress observations and show insufficient-data uncertainty.",
+      "level": "Functional",
+      "priority": "P1",
+      "source": "Legavia product discovery 2026-09 to 2026-10",
+      "scope": "all",
+      "functionality_ids": [
+        "LEGACY-CAP-009"
+      ],
+      "verification_method": "Independent functional verification",
+      "verification_ids": [
+        "FVT-LEGACY-016"
+      ],
+      "status": "Candidate",
+      "disposition": "Unverified"
+    },
+    {
+      "id": "LEGACY-FNC-071",
+      "summary": "The Movies watchlist may rank candidate titles by a timestamped external rating when licensed…",
+      "statement": "The Movies watchlist may rank candidate titles by a timestamped external rating when licensed data is available, retaining a manual order fallback.",
+      "level": "Functional",
+      "priority": "P2",
+      "source": "Legavia product discovery 2026-09 to 2026-10",
+      "scope": "all",
+      "functionality_ids": [
+        "LEGACY-CAP-009"
+      ],
+      "verification_method": "Independent functional verification",
+      "verification_ids": [
+        "FVT-LEGACY-017"
+      ],
+      "status": "Candidate",
+      "disposition": "Unverified"
+    },
+    {
+      "id": "LEGACY-FNC-072",
+      "summary": "The user shall be able to record goal-linked financial objectives without mistaking projections…",
+      "statement": "The user shall be able to record goal-linked financial objectives without mistaking projections for actual account balances.",
+      "level": "Functional",
+      "priority": "P1",
+      "source": "Legavia product discovery 2026-09 to 2026-10",
+      "scope": "all",
+      "functionality_ids": [
+        "LEGACY-CAP-006"
+      ],
+      "verification_method": "Independent functional verification",
+      "verification_ids": [],
+      "status": "Candidate",
+      "disposition": "Unverified"
+    },
+    {
+      "id": "LEGACY-FNC-073",
+      "summary": "The Today dashboard shall let the user see assigned actions, reminders, active focus session and…",
+      "statement": "The Today dashboard shall let the user see assigned actions, reminders, active focus session and hydration status without entering individual modules.",
+      "level": "Functional",
+      "priority": "P1",
+      "source": "Legavia product discovery 2026-09 to 2026-10",
+      "scope": "all",
+      "functionality_ids": [
+        "LEGACY-CAP-002"
+      ],
+      "verification_method": "Independent functional verification",
+      "verification_ids": [
+        "FVT-LEGACY-019"
+      ],
+      "status": "Candidate",
+      "disposition": "Unverified"
+    },
+    {
+      "id": "LEGACY-FNC-074",
+      "summary": "Every domain mutation affecting progress or finances shall retain a stable event identity,…",
+      "statement": "Every domain mutation affecting progress or finances shall retain a stable event identity, origin and reversible or compensating correction history.",
+      "level": "Functional",
+      "priority": "P0",
+      "source": "Legavia product discovery 2026-09 to 2026-10",
+      "scope": "all",
+      "functionality_ids": [
+        "LEGACY-CAP-001"
+      ],
+      "verification_method": "Independent functional verification",
+      "verification_ids": [
+        "FVT-LEGACY-001",
+        "FVT-LEGACY-015",
+        "FVT-LEGACY-023"
+      ],
+      "status": "Candidate",
+      "disposition": "Unverified"
+    },
+    {
+      "id": "LEGACY-UX-017",
+      "summary": "Pixel-art fantasy RPG theming shall closely follow the accepted Legavia visual references on…",
+      "statement": "Pixel-art fantasy RPG theming shall closely follow the accepted Legavia visual references on progression surfaces while preserving readable, accessible operational views.",
+      "level": "UX",
+      "priority": "P0",
+      "source": "Legavia product discovery 2026-09 to 2026-10",
+      "scope": "all",
+      "functionality_ids": [
+        "LEGACY-CAP-005"
+      ],
+      "verification_method": "Visual inspection and interaction test",
+      "verification_ids": [],
+      "status": "Candidate",
+      "disposition": "Unverified"
+    },
+    {
+      "id": "LEGACY-UX-018",
+      "summary": "The app shall provide consistent responsive layouts for mobile and desktop, including a…",
+      "statement": "The app shall provide consistent responsive layouts for mobile and desktop, including a persistent Auto/Mobile/Desktop preview override.",
+      "level": "UX",
+      "priority": "P0",
+      "source": "Legavia product discovery 2026-09 to 2026-10",
+      "scope": "all",
+      "functionality_ids": [
+        "LEGACY-CAP-005"
+      ],
+      "verification_method": "Visual inspection and interaction test",
+      "verification_ids": [],
+      "status": "Candidate",
+      "disposition": "Unverified"
+    },
+    {
+      "id": "LEGACY-UX-019",
+      "summary": "The design system shall define typography, contrast, icon scale, artwork placement, spacing,…",
+      "statement": "The design system shall define typography, contrast, icon scale, artwork placement, spacing, focus states and reusable components; decorative icons shall not crowd core controls.",
+      "level": "UX",
+      "priority": "P0",
+      "source": "Legavia product discovery 2026-09 to 2026-10",
+      "scope": "all",
+      "functionality_ids": [
+        "LEGACY-CAP-005"
+      ],
+      "verification_method": "Visual inspection and interaction test",
+      "verification_ids": [],
+      "status": "Candidate",
+      "disposition": "Unverified"
+    },
+    {
+      "id": "LEGACY-UX-020",
+      "summary": "Every approved journey shall have matching mobile and desktop UX states and…",
+      "statement": "Every approved journey shall have matching mobile and desktop UX states and reference-versus-actual visual-regression evidence.",
+      "level": "UX",
+      "priority": "P0",
+      "source": "Legavia product discovery 2026-09 to 2026-10",
+      "scope": "all",
+      "functionality_ids": [
+        "LEGACY-CAP-005"
+      ],
+      "verification_method": "Visual inspection and interaction test",
+      "verification_ids": [],
+      "status": "Candidate",
+      "disposition": "Unverified"
+    },
+    {
+      "id": "LEGACY-UX-021",
+      "summary": "Gamification state shall always expose a textual explanation for progression, currency and…",
+      "statement": "Gamification state shall always expose a textual explanation for progression, currency and penalties.",
+      "level": "UX",
+      "priority": "P1",
+      "source": "Legavia product discovery 2026-09 to 2026-10",
+      "scope": "all",
+      "functionality_ids": [
+        "LEGACY-CAP-005"
+      ],
+      "verification_method": "Visual inspection and interaction test",
+      "verification_ids": [],
+      "status": "Candidate",
+      "disposition": "Unverified"
+    },
+    {
+      "id": "LEGACY-UX-022",
+      "summary": "Permission requests for microphone, camera, health and calendar integrations shall be…",
+      "statement": "Permission requests for microphone, camera, health and calendar integrations shall be contextual, revocable and accompanied by a manual fallback.",
+      "level": "UX",
+      "priority": "P1",
+      "source": "Legavia product discovery 2026-09 to 2026-10",
+      "scope": "all",
+      "functionality_ids": [
+        "LEGACY-CAP-005"
+      ],
+      "verification_method": "Visual inspection and interaction test",
+      "verification_ids": [],
+      "status": "Candidate",
+      "disposition": "Unverified"
+    },
+    {
+      "id": "LEGACY-UX-023",
+      "summary": "User-selected low-gamification and reduced-motion presentation preferences shall not alter…",
+      "statement": "User-selected low-gamification and reduced-motion presentation preferences shall not alter domain correctness.",
+      "level": "UX",
+      "priority": "P1",
+      "source": "Legavia product discovery 2026-09 to 2026-10",
+      "scope": "all",
+      "functionality_ids": [
+        "LEGACY-CAP-005"
+      ],
+      "verification_method": "Visual inspection and interaction test",
+      "verification_ids": [],
+      "status": "Candidate",
+      "disposition": "Unverified"
+    },
+    {
+      "id": "LEGACY-NFR-013",
+      "summary": "Authentication and authorization tests shall cover every API and storage lookup, including…",
+      "statement": "Authentication and authorization tests shall cover every API and storage lookup, including nested object access and workspace reassignment attempts.",
+      "level": "Quality",
+      "priority": "P0",
+      "source": "Legavia product discovery 2026-09 to 2026-10",
+      "scope": "all",
+      "functionality_ids": [
+        "LEGACY-CAP-001"
+      ],
+      "verification_method": "Independent quality and security verification",
+      "verification_ids": [],
+      "status": "Candidate",
+      "disposition": "Unverified"
+    },
+    {
+      "id": "LEGACY-NFR-014",
+      "summary": "Repeated completion, focus and financial event submissions shall produce one logical event and…",
+      "statement": "Repeated completion, focus and financial event submissions shall produce one logical event and one reward or ledger effect.",
+      "level": "Quality",
+      "priority": "P0",
+      "source": "Legavia product discovery 2026-09 to 2026-10",
+      "scope": "all",
+      "functionality_ids": [
+        "LEGACY-CAP-001"
+      ],
+      "verification_method": "Independent quality and security verification",
+      "verification_ids": [],
+      "status": "Candidate",
+      "disposition": "Unverified"
+    },
+    {
+      "id": "LEGACY-NFR-015",
+      "summary": "Imported files and private media shall be segregated from public code repositories, development…",
+      "statement": "Imported files and private media shall be segregated from public code repositories, development fixtures and observability logs.",
+      "level": "Quality",
+      "priority": "P0",
+      "source": "Legavia product discovery 2026-09 to 2026-10",
+      "scope": "all",
+      "functionality_ids": [
+        "LEGACY-CAP-001"
+      ],
+      "verification_method": "Independent quality and security verification",
+      "verification_ids": [],
+      "status": "Candidate",
+      "disposition": "Unverified"
+    },
+    {
+      "id": "LEGACY-NFR-016",
+      "summary": "The product shall offer a recoverable draft or retry state for interrupted network requests and…",
+      "statement": "The product shall offer a recoverable draft or retry state for interrupted network requests and shall not claim offline synchronization until independently verified.",
+      "level": "Quality",
+      "priority": "P0",
+      "source": "Legavia product discovery 2026-09 to 2026-10",
+      "scope": "all",
+      "functionality_ids": [
+        "LEGACY-CAP-001"
+      ],
+      "verification_method": "Independent quality and security verification",
+      "verification_ids": [],
+      "status": "Candidate",
+      "disposition": "Unverified"
+    },
+    {
+      "id": "LEGACY-NFR-017",
+      "summary": "Production infrastructure shall document backup, restore, retention and recovery testing before…",
+      "statement": "Production infrastructure shall document backup, restore, retention and recovery testing before storing irreplaceable personal memories or financial records.",
+      "level": "Quality",
+      "priority": "P0",
+      "source": "Legavia product discovery 2026-09 to 2026-10",
+      "scope": "all",
+      "functionality_ids": [
+        "LEGACY-CAP-001"
+      ],
+      "verification_method": "Independent quality and security verification",
+      "verification_ids": [],
+      "status": "Candidate",
+      "disposition": "Unverified"
+    },
+    {
+      "id": "LEGACY-NFR-018",
+      "summary": "The team shall establish measured mobile/desktop interaction and startup performance budgets…",
+      "statement": "The team shall establish measured mobile/desktop interaction and startup performance budgets using representative devices before release acceptance.",
+      "level": "Quality",
+      "priority": "P1",
+      "source": "Legavia product discovery 2026-09 to 2026-10",
+      "scope": "all",
+      "functionality_ids": [
+        "LEGACY-CAP-001"
+      ],
+      "verification_method": "Independent quality and security verification",
+      "verification_ids": [],
+      "status": "Candidate",
+      "disposition": "Unverified"
+    },
+    {
+      "id": "LEGACY-NFR-019",
+      "summary": "AI providers shall receive only authorized minimum necessary content and shall not hold…",
+      "statement": "AI providers shall receive only authorized minimum necessary content and shall not hold privileged direct-write credentials to production data.",
+      "level": "Quality",
+      "priority": "P1",
+      "source": "Legavia product discovery 2026-09 to 2026-10",
+      "scope": "all",
+      "functionality_ids": [
+        "LEGACY-CAP-001"
+      ],
+      "verification_method": "Independent quality and security verification",
+      "verification_ids": [],
+      "status": "Candidate",
+      "disposition": "Unverified"
+    },
+    {
+      "id": "LEGACY-NFR-020",
+      "summary": "Development releases shall include automated build, unit, integration, authorization and…",
+      "statement": "Development releases shall include automated build, unit, integration, authorization and representative mobile/desktop visual tests with candidate fingerprints.",
+      "level": "Quality",
+      "priority": "P0",
+      "source": "Legavia product discovery 2026-09 to 2026-10",
+      "scope": "all",
+      "functionality_ids": [
+        "LEGACY-CAP-001"
+      ],
+      "verification_method": "Independent quality and security verification",
+      "verification_ids": [],
+      "status": "Candidate",
+      "disposition": "Unverified"
+    },
+    {
+      "id": "LEGACY-NFR-021",
+      "summary": "Attachment quotas, virus/content validation and bounded upload size shall be enforced before…",
+      "statement": "Attachment quotas, virus/content validation and bounded upload size shall be enforced before files become available to other users.",
+      "level": "Quality",
+      "priority": "P1",
+      "source": "Legavia product discovery 2026-09 to 2026-10",
+      "scope": "all",
+      "functionality_ids": [
+        "LEGACY-CAP-001"
+      ],
+      "verification_method": "Independent quality and security verification",
+      "verification_ids": [],
+      "status": "Candidate",
+      "disposition": "Unverified"
+    },
+    {
+      "id": "LEGACY-NFR-022",
+      "summary": "The system shall store timestamps with timezone semantics and handle DST, local-date scheduling,…",
+      "statement": "The system shall store timestamps with timezone semantics and handle DST, local-date scheduling, currency precision and historical revisions deterministically.",
+      "level": "Quality",
+      "priority": "P0",
+      "source": "Legavia product discovery 2026-09 to 2026-10",
+      "scope": "all",
+      "functionality_ids": [
+        "LEGACY-CAP-001"
+      ],
+      "verification_method": "Independent quality and security verification",
+      "verification_ids": [],
+      "status": "Candidate",
+      "disposition": "Unverified"
+    }
+  ],
+  "functionalities": [
+    {
+      "id": "LEGACY-CAP-001",
+      "summary": "Identity, workspace isolation and data governance",
+      "component": "identity-access",
+      "depends_on_functionality_ids": [],
+      "source": "docs/business/FUNCTIONALITIES.md",
+      "scope": "all",
+      "level": "Product capability",
+      "statement": "Identity, workspace isolation and data governance",
+      "requirement_ids": [
+        "LEGACY-BIZ-001",
+        "LEGACY-BIZ-003",
+        "LEGACY-BIZ-004",
+        "LEGACY-BIZ-005",
+        "LEGACY-FNC-001",
+        "LEGACY-NFR-001",
+        "LEGACY-NFR-002",
+        "LEGACY-NFR-003",
+        "LEGACY-NFR-004",
+        "LEGACY-NFR-005",
+        "LEGACY-NFR-006",
+        "LEGACY-NFR-007",
+        "LEGACY-NFR-008",
+        "LEGACY-NFR-009",
+        "LEGACY-NFR-010",
+        "LEGACY-NFR-011",
+        "LEGACY-NFR-012",
+        "LEGACY-BIZ-006",
+        "LEGACY-BIZ-007",
+        "LEGACY-BIZ-008",
+        "LEGACY-BIZ-009",
+        "LEGACY-BIZ-010",
+        "LEGACY-FNC-056",
+        "LEGACY-FNC-059",
+        "LEGACY-FNC-061",
+        "LEGACY-FNC-062",
+        "LEGACY-FNC-074",
+        "LEGACY-NFR-013",
+        "LEGACY-NFR-014",
+        "LEGACY-NFR-015",
+        "LEGACY-NFR-016",
+        "LEGACY-NFR-017",
+        "LEGACY-NFR-018",
+        "LEGACY-NFR-019",
+        "LEGACY-NFR-020",
+        "LEGACY-NFR-021",
+        "LEGACY-NFR-022"
+      ],
+      "status": "Candidate",
+      "owner": "Product/Systems Engineering",
+      "allocation_rationale": "Legavia application component; GUI legacy scope remains all until configurable application filters ship"
+    },
+    {
+      "id": "LEGACY-CAP-002",
+      "summary": "Today, schedule and daily execution",
+      "component": "today",
+      "depends_on_functionality_ids": [
+        "LEGACY-CAP-001"
+      ],
+      "source": "docs/business/FUNCTIONALITIES.md",
+      "scope": "all",
+      "level": "Product capability",
+      "statement": "Today, schedule and daily execution",
+      "requirement_ids": [
+        "LEGACY-FNC-002",
+        "LEGACY-FNC-007",
+        "LEGACY-FNC-019",
+        "LEGACY-FNC-044",
+        "LEGACY-FNC-053",
+        "LEGACY-FNC-063",
+        "LEGACY-FNC-073"
+      ],
+      "status": "Candidate",
+      "owner": "Product/Systems Engineering",
+      "allocation_rationale": "Legavia application component; GUI legacy scope remains all until configurable application filters ship"
+    },
+    {
+      "id": "LEGACY-CAP-003",
+      "summary": "Goals, phases, milestones and map navigation",
+      "component": "goals-map",
+      "depends_on_functionality_ids": [
+        "LEGACY-CAP-001"
+      ],
+      "source": "docs/business/FUNCTIONALITIES.md",
+      "scope": "all",
+      "level": "Product capability",
+      "statement": "Goals, phases, milestones and map navigation",
+      "requirement_ids": [
+        "LEGACY-FNC-003",
+        "LEGACY-FNC-004",
+        "LEGACY-FNC-005"
+      ],
+      "status": "Candidate",
+      "owner": "Product/Systems Engineering",
+      "allocation_rationale": "Legavia application component; GUI legacy scope remains all until configurable application filters ship"
+    },
+    {
+      "id": "LEGACY-CAP-004",
+      "summary": "Habits, completion, continuity and gamification",
+      "component": "gamification",
+      "depends_on_functionality_ids": [
+        "LEGACY-CAP-002",
+        "LEGACY-CAP-003"
+      ],
+      "source": "docs/business/FUNCTIONALITIES.md",
+      "scope": "all",
+      "level": "Product capability",
+      "statement": "Habits, completion, continuity and gamification",
+      "requirement_ids": [
+        "LEGACY-BIZ-002",
+        "LEGACY-FNC-006",
+        "LEGACY-FNC-008",
+        "LEGACY-FNC-009",
+        "LEGACY-FNC-010",
+        "LEGACY-FNC-011",
+        "LEGACY-FNC-012",
+        "LEGACY-FNC-013",
+        "LEGACY-FNC-014",
+        "LEGACY-FNC-015",
+        "LEGACY-FNC-016",
+        "LEGACY-FNC-068",
+        "LEGACY-FNC-069"
+      ],
+      "status": "Candidate",
+      "owner": "Product/Systems Engineering",
+      "allocation_rationale": "Legavia application component; GUI legacy scope remains all until configurable application filters ship"
+    },
+    {
+      "id": "LEGACY-CAP-005",
+      "summary": "Shell navigation, search and insights",
+      "component": "app-shell",
+      "depends_on_functionality_ids": [
+        "LEGACY-CAP-001"
+      ],
+      "source": "docs/business/FUNCTIONALITIES.md",
+      "scope": "all",
+      "level": "Product capability",
+      "statement": "Shell navigation, search and insights",
+      "requirement_ids": [
+        "LEGACY-FNC-017",
+        "LEGACY-FNC-018",
+        "LEGACY-FNC-020",
+        "LEGACY-FNC-021",
+        "LEGACY-UX-001",
+        "LEGACY-UX-002",
+        "LEGACY-UX-003",
+        "LEGACY-UX-004",
+        "LEGACY-UX-005",
+        "LEGACY-UX-006",
+        "LEGACY-UX-007",
+        "LEGACY-UX-008",
+        "LEGACY-UX-009",
+        "LEGACY-UX-010",
+        "LEGACY-UX-011",
+        "LEGACY-UX-012",
+        "LEGACY-UX-013",
+        "LEGACY-UX-014",
+        "LEGACY-UX-015",
+        "LEGACY-UX-016",
+        "LEGACY-FNC-060",
+        "LEGACY-FNC-064",
+        "LEGACY-UX-017",
+        "LEGACY-UX-018",
+        "LEGACY-UX-019",
+        "LEGACY-UX-020",
+        "LEGACY-UX-021",
+        "LEGACY-UX-022",
+        "LEGACY-UX-023"
+      ],
+      "status": "Candidate",
+      "owner": "Product/Systems Engineering",
+      "allocation_rationale": "Legavia application component; GUI legacy scope remains all until configurable application filters ship"
+    },
+    {
+      "id": "LEGACY-CAP-006",
+      "summary": "Financial accounts, ledgers, budgets and forecasts",
+      "component": "finance",
+      "depends_on_functionality_ids": [
+        "LEGACY-CAP-001"
+      ],
+      "source": "docs/business/FUNCTIONALITIES.md",
+      "scope": "all",
+      "level": "Product capability",
+      "statement": "Financial accounts, ledgers, budgets and forecasts",
+      "requirement_ids": [
+        "LEGACY-FNC-028",
+        "LEGACY-FNC-029",
+        "LEGACY-FNC-030",
+        "LEGACY-FNC-031",
+        "LEGACY-FNC-032",
+        "LEGACY-FNC-033",
+        "LEGACY-FNC-034",
+        "LEGACY-FNC-035",
+        "LEGACY-FNC-036",
+        "LEGACY-FNC-037",
+        "LEGACY-FNC-038",
+        "LEGACY-FNC-039",
+        "LEGACY-FNC-040",
+        "LEGACY-FNC-041",
+        "LEGACY-FNC-042",
+        "LEGACY-FNC-043",
+        "LEGACY-FNC-072"
+      ],
+      "status": "Candidate",
+      "owner": "Product/Systems Engineering",
+      "allocation_rationale": "Legavia application component; GUI legacy scope remains all until configurable application filters ship"
+    },
+    {
+      "id": "LEGACY-CAP-007",
+      "summary": "Learning and course progress",
+      "component": "learning",
+      "depends_on_functionality_ids": [
+        "LEGACY-CAP-001"
+      ],
+      "source": "docs/business/FUNCTIONALITIES.md",
+      "scope": "all",
+      "level": "Product capability",
+      "statement": "Learning and course progress",
+      "requirement_ids": [
+        "LEGACY-FNC-027",
+        "LEGACY-FNC-067"
+      ],
+      "status": "Candidate",
+      "owner": "Product/Systems Engineering",
+      "allocation_rationale": "Legavia application component; GUI legacy scope remains all until configurable application filters ship"
+    },
+    {
+      "id": "LEGACY-CAP-008",
+      "summary": "Focus and time tracking",
+      "component": "focus",
+      "depends_on_functionality_ids": [
+        "LEGACY-CAP-002"
+      ],
+      "source": "docs/business/FUNCTIONALITIES.md",
+      "scope": "all",
+      "level": "Product capability",
+      "statement": "Focus and time tracking",
+      "requirement_ids": [
+        "LEGACY-FNC-045",
+        "LEGACY-FNC-046"
+      ],
+      "status": "Candidate",
+      "owner": "Product/Systems Engineering",
+      "allocation_rationale": "Legavia application component; GUI legacy scope remains all until configurable application filters ship"
+    },
+    {
+      "id": "LEGACY-CAP-009",
+      "summary": "Books, games and movies",
+      "component": "media-library",
+      "depends_on_functionality_ids": [
+        "LEGACY-CAP-001"
+      ],
+      "source": "docs/business/FUNCTIONALITIES.md",
+      "scope": "all",
+      "level": "Product capability",
+      "statement": "Books, games and movies",
+      "requirement_ids": [
+        "LEGACY-FNC-047",
+        "LEGACY-FNC-048",
+        "LEGACY-FNC-049",
+        "LEGACY-FNC-070",
+        "LEGACY-FNC-071"
+      ],
+      "status": "Candidate",
+      "owner": "Product/Systems Engineering",
+      "allocation_rationale": "Legavia application component; GUI legacy scope remains all until configurable application filters ship"
+    },
+    {
+      "id": "LEGACY-CAP-010",
+      "summary": "Memories and knowledge timeline",
+      "component": "memory",
+      "depends_on_functionality_ids": [
+        "LEGACY-CAP-001"
+      ],
+      "source": "docs/business/FUNCTIONALITIES.md",
+      "scope": "all",
+      "level": "Product capability",
+      "statement": "Memories and knowledge timeline",
+      "requirement_ids": [
+        "LEGACY-FNC-050"
+      ],
+      "status": "Candidate",
+      "owner": "Product/Systems Engineering",
+      "allocation_rationale": "Legavia application component; GUI legacy scope remains all until configurable application filters ship"
+    },
+    {
+      "id": "LEGACY-CAP-011",
+      "summary": "CV and achievement evidence",
+      "component": "profile",
+      "depends_on_functionality_ids": [
+        "LEGACY-CAP-003"
+      ],
+      "source": "docs/business/FUNCTIONALITIES.md",
+      "scope": "all",
+      "level": "Product capability",
+      "statement": "CV and achievement evidence",
+      "requirement_ids": [
+        "LEGACY-FNC-051"
+      ],
+      "status": "Candidate",
+      "owner": "Product/Systems Engineering",
+      "allocation_rationale": "Legavia application component; GUI legacy scope remains all until configurable application filters ship"
+    },
+    {
+      "id": "LEGACY-CAP-012",
+      "summary": "Health and wellness activity",
+      "component": "health",
+      "depends_on_functionality_ids": [
+        "LEGACY-CAP-001"
+      ],
+      "source": "docs/business/FUNCTIONALITIES.md",
+      "scope": "all",
+      "level": "Product capability",
+      "statement": "Health and wellness activity",
+      "requirement_ids": [
+        "LEGACY-FNC-052"
+      ],
+      "status": "Candidate",
+      "owner": "Product/Systems Engineering",
+      "allocation_rationale": "Legavia application component; GUI legacy scope remains all until configurable application filters ship"
+    },
+    {
+      "id": "LEGACY-CAP-013",
+      "summary": "AI-assisted capture, suggestions and feature approval",
+      "component": "ai-governance",
+      "depends_on_functionality_ids": [
+        "LEGACY-CAP-001"
+      ],
+      "source": "docs/business/FUNCTIONALITIES.md",
+      "scope": "all",
+      "level": "Product capability",
+      "statement": "AI-assisted capture, suggestions and feature approval",
+      "requirement_ids": [
+        "LEGACY-FNC-025",
+        "LEGACY-FNC-026",
+        "LEGACY-FNC-054",
+        "LEGACY-FNC-055",
+        "LEGACY-FNC-058",
+        "LEGACY-FNC-066"
+      ],
+      "status": "Candidate",
+      "owner": "Product/Systems Engineering",
+      "allocation_rationale": "Legavia application component; GUI legacy scope remains all until configurable application filters ship"
+    },
+    {
+      "id": "LEGACY-CAP-014",
+      "summary": "Family and opt-in social collaboration",
+      "component": "social",
+      "depends_on_functionality_ids": [
+        "LEGACY-CAP-001"
+      ],
+      "source": "docs/business/FUNCTIONALITIES.md",
+      "scope": "all",
+      "level": "Product capability",
+      "statement": "Family and opt-in social collaboration",
+      "requirement_ids": [
+        "LEGACY-FNC-024",
+        "LEGACY-FNC-057",
+        "LEGACY-FNC-065"
+      ],
+      "status": "Candidate",
+      "owner": "Product/Systems Engineering",
+      "allocation_rationale": "Legavia application component; GUI legacy scope remains all until configurable application filters ship"
+    },
+    {
+      "id": "LEGACY-CAP-015",
+      "summary": "External data and portability integrations",
+      "component": "integration",
+      "depends_on_functionality_ids": [
+        "LEGACY-CAP-001"
+      ],
+      "source": "docs/business/FUNCTIONALITIES.md",
+      "scope": "all",
+      "level": "Product capability",
+      "statement": "External data and portability integrations",
+      "requirement_ids": [
+        "LEGACY-FNC-022",
+        "LEGACY-FNC-023"
+      ],
+      "status": "Candidate",
+      "owner": "Product/Systems Engineering",
+      "allocation_rationale": "Legavia application component; GUI legacy scope remains all until configurable application filters ship"
+    }
+  ],
+  "work_packages": [
+    {
+      "id": "LEGACY-WORK-001",
+      "title": "SE review and approve product baseline",
+      "summary": "SE review and approve product baseline",
+      "scope": "all",
+      "work_package_type": "systems_engineering",
+      "status": "Backlog",
+      "priority": "P0",
+      "functionality_ids": [
+        "LEGACY-CAP-001",
+        "LEGACY-CAP-005"
+      ],
+      "depends_on": [],
+      "target_repositories": [
+        "matheusns/legacy"
+      ],
+      "path": "docs/work_packages/LEGACY-WORK-001.md",
+      "acceptance_criteria": [
+        "Signed approval of business/ConOps/use cases/requirements and acceptance criteria; record unresolved decisions and baseline version."
+      ],
+      "unit_test_gate": {
+        "required": false,
+        "rationale": "Systems Engineering controlled-document review; no executable unit test applicable.",
+        "test_description": "Evidence-driven document review"
+      }
+    },
+    {
+      "id": "LEGACY-WORK-002",
+      "title": "Architecture decisions and secure domain skeleton",
+      "summary": "Architecture decisions and secure domain skeleton",
+      "scope": "all",
+      "work_package_type": "systems_engineering",
+      "status": "Backlog",
+      "priority": "P0",
+      "functionality_ids": [
+        "LEGACY-CAP-001",
+        "LEGACY-CAP-003",
+        "LEGACY-CAP-004"
+      ],
+      "depends_on": [
+        "LEGACY-WORK-001"
+      ],
+      "target_repositories": [
+        "matheusns/legacy"
+      ],
+      "path": "docs/work_packages/LEGACY-WORK-002.md",
+      "acceptance_criteria": [
+        "Accepted ADRs for identity/tenancy, source of truth, event idempotency, app stack, assets, hosting and testability."
+      ],
+      "unit_test_gate": {
+        "required": false,
+        "rationale": "Systems Engineering controlled-document review; no executable unit test applicable.",
+        "test_description": "Evidence-driven document review"
+      }
+    },
+    {
+      "id": "LEGACY-WORK-003",
+      "title": "Bootstrap web/mobile application and persistence",
+      "summary": "Bootstrap web/mobile application and persistence",
+      "scope": "all",
+      "work_package_type": "technical",
+      "status": "Backlog",
+      "priority": "P0",
+      "functionality_ids": [
+        "LEGACY-CAP-001",
+        "LEGACY-CAP-005"
+      ],
+      "depends_on": [
+        "LEGACY-WORK-002"
+      ],
+      "target_repositories": [
+        "matheusns/legacy_app",
+        "matheusns/legacy_verification_tooling"
+      ],
+      "path": "docs/work_packages/LEGACY-WORK-003.md",
+      "acceptance_criteria": [
+        "Reproducible local startup and CI; isolated accounts; secured CRUD API; deterministic fixtures and unit tests."
+      ],
+      "unit_test_gate": {
+        "required": true,
+        "rationale": "Independent candidate-bound application unit tests required before acceptance.",
+        "test_description": "Run deterministic application unit suite on candidate."
+      }
+    },
+    {
+      "id": "LEGACY-WORK-004",
+      "title": "Implement responsive shell and UX references",
+      "summary": "Implement responsive shell and UX references",
+      "scope": "all",
+      "work_package_type": "technical",
+      "status": "Backlog",
+      "priority": "P1",
+      "functionality_ids": [
+        "LEGACY-CAP-005",
+        "LEGACY-CAP-002"
+      ],
+      "depends_on": [
+        "LEGACY-WORK-003"
+      ],
+      "target_repositories": [
+        "matheusns/legacy_app",
+        "matheusns/legacy_mockups",
+        "matheusns/legacy_verification_tooling"
+      ],
+      "path": "docs/work_packages/LEGACY-WORK-004.md",
+      "acceptance_criteria": [
+        "Today/Map/Life/Insights/Me shell; Auto/Mobile/Desktop switch; approved phone and desktop captures."
+      ],
+      "unit_test_gate": {
+        "required": true,
+        "rationale": "Independent candidate-bound application unit tests required before acceptance.",
+        "test_description": "Run deterministic application unit suite on candidate."
+      }
+    },
+    {
+      "id": "LEGACY-WORK-005",
+      "title": "Implement goal, phase, milestone and task domain",
+      "summary": "Implement goal, phase, milestone and task domain",
+      "scope": "all",
+      "work_package_type": "technical",
+      "status": "Backlog",
+      "priority": "P1",
+      "functionality_ids": [
+        "LEGACY-CAP-003",
+        "LEGACY-CAP-002"
+      ],
+      "depends_on": [
+        "LEGACY-WORK-003"
+      ],
+      "target_repositories": [
+        "matheusns/legacy_app",
+        "matheusns/legacy_verification_tooling"
+      ],
+      "path": "docs/work_packages/LEGACY-WORK-005.md",
+      "acceptance_criteria": [
+        "Workspace-scoped goal hierarchy and task links with validation and persistence on reload."
+      ],
+      "unit_test_gate": {
+        "required": true,
+        "rationale": "Independent candidate-bound application unit tests required before acceptance.",
+        "test_description": "Run deterministic application unit suite on candidate."
+      }
+    },
+    {
+      "id": "LEGACY-WORK-006",
+      "title": "Implement exactly-once completion and reward ledger",
+      "summary": "Implement exactly-once completion and reward ledger",
+      "scope": "all",
+      "work_package_type": "technical",
+      "status": "Backlog",
+      "priority": "P1",
+      "functionality_ids": [
+        "LEGACY-CAP-004",
+        "LEGACY-CAP-003",
+        "LEGACY-CAP-002"
+      ],
+      "depends_on": [
+        "LEGACY-WORK-005"
+      ],
+      "target_repositories": [
+        "matheusns/legacy_app",
+        "matheusns/legacy_verification_tooling"
+      ],
+      "path": "docs/work_packages/LEGACY-WORK-006.md",
+      "acceptance_criteria": [
+        "Atomic completion, XP award, map projection, undo and retry safety under two concurrent requests."
+      ],
+      "unit_test_gate": {
+        "required": true,
+        "rationale": "Independent candidate-bound application unit tests required before acceptance.",
+        "test_description": "Run deterministic application unit suite on candidate."
+      }
+    },
+    {
+      "id": "LEGACY-WORK-007",
+      "title": "Deliver first end-to-end journey and acceptance evidence",
+      "summary": "Deliver first end-to-end journey and acceptance evidence",
+      "scope": "all",
+      "work_package_type": "technical",
+      "status": "Backlog",
+      "priority": "P0",
+      "functionality_ids": [
+        "LEGACY-CAP-002",
+        "LEGACY-CAP-003",
+        "LEGACY-CAP-004",
+        "LEGACY-CAP-005"
+      ],
+      "depends_on": [
+        "LEGACY-WORK-004",
+        "LEGACY-WORK-006"
+      ],
+      "target_repositories": [
+        "matheusns/legacy_app",
+        "matheusns/legacy_verification_tooling"
+      ],
+      "path": "docs/work_packages/LEGACY-WORK-007.md",
+      "acceptance_criteria": [
+        "Representative phone/desktop end-to-end flow, privacy regression and persisted state after reload, with captures and FVT evidence."
+      ],
+      "unit_test_gate": {
+        "required": true,
+        "rationale": "Independent candidate-bound application unit tests required before acceptance.",
+        "test_description": "Run deterministic application unit suite on candidate."
+      }
+    },
+    {
+      "id": "LEGACY-WORK-008",
+      "title": "Implement habits and missed-day recovery",
+      "summary": "Implement habits and missed-day recovery",
+      "scope": "all",
+      "work_package_type": "technical",
+      "status": "Backlog",
+      "priority": "P1",
+      "functionality_ids": [
+        "LEGACY-CAP-004",
+        "LEGACY-CAP-002"
+      ],
+      "depends_on": [
+        "LEGACY-WORK-007"
+      ],
+      "target_repositories": [
+        "matheusns/legacy_app",
+        "matheusns/legacy_verification_tooling"
+      ],
+      "path": "docs/work_packages/LEGACY-WORK-008.md",
+      "acceptance_criteria": [
+        "Recurring schedules, continuity/recovery, history and correction tests."
+      ],
+      "unit_test_gate": {
+        "required": true,
+        "rationale": "Independent candidate-bound application unit tests required before acceptance.",
+        "test_description": "Run deterministic application unit suite on candidate."
+      }
+    },
+    {
+      "id": "LEGACY-WORK-009",
+      "title": "Bootstrap controlled browser and visual regression adapters",
+      "summary": "Bootstrap controlled browser and visual regression adapters",
+      "scope": "all",
+      "work_package_type": "technical",
+      "status": "Backlog",
+      "priority": "P1",
+      "functionality_ids": [
+        "LEGACY-CAP-005"
+      ],
+      "depends_on": [
+        "LEGACY-WORK-002"
+      ],
+      "target_repositories": [
+        "matheusns/legacy_verification_tooling",
+        "matheusns/legavia_sdlc_gui"
+      ],
+      "path": "docs/work_packages/LEGACY-WORK-009.md",
+      "acceptance_criteria": [
+        "Playwright or equivalent browser runner, deterministic fixtures and candidate-stamped screenshot provenance."
+      ],
+      "unit_test_gate": {
+        "required": true,
+        "rationale": "Independent candidate-bound application unit tests required before acceptance.",
+        "test_description": "Run deterministic application unit suite on candidate."
+      }
+    },
+    {
+      "id": "LEGACY-WORK-010",
+      "title": "Create finance importer and deterministic ledger",
+      "summary": "Create finance importer and deterministic ledger",
+      "scope": "all",
+      "work_package_type": "technical",
+      "status": "Backlog",
+      "priority": "P1",
+      "functionality_ids": [
+        "LEGACY-CAP-006"
+      ],
+      "depends_on": [
+        "LEGACY-WORK-003"
+      ],
+      "target_repositories": [
+        "matheusns/legacy_app",
+        "matheusns/legacy_verification_tooling"
+      ],
+      "path": "docs/work_packages/LEGACY-WORK-010.md",
+      "acceptance_criteria": [
+        "Decimal ledger, source provenance, workbook preview and duplicate prevention against synthetic data."
+      ],
+      "unit_test_gate": {
+        "required": true,
+        "rationale": "Independent candidate-bound application unit tests required before acceptance.",
+        "test_description": "Run deterministic application unit suite on candidate."
+      }
+    },
+    {
+      "id": "LEGACY-WORK-011",
+      "title": "Implement focus, hydration and media catalog",
+      "summary": "Implement focus, hydration and media catalog",
+      "scope": "all",
+      "work_package_type": "technical",
+      "status": "Backlog",
+      "priority": "P1",
+      "functionality_ids": [
+        "LEGACY-CAP-008",
+        "LEGACY-CAP-002",
+        "LEGACY-CAP-009"
+      ],
+      "depends_on": [
+        "LEGACY-WORK-007"
+      ],
+      "target_repositories": [
+        "matheusns/legacy_app",
+        "matheusns/legacy_verification_tooling"
+      ],
+      "path": "docs/work_packages/LEGACY-WORK-011.md",
+      "acceptance_criteria": [
+        "Focus/hydration events and book/movie/game tracking with independent tests."
+      ],
+      "unit_test_gate": {
+        "required": true,
+        "rationale": "Independent candidate-bound application unit tests required before acceptance.",
+        "test_description": "Run deterministic application unit suite on candidate."
+      }
+    },
+    {
+      "id": "LEGACY-WORK-012",
+      "title": "Implement AI proposal review and bounded integrations",
+      "summary": "Implement AI proposal review and bounded integrations",
+      "scope": "all",
+      "work_package_type": "technical",
+      "status": "Backlog",
+      "priority": "P1",
+      "functionality_ids": [
+        "LEGACY-CAP-013",
+        "LEGACY-CAP-015"
+      ],
+      "depends_on": [
+        "LEGACY-WORK-007"
+      ],
+      "target_repositories": [
+        "matheusns/legacy_app",
+        "matheusns/legacy_verification_tooling"
+      ],
+      "path": "docs/work_packages/LEGACY-WORK-012.md",
+      "acceptance_criteria": [
+        "Human approval before persistence, provenance and safe manual fallback."
+      ],
+      "unit_test_gate": {
+        "required": true,
+        "rationale": "Independent candidate-bound application unit tests required before acceptance.",
+        "test_description": "Run deterministic application unit suite on candidate."
+      }
+    }
+  ],
+  "artifacts": [
+    {
+      "id": "LEGACY-SPEC-BIZ-001",
+      "type": "specification",
+      "scope": "all",
+      "status": "Candidate",
+      "path": "docs/business/PRODUCT_VISION_AND_SCOPE.md",
+      "title": "Vision and business scope"
+    },
+    {
+      "id": "LEGACY-SPEC-CONOPS-001",
+      "type": "specification",
+      "scope": "all",
+      "status": "Candidate",
+      "path": "docs/business/CONOPS.md",
+      "title": "Concept of Operations"
+    },
+    {
+      "id": "LEGACY-SPEC-UC-001",
+      "type": "specification",
+      "scope": "all",
+      "status": "Candidate",
+      "path": "docs/business/USE_CASES.md",
+      "title": "Use cases"
+    },
+    {
+      "id": "LEGACY-SPEC-REQ-001",
+      "type": "specification",
+      "scope": "all",
+      "status": "Candidate",
+      "path": "docs/business/REQUIREMENTS.md",
+      "title": "Requirements catalog"
+    },
+    {
+      "id": "LEGACY-SPEC-FNC-001",
+      "type": "specification",
+      "scope": "all",
+      "status": "Candidate",
+      "path": "docs/business/FUNCTIONALITIES.md",
+      "title": "Functionalities and allocation"
+    },
+    {
+      "id": "LEGACY-SPEC-VER-001",
+      "type": "test_definition",
+      "scope": "all",
+      "status": "Planned",
+      "path": "docs/business/VERIFICATION_AND_ACCEPTANCE.md",
+      "title": "Verification and acceptance plan"
+    }
+  ],
+  "legavia_extension": {
+    "schema_version": "0.1.0",
+    "baseline_status": "Candidate",
+    "baseline_date": "2026-10-29",
+    "repository_targets": [
+      {
+        "id": "control",
+        "repo": "matheusns/legacy",
+        "role": "Product requirements, agents, manifest and WP"
+      },
+      {
+        "id": "gui",
+        "repo": "matheusns/legavia_sdlc_gui",
+        "role": "Local SDLC workbench"
+      },
+      {
+        "id": "app",
+        "repo": "matheusns/legacy_app",
+        "role": "Production responsive web/mobile app"
+      },
+      {
+        "id": "ux",
+        "repo": "matheusns/legacy_mockups",
+        "role": "Visual references and UX proposals"
+      },
+      {
+        "id": "verification",
+        "repo": "matheusns/legacy_verification_tooling",
+        "role": "Independent application/browser tests"
+      }
+    ],
+    "application_components": [
+      "identity-access",
+      "today",
+      "goals-map",
+      "gamification",
+      "app-shell",
+      "finance",
+      "learning",
+      "focus",
+      "media-library",
+      "memory",
+      "profile",
+      "health",
+      "ai-governance",
+      "social",
+      "integration"
+    ],
+    "target_profiles": [
+      "mobile-browser",
+      "desktop-browser",
+      "mobile-pwa"
+    ],
+    "use_case_catalog": "traceability/business_baseline.json",
+    "conops": "docs/business/CONOPS.md",
+    "visual_baseline_status": "pending reference approval",
+    "execution_runner_status": "not configured",
+    "scope_mapping": "all until GUI dynamic component scopes are implemented"
+  }
+}
