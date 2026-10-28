@@ -1,0 +1,32 @@
+name: Business baseline integrity
+on:
+  push:
+    branches: [main]
+    paths:
+      - "docs/business/**"
+      - "docs/work_packages/**"
+      - "traceability/**"
+      - "tools/validate_business_baseline.py"
+      - ".github/workflows/business-baseline.yml"
+  pull_request:
+    paths:
+      - "docs/business/**"
+      - "docs/work_packages/**"
+      - "traceability/**"
+      - "tools/validate_business_baseline.py"
+      - ".github/workflows/business-baseline.yml"
+permissions:
+  contents: read
+jobs:
+  contract-validation:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Validate baseline JSON and references
+        run: python3 tools/validate_business_baseline.py
+      - name: Validate Python syntax
+        run: python3 -m py_compile tools/validate_business_baseline.py
