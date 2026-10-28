@@ -1,0 +1,441 @@
+{
+  "schema_version": "1.0",
+  "project": "LEGAVIA",
+  "status": "candidate-for-SE-review",
+  "use_cases": [
+    {
+      "id": "UC-001",
+      "title": "Open Today and execute the next action",
+      "actor": "User",
+      "precondition": "User is authenticated.",
+      "flow": "System loads today's cross-module agenda; user completes/starts an action; state and progress update.",
+      "exceptions": "Permission, validation, offline retry or empty state is handled explicitly without unintended writes.",
+      "trace": [
+        "LEGACY-FUNC-004",
+        "LEGACY-FUNC-007",
+        "LEGACY-FUNC-008"
+      ],
+      "source": "docs/reference/LEGACY_GAMIFICATION_UX_ARCHITECTURE_BASELINE_v0.1.md",
+      "stage": "candidate"
+    },
+    {
+      "id": "UC-002",
+      "title": "Create a habit or routine",
+      "actor": "User",
+      "precondition": "Workspace active.",
+      "flow": "User selects context, schedule/target, reminder/integration, and optional goal link; system validates and saves.",
+      "exceptions": "Permission, validation, offline retry or empty state is handled explicitly without unintended writes.",
+      "trace": [
+        "LEGACY-FUNC-006"
+      ],
+      "source": "docs/reference/LEGACY_GAMIFICATION_UX_ARCHITECTURE_BASELINE_v0.1.md",
+      "stage": "candidate"
+    },
+    {
+      "id": "UC-003",
+      "title": "Create a long-term goal and phases",
+      "actor": "User",
+      "precondition": "Workspace active.",
+      "flow": "User creates goal, phases, milestones, success criteria, and optional linked habits/tasks.",
+      "exceptions": "Permission, validation, offline retry or empty state is handled explicitly without unintended writes.",
+      "trace": [
+        "LEGACY-FUNC-003"
+      ],
+      "source": "docs/reference/LEGACY_GAMIFICATION_UX_ARCHITECTURE_BASELINE_v0.1.md",
+      "stage": "candidate"
+    },
+    {
+      "id": "UC-004",
+      "title": "Navigate the goal map",
+      "actor": "User",
+      "precondition": "At least one goal exists.",
+      "flow": "User opens Map, selects an island/phase, inspects milestone status, and continues the next available step.",
+      "exceptions": "Permission, validation, offline retry or empty state is handled explicitly without unintended writes.",
+      "trace": [
+        "LEGACY-FUNC-005"
+      ],
+      "source": "docs/reference/LEGACY_GAMIFICATION_UX_ARCHITECTURE_BASELINE_v0.1.md",
+      "stage": "candidate"
+    },
+    {
+      "id": "UC-005",
+      "title": "Recover after missed activity",
+      "actor": "User",
+      "precondition": "One or more scheduled actions were missed.",
+      "flow": "System shows a recovery summary, preserves historical continuity, and lets user resume, reschedule, or intentionally skip.",
+      "exceptions": "Permission, validation, offline retry or empty state is handled explicitly without unintended writes.",
+      "trace": [
+        "LEGACY-FUNC-006"
+      ],
+      "source": "docs/reference/LEGACY_GAMIFICATION_UX_ARCHITECTURE_BASELINE_v0.1.md",
+      "stage": "candidate"
+    },
+    {
+      "id": "UC-006",
+      "title": "Review progress and insights",
+      "actor": "User",
+      "precondition": "History exists.",
+      "flow": "User selects time range/domain; system shows consistency, milestone progress, trends, and recommended review points.",
+      "exceptions": "Permission, validation, offline retry or empty state is handled explicitly without unintended writes.",
+      "trace": [
+        "LEGACY-FUNC-009"
+      ],
+      "source": "docs/reference/LEGACY_GAMIFICATION_UX_ARCHITECTURE_BASELINE_v0.1.md",
+      "stage": "candidate"
+    },
+    {
+      "id": "UC-007",
+      "title": "Switch life modules without losing context",
+      "actor": "User",
+      "precondition": "Multiple modules enabled.",
+      "flow": "User switches from one top-level/module context to another and later returns to the prior state.",
+      "exceptions": "Permission, validation, offline retry or empty state is handled explicitly without unintended writes.",
+      "trace": [
+        "LEGACY-FUNC-002"
+      ],
+      "source": "docs/reference/LEGACY_GAMIFICATION_UX_ARCHITECTURE_BASELINE_v0.1.md",
+      "stage": "candidate"
+    },
+    {
+      "id": "UC-008",
+      "title": "Use external data to auto-complete progress",
+      "actor": "User",
+      "precondition": "Integration authorized.",
+      "flow": "System ingests eligible external signal, maps it to a tracked item, updates progress once, and exposes provenance.",
+      "exceptions": "Permission, validation, offline retry or empty state is handled explicitly without unintended writes.",
+      "trace": [
+        "LEGACY-FUNC-022"
+      ],
+      "source": "docs/reference/LEGACY_GAMIFICATION_UX_ARCHITECTURE_BASELINE_v0.1.md",
+      "stage": "candidate"
+    },
+    {
+      "id": "UC-009",
+      "title": "Collaborate with family on an opt-in goal",
+      "actor": "User / invited family member",
+      "precondition": "Sharing explicitly enabled.",
+      "flow": "Owner shares selected goal; collaborator sees only authorized data and contributes progress.",
+      "exceptions": "Permission, validation, offline retry or empty state is handled explicitly without unintended writes.",
+      "trace": [
+        "LEGACY-FUNC-021"
+      ],
+      "source": "docs/reference/LEGACY_GAMIFICATION_UX_ARCHITECTURE_BASELINE_v0.1.md",
+      "stage": "candidate"
+    },
+    {
+      "id": "UC-010",
+      "title": "Submit and approve an AI-generated feature request",
+      "actor": "User / Admin",
+      "precondition": "AI capture and admin role available.",
+      "flow": "User records request; AI creates structured proposal; admin edits/approves/rejects; approved item enters beta workflow with audit trail.",
+      "exceptions": "Permission, validation, offline retry or empty state is handled explicitly without unintended writes.",
+      "trace": [
+        "LEGACY-FUNC-020"
+      ],
+      "source": "docs/reference/LEGACY_GAMIFICATION_UX_ARCHITECTURE_BASELINE_v0.1.md",
+      "stage": "candidate"
+    },
+    {
+      "id": "UC-011",
+      "title": "Import a learning course",
+      "actor": "User",
+      "precondition": "Learning module enabled.",
+      "flow": "User supplies source links; AI extracts candidate modules/lessons/activities; user reviews before saving.",
+      "exceptions": "Permission, validation, offline retry or empty state is handled explicitly without unintended writes.",
+      "trace": [
+        "LEGACY-FUNC-013"
+      ],
+      "source": "docs/reference/LEGACY_GAMIFICATION_UX_ARCHITECTURE_BASELINE_v0.1.md",
+      "stage": "candidate"
+    },
+    {
+      "id": "UC-012",
+      "title": "Review financial goal projection",
+      "actor": "User",
+      "precondition": "Finance module enabled.",
+      "flow": "User opens a financial goal, reviews current assumptions/imported values and projected trajectory, and updates assumptions explicitly.",
+      "exceptions": "Permission, validation, offline retry or empty state is handled explicitly without unintended writes.",
+      "trace": [
+        "LEGACY-FUNC-012"
+      ],
+      "source": "docs/reference/LEGACY_GAMIFICATION_UX_ARCHITECTURE_BASELINE_v0.1.md",
+      "stage": "candidate"
+    },
+    {
+      "id": "UC-013",
+      "title": "Run a focused work session",
+      "actor": "User",
+      "precondition": "A workspace and optional task exist",
+      "flow": "Select task, start session, pause/resume and finish; record eligible duration",
+      "exceptions": "Interruptions are recorded without awarding duplicate XP",
+      "trace": [
+        "LEGACY-FUNC-011"
+      ],
+      "source": "docs/business/LEGACY_USE_CASES_v0.2.md",
+      "stage": "candidate"
+    },
+    {
+      "id": "UC-014",
+      "title": "Log water intake",
+      "actor": "User",
+      "precondition": "Workspace and local date are configured",
+      "flow": "Choose serving or enter volume, confirm, inspect day total and target",
+      "exceptions": "Corrections must update aggregate once",
+      "trace": [
+        "LEGACY-FUNC-010"
+      ],
+      "source": "docs/business/LEGACY_USE_CASES_v0.2.md",
+      "stage": "candidate"
+    },
+    {
+      "id": "UC-015",
+      "title": "Import and reconcile financial data",
+      "actor": "User",
+      "precondition": "Finance access and spreadsheet export are available",
+      "flow": "Connect or upload, preview mappings, resolve duplicates, confirm, review categories",
+      "exceptions": "Reject invalid currency/date; never modify source without authorization",
+      "trace": [
+        "LEGACY-FUNC-012"
+      ],
+      "source": "docs/business/LEGACY_USE_CASES_v0.2.md",
+      "stage": "candidate"
+    },
+    {
+      "id": "UC-016",
+      "title": "Review multi-currency savings and projections",
+      "actor": "User",
+      "precondition": "Financial actuals and assumptions exist",
+      "flow": "Set month, accounts, currencies, scenarios and view account transfers, savings and forecasts",
+      "exceptions": "Uncertain FX estimates are labeled; remittances not double counted",
+      "trace": [
+        "LEGACY-FUNC-012"
+      ],
+      "source": "docs/business/LEGACY_USE_CASES_v0.2.md",
+      "stage": "candidate"
+    },
+    {
+      "id": "UC-017",
+      "title": "Track reading and predict finish date",
+      "actor": "User",
+      "precondition": "A reading book exists",
+      "flow": "Enter pages read with date; see pace window and estimated finish; mark complete",
+      "exceptions": "Insufficient history displays no false certainty",
+      "trace": [
+        "LEGACY-FUNC-014"
+      ],
+      "source": "docs/business/LEGACY_USE_CASES_v0.2.md",
+      "stage": "candidate"
+    },
+    {
+      "id": "UC-018",
+      "title": "Add a movie recommendation",
+      "actor": "User",
+      "precondition": "User can edit personal movie queue",
+      "flow": "Enter or dictate film, recommender and notes; inspect rating provenance and sort",
+      "exceptions": "Unavailable ratings remain explicitly unknown",
+      "trace": [
+        "LEGACY-FUNC-015"
+      ],
+      "source": "docs/business/LEGACY_USE_CASES_v0.2.md",
+      "stage": "candidate"
+    },
+    {
+      "id": "UC-019",
+      "title": "Track game play time",
+      "actor": "User",
+      "precondition": "Game exists in library",
+      "flow": "Start, pause/resume and stop timer; inspect total game hours",
+      "exceptions": "Duplicate stop and device retries do not double count",
+      "trace": [
+        "LEGACY-FUNC-016"
+      ],
+      "source": "docs/business/LEGACY_USE_CASES_v0.2.md",
+      "stage": "candidate"
+    },
+    {
+      "id": "UC-020",
+      "title": "Capture a memory and search it",
+      "actor": "User",
+      "precondition": "Capture consent is available",
+      "flow": "Create text/voice note, review transcription, attach image, search and open",
+      "exceptions": "Private media is access checked; errors keep original content",
+      "trace": [
+        "LEGACY-FUNC-017"
+      ],
+      "source": "docs/business/LEGACY_USE_CASES_v0.2.md",
+      "stage": "candidate"
+    },
+    {
+      "id": "UC-021",
+      "title": "Connect external calendar",
+      "actor": "User",
+      "precondition": "Provider authorization and available event permissions",
+      "flow": "Authorize scoped access; show agenda; link task; revoke access",
+      "exceptions": "Revocation removes future access but preserves user-owned work",
+      "trace": [
+        "LEGACY-FUNC-018",
+        "LEGACY-FUNC-022"
+      ],
+      "source": "docs/business/LEGACY_USE_CASES_v0.2.md",
+      "stage": "candidate"
+    },
+    {
+      "id": "UC-022",
+      "title": "Convert spoken request to daily task",
+      "actor": "User",
+      "precondition": "Voice capture enabled",
+      "flow": "Speak, review structured draft, correct, approve and save",
+      "exceptions": "Low-confidence parsing and rejection create no task",
+      "trace": [
+        "LEGACY-FUNC-019"
+      ],
+      "source": "docs/business/LEGACY_USE_CASES_v0.2.md",
+      "stage": "candidate"
+    },
+    {
+      "id": "UC-023",
+      "title": "Propose tasks from GitHub issues",
+      "actor": "User",
+      "precondition": "Scoped connector and selected project or repo are available",
+      "flow": "Read issues, select suggestions, preview and explicitly accept tasks",
+      "exceptions": "No external issue is silently edited",
+      "trace": [
+        "LEGACY-FUNC-022"
+      ],
+      "source": "docs/business/LEGACY_USE_CASES_v0.2.md",
+      "stage": "candidate"
+    },
+    {
+      "id": "UC-024",
+      "title": "Invite family member to shared goal",
+      "actor": "Workspace owner",
+      "precondition": "An account and private goal exist",
+      "flow": "Invite member, select permission, share goal, revoke access",
+      "exceptions": "Unshared user data stays inaccessible",
+      "trace": [
+        "LEGACY-FUNC-021"
+      ],
+      "source": "docs/business/LEGACY_USE_CASES_v0.2.md",
+      "stage": "candidate"
+    },
+    {
+      "id": "UC-025",
+      "title": "Switch responsive display mode",
+      "actor": "User",
+      "precondition": "Responsive app loaded",
+      "flow": "Open desktop/mobile mode setting; switch; preserve route and unsaved safe UI context",
+      "exceptions": "Essential actions remain available in both modes",
+      "trace": [
+        "LEGACY-FUNC-002"
+      ],
+      "source": "docs/business/LEGACY_USE_CASES_v0.2.md",
+      "stage": "candidate"
+    },
+    {
+      "id": "UC-026",
+      "title": "Review proposed CV update",
+      "actor": "User",
+      "precondition": "Completed project/milestone evidence exists",
+      "flow": "Inspect suggested entry; edit and approve; publish to own CV",
+      "exceptions": "No auto-publication without approval",
+      "trace": [
+        "LEGACY-FUNC-023"
+      ],
+      "source": "docs/business/LEGACY_USE_CASES_v0.2.md",
+      "stage": "candidate"
+    },
+    {
+      "id": "UC-027",
+      "title": "Export or delete personal data",
+      "actor": "User",
+      "precondition": "Authenticated workspace context",
+      "flow": "Choose portable export or deletion workflow; confirm; receive status/evidence",
+      "exceptions": "Other users' content excluded; retention exceptions disclosed",
+      "trace": [
+        "LEGACY-FUNC-022",
+        "LEGACY-FUNC-024"
+      ],
+      "source": "docs/business/LEGACY_USE_CASES_v0.2.md",
+      "stage": "candidate"
+    },
+    {
+      "id": "UC-028",
+      "title": "Audit user storage quota",
+      "actor": "Admin",
+      "precondition": "Admin role and storage telemetry exist",
+      "flow": "View quota, warn user, reject oversized new uploads and inspect user controls",
+      "exceptions": "Never expose private attachment content in quota UI",
+      "trace": [
+        "LEGACY-FUNC-021"
+      ],
+      "source": "docs/business/LEGACY_USE_CASES_v0.2.md",
+      "stage": "candidate"
+    },
+    {
+      "id": "UC-029",
+      "title": "Track an avoid/negative habit",
+      "actor": "User",
+      "precondition": "Habit definition includes severity and a valid recurrence rule",
+      "flow": "Record occurrence, inspect elapsed-since and severity impact; correct accidental log",
+      "exceptions": "No irreversible penalty or hidden user shame mechanic",
+      "trace": [
+        "LEGACY-FUNC-006"
+      ],
+      "source": "docs/business/LEGACY_USE_CASES_v0.2.md",
+      "stage": "candidate"
+    },
+    {
+      "id": "UC-030",
+      "title": "Roll out approved beta feature",
+      "actor": "Admin",
+      "precondition": "Feature proposal approved and cohort defined",
+      "flow": "Select cohort, deploy gated version, monitor, revert; record decision",
+      "exceptions": "No release before approval and security/functional gates",
+      "trace": [
+        "LEGACY-FUNC-020"
+      ],
+      "source": "docs/business/LEGACY_USE_CASES_v0.2.md",
+      "stage": "candidate"
+    },
+    {
+      "id": "UC-031",
+      "title": "Log exercise progress",
+      "actor": "User",
+      "precondition": "Health workspace accessible",
+      "flow": "Create activity session, enter metrics, optionally attach to goal",
+      "exceptions": "No medical diagnoses inferred from raw fitness entries",
+      "trace": [
+        "LEGACY-FUNC-010"
+      ],
+      "source": "docs/business/LEGACY_USE_CASES_v0.2.md",
+      "stage": "candidate"
+    },
+    {
+      "id": "UC-032",
+      "title": "Import handwritten notebook",
+      "actor": "User",
+      "precondition": "Compatible export provided",
+      "flow": "Upload, preview extracted pages, confirm association with notes",
+      "exceptions": "Failed imports leave existing notes unchanged",
+      "trace": [
+        "LEGACY-FUNC-017"
+      ],
+      "source": "docs/business/LEGACY_USE_CASES_v0.2.md",
+      "stage": "candidate"
+    },
+    {
+      "id": "UC-033",
+      "title": "Navigate the achievement and low-game modes",
+      "actor": "User",
+      "precondition": "User has game-progress events",
+      "flow": "Open Me, inspect earned rewards, switch theme; return to tasks",
+      "exceptions": "Progress and essential actions unaffected by theme choice",
+      "trace": [
+        "LEGACY-FUNC-008",
+        "LEGACY-FUNC-025"
+      ],
+      "source": "docs/business/LEGACY_USE_CASES_v0.2.md",
+      "stage": "candidate"
+    }
+  ]
+}

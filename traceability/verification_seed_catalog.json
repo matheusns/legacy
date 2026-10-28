@@ -1,0 +1,235 @@
+{
+  "schema_version": "1.0",
+  "project": "LEGAVIA",
+  "status": "design-only",
+  "execution_enabled": false,
+  "source": "docs/business/LEGACY_VERIFICATION_PLAN_v0.2.md",
+  "tests": [
+    {
+      "id": "FVT-LEGACY-001",
+      "title": "Daily execution loop",
+      "scenario": "Create linked goal + habit + task; complete from Today.",
+      "expected": "Item completion, milestone progress, XP, continuity, and analytics update exactly once.",
+      "trace": [
+        "LEGACY-FUNC-004",
+        "LEGACY-FUNC-007",
+        "LEGACY-FUNC-008"
+      ],
+      "status": "Design Only",
+      "execution_policy": "Not executable until test definition/fixture review"
+    },
+    {
+      "id": "FVT-LEGACY-002",
+      "title": "Goal map progression",
+      "scenario": "Complete prerequisites across two themed phases.",
+      "expected": "Correct locked/available/in-progress/completed transitions; user can navigate with tap-only controls.",
+      "trace": [
+        "LEGACY-FUNC-003",
+        "LEGACY-FUNC-005"
+      ],
+      "status": "Design Only",
+      "execution_policy": "Not executable until test definition/fixture review"
+    },
+    {
+      "id": "FVT-LEGACY-003",
+      "title": "Missed-day recovery",
+      "scenario": "Build history, miss scheduled action, reopen after inactivity.",
+      "expected": "Continuity degrades per rule but historical progress remains; recovery flow offers resume/reschedule/skip.",
+      "trace": [
+        "LEGACY-FUNC-006"
+      ],
+      "status": "Design Only",
+      "execution_policy": "Not executable until test definition/fixture review"
+    },
+    {
+      "id": "FVT-LEGACY-004",
+      "title": "Cross-module navigation",
+      "scenario": "Navigate deeply in Health, switch to Finance, return to Health.",
+      "expected": "Per-destination state is preserved and top-level switch requires one tap/click.",
+      "trace": [
+        "LEGACY-FUNC-002"
+      ],
+      "status": "Design Only",
+      "execution_policy": "Not executable until test definition/fixture review"
+    },
+    {
+      "id": "FVT-LEGACY-005",
+      "title": "Authorization isolation",
+      "scenario": "Create two users/family workspaces and shared/nonshared items.",
+      "expected": "Each account sees only authorized data; shared item visibility matches permission policy.",
+      "trace": [
+        "LEGACY-FUNC-001",
+        "LEGACY-FUNC-021"
+      ],
+      "status": "Design Only",
+      "execution_policy": "Not executable until test definition/fixture review"
+    },
+    {
+      "id": "FVT-LEGACY-006",
+      "title": "AI feature governance",
+      "scenario": "Submit voice/text request, generate proposal, reject once, approve revised version.",
+      "expected": "No baseline promotion before explicit approval; all decisions are auditable.",
+      "trace": [
+        "LEGACY-FUNC-020"
+      ],
+      "status": "Design Only",
+      "execution_policy": "Not executable until test definition/fixture review"
+    },
+    {
+      "id": "FVT-LEGACY-007",
+      "title": "Learning import review",
+      "scenario": "Import course links and intentionally alter extracted structure.",
+      "expected": "No extracted content becomes authoritative until user accepts/edits it.",
+      "trace": [
+        "LEGACY-FUNC-013"
+      ],
+      "status": "Design Only",
+      "execution_policy": "Not executable until test definition/fixture review"
+    },
+    {
+      "id": "FVT-LEGACY-008",
+      "title": "Accessibility/navigation audit",
+      "scenario": "Run keyboard/touch/screen-reader checks across app shell and map.",
+      "expected": "WCAG 2.2 AA applicable checks pass; touch targets and drag alternatives meet requirements.",
+      "trace": [
+        "LEGACY-FUNC-002",
+        "LEGACY-FUNC-025"
+      ],
+      "status": "Design Only",
+      "execution_policy": "Not executable until test definition/fixture review"
+    },
+    {
+      "id": "FVT-LEGACY-009",
+      "title": "Water logging and correction",
+      "scenario": "Fixture seeded for same-day readings and timezone transitions",
+      "expected": "Correct entry results in exact daily amount, with no duplicate on retry",
+      "trace": [
+        "LEGACY-FUNC-010"
+      ],
+      "status": "Design Only",
+      "execution_policy": "Not executable until test definition/fixture review"
+    },
+    {
+      "id": "FVT-LEGACY-010",
+      "title": "Focus timer and reward idempotence",
+      "scenario": "Synthetic session state machine with pause/resume/cancel",
+      "expected": "Only eligible completed durations persist and award once",
+      "trace": [
+        "LEGACY-FUNC-011"
+      ],
+      "status": "Design Only",
+      "execution_policy": "Not executable until test definition/fixture review"
+    },
+    {
+      "id": "FVT-LEGACY-011",
+      "title": "Finance import and remittance accounting",
+      "scenario": "Two-currency spreadsheet fixture with transfer and duplicate rows",
+      "expected": "Preview/confirmation mandatory; remittance counted once; exchange rate provenance preserved",
+      "trace": [
+        "LEGACY-FUNC-012"
+      ],
+      "status": "Design Only",
+      "execution_policy": "Not executable until test definition/fixture review"
+    },
+    {
+      "id": "FVT-LEGACY-012",
+      "title": "Reading finish estimate",
+      "scenario": "Insufficient, irregular and steady reading observations",
+      "expected": "Estimate uses configured window; insufficient data and uncertain cases labeled",
+      "trace": [
+        "LEGACY-FUNC-014"
+      ],
+      "status": "Design Only",
+      "execution_policy": "Not executable until test definition/fixture review"
+    },
+    {
+      "id": "FVT-LEGACY-013",
+      "title": "Voice and AI confirmation",
+      "scenario": "Mocked voice transcript and proposal response",
+      "expected": "No state change before review/approval; authorization enforced",
+      "trace": [
+        "LEGACY-FUNC-019"
+      ],
+      "status": "Design Only",
+      "execution_policy": "Not executable until test definition/fixture review"
+    },
+    {
+      "id": "FVT-LEGACY-014",
+      "title": "Movie recommendation and provenance",
+      "scenario": "Recommendation plus unavailable/existing external ratings",
+      "expected": "Recommender/date retained and rating source explicit",
+      "trace": [
+        "LEGACY-FUNC-015"
+      ],
+      "status": "Design Only",
+      "execution_policy": "Not executable until test definition/fixture review"
+    },
+    {
+      "id": "FVT-LEGACY-015",
+      "title": "Game session retry safety",
+      "scenario": "Pause/resume/stop/retry synthetic clock",
+      "expected": "Cumulative duration correct after repeated stop",
+      "trace": [
+        "LEGACY-FUNC-016"
+      ],
+      "status": "Design Only",
+      "execution_policy": "Not executable until test definition/fixture review"
+    },
+    {
+      "id": "FVT-LEGACY-016",
+      "title": "Memory media isolation",
+      "scenario": "Two users, uploaded photo and note fixture",
+      "expected": "Signed media access and search observe tenant policy",
+      "trace": [
+        "LEGACY-FUNC-017"
+      ],
+      "status": "Design Only",
+      "execution_policy": "Not executable until test definition/fixture review"
+    },
+    {
+      "id": "FVT-LEGACY-017",
+      "title": "Family sharing revocation",
+      "scenario": "Shared and private goal fixture with member removal",
+      "expected": "Visibility revoked server-side without affecting owner content",
+      "trace": [
+        "LEGACY-FUNC-021"
+      ],
+      "status": "Design Only",
+      "execution_policy": "Not executable until test definition/fixture review"
+    },
+    {
+      "id": "FVT-LEGACY-018",
+      "title": "Web/phone visual match",
+      "scenario": "Approved references and deterministic viewport/fixture states",
+      "expected": "Phone and desktop critical journeys preserve behavior; differences reviewed",
+      "trace": [
+        "LEGACY-FUNC-002",
+        "LEGACY-FUNC-025"
+      ],
+      "status": "Design Only",
+      "execution_policy": "Not executable until test definition/fixture review"
+    },
+    {
+      "id": "FVT-LEGACY-019",
+      "title": "Backups and restoration",
+      "scenario": "Isolated synthetic database corruption and restore fixture",
+      "expected": "Restore documentation and referential consistency confirmed",
+      "trace": [
+        "LEGACY-FUNC-024"
+      ],
+      "status": "Design Only",
+      "execution_policy": "Not executable until test definition/fixture review"
+    },
+    {
+      "id": "FVT-LEGACY-020",
+      "title": "Career proposal review",
+      "scenario": "Completed-goal fixture with suggested CV entry",
+      "expected": "No CV write until manual approval",
+      "trace": [
+        "LEGACY-FUNC-023"
+      ],
+      "status": "Design Only",
+      "execution_policy": "Not executable until test definition/fixture review"
+    }
+  ]
+}

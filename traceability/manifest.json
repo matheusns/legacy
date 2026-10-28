@@ -1,0 +1,3077 @@
+{
+  "schema_version": "1.0",
+  "project": {
+    "id": "LEGAVIA",
+    "name": "Legavia",
+    "description": "Unified personal-life management product",
+    "baseline": "business-candidate-v0.2",
+    "status": "Proposed",
+    "control_repository": "matheusns/legacy",
+    "primary_remote": "GitHub",
+    "product_name": "Legavia",
+    "date": "2026-10-29"
+  },
+  "document_control": {
+    "status": "candidate-for-SE-review",
+    "authority": "Product owner / Systems Engineering",
+    "source_reference": "docs/reference/LEGACY_GAMIFICATION_UX_ARCHITECTURE_BASELINE_v0.1.md",
+    "change_policy": "Only approved control-plane changes may promote requirements, work packages and FVTs."
+  },
+  "repositories": [
+    {
+      "id": "control",
+      "url": "https://github.com/matheusns/legacy",
+      "role": "SDLC business/SE control"
+    },
+    {
+      "id": "gui",
+      "url": "https://github.com/matheusns/legavia_sdlc_gui",
+      "role": "local GUI"
+    },
+    {
+      "id": "app",
+      "url": "https://github.com/matheusns/legacy_app",
+      "role": "production app"
+    },
+    {
+      "id": "verification",
+      "url": "https://github.com/matheusns/legacy_verification_tooling",
+      "role": "independent verification"
+    },
+    {
+      "id": "mockups",
+      "url": "https://github.com/matheusns/legacy_mockups",
+      "role": "visual references"
+    }
+  ],
+  "requirements": [
+    {
+      "id": "LEGACY-BIZ-001",
+      "statement": "The product shall provide one unified life-management environment spanning multiple domains while preserving a consistent interaction model.",
+      "priority": "P0",
+      "source": "docs/reference/LEGACY_GAMIFICATION_UX_ARCHITECTURE_BASELINE_v0.1.md",
+      "scope": "all",
+      "level": "BIZ",
+      "status": "Proposed",
+      "disposition": "Not Assessed",
+      "functionality_ids": [],
+      "verification_method": "Architecture review"
+    },
+    {
+      "id": "LEGACY-BIZ-002",
+      "statement": "Gamification shall reinforce completion of meaningful real-world objectives and shall not require separate game-only maintenance to preserve progress.",
+      "priority": "P0",
+      "source": "docs/reference/LEGACY_GAMIFICATION_UX_ARCHITECTURE_BASELINE_v0.1.md",
+      "scope": "all",
+      "level": "BIZ",
+      "status": "Proposed",
+      "disposition": "Not Assessed",
+      "functionality_ids": [
+        "LEGACY-FUNC-008"
+      ],
+      "verification_method": "Product inspection + telemetry"
+    },
+    {
+      "id": "LEGACY-BIZ-003",
+      "statement": "Each user shall have a private workspace, with explicit sharing controls for family or collaborative features.",
+      "priority": "P0",
+      "source": "docs/reference/LEGACY_GAMIFICATION_UX_ARCHITECTURE_BASELINE_v0.1.md",
+      "scope": "all",
+      "level": "BIZ",
+      "status": "Proposed",
+      "disposition": "Not Assessed",
+      "functionality_ids": [
+        "LEGACY-FUNC-001"
+      ],
+      "verification_method": "Security/FVT"
+    },
+    {
+      "id": "LEGACY-BIZ-004",
+      "statement": "The product shall support adding new life modules without changing the top-level interaction principles or duplicating core domain entities.",
+      "priority": "P1",
+      "source": "docs/reference/LEGACY_GAMIFICATION_UX_ARCHITECTURE_BASELINE_v0.1.md",
+      "scope": "all",
+      "level": "BIZ",
+      "status": "Proposed",
+      "disposition": "Not Assessed",
+      "functionality_ids": [],
+      "verification_method": "Architecture test"
+    },
+    {
+      "id": "LEGACY-BIZ-005",
+      "statement": "Feature requests generated from user input may be proposed by AI but shall require explicit authorized approval before becoming a production baseline item.",
+      "priority": "P1",
+      "source": "docs/reference/LEGACY_GAMIFICATION_UX_ARCHITECTURE_BASELINE_v0.1.md",
+      "scope": "all",
+      "level": "BIZ",
+      "status": "Proposed",
+      "disposition": "Not Assessed",
+      "functionality_ids": [
+        "LEGACY-FUNC-020"
+      ],
+      "verification_method": "Workflow FVT"
+    },
+    {
+      "id": "LEGACY-FNC-001",
+      "statement": "The system shall authenticate users and load only the data authorized for the active workspace.",
+      "priority": "P0",
+      "source": "docs/reference/LEGACY_GAMIFICATION_UX_ARCHITECTURE_BASELINE_v0.1.md",
+      "scope": "all",
+      "level": "FNC",
+      "status": "Proposed",
+      "disposition": "Not Assessed",
+      "functionality_ids": [
+        "LEGACY-FUNC-001"
+      ],
+      "verification_method": "Security/FVT"
+    },
+    {
+      "id": "LEGACY-FNC-002",
+      "statement": "The Today view shall aggregate due habits, tasks, calendar context, and the next recommended action without requiring navigation into each module.",
+      "priority": "P0",
+      "source": "docs/reference/LEGACY_GAMIFICATION_UX_ARCHITECTURE_BASELINE_v0.1.md",
+      "scope": "all",
+      "level": "FNC",
+      "status": "Proposed",
+      "disposition": "Not Assessed",
+      "functionality_ids": [
+        "LEGACY-FUNC-004"
+      ],
+      "verification_method": "FVT"
+    },
+    {
+      "id": "LEGACY-FNC-003",
+      "statement": "The system shall represent goals using long-term, mid-term, and short-term relationships and allow decomposition into phases and milestones.",
+      "priority": "P0",
+      "source": "docs/reference/LEGACY_GAMIFICATION_UX_ARCHITECTURE_BASELINE_v0.1.md",
+      "scope": "all",
+      "level": "FNC",
+      "status": "Proposed",
+      "disposition": "Not Assessed",
+      "functionality_ids": [
+        "LEGACY-FUNC-003"
+      ],
+      "verification_method": "FVT"
+    },
+    {
+      "id": "LEGACY-FNC-004",
+      "statement": "The Map view shall visualize phases/milestones as navigable nodes and indicate locked, available, in-progress, and completed states.",
+      "priority": "P0",
+      "source": "docs/reference/LEGACY_GAMIFICATION_UX_ARCHITECTURE_BASELINE_v0.1.md",
+      "scope": "all",
+      "level": "FNC",
+      "status": "Proposed",
+      "disposition": "Not Assessed",
+      "functionality_ids": [
+        "LEGACY-FUNC-005"
+      ],
+      "verification_method": "Visual FVT"
+    },
+    {
+      "id": "LEGACY-FNC-005",
+      "statement": "The Map shall support distinct visual themes by phase/island while retaining a consistent interaction grammar.",
+      "priority": "P1",
+      "source": "docs/reference/LEGACY_GAMIFICATION_UX_ARCHITECTURE_BASELINE_v0.1.md",
+      "scope": "all",
+      "level": "FNC",
+      "status": "Proposed",
+      "disposition": "Not Assessed",
+      "functionality_ids": [
+        "LEGACY-FUNC-005",
+        "LEGACY-FUNC-025"
+      ],
+      "verification_method": "Visual inspection"
+    },
+    {
+      "id": "LEGACY-FNC-006",
+      "statement": "Users shall be able to create recurring habits using daily, selected-day, interval, and target-per-period schedules.",
+      "priority": "P0",
+      "source": "docs/reference/LEGACY_GAMIFICATION_UX_ARCHITECTURE_BASELINE_v0.1.md",
+      "scope": "all",
+      "level": "FNC",
+      "status": "Proposed",
+      "disposition": "Not Assessed",
+      "functionality_ids": [
+        "LEGACY-FUNC-006"
+      ],
+      "verification_method": "Functional test"
+    },
+    {
+      "id": "LEGACY-FNC-007",
+      "statement": "Users shall be able to create one-off tasks with due date, optional checklist, priority, and linkage to a goal or module.",
+      "priority": "P0",
+      "source": "docs/reference/LEGACY_GAMIFICATION_UX_ARCHITECTURE_BASELINE_v0.1.md",
+      "scope": "all",
+      "level": "FNC",
+      "status": "Proposed",
+      "disposition": "Not Assessed",
+      "functionality_ids": [
+        "LEGACY-FUNC-004"
+      ],
+      "verification_method": "Functional test"
+    },
+    {
+      "id": "LEGACY-FNC-008",
+      "statement": "Users shall be able to group ordered habits/actions into reusable routines.",
+      "priority": "P1",
+      "source": "docs/reference/LEGACY_GAMIFICATION_UX_ARCHITECTURE_BASELINE_v0.1.md",
+      "scope": "all",
+      "level": "FNC",
+      "status": "Proposed",
+      "disposition": "Not Assessed",
+      "functionality_ids": [
+        "LEGACY-FUNC-006"
+      ],
+      "verification_method": "Functional test"
+    },
+    {
+      "id": "LEGACY-FNC-009",
+      "statement": "A completion action shall update the underlying item, relevant milestone progress, analytics, and gamification state atomically.",
+      "priority": "P0",
+      "source": "docs/reference/LEGACY_GAMIFICATION_UX_ARCHITECTURE_BASELINE_v0.1.md",
+      "scope": "all",
+      "level": "FNC",
+      "status": "Proposed",
+      "disposition": "Not Assessed",
+      "functionality_ids": [
+        "LEGACY-FUNC-007"
+      ],
+      "verification_method": "Integration FVT"
+    },
+    {
+      "id": "LEGACY-FNC-010",
+      "statement": "Users shall be able to undo an accidental completion without losing unrelated progress.",
+      "priority": "P0",
+      "source": "docs/reference/LEGACY_GAMIFICATION_UX_ARCHITECTURE_BASELINE_v0.1.md",
+      "scope": "all",
+      "level": "FNC",
+      "status": "Proposed",
+      "disposition": "Not Assessed",
+      "functionality_ids": [
+        "LEGACY-FUNC-007"
+      ],
+      "verification_method": "Functional test"
+    },
+    {
+      "id": "LEGACY-FNC-011",
+      "statement": "The system shall calculate a continuity metric that preserves historical progress after isolated misses rather than relying only on a reset-to-zero streak.",
+      "priority": "P0",
+      "source": "docs/reference/LEGACY_GAMIFICATION_UX_ARCHITECTURE_BASELINE_v0.1.md",
+      "scope": "all",
+      "level": "FNC",
+      "status": "Proposed",
+      "disposition": "Not Assessed",
+      "functionality_ids": [
+        "LEGACY-FUNC-006"
+      ],
+      "verification_method": "Algorithm test"
+    },
+    {
+      "id": "LEGACY-FNC-012",
+      "statement": "The system may show traditional streaks in addition to the continuity metric, with user-configurable grace or recovery behavior.",
+      "priority": "P1",
+      "source": "docs/reference/LEGACY_GAMIFICATION_UX_ARCHITECTURE_BASELINE_v0.1.md",
+      "scope": "all",
+      "level": "FNC",
+      "status": "Proposed",
+      "disposition": "Not Assessed",
+      "functionality_ids": [
+        "LEGACY-FUNC-006"
+      ],
+      "verification_method": "Functional test"
+    },
+    {
+      "id": "LEGACY-FNC-013",
+      "statement": "Verified actions shall award configurable XP to a global level and one or more domain skills.",
+      "priority": "P0",
+      "source": "docs/reference/LEGACY_GAMIFICATION_UX_ARCHITECTURE_BASELINE_v0.1.md",
+      "scope": "all",
+      "level": "FNC",
+      "status": "Proposed",
+      "disposition": "Not Assessed",
+      "functionality_ids": [
+        "LEGACY-FUNC-008"
+      ],
+      "verification_method": "Functional test"
+    },
+    {
+      "id": "LEGACY-FNC-014",
+      "statement": "The system shall support achievements and milestone unlocks with in-progress and completed states.",
+      "priority": "P1",
+      "source": "docs/reference/LEGACY_GAMIFICATION_UX_ARCHITECTURE_BASELINE_v0.1.md",
+      "scope": "all",
+      "level": "FNC",
+      "status": "Proposed",
+      "disposition": "Not Assessed",
+      "functionality_ids": [
+        "LEGACY-FUNC-008"
+      ],
+      "verification_method": "Functional test"
+    },
+    {
+      "id": "LEGACY-FNC-015",
+      "statement": "The system shall support optional virtual currency and user-defined rewards without gating core task/habit functionality.",
+      "priority": "P1",
+      "source": "docs/reference/LEGACY_GAMIFICATION_UX_ARCHITECTURE_BASELINE_v0.1.md",
+      "scope": "all",
+      "level": "FNC",
+      "status": "Proposed",
+      "disposition": "Not Assessed",
+      "functionality_ids": [
+        "LEGACY-FUNC-008"
+      ],
+      "verification_method": "Functional test"
+    },
+    {
+      "id": "LEGACY-FNC-016",
+      "statement": "The system shall support finite daily/weekly quests derived from current goals and habits.",
+      "priority": "P1",
+      "source": "docs/reference/LEGACY_GAMIFICATION_UX_ARCHITECTURE_BASELINE_v0.1.md",
+      "scope": "all",
+      "level": "FNC",
+      "status": "Proposed",
+      "disposition": "Not Assessed",
+      "functionality_ids": [
+        "LEGACY-FUNC-008"
+      ],
+      "verification_method": "FVT"
+    },
+    {
+      "id": "LEGACY-FNC-017",
+      "statement": "Users shall be able to access Personal, Work, Health, Finance, Learning, and future modules through a common module hub.",
+      "priority": "P0",
+      "source": "docs/reference/LEGACY_GAMIFICATION_UX_ARCHITECTURE_BASELINE_v0.1.md",
+      "scope": "all",
+      "level": "FNC",
+      "status": "Proposed",
+      "disposition": "Not Assessed",
+      "functionality_ids": [
+        "LEGACY-FUNC-002"
+      ],
+      "verification_method": "Navigation FVT"
+    },
+    {
+      "id": "LEGACY-FNC-018",
+      "statement": "The system shall provide a global search entry point capable of locating goals, tasks, habits, modules, lessons, and other indexed entities.",
+      "priority": "P1",
+      "source": "docs/reference/LEGACY_GAMIFICATION_UX_ARCHITECTURE_BASELINE_v0.1.md",
+      "scope": "all",
+      "level": "FNC",
+      "status": "Proposed",
+      "disposition": "Not Assessed",
+      "functionality_ids": [],
+      "verification_method": "Search FVT"
+    },
+    {
+      "id": "LEGACY-FNC-019",
+      "statement": "The system shall support context-aware reminders that can be snoozed, completed, or opened directly to the relevant item.",
+      "priority": "P1",
+      "source": "docs/reference/LEGACY_GAMIFICATION_UX_ARCHITECTURE_BASELINE_v0.1.md",
+      "scope": "all",
+      "level": "FNC",
+      "status": "Proposed",
+      "disposition": "Not Assessed",
+      "functionality_ids": [
+        "LEGACY-FUNC-018"
+      ],
+      "verification_method": "Notification test"
+    },
+    {
+      "id": "LEGACY-FNC-020",
+      "statement": "The system shall support glanceable widgets for a small set of high-value signals and deep-link widget interactions to the relevant app context.",
+      "priority": "P1",
+      "source": "docs/reference/LEGACY_GAMIFICATION_UX_ARCHITECTURE_BASELINE_v0.1.md",
+      "scope": "all",
+      "level": "FNC",
+      "status": "Proposed",
+      "disposition": "Not Assessed",
+      "functionality_ids": [
+        "LEGACY-FUNC-018"
+      ],
+      "verification_method": "Widget FVT"
+    },
+    {
+      "id": "LEGACY-FNC-021",
+      "statement": "The system shall provide history and analytics by day, week, month, and selected life domain.",
+      "priority": "P0",
+      "source": "docs/reference/LEGACY_GAMIFICATION_UX_ARCHITECTURE_BASELINE_v0.1.md",
+      "scope": "all",
+      "level": "FNC",
+      "status": "Proposed",
+      "disposition": "Not Assessed",
+      "functionality_ids": [
+        "LEGACY-FUNC-009",
+        "LEGACY-FUNC-026"
+      ],
+      "verification_method": "Analytics test"
+    },
+    {
+      "id": "LEGACY-FNC-022",
+      "statement": "Where authorized, the system shall ingest eligible external signals such as calendar and health data to reduce manual logging.",
+      "priority": "P1",
+      "source": "docs/reference/LEGACY_GAMIFICATION_UX_ARCHITECTURE_BASELINE_v0.1.md",
+      "scope": "all",
+      "level": "FNC",
+      "status": "Proposed",
+      "disposition": "Not Assessed",
+      "functionality_ids": [
+        "LEGACY-FUNC-022"
+      ],
+      "verification_method": "Integration test"
+    },
+    {
+      "id": "LEGACY-FNC-023",
+      "statement": "The system shall provide export of user-owned structured data in at least one portable format.",
+      "priority": "P1",
+      "source": "docs/reference/LEGACY_GAMIFICATION_UX_ARCHITECTURE_BASELINE_v0.1.md",
+      "scope": "all",
+      "level": "FNC",
+      "status": "Proposed",
+      "disposition": "Not Assessed",
+      "functionality_ids": [
+        "LEGACY-FUNC-022"
+      ],
+      "verification_method": "Export test"
+    },
+    {
+      "id": "LEGACY-FNC-024",
+      "statement": "Family/social features shall be opt-in and support cooperative goals without requiring public leaderboard participation.",
+      "priority": "P1",
+      "source": "docs/reference/LEGACY_GAMIFICATION_UX_ARCHITECTURE_BASELINE_v0.1.md",
+      "scope": "all",
+      "level": "FNC",
+      "status": "Proposed",
+      "disposition": "Not Assessed",
+      "functionality_ids": [
+        "LEGACY-FUNC-021"
+      ],
+      "verification_method": "Permission + FVT"
+    },
+    {
+      "id": "LEGACY-FNC-025",
+      "statement": "Users shall be able to submit a feature request by text or voice and receive an AI-generated structured proposal containing scope, rationale, dependencies, and acceptance criteria.",
+      "priority": "P1",
+      "source": "docs/reference/LEGACY_GAMIFICATION_UX_ARCHITECTURE_BASELINE_v0.1.md",
+      "scope": "all",
+      "level": "FNC",
+      "status": "Proposed",
+      "disposition": "Not Assessed",
+      "functionality_ids": [
+        "LEGACY-FUNC-020"
+      ],
+      "verification_method": "Workflow FVT"
+    },
+    {
+      "id": "LEGACY-FNC-026",
+      "statement": "An authorized administrator shall be able to approve or reject an AI-generated feature proposal and route approved proposals into a beta/release workflow.",
+      "priority": "P1",
+      "source": "docs/reference/LEGACY_GAMIFICATION_UX_ARCHITECTURE_BASELINE_v0.1.md",
+      "scope": "all",
+      "level": "FNC",
+      "status": "Proposed",
+      "disposition": "Not Assessed",
+      "functionality_ids": [
+        "LEGACY-FUNC-020"
+      ],
+      "verification_method": "Workflow FVT"
+    },
+    {
+      "id": "LEGACY-FNC-027",
+      "statement": "The Learning module shall represent courses, modules, lessons, and activities and support importing source links for AI-assisted content extraction subject to user review.",
+      "priority": "P1",
+      "source": "docs/reference/LEGACY_GAMIFICATION_UX_ARCHITECTURE_BASELINE_v0.1.md",
+      "scope": "all",
+      "level": "FNC",
+      "status": "Proposed",
+      "disposition": "Not Assessed",
+      "functionality_ids": [
+        "LEGACY-FUNC-013"
+      ],
+      "verification_method": "Learning FVT"
+    },
+    {
+      "id": "LEGACY-FNC-028",
+      "statement": "The Finance module shall support goal-linked projections and preserve separation between user-entered assumptions and imported financial data.",
+      "priority": "P1",
+      "source": "docs/reference/LEGACY_GAMIFICATION_UX_ARCHITECTURE_BASELINE_v0.1.md",
+      "scope": "all",
+      "level": "FNC",
+      "status": "Proposed",
+      "disposition": "Not Assessed",
+      "functionality_ids": [
+        "LEGACY-FUNC-012"
+      ],
+      "verification_method": "Finance FVT"
+    },
+    {
+      "id": "LEGACY-UX-001",
+      "statement": "The compact/mobile shell shall expose no more than five default top-level destinations.",
+      "priority": "P0",
+      "source": "docs/reference/LEGACY_GAMIFICATION_UX_ARCHITECTURE_BASELINE_v0.1.md",
+      "scope": "all",
+      "level": "UX",
+      "status": "Proposed",
+      "disposition": "Not Assessed",
+      "functionality_ids": [
+        "LEGACY-FUNC-002"
+      ],
+      "verification_method": "Design inspection"
+    },
+    {
+      "id": "LEGACY-UX-002",
+      "statement": "Top-level navigation controls shall navigate between sections and shall not be repurposed as action buttons.",
+      "priority": "P0",
+      "source": "docs/reference/LEGACY_GAMIFICATION_UX_ARCHITECTURE_BASELINE_v0.1.md",
+      "scope": "all",
+      "level": "UX",
+      "status": "Proposed",
+      "disposition": "Not Assessed",
+      "functionality_ids": [
+        "LEGACY-FUNC-002"
+      ],
+      "verification_method": "Design inspection"
+    },
+    {
+      "id": "LEGACY-UX-003",
+      "statement": "Switching top-level destinations shall preserve the navigation state of each destination.",
+      "priority": "P0",
+      "source": "docs/reference/LEGACY_GAMIFICATION_UX_ARCHITECTURE_BASELINE_v0.1.md",
+      "scope": "all",
+      "level": "UX",
+      "status": "Proposed",
+      "disposition": "Not Assessed",
+      "functionality_ids": [
+        "LEGACY-FUNC-002"
+      ],
+      "verification_method": "Navigation FVT"
+    },
+    {
+      "id": "LEGACY-UX-004",
+      "statement": "Advanced or infrequently used options shall be progressively disclosed rather than presented in the default daily workflow.",
+      "priority": "P0",
+      "source": "docs/reference/LEGACY_GAMIFICATION_UX_ARCHITECTURE_BASELINE_v0.1.md",
+      "scope": "all",
+      "level": "UX",
+      "status": "Proposed",
+      "disposition": "Not Assessed",
+      "functionality_ids": [
+        "LEGACY-FUNC-002"
+      ],
+      "verification_method": "Usability inspection"
+    },
+    {
+      "id": "LEGACY-UX-005",
+      "statement": "Each high-frequency screen shall present one clearly identifiable primary action and visually subordinate secondary actions.",
+      "priority": "P0",
+      "source": "docs/reference/LEGACY_GAMIFICATION_UX_ARCHITECTURE_BASELINE_v0.1.md",
+      "scope": "all",
+      "level": "UX",
+      "status": "Proposed",
+      "disposition": "Not Assessed",
+      "functionality_ids": [
+        "LEGACY-FUNC-002"
+      ],
+      "verification_method": "Design inspection"
+    },
+    {
+      "id": "LEGACY-UX-006",
+      "statement": "Primary touch targets shall provide at least a 44×44 pt hit region on iOS-class interfaces.",
+      "priority": "P0",
+      "source": "docs/reference/LEGACY_GAMIFICATION_UX_ARCHITECTURE_BASELINE_v0.1.md",
+      "scope": "all",
+      "level": "UX",
+      "status": "Proposed",
+      "disposition": "Not Assessed",
+      "functionality_ids": [
+        "LEGACY-FUNC-002"
+      ],
+      "verification_method": "UI audit"
+    },
+    {
+      "id": "LEGACY-UX-007",
+      "statement": "The interface shall provide visible feedback for success, failure, disabled actions, and recoverable errors, including an explanation when an action cannot proceed.",
+      "priority": "P0",
+      "source": "docs/reference/LEGACY_GAMIFICATION_UX_ARCHITECTURE_BASELINE_v0.1.md",
+      "scope": "all",
+      "level": "UX",
+      "status": "Proposed",
+      "disposition": "Not Assessed",
+      "functionality_ids": [
+        "LEGACY-FUNC-002"
+      ],
+      "verification_method": "FVT"
+    },
+    {
+      "id": "LEGACY-UX-008",
+      "statement": "No essential state or instruction shall be communicated by color alone, and reduced-motion preferences shall be honored.",
+      "priority": "P0",
+      "source": "docs/reference/LEGACY_GAMIFICATION_UX_ARCHITECTURE_BASELINE_v0.1.md",
+      "scope": "all",
+      "level": "UX",
+      "status": "Proposed",
+      "disposition": "Not Assessed",
+      "functionality_ids": [
+        "LEGACY-FUNC-002"
+      ],
+      "verification_method": "Accessibility audit"
+    },
+    {
+      "id": "LEGACY-UX-009",
+      "statement": "All drag-based nonessential interactions shall have a single-pointer non-drag alternative.",
+      "priority": "P0",
+      "source": "docs/reference/LEGACY_GAMIFICATION_UX_ARCHITECTURE_BASELINE_v0.1.md",
+      "scope": "all",
+      "level": "UX",
+      "status": "Proposed",
+      "disposition": "Not Assessed",
+      "functionality_ids": [
+        "LEGACY-FUNC-002"
+      ],
+      "verification_method": "Accessibility FVT"
+    },
+    {
+      "id": "LEGACY-UX-010",
+      "statement": "The user shall be able to switch between any two top-level destinations with one tap/click from the app shell.",
+      "priority": "P0",
+      "source": "docs/reference/LEGACY_GAMIFICATION_UX_ARCHITECTURE_BASELINE_v0.1.md",
+      "scope": "all",
+      "level": "UX",
+      "status": "Proposed",
+      "disposition": "Not Assessed",
+      "functionality_ids": [
+        "LEGACY-FUNC-002"
+      ],
+      "verification_method": "Navigation FVT"
+    },
+    {
+      "id": "LEGACY-UX-011",
+      "statement": "The interface shall support a low-gamification presentation mode that preserves productivity functionality while reducing decorative game elements.",
+      "priority": "P1",
+      "source": "docs/reference/LEGACY_GAMIFICATION_UX_ARCHITECTURE_BASELINE_v0.1.md",
+      "scope": "all",
+      "level": "UX",
+      "status": "Proposed",
+      "disposition": "Not Assessed",
+      "functionality_ids": [
+        "LEGACY-FUNC-025"
+      ],
+      "verification_method": "Visual FVT"
+    },
+    {
+      "id": "LEGACY-UX-012",
+      "statement": "Empty states shall contain an explanation and at least one valid next action when the user has permission to create or configure content.",
+      "priority": "P0",
+      "source": "docs/reference/LEGACY_GAMIFICATION_UX_ARCHITECTURE_BASELINE_v0.1.md",
+      "scope": "all",
+      "level": "UX",
+      "status": "Proposed",
+      "disposition": "Not Assessed",
+      "functionality_ids": [
+        "LEGACY-FUNC-002"
+      ],
+      "verification_method": "State coverage test"
+    },
+    {
+      "id": "LEGACY-NFR-001",
+      "statement": "Web surfaces shall conform to WCAG 2.2 Level AA for applicable success criteria.",
+      "priority": "P0",
+      "source": "docs/reference/LEGACY_GAMIFICATION_UX_ARCHITECTURE_BASELINE_v0.1.md",
+      "scope": "all",
+      "level": "NFR",
+      "status": "Proposed",
+      "disposition": "Not Assessed",
+      "functionality_ids": [
+        "LEGACY-FUNC-002"
+      ],
+      "verification_method": "Accessibility audit"
+    },
+    {
+      "id": "LEGACY-NFR-002",
+      "statement": "User and workspace authorization boundaries shall be enforced server-side for every data access path.",
+      "priority": "P0",
+      "source": "docs/reference/LEGACY_GAMIFICATION_UX_ARCHITECTURE_BASELINE_v0.1.md",
+      "scope": "all",
+      "level": "NFR",
+      "status": "Proposed",
+      "disposition": "Not Assessed",
+      "functionality_ids": [
+        "LEGACY-FUNC-001"
+      ],
+      "verification_method": "Security test"
+    },
+    {
+      "id": "LEGACY-NFR-003",
+      "statement": "Sensitive user data shall be encrypted in transit and at rest using platform-standard mechanisms.",
+      "priority": "P0",
+      "source": "docs/reference/LEGACY_GAMIFICATION_UX_ARCHITECTURE_BASELINE_v0.1.md",
+      "scope": "all",
+      "level": "NFR",
+      "status": "Proposed",
+      "disposition": "Not Assessed",
+      "functionality_ids": [
+        "LEGACY-FUNC-001"
+      ],
+      "verification_method": "Security review"
+    },
+    {
+      "id": "LEGACY-NFR-004",
+      "statement": "Critical daily actions shall remain usable under intermittent connectivity and synchronize safely when connectivity returns.",
+      "priority": "P1",
+      "source": "docs/reference/LEGACY_GAMIFICATION_UX_ARCHITECTURE_BASELINE_v0.1.md",
+      "scope": "all",
+      "level": "NFR",
+      "status": "Proposed",
+      "disposition": "Not Assessed",
+      "functionality_ids": [],
+      "verification_method": "Offline/sync FVT"
+    },
+    {
+      "id": "LEGACY-NFR-005",
+      "statement": "Synchronization shall be idempotent for repeated completion/update requests and shall prevent duplicate XP/reward issuance.",
+      "priority": "P0",
+      "source": "docs/reference/LEGACY_GAMIFICATION_UX_ARCHITECTURE_BASELINE_v0.1.md",
+      "scope": "all",
+      "level": "NFR",
+      "status": "Proposed",
+      "disposition": "Not Assessed",
+      "functionality_ids": [
+        "LEGACY-FUNC-007"
+      ],
+      "verification_method": "Integration test"
+    },
+    {
+      "id": "LEGACY-NFR-006",
+      "statement": "The system shall keep an auditable history for admin approval of AI-generated feature proposals and beta promotion decisions.",
+      "priority": "P1",
+      "source": "docs/reference/LEGACY_GAMIFICATION_UX_ARCHITECTURE_BASELINE_v0.1.md",
+      "scope": "all",
+      "level": "NFR",
+      "status": "Proposed",
+      "disposition": "Not Assessed",
+      "functionality_ids": [
+        "LEGACY-FUNC-020"
+      ],
+      "verification_method": "Audit test"
+    },
+    {
+      "id": "LEGACY-NFR-007",
+      "statement": "High-frequency completion interactions shall provide perceived feedback immediately; any longer-running operation shall expose visible progress/state.",
+      "priority": "P0",
+      "source": "docs/reference/LEGACY_GAMIFICATION_UX_ARCHITECTURE_BASELINE_v0.1.md",
+      "scope": "all",
+      "level": "NFR",
+      "status": "Proposed",
+      "disposition": "Not Assessed",
+      "functionality_ids": [
+        "LEGACY-FUNC-025"
+      ],
+      "verification_method": "Performance UX test"
+    },
+    {
+      "id": "LEGACY-NFR-008",
+      "statement": "Product analytics shall minimize collection to events required for UX/product decisions and shall distinguish telemetry from user content.",
+      "priority": "P1",
+      "source": "docs/reference/LEGACY_GAMIFICATION_UX_ARCHITECTURE_BASELINE_v0.1.md",
+      "scope": "all",
+      "level": "NFR",
+      "status": "Proposed",
+      "disposition": "Not Assessed",
+      "functionality_ids": [
+        "LEGACY-FUNC-026"
+      ],
+      "verification_method": "Privacy review"
+    },
+    {
+      "id": "LEGACY-BIZ-006",
+      "statement": "Users shall retain ownership and control over their personal records and sharing permissions.",
+      "priority": "P0",
+      "source": "docs/business/LEGACY_REQUIREMENTS_v0.2.md",
+      "module": "business",
+      "scope": "all",
+      "level": "BIZ",
+      "status": "Proposed",
+      "disposition": "Not Assessed",
+      "functionality_ids": [
+        "LEGACY-FUNC-001"
+      ],
+      "verification_method": "Analysis, inspection and test"
+    },
+    {
+      "id": "LEGACY-BIZ-007",
+      "statement": "Legavia shall support responsive desktop-web and smartphone workflows using the same business data and permissions.",
+      "priority": "P0",
+      "source": "docs/business/LEGACY_REQUIREMENTS_v0.2.md",
+      "module": "business",
+      "scope": "all",
+      "level": "BIZ",
+      "status": "Proposed",
+      "disposition": "Not Assessed",
+      "functionality_ids": [],
+      "verification_method": "Analysis, inspection and test"
+    },
+    {
+      "id": "LEGACY-BIZ-008",
+      "statement": "Importing external financial, calendar, or media data shall not silently replace user-authored authoritative records.",
+      "priority": "P1",
+      "source": "docs/business/LEGACY_REQUIREMENTS_v0.2.md",
+      "module": "business",
+      "scope": "all",
+      "level": "BIZ",
+      "status": "Proposed",
+      "disposition": "Not Assessed",
+      "functionality_ids": [],
+      "verification_method": "Analysis, inspection and test"
+    },
+    {
+      "id": "LEGACY-BIZ-009",
+      "statement": "The product shall support incremental modules with bounded, independently testable release increments.",
+      "priority": "P0",
+      "source": "docs/business/LEGACY_REQUIREMENTS_v0.2.md",
+      "module": "business",
+      "scope": "all",
+      "level": "BIZ",
+      "status": "Proposed",
+      "disposition": "Not Assessed",
+      "functionality_ids": [
+        "LEGACY-FUNC-024"
+      ],
+      "verification_method": "Analysis, inspection and test"
+    },
+    {
+      "id": "LEGACY-BIZ-010",
+      "statement": "The product shall distinguish user wellbeing data from diagnostics and shall not sell or expose private content as public game state.",
+      "priority": "P0",
+      "source": "docs/business/LEGACY_REQUIREMENTS_v0.2.md",
+      "module": "business",
+      "scope": "all",
+      "level": "BIZ",
+      "status": "Proposed",
+      "disposition": "Not Assessed",
+      "functionality_ids": [],
+      "verification_method": "Analysis, inspection and test"
+    },
+    {
+      "id": "LEGACY-FNC-029",
+      "statement": "Users shall start, pause, resume, cancel, and complete named focus sessions linked to tasks or goals, recording elapsed and effective duration.",
+      "priority": "P1",
+      "source": "docs/business/LEGACY_REQUIREMENTS_v0.2.md",
+      "module": "focus",
+      "scope": "all",
+      "level": "FNC",
+      "status": "Proposed",
+      "disposition": "Not Assessed",
+      "functionality_ids": [
+        "LEGACY-FUNC-011"
+      ],
+      "verification_method": "Functional / integration verification"
+    },
+    {
+      "id": "LEGACY-FNC-030",
+      "statement": "Completed eligible focus sessions shall contribute to a persistent virtual forest and optional in-app reward balance without duplicating rewards on retry.",
+      "priority": "P1",
+      "source": "docs/business/LEGACY_REQUIREMENTS_v0.2.md",
+      "module": "focus",
+      "scope": "all",
+      "level": "FNC",
+      "status": "Proposed",
+      "disposition": "Not Assessed",
+      "functionality_ids": [
+        "LEGACY-FUNC-011"
+      ],
+      "verification_method": "Functional / integration verification"
+    },
+    {
+      "id": "LEGACY-FNC-031",
+      "statement": "Users shall record, correct, and review daily water consumption using configurable serving sizes and units.",
+      "priority": "P0",
+      "source": "docs/business/LEGACY_REQUIREMENTS_v0.2.md",
+      "module": "health",
+      "scope": "all",
+      "level": "FNC",
+      "status": "Proposed",
+      "disposition": "Not Assessed",
+      "functionality_ids": [
+        "LEGACY-FUNC-010"
+      ],
+      "verification_method": "Functional / integration verification"
+    },
+    {
+      "id": "LEGACY-FNC-032",
+      "statement": "Users shall configure daily water targets and review daily progress with explicit date and local-timezone semantics.",
+      "priority": "P0",
+      "source": "docs/business/LEGACY_REQUIREMENTS_v0.2.md",
+      "module": "health",
+      "scope": "all",
+      "level": "FNC",
+      "status": "Proposed",
+      "disposition": "Not Assessed",
+      "functionality_ids": [
+        "LEGACY-FUNC-010"
+      ],
+      "verification_method": "Functional / integration verification"
+    },
+    {
+      "id": "LEGACY-FNC-033",
+      "statement": "The Finance module shall categorize imported and manual transactions and track monthly income, expenses, savings, and account balances.",
+      "priority": "P1",
+      "source": "docs/business/LEGACY_REQUIREMENTS_v0.2.md",
+      "module": "finance",
+      "scope": "all",
+      "level": "FNC",
+      "status": "Proposed",
+      "disposition": "Not Assessed",
+      "functionality_ids": [
+        "LEGACY-FUNC-012"
+      ],
+      "verification_method": "Functional / integration verification"
+    },
+    {
+      "id": "LEGACY-FNC-034",
+      "statement": "Users shall import financial data from user-authorized spreadsheets with source provenance, preview, deduplication, and confirmation before commit.",
+      "priority": "P1",
+      "source": "docs/business/LEGACY_REQUIREMENTS_v0.2.md",
+      "module": "finance",
+      "scope": "all",
+      "level": "FNC",
+      "status": "Proposed",
+      "disposition": "Not Assessed",
+      "functionality_ids": [
+        "LEGACY-FUNC-012"
+      ],
+      "verification_method": "Functional / integration verification"
+    },
+    {
+      "id": "LEGACY-FNC-035",
+      "statement": "The Finance module shall represent accounts, transfers and remittances across currencies without double-counting intra-user transfers as income or expenditure.",
+      "priority": "P1",
+      "source": "docs/business/LEGACY_REQUIREMENTS_v0.2.md",
+      "module": "finance",
+      "scope": "all",
+      "level": "FNC",
+      "status": "Proposed",
+      "disposition": "Not Assessed",
+      "functionality_ids": [
+        "LEGACY-FUNC-012"
+      ],
+      "verification_method": "Functional / integration verification"
+    },
+    {
+      "id": "LEGACY-FNC-036",
+      "statement": "Financial projections shall distinguish historical actuals, planned budgets, and assumptions, including housing and vehicle ownership costs.",
+      "priority": "P1",
+      "source": "docs/business/LEGACY_REQUIREMENTS_v0.2.md",
+      "module": "finance",
+      "scope": "all",
+      "level": "FNC",
+      "status": "Proposed",
+      "disposition": "Not Assessed",
+      "functionality_ids": [
+        "LEGACY-FUNC-012"
+      ],
+      "verification_method": "Functional / integration verification"
+    },
+    {
+      "id": "LEGACY-FNC-037",
+      "statement": "Users shall compare budget to actual spending by month and category and inspect transactions driving a variance.",
+      "priority": "P1",
+      "source": "docs/business/LEGACY_REQUIREMENTS_v0.2.md",
+      "module": "finance",
+      "scope": "all",
+      "level": "FNC",
+      "status": "Proposed",
+      "disposition": "Not Assessed",
+      "functionality_ids": [
+        "LEGACY-FUNC-012"
+      ],
+      "verification_method": "Functional / integration verification"
+    },
+    {
+      "id": "LEGACY-FNC-038",
+      "statement": "Users shall track asset-related costs, financing, service, insurance and estimated depreciation separately from realized cash flows.",
+      "priority": "P2",
+      "source": "docs/business/LEGACY_REQUIREMENTS_v0.2.md",
+      "module": "finance",
+      "scope": "all",
+      "level": "FNC",
+      "status": "Proposed",
+      "disposition": "Not Assessed",
+      "functionality_ids": [
+        "LEGACY-FUNC-012"
+      ],
+      "verification_method": "Functional / integration verification"
+    },
+    {
+      "id": "LEGACY-FNC-039",
+      "statement": "The Learning module shall track course enrollment, modules, lessons, activities, completion, and related resources.",
+      "priority": "P1",
+      "source": "docs/business/LEGACY_REQUIREMENTS_v0.2.md",
+      "module": "learning",
+      "scope": "all",
+      "level": "FNC",
+      "status": "Proposed",
+      "disposition": "Not Assessed",
+      "functionality_ids": [
+        "LEGACY-FUNC-013"
+      ],
+      "verification_method": "Functional / integration verification"
+    },
+    {
+      "id": "LEGACY-FNC-040",
+      "statement": "Users shall maintain books in reading, planned, and completed states with total-page and read-page progress.",
+      "priority": "P1",
+      "source": "docs/business/LEGACY_REQUIREMENTS_v0.2.md",
+      "module": "books",
+      "scope": "all",
+      "level": "FNC",
+      "status": "Proposed",
+      "disposition": "Not Assessed",
+      "functionality_ids": [
+        "LEGACY-FUNC-014"
+      ],
+      "verification_method": "Functional / integration verification"
+    },
+    {
+      "id": "LEGACY-FNC-041",
+      "statement": "The reading module shall estimate completion dates using recent timestamped reading observations, exposing insufficient-data and uncertainty states.",
+      "priority": "P1",
+      "source": "docs/business/LEGACY_REQUIREMENTS_v0.2.md",
+      "module": "books",
+      "scope": "all",
+      "level": "FNC",
+      "status": "Proposed",
+      "disposition": "Not Assessed",
+      "functionality_ids": [
+        "LEGACY-FUNC-014"
+      ],
+      "verification_method": "Functional / integration verification"
+    },
+    {
+      "id": "LEGACY-FNC-042",
+      "statement": "Users shall register movie recommendations by voice or text with recommender attribution, submission timestamp, and personal queue status.",
+      "priority": "P1",
+      "source": "docs/business/LEGACY_REQUIREMENTS_v0.2.md",
+      "module": "movies",
+      "scope": "all",
+      "level": "FNC",
+      "status": "Proposed",
+      "disposition": "Not Assessed",
+      "functionality_ids": [
+        "LEGACY-FUNC-015"
+      ],
+      "verification_method": "Functional / integration verification"
+    },
+    {
+      "id": "LEGACY-FNC-043",
+      "statement": "When an external movie rating is available, the queue shall display its source, retrieval date and sort ordering; unknown scores shall remain unranked.",
+      "priority": "P1",
+      "source": "docs/business/LEGACY_REQUIREMENTS_v0.2.md",
+      "module": "movies",
+      "scope": "all",
+      "level": "FNC",
+      "status": "Proposed",
+      "disposition": "Not Assessed",
+      "functionality_ids": [
+        "LEGACY-FUNC-015"
+      ],
+      "verification_method": "Functional / integration verification"
+    },
+    {
+      "id": "LEGACY-FNC-044",
+      "statement": "Users shall maintain a game library and track per-game play sessions with start, pause, resume, stop, and cumulative elapsed duration.",
+      "priority": "P1",
+      "source": "docs/business/LEGACY_REQUIREMENTS_v0.2.md",
+      "module": "games",
+      "scope": "all",
+      "level": "FNC",
+      "status": "Proposed",
+      "disposition": "Not Assessed",
+      "functionality_ids": [
+        "LEGACY-FUNC-016"
+      ],
+      "verification_method": "Functional / integration verification"
+    },
+    {
+      "id": "LEGACY-FNC-045",
+      "statement": "Users shall capture searchable notes and reflections using text or voice, retaining original input and transcription provenance.",
+      "priority": "P1",
+      "source": "docs/business/LEGACY_REQUIREMENTS_v0.2.md",
+      "module": "memory",
+      "scope": "all",
+      "level": "FNC",
+      "status": "Proposed",
+      "disposition": "Not Assessed",
+      "functionality_ids": [
+        "LEGACY-FUNC-017"
+      ],
+      "verification_method": "Functional / integration verification"
+    },
+    {
+      "id": "LEGACY-FNC-046",
+      "statement": "Users shall import compatible notebook documents from user-provided reMarkable exports with explicit review, file size limits and source metadata.",
+      "priority": "P2",
+      "source": "docs/business/LEGACY_REQUIREMENTS_v0.2.md",
+      "module": "memory",
+      "scope": "all",
+      "level": "FNC",
+      "status": "Proposed",
+      "disposition": "Not Assessed",
+      "functionality_ids": [
+        "LEGACY-FUNC-017"
+      ],
+      "verification_method": "Functional / integration verification"
+    },
+    {
+      "id": "LEGACY-FNC-047",
+      "statement": "Users shall attach photos and documents to private memories and review them in chronological context.",
+      "priority": "P1",
+      "source": "docs/business/LEGACY_REQUIREMENTS_v0.2.md",
+      "module": "memory",
+      "scope": "all",
+      "level": "FNC",
+      "status": "Proposed",
+      "disposition": "Not Assessed",
+      "functionality_ids": [
+        "LEGACY-FUNC-017"
+      ],
+      "verification_method": "Functional / integration verification"
+    },
+    {
+      "id": "LEGACY-FNC-048",
+      "statement": "Users shall organize thoughts and memories into an editable relationship map without duplicating source records.",
+      "priority": "P2",
+      "source": "docs/business/LEGACY_REQUIREMENTS_v0.2.md",
+      "module": "memory",
+      "scope": "all",
+      "level": "FNC",
+      "status": "Proposed",
+      "disposition": "Not Assessed",
+      "functionality_ids": [
+        "LEGACY-FUNC-017"
+      ],
+      "verification_method": "Functional / integration verification"
+    },
+    {
+      "id": "LEGACY-FNC-049",
+      "statement": "Users shall maintain a CV/experience profile with manually approved updates proposed from completed goals, projects or milestones.",
+      "priority": "P2",
+      "source": "docs/business/LEGACY_REQUIREMENTS_v0.2.md",
+      "module": "career",
+      "scope": "all",
+      "level": "FNC",
+      "status": "Proposed",
+      "disposition": "Not Assessed",
+      "functionality_ids": [
+        "LEGACY-FUNC-023"
+      ],
+      "verification_method": "Functional / integration verification"
+    },
+    {
+      "id": "LEGACY-FNC-050",
+      "statement": "Users shall view calendar context and schedule or reschedule Legavia tasks while preserving original external calendar event ownership.",
+      "priority": "P1",
+      "source": "docs/business/LEGACY_REQUIREMENTS_v0.2.md",
+      "module": "calendar",
+      "scope": "all",
+      "level": "FNC",
+      "status": "Proposed",
+      "disposition": "Not Assessed",
+      "functionality_ids": [
+        "LEGACY-FUNC-018"
+      ],
+      "verification_method": "Functional / integration verification"
+    },
+    {
+      "id": "LEGACY-FNC-051",
+      "statement": "Voice or chat capture shall produce a previewable structured task, habit, note, or request; persisted changes shall require user confirmation.",
+      "priority": "P1",
+      "source": "docs/business/LEGACY_REQUIREMENTS_v0.2.md",
+      "module": "ai",
+      "scope": "all",
+      "level": "FNC",
+      "status": "Proposed",
+      "disposition": "Not Assessed",
+      "functionality_ids": [
+        "LEGACY-FUNC-019"
+      ],
+      "verification_method": "Functional / integration verification"
+    },
+    {
+      "id": "LEGACY-FNC-052",
+      "statement": "When GitHub is authorized, the system shall propose daily or weekly work items from selected issues or project items, subject to user acceptance.",
+      "priority": "P2",
+      "source": "docs/business/LEGACY_REQUIREMENTS_v0.2.md",
+      "module": "integrations",
+      "scope": "all",
+      "level": "FNC",
+      "status": "Proposed",
+      "disposition": "Not Assessed",
+      "functionality_ids": [
+        "LEGACY-FUNC-022"
+      ],
+      "verification_method": "Functional / integration verification"
+    },
+    {
+      "id": "LEGACY-FNC-053",
+      "statement": "Workspace owners shall be able to invite family users and grant explicit least-privilege roles for shared objects.",
+      "priority": "P1",
+      "source": "docs/business/LEGACY_REQUIREMENTS_v0.2.md",
+      "module": "family",
+      "scope": "all",
+      "level": "FNC",
+      "status": "Proposed",
+      "disposition": "Not Assessed",
+      "functionality_ids": [
+        "LEGACY-FUNC-021"
+      ],
+      "verification_method": "Functional / integration verification"
+    },
+    {
+      "id": "LEGACY-FNC-054",
+      "statement": "Administrators shall view storage use per workspace and enforce configurable quotas and safe rejection semantics.",
+      "priority": "P2",
+      "source": "docs/business/LEGACY_REQUIREMENTS_v0.2.md",
+      "module": "admin",
+      "scope": "all",
+      "level": "FNC",
+      "status": "Proposed",
+      "disposition": "Not Assessed",
+      "functionality_ids": [
+        "LEGACY-FUNC-021"
+      ],
+      "verification_method": "Functional / integration verification"
+    },
+    {
+      "id": "LEGACY-FNC-055",
+      "statement": "Administrators shall assign approved features to a bounded beta cohort, revoke access, and record rollout and rollback decisions.",
+      "priority": "P2",
+      "source": "docs/business/LEGACY_REQUIREMENTS_v0.2.md",
+      "module": "admin",
+      "scope": "all",
+      "level": "FNC",
+      "status": "Proposed",
+      "disposition": "Not Assessed",
+      "functionality_ids": [
+        "LEGACY-FUNC-020"
+      ],
+      "verification_method": "Functional / integration verification"
+    },
+    {
+      "id": "LEGACY-FNC-056",
+      "statement": "Users shall review and revoke external connector authorizations and inspect the last successful import timestamp.",
+      "priority": "P1",
+      "source": "docs/business/LEGACY_REQUIREMENTS_v0.2.md",
+      "module": "integrations",
+      "scope": "all",
+      "level": "FNC",
+      "status": "Proposed",
+      "disposition": "Not Assessed",
+      "functionality_ids": [
+        "LEGACY-FUNC-022"
+      ],
+      "verification_method": "Functional / integration verification"
+    },
+    {
+      "id": "LEGACY-FNC-057",
+      "statement": "Habit configuration shall distinguish positive and avoid/negative behaviors and support optional severity-dependent penalty rules.",
+      "priority": "P1",
+      "source": "docs/business/LEGACY_REQUIREMENTS_v0.2.md",
+      "module": "habits",
+      "scope": "all",
+      "level": "FNC",
+      "status": "Proposed",
+      "disposition": "Not Assessed",
+      "functionality_ids": [
+        "LEGACY-FUNC-006"
+      ],
+      "verification_method": "Functional / integration verification"
+    },
+    {
+      "id": "LEGACY-FNC-058",
+      "statement": "Avoid/negative behavior tracking shall expose time elapsed since a confirmed occurrence and provide correction or reversal of an erroneous record.",
+      "priority": "P1",
+      "source": "docs/business/LEGACY_REQUIREMENTS_v0.2.md",
+      "module": "habits",
+      "scope": "all",
+      "level": "FNC",
+      "status": "Proposed",
+      "disposition": "Not Assessed",
+      "functionality_ids": [
+        "LEGACY-FUNC-006"
+      ],
+      "verification_method": "Functional / integration verification"
+    },
+    {
+      "id": "LEGACY-FNC-059",
+      "statement": "The Finance module shall provide multi-period savings and expense trends including configurable category drilldowns and annual projections.",
+      "priority": "P1",
+      "source": "docs/business/LEGACY_REQUIREMENTS_v0.2.md",
+      "module": "finance",
+      "scope": "all",
+      "level": "FNC",
+      "status": "Proposed",
+      "disposition": "Not Assessed",
+      "functionality_ids": [
+        "LEGACY-FUNC-012",
+        "LEGACY-FUNC-026"
+      ],
+      "verification_method": "Functional / integration verification"
+    },
+    {
+      "id": "LEGACY-FNC-060",
+      "statement": "Users shall configure notification/reminder preferences per module and disable nonessential alerts.",
+      "priority": "P1",
+      "source": "docs/business/LEGACY_REQUIREMENTS_v0.2.md",
+      "module": "notifications",
+      "scope": "all",
+      "level": "FNC",
+      "status": "Proposed",
+      "disposition": "Not Assessed",
+      "functionality_ids": [
+        "LEGACY-FUNC-018"
+      ],
+      "verification_method": "Functional / integration verification"
+    },
+    {
+      "id": "LEGACY-FNC-061",
+      "statement": "Users shall be able to switch between mobile and desktop preview layouts without losing the underlying working state.",
+      "priority": "P0",
+      "source": "docs/business/LEGACY_REQUIREMENTS_v0.2.md",
+      "module": "ux",
+      "scope": "all",
+      "level": "FNC",
+      "status": "Proposed",
+      "disposition": "Not Assessed",
+      "functionality_ids": [
+        "LEGACY-FUNC-002"
+      ],
+      "verification_method": "Functional / integration verification"
+    },
+    {
+      "id": "LEGACY-FNC-062",
+      "statement": "Users shall record workouts, runs, or activity sessions manually and link progress to optional goals, without implying medical diagnosis.",
+      "priority": "P2",
+      "source": "docs/business/LEGACY_REQUIREMENTS_v0.2.md",
+      "module": "health",
+      "scope": "all",
+      "level": "FNC",
+      "status": "Proposed",
+      "disposition": "Not Assessed",
+      "functionality_ids": [
+        "LEGACY-FUNC-010"
+      ],
+      "verification_method": "Functional / integration verification"
+    },
+    {
+      "id": "LEGACY-FNC-063",
+      "statement": "Users shall download user-owned content in portable machine-readable form and initiate account-data deletion through authenticated controls.",
+      "priority": "P1",
+      "source": "docs/business/LEGACY_REQUIREMENTS_v0.2.md",
+      "module": "privacy",
+      "scope": "all",
+      "level": "FNC",
+      "status": "Proposed",
+      "disposition": "Not Assessed",
+      "functionality_ids": [
+        "LEGACY-FUNC-022"
+      ],
+      "verification_method": "Functional / integration verification"
+    },
+    {
+      "id": "LEGACY-FNC-064",
+      "statement": "Users shall manage financial accounts and recurring obligations across jurisdictions while retaining original transaction currency and exchange-rate provenance.",
+      "priority": "P1",
+      "source": "docs/business/LEGACY_REQUIREMENTS_v0.2.md",
+      "module": "finance",
+      "scope": "all",
+      "level": "FNC",
+      "status": "Proposed",
+      "disposition": "Not Assessed",
+      "functionality_ids": [
+        "LEGACY-FUNC-012"
+      ],
+      "verification_method": "Functional / integration verification"
+    },
+    {
+      "id": "LEGACY-FNC-065",
+      "statement": "Administrators shall inspect audit records for data-sharing and feature-approval actions without browsing unrelated private user content.",
+      "priority": "P1",
+      "source": "docs/business/LEGACY_REQUIREMENTS_v0.2.md",
+      "module": "admin",
+      "scope": "all",
+      "level": "FNC",
+      "status": "Proposed",
+      "disposition": "Not Assessed",
+      "functionality_ids": [
+        "LEGACY-FUNC-021"
+      ],
+      "verification_method": "Functional / integration verification"
+    },
+    {
+      "id": "LEGACY-FNC-066",
+      "statement": "Users shall attach task or goal evidence and inspect the source event behind XP, currency, and progress changes.",
+      "priority": "P1",
+      "source": "docs/business/LEGACY_REQUIREMENTS_v0.2.md",
+      "module": "gamification",
+      "scope": "all",
+      "level": "FNC",
+      "status": "Proposed",
+      "disposition": "Not Assessed",
+      "functionality_ids": [
+        "LEGACY-FUNC-007"
+      ],
+      "verification_method": "Functional / integration verification"
+    },
+    {
+      "id": "LEGACY-FNC-067",
+      "statement": "Users shall visualize completed and pending skills, awards and milestones without public disclosure by default.",
+      "priority": "P1",
+      "source": "docs/business/LEGACY_REQUIREMENTS_v0.2.md",
+      "module": "gamification",
+      "scope": "all",
+      "level": "FNC",
+      "status": "Proposed",
+      "disposition": "Not Assessed",
+      "functionality_ids": [
+        "LEGACY-FUNC-008"
+      ],
+      "verification_method": "Functional / integration verification"
+    },
+    {
+      "id": "LEGACY-NFR-009",
+      "statement": "All user content shall be tenant-scoped and enforced by server authorization, including media links, exports and background jobs.",
+      "priority": "P0",
+      "source": "docs/business/LEGACY_REQUIREMENTS_v0.2.md",
+      "module": "security",
+      "scope": "all",
+      "level": "NFR",
+      "status": "Proposed",
+      "disposition": "Not Assessed",
+      "functionality_ids": [
+        "LEGACY-FUNC-001"
+      ],
+      "verification_method": "Analysis, inspection and test"
+    },
+    {
+      "id": "LEGACY-NFR-010",
+      "statement": "State-changing actions and imports shall be retry-safe and record sufficient provenance for deterministic reconciliation.",
+      "priority": "P0",
+      "source": "docs/business/LEGACY_REQUIREMENTS_v0.2.md",
+      "module": "reliability",
+      "scope": "all",
+      "level": "NFR",
+      "status": "Proposed",
+      "disposition": "Not Assessed",
+      "functionality_ids": [
+        "LEGACY-FUNC-007"
+      ],
+      "verification_method": "Analysis, inspection and test"
+    },
+    {
+      "id": "LEGACY-NFR-011",
+      "statement": "Timezone-aware timestamps shall be stored in an unambiguous representation; displayed calendar days shall use user-selected timezone.",
+      "priority": "P0",
+      "source": "docs/business/LEGACY_REQUIREMENTS_v0.2.md",
+      "module": "data",
+      "scope": "all",
+      "level": "NFR",
+      "status": "Proposed",
+      "disposition": "Not Assessed",
+      "functionality_ids": [
+        "LEGACY-FUNC-024"
+      ],
+      "verification_method": "Analysis, inspection and test"
+    },
+    {
+      "id": "LEGACY-NFR-012",
+      "statement": "The same supported feature shall preserve its essential business behavior across mobile and desktop layouts.",
+      "priority": "P0",
+      "source": "docs/business/LEGACY_REQUIREMENTS_v0.2.md",
+      "module": "ux",
+      "scope": "all",
+      "level": "NFR",
+      "status": "Proposed",
+      "disposition": "Not Assessed",
+      "functionality_ids": [
+        "LEGACY-FUNC-002"
+      ],
+      "verification_method": "Analysis, inspection and test"
+    },
+    {
+      "id": "LEGACY-NFR-013",
+      "statement": "Each required screen state and critical journey shall have a deterministic fixture and independently reviewable visual evidence for mobile and desktop.",
+      "priority": "P0",
+      "source": "docs/business/LEGACY_REQUIREMENTS_v0.2.md",
+      "module": "verification",
+      "scope": "all",
+      "level": "NFR",
+      "status": "Proposed",
+      "disposition": "Not Assessed",
+      "functionality_ids": [
+        "LEGACY-FUNC-002"
+      ],
+      "verification_method": "Analysis, inspection and test"
+    },
+    {
+      "id": "LEGACY-NFR-014",
+      "statement": "Release approval shall depend on passing defined security, functional, accessibility and regression gates for the changed scope.",
+      "priority": "P0",
+      "source": "docs/business/LEGACY_REQUIREMENTS_v0.2.md",
+      "module": "quality",
+      "scope": "all",
+      "level": "NFR",
+      "status": "Proposed",
+      "disposition": "Not Assessed",
+      "functionality_ids": [
+        "LEGACY-FUNC-024"
+      ],
+      "verification_method": "Analysis, inspection and test"
+    },
+    {
+      "id": "LEGACY-NFR-015",
+      "statement": "The system shall offer user-controlled content export and deletion with retention exceptions documented in a user-accessible policy.",
+      "priority": "P1",
+      "source": "docs/business/LEGACY_REQUIREMENTS_v0.2.md",
+      "module": "privacy",
+      "scope": "all",
+      "level": "NFR",
+      "status": "Proposed",
+      "disposition": "Not Assessed",
+      "functionality_ids": [
+        "LEGACY-FUNC-024"
+      ],
+      "verification_method": "Analysis, inspection and test"
+    },
+    {
+      "id": "LEGACY-NFR-016",
+      "statement": "Sensitive media, access tokens and external integration credentials shall not appear in agent prompts, debug bundles or routine telemetry.",
+      "priority": "P0",
+      "source": "docs/business/LEGACY_REQUIREMENTS_v0.2.md",
+      "module": "security",
+      "scope": "all",
+      "level": "NFR",
+      "status": "Proposed",
+      "disposition": "Not Assessed",
+      "functionality_ids": [
+        "LEGACY-FUNC-001"
+      ],
+      "verification_method": "Analysis, inspection and test"
+    },
+    {
+      "id": "LEGACY-NFR-017",
+      "statement": "Financial projections and estimated reading-completion dates shall identify assumptions and distinguish estimates from observed facts.",
+      "priority": "P1",
+      "source": "docs/business/LEGACY_REQUIREMENTS_v0.2.md",
+      "module": "integrity",
+      "scope": "all",
+      "level": "NFR",
+      "status": "Proposed",
+      "disposition": "Not Assessed",
+      "functionality_ids": [
+        "LEGACY-FUNC-014"
+      ],
+      "verification_method": "Analysis, inspection and test"
+    },
+    {
+      "id": "LEGACY-NFR-018",
+      "statement": "The product shall provide documented recovery procedures for storage corruption and restore tests before promoting data-dependent releases.",
+      "priority": "P0",
+      "source": "docs/business/LEGACY_REQUIREMENTS_v0.2.md",
+      "module": "reliability",
+      "scope": "all",
+      "level": "NFR",
+      "status": "Proposed",
+      "disposition": "Not Assessed",
+      "functionality_ids": [
+        "LEGACY-FUNC-024"
+      ],
+      "verification_method": "Analysis, inspection and test"
+    },
+    {
+      "id": "LEGACY-NFR-019",
+      "statement": "Application and testing instrumentation shall not use production user data as public fixture inputs without explicit authorized sanitization.",
+      "priority": "P0",
+      "source": "docs/business/LEGACY_REQUIREMENTS_v0.2.md",
+      "module": "privacy",
+      "scope": "all",
+      "level": "NFR",
+      "status": "Proposed",
+      "disposition": "Not Assessed",
+      "functionality_ids": [
+        "LEGACY-FUNC-024"
+      ],
+      "verification_method": "Analysis, inspection and test"
+    }
+  ],
+  "functionalities": [
+    {
+      "id": "LEGACY-FUNC-001",
+      "summary": "Identity, workspace and privacy",
+      "statement": "Authenticate, authorize and isolate all user-owned content and media.",
+      "scope": "all",
+      "status": "Specified",
+      "requirement_ids": [
+        "LEGACY-FNC-001",
+        "LEGACY-NFR-002",
+        "LEGACY-NFR-003",
+        "LEGACY-NFR-009",
+        "LEGACY-NFR-016",
+        "LEGACY-BIZ-003",
+        "LEGACY-BIZ-006"
+      ],
+      "depends_on_functionality_ids": [],
+      "component": "core",
+      "priority": "P0",
+      "owner": "Product",
+      "source": "docs/business/LEGACY_FUNCTIONALITIES_v0.2.md"
+    },
+    {
+      "id": "LEGACY-FUNC-002",
+      "summary": "App shell and responsive UX",
+      "statement": "Five destinations, responsive layouts, accessible navigation and explicit state feedback.",
+      "scope": "all",
+      "status": "Specified",
+      "requirement_ids": [
+        "LEGACY-FNC-017",
+        "LEGACY-FNC-061",
+        "LEGACY-UX-001",
+        "LEGACY-UX-002",
+        "LEGACY-UX-003",
+        "LEGACY-UX-004",
+        "LEGACY-UX-005",
+        "LEGACY-UX-006",
+        "LEGACY-UX-007",
+        "LEGACY-UX-008",
+        "LEGACY-UX-009",
+        "LEGACY-UX-010",
+        "LEGACY-UX-012",
+        "LEGACY-NFR-001",
+        "LEGACY-NFR-012",
+        "LEGACY-NFR-013"
+      ],
+      "depends_on_functionality_ids": [
+        "LEGACY-FUNC-001"
+      ],
+      "component": "ux",
+      "priority": "P0",
+      "owner": "Product",
+      "source": "docs/business/LEGACY_FUNCTIONALITIES_v0.2.md"
+    },
+    {
+      "id": "LEGACY-FUNC-003",
+      "summary": "Goals, phases and milestones",
+      "statement": "Create and maintain nested goal progression and explicit success criteria.",
+      "scope": "all",
+      "status": "Specified",
+      "requirement_ids": [
+        "LEGACY-FNC-003"
+      ],
+      "depends_on_functionality_ids": [
+        "LEGACY-FUNC-001"
+      ],
+      "component": "goals",
+      "priority": "P0",
+      "owner": "Product",
+      "source": "docs/business/LEGACY_FUNCTIONALITIES_v0.2.md"
+    },
+    {
+      "id": "LEGACY-FUNC-004",
+      "summary": "Tasks and Today",
+      "statement": "Create goal-linked actions and execute daily tasks from one consolidated view.",
+      "scope": "all",
+      "status": "Specified",
+      "requirement_ids": [
+        "LEGACY-FNC-002",
+        "LEGACY-FNC-007"
+      ],
+      "depends_on_functionality_ids": [
+        "LEGACY-FUNC-002",
+        "LEGACY-FUNC-003"
+      ],
+      "component": "today",
+      "priority": "P0",
+      "owner": "Product",
+      "source": "docs/business/LEGACY_FUNCTIONALITIES_v0.2.md"
+    },
+    {
+      "id": "LEGACY-FUNC-005",
+      "summary": "Goal world map",
+      "statement": "Render goal and phase progression with accessible visual states.",
+      "scope": "all",
+      "status": "Specified",
+      "requirement_ids": [
+        "LEGACY-FNC-004",
+        "LEGACY-FNC-005"
+      ],
+      "depends_on_functionality_ids": [
+        "LEGACY-FUNC-002",
+        "LEGACY-FUNC-003"
+      ],
+      "component": "map",
+      "priority": "P0",
+      "owner": "Product",
+      "source": "docs/business/LEGACY_FUNCTIONALITIES_v0.2.md"
+    },
+    {
+      "id": "LEGACY-FUNC-006",
+      "summary": "Habits and recovery",
+      "statement": "Schedule positive and avoid/negative behaviors, continuity and recovery.",
+      "scope": "all",
+      "status": "Specified",
+      "requirement_ids": [
+        "LEGACY-FNC-006",
+        "LEGACY-FNC-008",
+        "LEGACY-FNC-011",
+        "LEGACY-FNC-012",
+        "LEGACY-FNC-057",
+        "LEGACY-FNC-058"
+      ],
+      "depends_on_functionality_ids": [
+        "LEGACY-FUNC-001",
+        "LEGACY-FUNC-004"
+      ],
+      "component": "habits",
+      "priority": "P0",
+      "owner": "Product",
+      "source": "docs/business/LEGACY_FUNCTIONALITIES_v0.2.md"
+    },
+    {
+      "id": "LEGACY-FUNC-007",
+      "summary": "Completion and progress ledger",
+      "statement": "Persist completions, reversal and exactly-once cross-module progress.",
+      "scope": "all",
+      "status": "Specified",
+      "requirement_ids": [
+        "LEGACY-FNC-009",
+        "LEGACY-FNC-010",
+        "LEGACY-NFR-005",
+        "LEGACY-NFR-010",
+        "LEGACY-FNC-066"
+      ],
+      "depends_on_functionality_ids": [
+        "LEGACY-FUNC-003",
+        "LEGACY-FUNC-004"
+      ],
+      "component": "core",
+      "priority": "P0",
+      "owner": "Product",
+      "source": "docs/business/LEGACY_FUNCTIONALITIES_v0.2.md"
+    },
+    {
+      "id": "LEGACY-FUNC-008",
+      "summary": "XP, rewards and achievements",
+      "statement": "Materialize skills, levels, awards and currency derived from verified actions.",
+      "scope": "all",
+      "status": "Specified",
+      "requirement_ids": [
+        "LEGACY-FNC-013",
+        "LEGACY-FNC-014",
+        "LEGACY-FNC-015",
+        "LEGACY-FNC-016",
+        "LEGACY-FNC-067",
+        "LEGACY-BIZ-002"
+      ],
+      "depends_on_functionality_ids": [
+        "LEGACY-FUNC-007"
+      ],
+      "component": "gamification",
+      "priority": "P0",
+      "owner": "Product",
+      "source": "docs/business/LEGACY_FUNCTIONALITIES_v0.2.md"
+    },
+    {
+      "id": "LEGACY-FUNC-009",
+      "summary": "Insights and trends",
+      "statement": "Aggregate dated actions, milestones and meaningful progress signals.",
+      "scope": "all",
+      "status": "Specified",
+      "requirement_ids": [
+        "LEGACY-FNC-021"
+      ],
+      "depends_on_functionality_ids": [
+        "LEGACY-FUNC-007"
+      ],
+      "component": "insights",
+      "priority": "P0",
+      "owner": "Product",
+      "source": "docs/business/LEGACY_FUNCTIONALITIES_v0.2.md"
+    },
+    {
+      "id": "LEGACY-FUNC-010",
+      "summary": "Water and activity",
+      "statement": "Capture hydration with servings and targets, optionally workouts and runs.",
+      "scope": "all",
+      "status": "Specified",
+      "requirement_ids": [
+        "LEGACY-FNC-031",
+        "LEGACY-FNC-032",
+        "LEGACY-FNC-062"
+      ],
+      "depends_on_functionality_ids": [
+        "LEGACY-FUNC-002",
+        "LEGACY-FUNC-001"
+      ],
+      "component": "health",
+      "priority": "P0",
+      "owner": "Product",
+      "source": "docs/business/LEGACY_FUNCTIONALITIES_v0.2.md"
+    },
+    {
+      "id": "LEGACY-FUNC-011",
+      "summary": "Focus forest",
+      "statement": "Track named focus sessions and derive forest growth and optional reward transactions.",
+      "scope": "all",
+      "status": "Specified",
+      "requirement_ids": [
+        "LEGACY-FNC-029",
+        "LEGACY-FNC-030"
+      ],
+      "depends_on_functionality_ids": [
+        "LEGACY-FUNC-007",
+        "LEGACY-FUNC-008"
+      ],
+      "component": "focus",
+      "priority": "P1",
+      "owner": "Product",
+      "source": "docs/business/LEGACY_FUNCTIONALITIES_v0.2.md"
+    },
+    {
+      "id": "LEGACY-FUNC-012",
+      "summary": "Financial ledger and planning",
+      "statement": "Import accounts/transactions, monthly savings and scenario projections with provenance.",
+      "scope": "all",
+      "status": "Specified",
+      "requirement_ids": [
+        "LEGACY-FNC-028",
+        "LEGACY-FNC-033",
+        "LEGACY-FNC-034",
+        "LEGACY-FNC-035",
+        "LEGACY-FNC-036",
+        "LEGACY-FNC-037",
+        "LEGACY-FNC-038",
+        "LEGACY-FNC-059",
+        "LEGACY-FNC-064"
+      ],
+      "depends_on_functionality_ids": [
+        "LEGACY-FUNC-001",
+        "LEGACY-FUNC-002"
+      ],
+      "component": "finance",
+      "priority": "P1",
+      "owner": "Product",
+      "source": "docs/business/LEGACY_FUNCTIONALITIES_v0.2.md"
+    },
+    {
+      "id": "LEGACY-FUNC-013",
+      "summary": "Courses and learning",
+      "statement": "Track course hierarchy, progress and user-reviewed AI extraction.",
+      "scope": "all",
+      "status": "Specified",
+      "requirement_ids": [
+        "LEGACY-FNC-027",
+        "LEGACY-FNC-039"
+      ],
+      "depends_on_functionality_ids": [
+        "LEGACY-FUNC-001",
+        "LEGACY-FUNC-002"
+      ],
+      "component": "learning",
+      "priority": "P1",
+      "owner": "Product",
+      "source": "docs/business/LEGACY_FUNCTIONALITIES_v0.2.md"
+    },
+    {
+      "id": "LEGACY-FUNC-014",
+      "summary": "Book reading tracker",
+      "statement": "Manage books and estimate completion using timestamped observation trends.",
+      "scope": "all",
+      "status": "Specified",
+      "requirement_ids": [
+        "LEGACY-FNC-040",
+        "LEGACY-FNC-041",
+        "LEGACY-NFR-017"
+      ],
+      "depends_on_functionality_ids": [
+        "LEGACY-FUNC-001",
+        "LEGACY-FUNC-002"
+      ],
+      "component": "books",
+      "priority": "P1",
+      "owner": "Product",
+      "source": "docs/business/LEGACY_FUNCTIONALITIES_v0.2.md"
+    },
+    {
+      "id": "LEGACY-FUNC-015",
+      "summary": "Movie recommendation queue",
+      "statement": "Capture recommendations with attribution and externally sourced rating information.",
+      "scope": "all",
+      "status": "Specified",
+      "requirement_ids": [
+        "LEGACY-FNC-042",
+        "LEGACY-FNC-043"
+      ],
+      "depends_on_functionality_ids": [
+        "LEGACY-FUNC-001",
+        "LEGACY-FUNC-002"
+      ],
+      "component": "movies",
+      "priority": "P1",
+      "owner": "Product",
+      "source": "docs/business/LEGACY_FUNCTIONALITIES_v0.2.md"
+    },
+    {
+      "id": "LEGACY-FUNC-016",
+      "summary": "Games and timers",
+      "statement": "Track owned games, individual sessions, and cumulative playtime.",
+      "scope": "all",
+      "status": "Specified",
+      "requirement_ids": [
+        "LEGACY-FNC-044"
+      ],
+      "depends_on_functionality_ids": [
+        "LEGACY-FUNC-001",
+        "LEGACY-FUNC-002"
+      ],
+      "component": "games",
+      "priority": "P1",
+      "owner": "Product",
+      "source": "docs/business/LEGACY_FUNCTIONALITIES_v0.2.md"
+    },
+    {
+      "id": "LEGACY-FUNC-017",
+      "summary": "Notes, memory and media",
+      "statement": "Capture personal notes, voice, photos, notebook imports and mind-map relationships.",
+      "scope": "all",
+      "status": "Specified",
+      "requirement_ids": [
+        "LEGACY-FNC-045",
+        "LEGACY-FNC-046",
+        "LEGACY-FNC-047",
+        "LEGACY-FNC-048"
+      ],
+      "depends_on_functionality_ids": [
+        "LEGACY-FUNC-001",
+        "LEGACY-FUNC-002"
+      ],
+      "component": "memory",
+      "priority": "P1",
+      "owner": "Product",
+      "source": "docs/business/LEGACY_FUNCTIONALITIES_v0.2.md"
+    },
+    {
+      "id": "LEGACY-FUNC-018",
+      "summary": "Calendar and reminders",
+      "statement": "Present authorized calendar context and configurable direct-action reminders.",
+      "scope": "all",
+      "status": "Specified",
+      "requirement_ids": [
+        "LEGACY-FNC-019",
+        "LEGACY-FNC-020",
+        "LEGACY-FNC-050",
+        "LEGACY-FNC-060"
+      ],
+      "depends_on_functionality_ids": [
+        "LEGACY-FUNC-004"
+      ],
+      "component": "calendar",
+      "priority": "P1",
+      "owner": "Product",
+      "source": "docs/business/LEGACY_FUNCTIONALITIES_v0.2.md"
+    },
+    {
+      "id": "LEGACY-FUNC-019",
+      "summary": "Voice/chat action capture",
+      "statement": "Produce previewable AI-generated structured proposals and require confirmation before writes.",
+      "scope": "all",
+      "status": "Specified",
+      "requirement_ids": [
+        "LEGACY-FNC-051"
+      ],
+      "depends_on_functionality_ids": [
+        "LEGACY-FUNC-004"
+      ],
+      "component": "ai",
+      "priority": "P1",
+      "owner": "Product",
+      "source": "docs/business/LEGACY_FUNCTIONALITIES_v0.2.md"
+    },
+    {
+      "id": "LEGACY-FUNC-020",
+      "summary": "AI feature governance",
+      "statement": "Capture feature requests, review proposals, authorize beta promotion and audit decisions.",
+      "scope": "all",
+      "status": "Specified",
+      "requirement_ids": [
+        "LEGACY-FNC-025",
+        "LEGACY-FNC-026",
+        "LEGACY-FNC-055",
+        "LEGACY-NFR-006",
+        "LEGACY-BIZ-005"
+      ],
+      "depends_on_functionality_ids": [
+        "LEGACY-FUNC-019"
+      ],
+      "component": "governance",
+      "priority": "P1",
+      "owner": "Product",
+      "source": "docs/business/LEGACY_FUNCTIONALITIES_v0.2.md"
+    },
+    {
+      "id": "LEGACY-FUNC-021",
+      "summary": "Family, permissions and quotas",
+      "statement": "Manage invited members, shared goals and tenant resource limits.",
+      "scope": "all",
+      "status": "Specified",
+      "requirement_ids": [
+        "LEGACY-FNC-024",
+        "LEGACY-FNC-053",
+        "LEGACY-FNC-054",
+        "LEGACY-FNC-065"
+      ],
+      "depends_on_functionality_ids": [
+        "LEGACY-FUNC-001"
+      ],
+      "component": "family",
+      "priority": "P1",
+      "owner": "Product",
+      "source": "docs/business/LEGACY_FUNCTIONALITIES_v0.2.md"
+    },
+    {
+      "id": "LEGACY-FUNC-022",
+      "summary": "Integrations and import/export",
+      "statement": "Manage external connectors, data provenance, exports and GitHub proposed work.",
+      "scope": "all",
+      "status": "Specified",
+      "requirement_ids": [
+        "LEGACY-FNC-022",
+        "LEGACY-FNC-023",
+        "LEGACY-FNC-052",
+        "LEGACY-FNC-056",
+        "LEGACY-FNC-063"
+      ],
+      "depends_on_functionality_ids": [
+        "LEGACY-FUNC-001"
+      ],
+      "component": "integrations",
+      "priority": "P1",
+      "owner": "Product",
+      "source": "docs/business/LEGACY_FUNCTIONALITIES_v0.2.md"
+    },
+    {
+      "id": "LEGACY-FUNC-023",
+      "summary": "CV and professional profile",
+      "statement": "Create career history and propose reviewed updates based on completed work.",
+      "scope": "all",
+      "status": "Specified",
+      "requirement_ids": [
+        "LEGACY-FNC-049"
+      ],
+      "depends_on_functionality_ids": [
+        "LEGACY-FUNC-003"
+      ],
+      "component": "career",
+      "priority": "P2",
+      "owner": "Product",
+      "source": "docs/business/LEGACY_FUNCTIONALITIES_v0.2.md"
+    },
+    {
+      "id": "LEGACY-FUNC-024",
+      "summary": "Data resilience, security and release quality",
+      "statement": "Protect lifecycle integrity, tenant boundaries, backups and independent test evidence.",
+      "scope": "all",
+      "status": "Specified",
+      "requirement_ids": [
+        "LEGACY-NFR-011",
+        "LEGACY-NFR-014",
+        "LEGACY-NFR-015",
+        "LEGACY-NFR-018",
+        "LEGACY-NFR-019",
+        "LEGACY-BIZ-009"
+      ],
+      "depends_on_functionality_ids": [
+        "LEGACY-FUNC-001"
+      ],
+      "component": "platform",
+      "priority": "P0",
+      "owner": "Product",
+      "source": "docs/business/LEGACY_FUNCTIONALITIES_v0.2.md"
+    },
+    {
+      "id": "LEGACY-FUNC-025",
+      "summary": "Design themes and accessibility",
+      "statement": "Use approved visual language and offer low-gamification theming without breaking controls.",
+      "scope": "all",
+      "status": "Specified",
+      "requirement_ids": [
+        "LEGACY-UX-011",
+        "LEGACY-FNC-005",
+        "LEGACY-NFR-007"
+      ],
+      "depends_on_functionality_ids": [
+        "LEGACY-FUNC-002"
+      ],
+      "component": "ux",
+      "priority": "P1",
+      "owner": "Product",
+      "source": "docs/business/LEGACY_FUNCTIONALITIES_v0.2.md"
+    },
+    {
+      "id": "LEGACY-FUNC-026",
+      "summary": "Cross-domain activity insights",
+      "statement": "Combine privacy-safe activity, habits, tasks and financial view models without duplicating source data.",
+      "scope": "all",
+      "status": "Specified",
+      "requirement_ids": [
+        "LEGACY-FNC-021",
+        "LEGACY-FNC-059",
+        "LEGACY-NFR-008"
+      ],
+      "depends_on_functionality_ids": [
+        "LEGACY-FUNC-009",
+        "LEGACY-FUNC-012"
+      ],
+      "component": "insights",
+      "priority": "P1",
+      "owner": "Product",
+      "source": "docs/business/LEGACY_FUNCTIONALITIES_v0.2.md"
+    }
+  ],
+  "work_packages": [
+    {
+      "id": "WORK-001",
+      "title": "Approve canonical domain architecture and security boundaries",
+      "summary": "Approve canonical domain architecture and security boundaries",
+      "scope": "all",
+      "status": "Backlog",
+      "priority": "P0",
+      "work_package_type": "systems_engineering",
+      "functionality_ids": [
+        "LEGACY-FUNC-001",
+        "LEGACY-FUNC-003",
+        "LEGACY-FUNC-007",
+        "LEGACY-FUNC-024"
+      ],
+      "depends_on": [],
+      "acceptance_criteria": [
+        "architecture decisions captured",
+        "tenant and event ledger invariants reviewed",
+        "architecture approval recorded"
+      ],
+      "target_repositories": [
+        "matheusns/legacy"
+      ],
+      "path": "work_packages/WORK-001.md",
+      "unit_test_gate": {
+        "required": false,
+        "rationale": "Architecture or release approval is inspection/independent-test driven",
+        "test_description": "Run registered package-specific deterministic tests and capture candidate fingerprints"
+      }
+    },
+    {
+      "id": "WORK-002",
+      "title": "Define responsive visual design-system contract",
+      "summary": "Define responsive visual design-system contract",
+      "scope": "all",
+      "status": "Backlog",
+      "priority": "P0",
+      "work_package_type": "systems_engineering",
+      "functionality_ids": [
+        "LEGACY-FUNC-002",
+        "LEGACY-FUNC-005",
+        "LEGACY-FUNC-025"
+      ],
+      "depends_on": [
+        "WORK-001"
+      ],
+      "acceptance_criteria": [
+        "phone and desktop states catalogued",
+        "reference images pinned with viewport/fixture",
+        "accessible controls reviewed"
+      ],
+      "target_repositories": [
+        "matheusns/legacy",
+        "matheusns/legacy_mockups"
+      ],
+      "path": "work_packages/WORK-002.md",
+      "unit_test_gate": {
+        "required": false,
+        "rationale": "Architecture or release approval is inspection/independent-test driven",
+        "test_description": "Run registered package-specific deterministic tests and capture candidate fingerprints"
+      }
+    },
+    {
+      "id": "WORK-003",
+      "title": "Bootstrap application runtime and private workspaces",
+      "summary": "Bootstrap application runtime and private workspaces",
+      "scope": "all",
+      "status": "Backlog",
+      "priority": "P0",
+      "work_package_type": "technical",
+      "functionality_ids": [
+        "LEGACY-FUNC-001",
+        "LEGACY-FUNC-024"
+      ],
+      "depends_on": [
+        "WORK-001"
+      ],
+      "acceptance_criteria": [
+        "login and private resource access deterministic",
+        "workspace boundaries tested",
+        "secrets not logged"
+      ],
+      "target_repositories": [
+        "matheusns/legacy_app",
+        "matheusns/legacy_verification_tooling"
+      ],
+      "path": "work_packages/WORK-003.md",
+      "unit_test_gate": {
+        "required": true,
+        "rationale": "Current candidate-backed unit or browser checks required",
+        "test_description": "Run registered package-specific deterministic tests and capture candidate fingerprints"
+      }
+    },
+    {
+      "id": "WORK-004",
+      "title": "Implement shared goals, milestones and task persistence",
+      "summary": "Implement shared goals, milestones and task persistence",
+      "scope": "all",
+      "status": "Backlog",
+      "priority": "P0",
+      "work_package_type": "technical",
+      "functionality_ids": [
+        "LEGACY-FUNC-003",
+        "LEGACY-FUNC-004"
+      ],
+      "depends_on": [
+        "WORK-003"
+      ],
+      "acceptance_criteria": [
+        "create/edit task and goal stable across reload",
+        "manual task visible on Today",
+        "relationship invariants tested"
+      ],
+      "target_repositories": [
+        "matheusns/legacy_app",
+        "matheusns/legacy_verification_tooling"
+      ],
+      "path": "work_packages/WORK-004.md",
+      "unit_test_gate": {
+        "required": true,
+        "rationale": "Current candidate-backed unit or browser checks required",
+        "test_description": "Run registered package-specific deterministic tests and capture candidate fingerprints"
+      }
+    },
+    {
+      "id": "WORK-005",
+      "title": "Implement exactly-once completion/undo ledger",
+      "summary": "Implement exactly-once completion/undo ledger",
+      "scope": "all",
+      "status": "Backlog",
+      "priority": "P0",
+      "work_package_type": "technical",
+      "functionality_ids": [
+        "LEGACY-FUNC-007",
+        "LEGACY-FUNC-008"
+      ],
+      "depends_on": [
+        "WORK-004"
+      ],
+      "acceptance_criteria": [
+        "concurrent repeat does not double issue XP",
+        "undo reverses only own contribution",
+        "integration tests cover retries"
+      ],
+      "target_repositories": [
+        "matheusns/legacy_app",
+        "matheusns/legacy_verification_tooling"
+      ],
+      "path": "work_packages/WORK-005.md",
+      "unit_test_gate": {
+        "required": true,
+        "rationale": "Current candidate-backed unit or browser checks required",
+        "test_description": "Run registered package-specific deterministic tests and capture candidate fingerprints"
+      }
+    },
+    {
+      "id": "WORK-006",
+      "title": "Deliver Today mobile and desktop journey",
+      "summary": "Deliver Today mobile and desktop journey",
+      "scope": "all",
+      "status": "Backlog",
+      "priority": "P0",
+      "work_package_type": "technical",
+      "functionality_ids": [
+        "LEGACY-FUNC-002",
+        "LEGACY-FUNC-004"
+      ],
+      "depends_on": [
+        "WORK-002",
+        "WORK-004"
+      ],
+      "acceptance_criteria": [
+        "one-step due task completion",
+        "loading/error/empty/populated states",
+        "visual regression evidence captured"
+      ],
+      "target_repositories": [
+        "matheusns/legacy_app",
+        "matheusns/legacy_mockups",
+        "matheusns/legacy_verification_tooling"
+      ],
+      "path": "work_packages/WORK-006.md",
+      "unit_test_gate": {
+        "required": true,
+        "rationale": "Current candidate-backed unit or browser checks required",
+        "test_description": "Run registered package-specific deterministic tests and capture candidate fingerprints"
+      }
+    },
+    {
+      "id": "WORK-007",
+      "title": "Deliver accessible goal-map progression",
+      "summary": "Deliver accessible goal-map progression",
+      "scope": "all",
+      "status": "Backlog",
+      "priority": "P0",
+      "work_package_type": "technical",
+      "functionality_ids": [
+        "LEGACY-FUNC-003",
+        "LEGACY-FUNC-005"
+      ],
+      "depends_on": [
+        "WORK-002",
+        "WORK-005"
+      ],
+      "acceptance_criteria": [
+        "phase states computed from same goal graph",
+        "tap-only navigation and reduced-motion available",
+        "reference screenshot compared"
+      ],
+      "target_repositories": [
+        "matheusns/legacy_app",
+        "matheusns/legacy_verification_tooling"
+      ],
+      "path": "work_packages/WORK-007.md",
+      "unit_test_gate": {
+        "required": true,
+        "rationale": "Current candidate-backed unit or browser checks required",
+        "test_description": "Run registered package-specific deterministic tests and capture candidate fingerprints"
+      }
+    },
+    {
+      "id": "WORK-008",
+      "title": "Implement water tracking and user-configured targets",
+      "summary": "Implement water tracking and user-configured targets",
+      "scope": "all",
+      "status": "Backlog",
+      "priority": "P0",
+      "work_package_type": "technical",
+      "functionality_ids": [
+        "LEGACY-FUNC-010"
+      ],
+      "depends_on": [
+        "WORK-003",
+        "WORK-006"
+      ],
+      "acceptance_criteria": [
+        "water log correctable",
+        "daily sums timezone-aware",
+        "phone quick add and desktop UI covered"
+      ],
+      "target_repositories": [
+        "matheusns/legacy_app",
+        "matheusns/legacy_verification_tooling"
+      ],
+      "path": "work_packages/WORK-008.md",
+      "unit_test_gate": {
+        "required": true,
+        "rationale": "Current candidate-backed unit or browser checks required",
+        "test_description": "Run registered package-specific deterministic tests and capture candidate fingerprints"
+      }
+    },
+    {
+      "id": "WORK-009",
+      "title": "Implement habits, continuity and recoverable daily plan",
+      "summary": "Implement habits, continuity and recoverable daily plan",
+      "scope": "all",
+      "status": "Backlog",
+      "priority": "P0",
+      "work_package_type": "technical",
+      "functionality_ids": [
+        "LEGACY-FUNC-006",
+        "LEGACY-FUNC-009"
+      ],
+      "depends_on": [
+        "WORK-005",
+        "WORK-006"
+      ],
+      "acceptance_criteria": [
+        "scheduled habit occurrence modeled",
+        "missed-day recovery preserves historical progress",
+        "progress analytics deterministic"
+      ],
+      "target_repositories": [
+        "matheusns/legacy_app",
+        "matheusns/legacy_verification_tooling"
+      ],
+      "path": "work_packages/WORK-009.md",
+      "unit_test_gate": {
+        "required": true,
+        "rationale": "Current candidate-backed unit or browser checks required",
+        "test_description": "Run registered package-specific deterministic tests and capture candidate fingerprints"
+      }
+    },
+    {
+      "id": "WORK-010",
+      "title": "Build independent acceptance and visual evidence harness",
+      "summary": "Build independent acceptance and visual evidence harness",
+      "scope": "all",
+      "status": "Backlog",
+      "priority": "P0",
+      "work_package_type": "technical",
+      "functionality_ids": [
+        "LEGACY-FUNC-002",
+        "LEGACY-FUNC-024"
+      ],
+      "depends_on": [
+        "WORK-002",
+        "WORK-003"
+      ],
+      "acceptance_criteria": [
+        "deterministic fixtures and browser paths",
+        "capture artifacts labeled by viewport and version",
+        "CI test gates wired without ROS assumptions"
+      ],
+      "target_repositories": [
+        "matheusns/legacy_verification_tooling",
+        "matheusns/legavia_sdlc_gui"
+      ],
+      "path": "work_packages/WORK-010.md",
+      "unit_test_gate": {
+        "required": true,
+        "rationale": "Current candidate-backed unit or browser checks required",
+        "test_description": "Run registered package-specific deterministic tests and capture candidate fingerprints"
+      }
+    },
+    {
+      "id": "WORK-011",
+      "title": "Adapt SDLC GUI to product components and GitHub workflows",
+      "summary": "Adapt SDLC GUI to product components and GitHub workflows",
+      "scope": "all",
+      "status": "Backlog",
+      "priority": "P0",
+      "work_package_type": "technical",
+      "functionality_ids": [
+        "LEGACY-FUNC-024"
+      ],
+      "depends_on": [
+        "WORK-001"
+      ],
+      "acceptance_criteria": [
+        "web-app repository adapter in use",
+        "component filters not misleading library/node",
+        "GitHub PR integration and runner isolation validated"
+      ],
+      "target_repositories": [
+        "matheusns/legavia_sdlc_gui",
+        "matheusns/legacy"
+      ],
+      "path": "work_packages/WORK-011.md",
+      "unit_test_gate": {
+        "required": true,
+        "rationale": "Current candidate-backed unit or browser checks required",
+        "test_description": "Run registered package-specific deterministic tests and capture candidate fingerprints"
+      }
+    },
+    {
+      "id": "WORK-012",
+      "title": "Deliver coherent P0 end-to-end release gate",
+      "summary": "Deliver coherent P0 end-to-end release gate",
+      "scope": "all",
+      "status": "Backlog",
+      "priority": "P0",
+      "work_package_type": "systems_engineering",
+      "functionality_ids": [
+        "LEGACY-FUNC-001",
+        "LEGACY-FUNC-002",
+        "LEGACY-FUNC-003",
+        "LEGACY-FUNC-004",
+        "LEGACY-FUNC-005",
+        "LEGACY-FUNC-006",
+        "LEGACY-FUNC-007",
+        "LEGACY-FUNC-008",
+        "LEGACY-FUNC-009",
+        "LEGACY-FUNC-010",
+        "LEGACY-FUNC-024"
+      ],
+      "depends_on": [
+        "WORK-005",
+        "WORK-006",
+        "WORK-007",
+        "WORK-008",
+        "WORK-009",
+        "WORK-010",
+        "WORK-011"
+      ],
+      "acceptance_criteria": [
+        "independent acceptance FVTs pass",
+        "security and responsive visual review complete",
+        "known limitations and release decision recorded"
+      ],
+      "target_repositories": [
+        "matheusns/legacy",
+        "matheusns/legacy_verification_tooling"
+      ],
+      "path": "work_packages/WORK-012.md",
+      "unit_test_gate": {
+        "required": false,
+        "rationale": "Architecture or release approval is inspection/independent-test driven",
+        "test_description": "Run registered package-specific deterministic tests and capture candidate fingerprints"
+      }
+    },
+    {
+      "id": "WORK-013",
+      "title": "Implement finance import and projections slice",
+      "summary": "Implement finance import and projections slice",
+      "scope": "all",
+      "status": "Backlog",
+      "priority": "P1",
+      "work_package_type": "technical",
+      "functionality_ids": [
+        "LEGACY-FUNC-012"
+      ],
+      "depends_on": [
+        "WORK-003",
+        "WORK-010",
+        "WORK-012"
+      ],
+      "acceptance_criteria": [
+        "spreadsheet fixture import with duplicate and FX test",
+        "monthly savings with transfer accounting",
+        "forecasts labeled estimates"
+      ],
+      "target_repositories": [
+        "matheusns/legacy_app",
+        "matheusns/legacy_verification_tooling"
+      ],
+      "path": "work_packages/WORK-013.md",
+      "unit_test_gate": {
+        "required": true,
+        "rationale": "Current candidate-backed unit or browser checks required",
+        "test_description": "Run registered package-specific deterministic tests and capture candidate fingerprints"
+      }
+    },
+    {
+      "id": "WORK-014",
+      "title": "Implement focus, forest and reward session loop",
+      "summary": "Implement focus, forest and reward session loop",
+      "scope": "all",
+      "status": "Backlog",
+      "priority": "P1",
+      "work_package_type": "technical",
+      "functionality_ids": [
+        "LEGACY-FUNC-011"
+      ],
+      "depends_on": [
+        "WORK-005",
+        "WORK-010",
+        "WORK-012"
+      ],
+      "acceptance_criteria": [
+        "timer resilient to pauses and retries",
+        "Forest growth derives from valid sessions",
+        "reward balance is ledger-based"
+      ],
+      "target_repositories": [
+        "matheusns/legacy_app",
+        "matheusns/legacy_verification_tooling"
+      ],
+      "path": "work_packages/WORK-014.md",
+      "unit_test_gate": {
+        "required": true,
+        "rationale": "Current candidate-backed unit or browser checks required",
+        "test_description": "Run registered package-specific deterministic tests and capture candidate fingerprints"
+      }
+    },
+    {
+      "id": "WORK-015",
+      "title": "Implement learning, books, movies and games modules",
+      "summary": "Implement learning, books, movies and games modules",
+      "scope": "all",
+      "status": "Backlog",
+      "priority": "P1",
+      "work_package_type": "technical",
+      "functionality_ids": [
+        "LEGACY-FUNC-013",
+        "LEGACY-FUNC-014",
+        "LEGACY-FUNC-015",
+        "LEGACY-FUNC-016"
+      ],
+      "depends_on": [
+        "WORK-003",
+        "WORK-010",
+        "WORK-012"
+      ],
+      "acceptance_criteria": [
+        "course and reading progress persisted",
+        "movie provenance and game elapsed recorded",
+        "responsive tests for key flows"
+      ],
+      "target_repositories": [
+        "matheusns/legacy_app",
+        "matheusns/legacy_verification_tooling"
+      ],
+      "path": "work_packages/WORK-015.md",
+      "unit_test_gate": {
+        "required": true,
+        "rationale": "Current candidate-backed unit or browser checks required",
+        "test_description": "Run registered package-specific deterministic tests and capture candidate fingerprints"
+      }
+    },
+    {
+      "id": "WORK-016",
+      "title": "Implement memory capture and AI proposal approvals",
+      "summary": "Implement memory capture and AI proposal approvals",
+      "scope": "all",
+      "status": "Backlog",
+      "priority": "P1",
+      "work_package_type": "technical",
+      "functionality_ids": [
+        "LEGACY-FUNC-017",
+        "LEGACY-FUNC-019",
+        "LEGACY-FUNC-020"
+      ],
+      "depends_on": [
+        "WORK-003",
+        "WORK-010",
+        "WORK-012"
+      ],
+      "acceptance_criteria": [
+        "user review required for AI writes",
+        "private voice/photo access validated",
+        "feature proposals have auditable approvals"
+      ],
+      "target_repositories": [
+        "matheusns/legacy_app",
+        "matheusns/legacy_verification_tooling"
+      ],
+      "path": "work_packages/WORK-016.md",
+      "unit_test_gate": {
+        "required": true,
+        "rationale": "Current candidate-backed unit or browser checks required",
+        "test_description": "Run registered package-specific deterministic tests and capture candidate fingerprints"
+      }
+    },
+    {
+      "id": "WORK-017",
+      "title": "Deliver integrations, family and user data governance",
+      "summary": "Deliver integrations, family and user data governance",
+      "scope": "all",
+      "status": "Backlog",
+      "priority": "P1",
+      "work_package_type": "technical",
+      "functionality_ids": [
+        "LEGACY-FUNC-018",
+        "LEGACY-FUNC-021",
+        "LEGACY-FUNC-022"
+      ],
+      "depends_on": [
+        "WORK-003",
+        "WORK-010",
+        "WORK-012"
+      ],
+      "acceptance_criteria": [
+        "connector scopes and revocation supported",
+        "workspace sharing isolated",
+        "export behavior verified"
+      ],
+      "target_repositories": [
+        "matheusns/legacy_app",
+        "matheusns/legacy_verification_tooling"
+      ],
+      "path": "work_packages/WORK-017.md",
+      "unit_test_gate": {
+        "required": true,
+        "rationale": "Current candidate-backed unit or browser checks required",
+        "test_description": "Run registered package-specific deterministic tests and capture candidate fingerprints"
+      }
+    },
+    {
+      "id": "WORK-018",
+      "title": "Deliver professional CV and advanced wellbeing tracker",
+      "summary": "Deliver professional CV and advanced wellbeing tracker",
+      "scope": "all",
+      "status": "Backlog",
+      "priority": "P2",
+      "work_package_type": "technical",
+      "functionality_ids": [
+        "LEGACY-FUNC-010",
+        "LEGACY-FUNC-023"
+      ],
+      "depends_on": [
+        "WORK-003",
+        "WORK-010",
+        "WORK-012"
+      ],
+      "acceptance_criteria": [
+        "user approves inferred career entries",
+        "activity logs are informational not diagnostic",
+        "profile UI responsive"
+      ],
+      "target_repositories": [
+        "matheusns/legacy_app",
+        "matheusns/legacy_verification_tooling"
+      ],
+      "path": "work_packages/WORK-018.md",
+      "unit_test_gate": {
+        "required": true,
+        "rationale": "Current candidate-backed unit or browser checks required",
+        "test_description": "Run registered package-specific deterministic tests and capture candidate fingerprints"
+      }
+    }
+  ],
+  "artifacts": [],
+  "lessons_learned": [],
+  "engineering_findings": [],
+  "verification_changes": [],
+  "archived_work_packages": [],
+  "use_cases": [
+    {
+      "id": "UC-001",
+      "title": "Open Today and execute the next action",
+      "actor": "User",
+      "functionality_ids": [
+        "LEGACY-FUNC-004",
+        "LEGACY-FUNC-007",
+        "LEGACY-FUNC-008"
+      ],
+      "status": "Proposed",
+      "path": "docs/business/LEGACY_USE_CASES_v0.2.md"
+    },
+    {
+      "id": "UC-002",
+      "title": "Create a habit or routine",
+      "actor": "User",
+      "functionality_ids": [
+        "LEGACY-FUNC-006"
+      ],
+      "status": "Proposed",
+      "path": "docs/business/LEGACY_USE_CASES_v0.2.md"
+    },
+    {
+      "id": "UC-003",
+      "title": "Create a long-term goal and phases",
+      "actor": "User",
+      "functionality_ids": [
+        "LEGACY-FUNC-003"
+      ],
+      "status": "Proposed",
+      "path": "docs/business/LEGACY_USE_CASES_v0.2.md"
+    },
+    {
+      "id": "UC-004",
+      "title": "Navigate the goal map",
+      "actor": "User",
+      "functionality_ids": [
+        "LEGACY-FUNC-005"
+      ],
+      "status": "Proposed",
+      "path": "docs/business/LEGACY_USE_CASES_v0.2.md"
+    },
+    {
+      "id": "UC-005",
+      "title": "Recover after missed activity",
+      "actor": "User",
+      "functionality_ids": [
+        "LEGACY-FUNC-006"
+      ],
+      "status": "Proposed",
+      "path": "docs/business/LEGACY_USE_CASES_v0.2.md"
+    },
+    {
+      "id": "UC-006",
+      "title": "Review progress and insights",
+      "actor": "User",
+      "functionality_ids": [
+        "LEGACY-FUNC-009"
+      ],
+      "status": "Proposed",
+      "path": "docs/business/LEGACY_USE_CASES_v0.2.md"
+    },
+    {
+      "id": "UC-007",
+      "title": "Switch life modules without losing context",
+      "actor": "User",
+      "functionality_ids": [
+        "LEGACY-FUNC-002"
+      ],
+      "status": "Proposed",
+      "path": "docs/business/LEGACY_USE_CASES_v0.2.md"
+    },
+    {
+      "id": "UC-008",
+      "title": "Use external data to auto-complete progress",
+      "actor": "User",
+      "functionality_ids": [
+        "LEGACY-FUNC-022"
+      ],
+      "status": "Proposed",
+      "path": "docs/business/LEGACY_USE_CASES_v0.2.md"
+    },
+    {
+      "id": "UC-009",
+      "title": "Collaborate with family on an opt-in goal",
+      "actor": "User / invited family member",
+      "functionality_ids": [
+        "LEGACY-FUNC-021"
+      ],
+      "status": "Proposed",
+      "path": "docs/business/LEGACY_USE_CASES_v0.2.md"
+    },
+    {
+      "id": "UC-010",
+      "title": "Submit and approve an AI-generated feature request",
+      "actor": "User / Admin",
+      "functionality_ids": [
+        "LEGACY-FUNC-020"
+      ],
+      "status": "Proposed",
+      "path": "docs/business/LEGACY_USE_CASES_v0.2.md"
+    },
+    {
+      "id": "UC-011",
+      "title": "Import a learning course",
+      "actor": "User",
+      "functionality_ids": [
+        "LEGACY-FUNC-013"
+      ],
+      "status": "Proposed",
+      "path": "docs/business/LEGACY_USE_CASES_v0.2.md"
+    },
+    {
+      "id": "UC-012",
+      "title": "Review financial goal projection",
+      "actor": "User",
+      "functionality_ids": [
+        "LEGACY-FUNC-012"
+      ],
+      "status": "Proposed",
+      "path": "docs/business/LEGACY_USE_CASES_v0.2.md"
+    },
+    {
+      "id": "UC-013",
+      "title": "Run a focused work session",
+      "actor": "User",
+      "functionality_ids": [
+        "LEGACY-FUNC-011"
+      ],
+      "status": "Proposed",
+      "path": "docs/business/LEGACY_USE_CASES_v0.2.md"
+    },
+    {
+      "id": "UC-014",
+      "title": "Log water intake",
+      "actor": "User",
+      "functionality_ids": [
+        "LEGACY-FUNC-010"
+      ],
+      "status": "Proposed",
+      "path": "docs/business/LEGACY_USE_CASES_v0.2.md"
+    },
+    {
+      "id": "UC-015",
+      "title": "Import and reconcile financial data",
+      "actor": "User",
+      "functionality_ids": [
+        "LEGACY-FUNC-012"
+      ],
+      "status": "Proposed",
+      "path": "docs/business/LEGACY_USE_CASES_v0.2.md"
+    },
+    {
+      "id": "UC-016",
+      "title": "Review multi-currency savings and projections",
+      "actor": "User",
+      "functionality_ids": [
+        "LEGACY-FUNC-012"
+      ],
+      "status": "Proposed",
+      "path": "docs/business/LEGACY_USE_CASES_v0.2.md"
+    },
+    {
+      "id": "UC-017",
+      "title": "Track reading and predict finish date",
+      "actor": "User",
+      "functionality_ids": [
+        "LEGACY-FUNC-014"
+      ],
+      "status": "Proposed",
+      "path": "docs/business/LEGACY_USE_CASES_v0.2.md"
+    },
+    {
+      "id": "UC-018",
+      "title": "Add a movie recommendation",
+      "actor": "User",
+      "functionality_ids": [
+        "LEGACY-FUNC-015"
+      ],
+      "status": "Proposed",
+      "path": "docs/business/LEGACY_USE_CASES_v0.2.md"
+    },
+    {
+      "id": "UC-019",
+      "title": "Track game play time",
+      "actor": "User",
+      "functionality_ids": [
+        "LEGACY-FUNC-016"
+      ],
+      "status": "Proposed",
+      "path": "docs/business/LEGACY_USE_CASES_v0.2.md"
+    },
+    {
+      "id": "UC-020",
+      "title": "Capture a memory and search it",
+      "actor": "User",
+      "functionality_ids": [
+        "LEGACY-FUNC-017"
+      ],
+      "status": "Proposed",
+      "path": "docs/business/LEGACY_USE_CASES_v0.2.md"
+    },
+    {
+      "id": "UC-021",
+      "title": "Connect external calendar",
+      "actor": "User",
+      "functionality_ids": [
+        "LEGACY-FUNC-018",
+        "LEGACY-FUNC-022"
+      ],
+      "status": "Proposed",
+      "path": "docs/business/LEGACY_USE_CASES_v0.2.md"
+    },
+    {
+      "id": "UC-022",
+      "title": "Convert spoken request to daily task",
+      "actor": "User",
+      "functionality_ids": [
+        "LEGACY-FUNC-019"
+      ],
+      "status": "Proposed",
+      "path": "docs/business/LEGACY_USE_CASES_v0.2.md"
+    },
+    {
+      "id": "UC-023",
+      "title": "Propose tasks from GitHub issues",
+      "actor": "User",
+      "functionality_ids": [
+        "LEGACY-FUNC-022"
+      ],
+      "status": "Proposed",
+      "path": "docs/business/LEGACY_USE_CASES_v0.2.md"
+    },
+    {
+      "id": "UC-024",
+      "title": "Invite family member to shared goal",
+      "actor": "Workspace owner",
+      "functionality_ids": [
+        "LEGACY-FUNC-021"
+      ],
+      "status": "Proposed",
+      "path": "docs/business/LEGACY_USE_CASES_v0.2.md"
+    },
+    {
+      "id": "UC-025",
+      "title": "Switch responsive display mode",
+      "actor": "User",
+      "functionality_ids": [
+        "LEGACY-FUNC-002"
+      ],
+      "status": "Proposed",
+      "path": "docs/business/LEGACY_USE_CASES_v0.2.md"
+    },
+    {
+      "id": "UC-026",
+      "title": "Review proposed CV update",
+      "actor": "User",
+      "functionality_ids": [
+        "LEGACY-FUNC-023"
+      ],
+      "status": "Proposed",
+      "path": "docs/business/LEGACY_USE_CASES_v0.2.md"
+    },
+    {
+      "id": "UC-027",
+      "title": "Export or delete personal data",
+      "actor": "User",
+      "functionality_ids": [
+        "LEGACY-FUNC-022",
+        "LEGACY-FUNC-024"
+      ],
+      "status": "Proposed",
+      "path": "docs/business/LEGACY_USE_CASES_v0.2.md"
+    },
+    {
+      "id": "UC-028",
+      "title": "Audit user storage quota",
+      "actor": "Admin",
+      "functionality_ids": [
+        "LEGACY-FUNC-021"
+      ],
+      "status": "Proposed",
+      "path": "docs/business/LEGACY_USE_CASES_v0.2.md"
+    },
+    {
+      "id": "UC-029",
+      "title": "Track an avoid/negative habit",
+      "actor": "User",
+      "functionality_ids": [
+        "LEGACY-FUNC-006"
+      ],
+      "status": "Proposed",
+      "path": "docs/business/LEGACY_USE_CASES_v0.2.md"
+    },
+    {
+      "id": "UC-030",
+      "title": "Roll out approved beta feature",
+      "actor": "Admin",
+      "functionality_ids": [
+        "LEGACY-FUNC-020"
+      ],
+      "status": "Proposed",
+      "path": "docs/business/LEGACY_USE_CASES_v0.2.md"
+    },
+    {
+      "id": "UC-031",
+      "title": "Log exercise progress",
+      "actor": "User",
+      "functionality_ids": [
+        "LEGACY-FUNC-010"
+      ],
+      "status": "Proposed",
+      "path": "docs/business/LEGACY_USE_CASES_v0.2.md"
+    },
+    {
+      "id": "UC-032",
+      "title": "Import handwritten notebook",
+      "actor": "User",
+      "functionality_ids": [
+        "LEGACY-FUNC-017"
+      ],
+      "status": "Proposed",
+      "path": "docs/business/LEGACY_USE_CASES_v0.2.md"
+    },
+    {
+      "id": "UC-033",
+      "title": "Navigate the achievement and low-game modes",
+      "actor": "User",
+      "functionality_ids": [
+        "LEGACY-FUNC-008",
+        "LEGACY-FUNC-025"
+      ],
+      "status": "Proposed",
+      "path": "docs/business/LEGACY_USE_CASES_v0.2.md"
+    }
+  ],
+  "verification_seed_catalog": "traceability/verification_seed_catalog.json",
+  "functionality_verification": {
+    "tests": []
+  }
+}
