@@ -1,0 +1,25 @@
+name: Validate Legavia Business Baseline
+on:
+  pull_request:
+    paths:
+      - 'docs/business/**'
+      - 'traceability/**'
+      - 'work_packages/**'
+      - 'tools/validate_business_baseline.py'
+      - '.github/workflows/validate-business-baseline.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'docs/business/**'
+      - 'traceability/**'
+      - 'work_packages/**'
+      - 'tools/validate_business_baseline.py'
+jobs:
+  baseline-integrity:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate structured IDs, traceability and test execution policy
+        run: python3 tools/validate_business_baseline.py

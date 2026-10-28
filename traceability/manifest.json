@@ -54,7 +54,9 @@
       "level": "BIZ",
       "status": "Proposed",
       "disposition": "Not Assessed",
-      "functionality_ids": [],
+      "functionality_ids": [
+        "LEGACY-FUNC-002"
+      ],
       "verification_method": "Architecture review"
     },
     {
@@ -94,7 +96,9 @@
       "level": "BIZ",
       "status": "Proposed",
       "disposition": "Not Assessed",
-      "functionality_ids": [],
+      "functionality_ids": [
+        "LEGACY-FUNC-002"
+      ],
       "verification_method": "Architecture test"
     },
     {
@@ -359,7 +363,9 @@
       "level": "FNC",
       "status": "Proposed",
       "disposition": "Not Assessed",
-      "functionality_ids": [],
+      "functionality_ids": [
+        "LEGACY-FUNC-022"
+      ],
       "verification_method": "Search FVT"
     },
     {
@@ -722,7 +728,9 @@
       "level": "NFR",
       "status": "Proposed",
       "disposition": "Not Assessed",
-      "functionality_ids": [],
+      "functionality_ids": [
+        "LEGACY-FUNC-024"
+      ],
       "verification_method": "Offline/sync FVT"
     },
     {
@@ -806,7 +814,9 @@
       "level": "BIZ",
       "status": "Proposed",
       "disposition": "Not Assessed",
-      "functionality_ids": [],
+      "functionality_ids": [
+        "LEGACY-FUNC-002"
+      ],
       "verification_method": "Analysis, inspection and test"
     },
     {
@@ -819,7 +829,9 @@
       "level": "BIZ",
       "status": "Proposed",
       "disposition": "Not Assessed",
-      "functionality_ids": [],
+      "functionality_ids": [
+        "LEGACY-FUNC-022"
+      ],
       "verification_method": "Analysis, inspection and test"
     },
     {
@@ -847,7 +859,9 @@
       "level": "BIZ",
       "status": "Proposed",
       "disposition": "Not Assessed",
-      "functionality_ids": [],
+      "functionality_ids": [
+        "LEGACY-FUNC-001"
+      ],
       "verification_method": "Analysis, inspection and test"
     },
     {
@@ -1616,7 +1630,8 @@
         "LEGACY-NFR-009",
         "LEGACY-NFR-016",
         "LEGACY-BIZ-003",
-        "LEGACY-BIZ-006"
+        "LEGACY-BIZ-006",
+        "LEGACY-BIZ-010"
       ],
       "depends_on_functionality_ids": [],
       "component": "core",
@@ -1646,7 +1661,10 @@
         "LEGACY-UX-012",
         "LEGACY-NFR-001",
         "LEGACY-NFR-012",
-        "LEGACY-NFR-013"
+        "LEGACY-NFR-013",
+        "LEGACY-BIZ-001",
+        "LEGACY-BIZ-004",
+        "LEGACY-BIZ-007"
       ],
       "depends_on_functionality_ids": [
         "LEGACY-FUNC-001"
@@ -2046,7 +2064,9 @@
         "LEGACY-FNC-023",
         "LEGACY-FNC-052",
         "LEGACY-FNC-056",
-        "LEGACY-FNC-063"
+        "LEGACY-FNC-063",
+        "LEGACY-FNC-018",
+        "LEGACY-BIZ-008"
       ],
       "depends_on_functionality_ids": [
         "LEGACY-FUNC-001"
@@ -2085,7 +2105,8 @@
         "LEGACY-NFR-015",
         "LEGACY-NFR-018",
         "LEGACY-NFR-019",
-        "LEGACY-BIZ-009"
+        "LEGACY-BIZ-009",
+        "LEGACY-NFR-004"
       ],
       "depends_on_functionality_ids": [
         "LEGACY-FUNC-001"

@@ -20,10 +20,10 @@ The requirement table is derived into `traceability/manifest.json`; it is the sa
 
 | ID | Priority | Requirement statement | Allocated functionalities |
 |---|---|---|---|
-| LEGACY-BIZ-001 | P0 | The product shall provide one unified life-management environment spanning multiple domains while preserving a consistent interaction model. | Pending allocation review |
+| LEGACY-BIZ-001 | P0 | The product shall provide one unified life-management environment spanning multiple domains while preserving a consistent interaction model. | LEGACY-FUNC-002 |
 | LEGACY-BIZ-002 | P0 | Gamification shall reinforce completion of meaningful real-world objectives and shall not require separate game-only maintenance to preserve progress. | LEGACY-FUNC-008 |
 | LEGACY-BIZ-003 | P0 | Each user shall have a private workspace, with explicit sharing controls for family or collaborative features. | LEGACY-FUNC-001 |
-| LEGACY-BIZ-004 | P1 | The product shall support adding new life modules without changing the top-level interaction principles or duplicating core domain entities. | Pending allocation review |
+| LEGACY-BIZ-004 | P1 | The product shall support adding new life modules without changing the top-level interaction principles or duplicating core domain entities. | LEGACY-FUNC-002 |
 | LEGACY-BIZ-005 | P1 | Feature requests generated from user input may be proposed by AI but shall require explicit authorized approval before becoming a production baseline item. | LEGACY-FUNC-020 |
 | LEGACY-FNC-001 | P0 | The system shall authenticate users and load only the data authorized for the active workspace. | LEGACY-FUNC-001 |
 | LEGACY-FNC-002 | P0 | The Today view shall aggregate due habits, tasks, calendar context, and the next recommended action without requiring navigation into each module. | LEGACY-FUNC-004 |
@@ -42,7 +42,7 @@ The requirement table is derived into `traceability/manifest.json`; it is the sa
 | LEGACY-FNC-015 | P1 | The system shall support optional virtual currency and user-defined rewards without gating core task/habit functionality. | LEGACY-FUNC-008 |
 | LEGACY-FNC-016 | P1 | The system shall support finite daily/weekly quests derived from current goals and habits. | LEGACY-FUNC-008 |
 | LEGACY-FNC-017 | P0 | Users shall be able to access Personal, Work, Health, Finance, Learning, and future modules through a common module hub. | LEGACY-FUNC-002 |
-| LEGACY-FNC-018 | P1 | The system shall provide a global search entry point capable of locating goals, tasks, habits, modules, lessons, and other indexed entities. | Pending allocation review |
+| LEGACY-FNC-018 | P1 | The system shall provide a global search entry point capable of locating goals, tasks, habits, modules, lessons, and other indexed entities. | LEGACY-FUNC-022 |
 | LEGACY-FNC-019 | P1 | The system shall support context-aware reminders that can be snoozed, completed, or opened directly to the relevant item. | LEGACY-FUNC-018 |
 | LEGACY-FNC-020 | P1 | The system shall support glanceable widgets for a small set of high-value signals and deep-link widget interactions to the relevant app context. | LEGACY-FUNC-018 |
 | LEGACY-FNC-021 | P0 | The system shall provide history and analytics by day, week, month, and selected life domain. | LEGACY-FUNC-009, LEGACY-FUNC-026 |
@@ -68,16 +68,16 @@ The requirement table is derived into `traceability/manifest.json`; it is the sa
 | LEGACY-NFR-001 | P0 | Web surfaces shall conform to WCAG 2.2 Level AA for applicable success criteria. | LEGACY-FUNC-002 |
 | LEGACY-NFR-002 | P0 | User and workspace authorization boundaries shall be enforced server-side for every data access path. | LEGACY-FUNC-001 |
 | LEGACY-NFR-003 | P0 | Sensitive user data shall be encrypted in transit and at rest using platform-standard mechanisms. | LEGACY-FUNC-001 |
-| LEGACY-NFR-004 | P1 | Critical daily actions shall remain usable under intermittent connectivity and synchronize safely when connectivity returns. | Pending allocation review |
+| LEGACY-NFR-004 | P1 | Critical daily actions shall remain usable under intermittent connectivity and synchronize safely when connectivity returns. | LEGACY-FUNC-024 |
 | LEGACY-NFR-005 | P0 | Synchronization shall be idempotent for repeated completion/update requests and shall prevent duplicate XP/reward issuance. | LEGACY-FUNC-007 |
 | LEGACY-NFR-006 | P1 | The system shall keep an auditable history for admin approval of AI-generated feature proposals and beta promotion decisions. | LEGACY-FUNC-020 |
 | LEGACY-NFR-007 | P0 | High-frequency completion interactions shall provide perceived feedback immediately; any longer-running operation shall expose visible progress/state. | LEGACY-FUNC-025 |
 | LEGACY-NFR-008 | P1 | Product analytics shall minimize collection to events required for UX/product decisions and shall distinguish telemetry from user content. | LEGACY-FUNC-026 |
 | LEGACY-BIZ-006 | P0 | Users shall retain ownership and control over their personal records and sharing permissions. | LEGACY-FUNC-001 |
-| LEGACY-BIZ-007 | P0 | Legavia shall support responsive desktop-web and smartphone workflows using the same business data and permissions. | Pending allocation review |
-| LEGACY-BIZ-008 | P1 | Importing external financial, calendar, or media data shall not silently replace user-authored authoritative records. | Pending allocation review |
+| LEGACY-BIZ-007 | P0 | Legavia shall support responsive desktop-web and smartphone workflows using the same business data and permissions. | LEGACY-FUNC-002 |
+| LEGACY-BIZ-008 | P1 | Importing external financial, calendar, or media data shall not silently replace user-authored authoritative records. | LEGACY-FUNC-022 |
 | LEGACY-BIZ-009 | P0 | The product shall support incremental modules with bounded, independently testable release increments. | LEGACY-FUNC-024 |
-| LEGACY-BIZ-010 | P0 | The product shall distinguish user wellbeing data from diagnostics and shall not sell or expose private content as public game state. | Pending allocation review |
+| LEGACY-BIZ-010 | P0 | The product shall distinguish user wellbeing data from diagnostics and shall not sell or expose private content as public game state. | LEGACY-FUNC-001 |
 | LEGACY-FNC-029 | P1 | Users shall start, pause, resume, cancel, and complete named focus sessions linked to tasks or goals, recording elapsed and effective duration. | LEGACY-FUNC-011 |
 | LEGACY-FNC-030 | P1 | Completed eligible focus sessions shall contribute to a persistent virtual forest and optional in-app reward balance without duplicating rewards on retry. | LEGACY-FUNC-011 |
 | LEGACY-FNC-031 | P0 | Users shall record, correct, and review daily water consumption using configurable serving sizes and units. | LEGACY-FUNC-010 |
