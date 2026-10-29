@@ -3028,7 +3028,7 @@
       "summary": "SE review and approve product baseline",
       "scope": "all",
       "work_package_type": "systems_engineering",
-      "status": "Backlog",
+      "status": "Done",
       "priority": "P0",
       "functionality_ids": [
         "LEGACY-CAP-001",
@@ -3038,7 +3038,7 @@
       "target_repositories": [
         "matheusns/legacy"
       ],
-      "path": "docs/work_packages/LEGACY-WORK-001.md",
+      "path": "work/done/LEGACY-WORK-001.md",
       "acceptance_criteria": [
         "Signed approval of business/ConOps/use cases/requirements and acceptance criteria; record unresolved decisions and baseline version."
       ],
@@ -3061,7 +3061,37 @@
       "target_profile_ids": [
         "desktop-browser",
         "mobile-browser"
-      ]
+      ],
+      "review": {
+        "disposition": "Accepted",
+        "run_id": "DEV-20261029T123218Z-587BA0",
+        "reviewed_at": "2026-10-29T12:53:34.879398Z",
+        "review_note": null,
+        "acceptance_criteria_confirmed": [],
+        "attention_acknowledged": false,
+        "completion_boundary_acknowledged": true,
+        "git_reconciliation_acknowledged": false,
+        "git_reconciliation": null,
+        "demo_command_promotion": null,
+        "fvt_gate": {
+          "required": false,
+          "ready": true,
+          "state": "Not configured",
+          "test_id": null,
+          "detail": "No controlled FVT is linked to this Work Package."
+        },
+        "unit_test_disposition": "Not Applicable",
+        "unit_test_rationale": "Systems Engineering controlled-document review; no executable unit test applicable.",
+        "unit_test_evidence_passed": false,
+        "unit_test_run_id": null,
+        "unit_test_candidate_fingerprint": null,
+        "engineering_review_ids": [],
+        "engineering_decision_ids": [],
+        "engineering_review_outcomes": {},
+        "engineering_review_manual_approval": null
+      },
+      "lesson_ids_reviewed": [],
+      "latest_development_run_id": "DEV-20261029T123218Z-587BA0"
     },
     {
       "id": "LEGACY-WORK-002",
@@ -4703,5 +4733,1131 @@
       "ux"
     ],
     "reason": "Product execution requires Systems Engineering acceptance of the GUI adaptation. Tooling fixture execution does not grant product approval."
+  },
+  "archived_work_packages": [],
+  "lessons_learned": [],
+  "engineering_findings": [],
+  "verification_changes": [],
+  "_manifest_path": "/home/legavia/dev/legavia/legacy/traceability/manifest.json",
+  "dashboard": {
+    "counts": {
+      "requirements": 129,
+      "functionalities": 15,
+      "work_packages": 13,
+      "archived_work_packages": 0,
+      "lessons_learned": 0,
+      "artifacts": 6,
+      "tests": 0,
+      "classes": 0,
+      "commits": 0
+    },
+    "requirement_status": {
+      "Candidate": 129
+    },
+    "functionality_status": {
+      "Candidate": 15
+    },
+    "artifact_status": {
+      "Candidate": 5,
+      "Planned": 1
+    },
+    "lesson_status": {},
+    "scope_counts": {
+      "ai-governance": 6,
+      "app-shell": 29,
+      "finance": 17,
+      "focus": 2,
+      "gamification": 13,
+      "goals-map": 3,
+      "health": 1,
+      "identity-access": 37,
+      "integration": 2,
+      "learning": 2,
+      "media-library": 5,
+      "memory": 1,
+      "profile": 1,
+      "social": 3,
+      "today": 7,
+      "verification": 0,
+      "all": 129
+    }
+  },
+  "development_status": {
+    "weights": {
+      "implementation_unit": 0.333333,
+      "verification": 0.333333,
+      "validation": 0.333333
+    },
+    "scopes": {
+      "all": {
+        "percent": 0.0,
+        "total_features": 15,
+        "implementation_unit_features": 0,
+        "verified_features": 0,
+        "validated_features": 0,
+        "complete_features": 0,
+        "features": [
+          {
+            "id": "LEGACY-CAP-001",
+            "summary": "Identity, workspace isolation and data governance",
+            "scope": "all",
+            "owner": "Product/Systems Engineering",
+            "gates": {
+              "implementation_unit": false,
+              "verification": false,
+              "validation": false
+            },
+            "components": {
+              "identity-access": {
+                "scope": "identity-access",
+                "implementation_unit": false,
+                "verification": false,
+                "validation": false,
+                "implementation_evidence_ids": [],
+                "unit_test_evidence_ids": [],
+                "implementation_unit_evidence": [],
+                "verification_evidence_ids": [],
+                "validation_evidence_ids": []
+              }
+            },
+            "implementation_unit_evidence": [],
+            "score": 0,
+            "percent": 0.0,
+            "complete": false,
+            "functionality_verification": null,
+            "implemented": null
+          },
+          {
+            "id": "LEGACY-CAP-002",
+            "summary": "Today, schedule and daily execution",
+            "scope": "all",
+            "owner": "Product/Systems Engineering",
+            "gates": {
+              "implementation_unit": false,
+              "verification": false,
+              "validation": false
+            },
+            "components": {
+              "today": {
+                "scope": "today",
+                "implementation_unit": false,
+                "verification": false,
+                "validation": false,
+                "implementation_evidence_ids": [],
+                "unit_test_evidence_ids": [],
+                "implementation_unit_evidence": [],
+                "verification_evidence_ids": [],
+                "validation_evidence_ids": []
+              }
+            },
+            "implementation_unit_evidence": [],
+            "score": 0,
+            "percent": 0.0,
+            "complete": false,
+            "functionality_verification": null,
+            "implemented": null
+          },
+          {
+            "id": "LEGACY-CAP-003",
+            "summary": "Goals, phases, milestones and map navigation",
+            "scope": "all",
+            "owner": "Product/Systems Engineering",
+            "gates": {
+              "implementation_unit": false,
+              "verification": false,
+              "validation": false
+            },
+            "components": {
+              "goals-map": {
+                "scope": "goals-map",
+                "implementation_unit": false,
+                "verification": false,
+                "validation": false,
+                "implementation_evidence_ids": [],
+                "unit_test_evidence_ids": [],
+                "implementation_unit_evidence": [],
+                "verification_evidence_ids": [],
+                "validation_evidence_ids": []
+              }
+            },
+            "implementation_unit_evidence": [],
+            "score": 0,
+            "percent": 0.0,
+            "complete": false,
+            "functionality_verification": null,
+            "implemented": null
+          },
+          {
+            "id": "LEGACY-CAP-004",
+            "summary": "Habits, completion, continuity and gamification",
+            "scope": "all",
+            "owner": "Product/Systems Engineering",
+            "gates": {
+              "implementation_unit": false,
+              "verification": false,
+              "validation": false
+            },
+            "components": {
+              "gamification": {
+                "scope": "gamification",
+                "implementation_unit": false,
+                "verification": false,
+                "validation": false,
+                "implementation_evidence_ids": [],
+                "unit_test_evidence_ids": [],
+                "implementation_unit_evidence": [],
+                "verification_evidence_ids": [],
+                "validation_evidence_ids": []
+              }
+            },
+            "implementation_unit_evidence": [],
+            "score": 0,
+            "percent": 0.0,
+            "complete": false,
+            "functionality_verification": null,
+            "implemented": null
+          },
+          {
+            "id": "LEGACY-CAP-005",
+            "summary": "Shell navigation, search and insights",
+            "scope": "all",
+            "owner": "Product/Systems Engineering",
+            "gates": {
+              "implementation_unit": false,
+              "verification": false,
+              "validation": false
+            },
+            "components": {
+              "app-shell": {
+                "scope": "app-shell",
+                "implementation_unit": false,
+                "verification": false,
+                "validation": false,
+                "implementation_evidence_ids": [],
+                "unit_test_evidence_ids": [],
+                "implementation_unit_evidence": [],
+                "verification_evidence_ids": [],
+                "validation_evidence_ids": []
+              }
+            },
+            "implementation_unit_evidence": [],
+            "score": 0,
+            "percent": 0.0,
+            "complete": false,
+            "functionality_verification": null,
+            "implemented": null
+          },
+          {
+            "id": "LEGACY-CAP-006",
+            "summary": "Financial accounts, ledgers, budgets and forecasts",
+            "scope": "all",
+            "owner": "Product/Systems Engineering",
+            "gates": {
+              "implementation_unit": false,
+              "verification": false,
+              "validation": false
+            },
+            "components": {
+              "finance": {
+                "scope": "finance",
+                "implementation_unit": false,
+                "verification": false,
+                "validation": false,
+                "implementation_evidence_ids": [],
+                "unit_test_evidence_ids": [],
+                "implementation_unit_evidence": [],
+                "verification_evidence_ids": [],
+                "validation_evidence_ids": []
+              }
+            },
+            "implementation_unit_evidence": [],
+            "score": 0,
+            "percent": 0.0,
+            "complete": false,
+            "functionality_verification": null,
+            "implemented": null
+          },
+          {
+            "id": "LEGACY-CAP-007",
+            "summary": "Learning and course progress",
+            "scope": "all",
+            "owner": "Product/Systems Engineering",
+            "gates": {
+              "implementation_unit": false,
+              "verification": false,
+              "validation": false
+            },
+            "components": {
+              "learning": {
+                "scope": "learning",
+                "implementation_unit": false,
+                "verification": false,
+                "validation": false,
+                "implementation_evidence_ids": [],
+                "unit_test_evidence_ids": [],
+                "implementation_unit_evidence": [],
+                "verification_evidence_ids": [],
+                "validation_evidence_ids": []
+              }
+            },
+            "implementation_unit_evidence": [],
+            "score": 0,
+            "percent": 0.0,
+            "complete": false,
+            "functionality_verification": null,
+            "implemented": null
+          },
+          {
+            "id": "LEGACY-CAP-008",
+            "summary": "Focus and time tracking",
+            "scope": "all",
+            "owner": "Product/Systems Engineering",
+            "gates": {
+              "implementation_unit": false,
+              "verification": false,
+              "validation": false
+            },
+            "components": {
+              "focus": {
+                "scope": "focus",
+                "implementation_unit": false,
+                "verification": false,
+                "validation": false,
+                "implementation_evidence_ids": [],
+                "unit_test_evidence_ids": [],
+                "implementation_unit_evidence": [],
+                "verification_evidence_ids": [],
+                "validation_evidence_ids": []
+              }
+            },
+            "implementation_unit_evidence": [],
+            "score": 0,
+            "percent": 0.0,
+            "complete": false,
+            "functionality_verification": null,
+            "implemented": null
+          },
+          {
+            "id": "LEGACY-CAP-009",
+            "summary": "Books, games and movies",
+            "scope": "all",
+            "owner": "Product/Systems Engineering",
+            "gates": {
+              "implementation_unit": false,
+              "verification": false,
+              "validation": false
+            },
+            "components": {
+              "media-library": {
+                "scope": "media-library",
+                "implementation_unit": false,
+                "verification": false,
+                "validation": false,
+                "implementation_evidence_ids": [],
+                "unit_test_evidence_ids": [],
+                "implementation_unit_evidence": [],
+                "verification_evidence_ids": [],
+                "validation_evidence_ids": []
+              }
+            },
+            "implementation_unit_evidence": [],
+            "score": 0,
+            "percent": 0.0,
+            "complete": false,
+            "functionality_verification": null,
+            "implemented": null
+          },
+          {
+            "id": "LEGACY-CAP-010",
+            "summary": "Memories and knowledge timeline",
+            "scope": "all",
+            "owner": "Product/Systems Engineering",
+            "gates": {
+              "implementation_unit": false,
+              "verification": false,
+              "validation": false
+            },
+            "components": {
+              "memory": {
+                "scope": "memory",
+                "implementation_unit": false,
+                "verification": false,
+                "validation": false,
+                "implementation_evidence_ids": [],
+                "unit_test_evidence_ids": [],
+                "implementation_unit_evidence": [],
+                "verification_evidence_ids": [],
+                "validation_evidence_ids": []
+              }
+            },
+            "implementation_unit_evidence": [],
+            "score": 0,
+            "percent": 0.0,
+            "complete": false,
+            "functionality_verification": null,
+            "implemented": null
+          },
+          {
+            "id": "LEGACY-CAP-011",
+            "summary": "CV and achievement evidence",
+            "scope": "all",
+            "owner": "Product/Systems Engineering",
+            "gates": {
+              "implementation_unit": false,
+              "verification": false,
+              "validation": false
+            },
+            "components": {
+              "profile": {
+                "scope": "profile",
+                "implementation_unit": false,
+                "verification": false,
+                "validation": false,
+                "implementation_evidence_ids": [],
+                "unit_test_evidence_ids": [],
+                "implementation_unit_evidence": [],
+                "verification_evidence_ids": [],
+                "validation_evidence_ids": []
+              }
+            },
+            "implementation_unit_evidence": [],
+            "score": 0,
+            "percent": 0.0,
+            "complete": false,
+            "functionality_verification": null,
+            "implemented": null
+          },
+          {
+            "id": "LEGACY-CAP-012",
+            "summary": "Health and wellness activity",
+            "scope": "all",
+            "owner": "Product/Systems Engineering",
+            "gates": {
+              "implementation_unit": false,
+              "verification": false,
+              "validation": false
+            },
+            "components": {
+              "health": {
+                "scope": "health",
+                "implementation_unit": false,
+                "verification": false,
+                "validation": false,
+                "implementation_evidence_ids": [],
+                "unit_test_evidence_ids": [],
+                "implementation_unit_evidence": [],
+                "verification_evidence_ids": [],
+                "validation_evidence_ids": []
+              }
+            },
+            "implementation_unit_evidence": [],
+            "score": 0,
+            "percent": 0.0,
+            "complete": false,
+            "functionality_verification": null,
+            "implemented": null
+          },
+          {
+            "id": "LEGACY-CAP-013",
+            "summary": "AI-assisted capture, suggestions and feature approval",
+            "scope": "all",
+            "owner": "Product/Systems Engineering",
+            "gates": {
+              "implementation_unit": false,
+              "verification": false,
+              "validation": false
+            },
+            "components": {
+              "ai-governance": {
+                "scope": "ai-governance",
+                "implementation_unit": false,
+                "verification": false,
+                "validation": false,
+                "implementation_evidence_ids": [],
+                "unit_test_evidence_ids": [],
+                "implementation_unit_evidence": [],
+                "verification_evidence_ids": [],
+                "validation_evidence_ids": []
+              }
+            },
+            "implementation_unit_evidence": [],
+            "score": 0,
+            "percent": 0.0,
+            "complete": false,
+            "functionality_verification": null,
+            "implemented": null
+          },
+          {
+            "id": "LEGACY-CAP-014",
+            "summary": "Family and opt-in social collaboration",
+            "scope": "all",
+            "owner": "Product/Systems Engineering",
+            "gates": {
+              "implementation_unit": false,
+              "verification": false,
+              "validation": false
+            },
+            "components": {
+              "social": {
+                "scope": "social",
+                "implementation_unit": false,
+                "verification": false,
+                "validation": false,
+                "implementation_evidence_ids": [],
+                "unit_test_evidence_ids": [],
+                "implementation_unit_evidence": [],
+                "verification_evidence_ids": [],
+                "validation_evidence_ids": []
+              }
+            },
+            "implementation_unit_evidence": [],
+            "score": 0,
+            "percent": 0.0,
+            "complete": false,
+            "functionality_verification": null,
+            "implemented": null
+          },
+          {
+            "id": "LEGACY-CAP-015",
+            "summary": "External data and portability integrations",
+            "scope": "all",
+            "owner": "Product/Systems Engineering",
+            "gates": {
+              "implementation_unit": false,
+              "verification": false,
+              "validation": false
+            },
+            "components": {
+              "integration": {
+                "scope": "integration",
+                "implementation_unit": false,
+                "verification": false,
+                "validation": false,
+                "implementation_evidence_ids": [],
+                "unit_test_evidence_ids": [],
+                "implementation_unit_evidence": [],
+                "verification_evidence_ids": [],
+                "validation_evidence_ids": []
+              }
+            },
+            "implementation_unit_evidence": [],
+            "score": 0,
+            "percent": 0.0,
+            "complete": false,
+            "functionality_verification": null,
+            "implemented": null
+          }
+        ]
+      },
+      "ai-governance": {
+        "percent": 0.0,
+        "total_features": 1,
+        "implementation_unit_features": 0,
+        "verified_features": 0,
+        "validated_features": 0,
+        "complete_features": 0,
+        "features": [
+          {
+            "id": "LEGACY-CAP-013",
+            "summary": "AI-assisted capture, suggestions and feature approval",
+            "scope": "all",
+            "owner": "Product/Systems Engineering",
+            "gates": {
+              "implementation_unit": false,
+              "verification": false,
+              "validation": false
+            },
+            "components": {
+              "ai-governance": {
+                "scope": "ai-governance",
+                "implementation_unit": false,
+                "verification": false,
+                "validation": false,
+                "implementation_evidence_ids": [],
+                "unit_test_evidence_ids": [],
+                "implementation_unit_evidence": [],
+                "verification_evidence_ids": [],
+                "validation_evidence_ids": []
+              }
+            },
+            "implementation_unit_evidence": [],
+            "score": 0,
+            "percent": 0.0,
+            "complete": false,
+            "functionality_verification": null,
+            "implemented": null
+          }
+        ]
+      },
+      "app-shell": {
+        "percent": 0.0,
+        "total_features": 1,
+        "implementation_unit_features": 0,
+        "verified_features": 0,
+        "validated_features": 0,
+        "complete_features": 0,
+        "features": [
+          {
+            "id": "LEGACY-CAP-005",
+            "summary": "Shell navigation, search and insights",
+            "scope": "all",
+            "owner": "Product/Systems Engineering",
+            "gates": {
+              "implementation_unit": false,
+              "verification": false,
+              "validation": false
+            },
+            "components": {
+              "app-shell": {
+                "scope": "app-shell",
+                "implementation_unit": false,
+                "verification": false,
+                "validation": false,
+                "implementation_evidence_ids": [],
+                "unit_test_evidence_ids": [],
+                "implementation_unit_evidence": [],
+                "verification_evidence_ids": [],
+                "validation_evidence_ids": []
+              }
+            },
+            "implementation_unit_evidence": [],
+            "score": 0,
+            "percent": 0.0,
+            "complete": false,
+            "functionality_verification": null,
+            "implemented": null
+          }
+        ]
+      },
+      "finance": {
+        "percent": 0.0,
+        "total_features": 1,
+        "implementation_unit_features": 0,
+        "verified_features": 0,
+        "validated_features": 0,
+        "complete_features": 0,
+        "features": [
+          {
+            "id": "LEGACY-CAP-006",
+            "summary": "Financial accounts, ledgers, budgets and forecasts",
+            "scope": "all",
+            "owner": "Product/Systems Engineering",
+            "gates": {
+              "implementation_unit": false,
+              "verification": false,
+              "validation": false
+            },
+            "components": {
+              "finance": {
+                "scope": "finance",
+                "implementation_unit": false,
+                "verification": false,
+                "validation": false,
+                "implementation_evidence_ids": [],
+                "unit_test_evidence_ids": [],
+                "implementation_unit_evidence": [],
+                "verification_evidence_ids": [],
+                "validation_evidence_ids": []
+              }
+            },
+            "implementation_unit_evidence": [],
+            "score": 0,
+            "percent": 0.0,
+            "complete": false,
+            "functionality_verification": null,
+            "implemented": null
+          }
+        ]
+      },
+      "focus": {
+        "percent": 0.0,
+        "total_features": 1,
+        "implementation_unit_features": 0,
+        "verified_features": 0,
+        "validated_features": 0,
+        "complete_features": 0,
+        "features": [
+          {
+            "id": "LEGACY-CAP-008",
+            "summary": "Focus and time tracking",
+            "scope": "all",
+            "owner": "Product/Systems Engineering",
+            "gates": {
+              "implementation_unit": false,
+              "verification": false,
+              "validation": false
+            },
+            "components": {
+              "focus": {
+                "scope": "focus",
+                "implementation_unit": false,
+                "verification": false,
+                "validation": false,
+                "implementation_evidence_ids": [],
+                "unit_test_evidence_ids": [],
+                "implementation_unit_evidence": [],
+                "verification_evidence_ids": [],
+                "validation_evidence_ids": []
+              }
+            },
+            "implementation_unit_evidence": [],
+            "score": 0,
+            "percent": 0.0,
+            "complete": false,
+            "functionality_verification": null,
+            "implemented": null
+          }
+        ]
+      },
+      "gamification": {
+        "percent": 0.0,
+        "total_features": 1,
+        "implementation_unit_features": 0,
+        "verified_features": 0,
+        "validated_features": 0,
+        "complete_features": 0,
+        "features": [
+          {
+            "id": "LEGACY-CAP-004",
+            "summary": "Habits, completion, continuity and gamification",
+            "scope": "all",
+            "owner": "Product/Systems Engineering",
+            "gates": {
+              "implementation_unit": false,
+              "verification": false,
+              "validation": false
+            },
+            "components": {
+              "gamification": {
+                "scope": "gamification",
+                "implementation_unit": false,
+                "verification": false,
+                "validation": false,
+                "implementation_evidence_ids": [],
+                "unit_test_evidence_ids": [],
+                "implementation_unit_evidence": [],
+                "verification_evidence_ids": [],
+                "validation_evidence_ids": []
+              }
+            },
+            "implementation_unit_evidence": [],
+            "score": 0,
+            "percent": 0.0,
+            "complete": false,
+            "functionality_verification": null,
+            "implemented": null
+          }
+        ]
+      },
+      "goals-map": {
+        "percent": 0.0,
+        "total_features": 1,
+        "implementation_unit_features": 0,
+        "verified_features": 0,
+        "validated_features": 0,
+        "complete_features": 0,
+        "features": [
+          {
+            "id": "LEGACY-CAP-003",
+            "summary": "Goals, phases, milestones and map navigation",
+            "scope": "all",
+            "owner": "Product/Systems Engineering",
+            "gates": {
+              "implementation_unit": false,
+              "verification": false,
+              "validation": false
+            },
+            "components": {
+              "goals-map": {
+                "scope": "goals-map",
+                "implementation_unit": false,
+                "verification": false,
+                "validation": false,
+                "implementation_evidence_ids": [],
+                "unit_test_evidence_ids": [],
+                "implementation_unit_evidence": [],
+                "verification_evidence_ids": [],
+                "validation_evidence_ids": []
+              }
+            },
+            "implementation_unit_evidence": [],
+            "score": 0,
+            "percent": 0.0,
+            "complete": false,
+            "functionality_verification": null,
+            "implemented": null
+          }
+        ]
+      },
+      "health": {
+        "percent": 0.0,
+        "total_features": 1,
+        "implementation_unit_features": 0,
+        "verified_features": 0,
+        "validated_features": 0,
+        "complete_features": 0,
+        "features": [
+          {
+            "id": "LEGACY-CAP-012",
+            "summary": "Health and wellness activity",
+            "scope": "all",
+            "owner": "Product/Systems Engineering",
+            "gates": {
+              "implementation_unit": false,
+              "verification": false,
+              "validation": false
+            },
+            "components": {
+              "health": {
+                "scope": "health",
+                "implementation_unit": false,
+                "verification": false,
+                "validation": false,
+                "implementation_evidence_ids": [],
+                "unit_test_evidence_ids": [],
+                "implementation_unit_evidence": [],
+                "verification_evidence_ids": [],
+                "validation_evidence_ids": []
+              }
+            },
+            "implementation_unit_evidence": [],
+            "score": 0,
+            "percent": 0.0,
+            "complete": false,
+            "functionality_verification": null,
+            "implemented": null
+          }
+        ]
+      },
+      "identity-access": {
+        "percent": 0.0,
+        "total_features": 1,
+        "implementation_unit_features": 0,
+        "verified_features": 0,
+        "validated_features": 0,
+        "complete_features": 0,
+        "features": [
+          {
+            "id": "LEGACY-CAP-001",
+            "summary": "Identity, workspace isolation and data governance",
+            "scope": "all",
+            "owner": "Product/Systems Engineering",
+            "gates": {
+              "implementation_unit": false,
+              "verification": false,
+              "validation": false
+            },
+            "components": {
+              "identity-access": {
+                "scope": "identity-access",
+                "implementation_unit": false,
+                "verification": false,
+                "validation": false,
+                "implementation_evidence_ids": [],
+                "unit_test_evidence_ids": [],
+                "implementation_unit_evidence": [],
+                "verification_evidence_ids": [],
+                "validation_evidence_ids": []
+              }
+            },
+            "implementation_unit_evidence": [],
+            "score": 0,
+            "percent": 0.0,
+            "complete": false,
+            "functionality_verification": null,
+            "implemented": null
+          }
+        ]
+      },
+      "integration": {
+        "percent": 0.0,
+        "total_features": 1,
+        "implementation_unit_features": 0,
+        "verified_features": 0,
+        "validated_features": 0,
+        "complete_features": 0,
+        "features": [
+          {
+            "id": "LEGACY-CAP-015",
+            "summary": "External data and portability integrations",
+            "scope": "all",
+            "owner": "Product/Systems Engineering",
+            "gates": {
+              "implementation_unit": false,
+              "verification": false,
+              "validation": false
+            },
+            "components": {
+              "integration": {
+                "scope": "integration",
+                "implementation_unit": false,
+                "verification": false,
+                "validation": false,
+                "implementation_evidence_ids": [],
+                "unit_test_evidence_ids": [],
+                "implementation_unit_evidence": [],
+                "verification_evidence_ids": [],
+                "validation_evidence_ids": []
+              }
+            },
+            "implementation_unit_evidence": [],
+            "score": 0,
+            "percent": 0.0,
+            "complete": false,
+            "functionality_verification": null,
+            "implemented": null
+          }
+        ]
+      },
+      "learning": {
+        "percent": 0.0,
+        "total_features": 1,
+        "implementation_unit_features": 0,
+        "verified_features": 0,
+        "validated_features": 0,
+        "complete_features": 0,
+        "features": [
+          {
+            "id": "LEGACY-CAP-007",
+            "summary": "Learning and course progress",
+            "scope": "all",
+            "owner": "Product/Systems Engineering",
+            "gates": {
+              "implementation_unit": false,
+              "verification": false,
+              "validation": false
+            },
+            "components": {
+              "learning": {
+                "scope": "learning",
+                "implementation_unit": false,
+                "verification": false,
+                "validation": false,
+                "implementation_evidence_ids": [],
+                "unit_test_evidence_ids": [],
+                "implementation_unit_evidence": [],
+                "verification_evidence_ids": [],
+                "validation_evidence_ids": []
+              }
+            },
+            "implementation_unit_evidence": [],
+            "score": 0,
+            "percent": 0.0,
+            "complete": false,
+            "functionality_verification": null,
+            "implemented": null
+          }
+        ]
+      },
+      "media-library": {
+        "percent": 0.0,
+        "total_features": 1,
+        "implementation_unit_features": 0,
+        "verified_features": 0,
+        "validated_features": 0,
+        "complete_features": 0,
+        "features": [
+          {
+            "id": "LEGACY-CAP-009",
+            "summary": "Books, games and movies",
+            "scope": "all",
+            "owner": "Product/Systems Engineering",
+            "gates": {
+              "implementation_unit": false,
+              "verification": false,
+              "validation": false
+            },
+            "components": {
+              "media-library": {
+                "scope": "media-library",
+                "implementation_unit": false,
+                "verification": false,
+                "validation": false,
+                "implementation_evidence_ids": [],
+                "unit_test_evidence_ids": [],
+                "implementation_unit_evidence": [],
+                "verification_evidence_ids": [],
+                "validation_evidence_ids": []
+              }
+            },
+            "implementation_unit_evidence": [],
+            "score": 0,
+            "percent": 0.0,
+            "complete": false,
+            "functionality_verification": null,
+            "implemented": null
+          }
+        ]
+      },
+      "memory": {
+        "percent": 0.0,
+        "total_features": 1,
+        "implementation_unit_features": 0,
+        "verified_features": 0,
+        "validated_features": 0,
+        "complete_features": 0,
+        "features": [
+          {
+            "id": "LEGACY-CAP-010",
+            "summary": "Memories and knowledge timeline",
+            "scope": "all",
+            "owner": "Product/Systems Engineering",
+            "gates": {
+              "implementation_unit": false,
+              "verification": false,
+              "validation": false
+            },
+            "components": {
+              "memory": {
+                "scope": "memory",
+                "implementation_unit": false,
+                "verification": false,
+                "validation": false,
+                "implementation_evidence_ids": [],
+                "unit_test_evidence_ids": [],
+                "implementation_unit_evidence": [],
+                "verification_evidence_ids": [],
+                "validation_evidence_ids": []
+              }
+            },
+            "implementation_unit_evidence": [],
+            "score": 0,
+            "percent": 0.0,
+            "complete": false,
+            "functionality_verification": null,
+            "implemented": null
+          }
+        ]
+      },
+      "profile": {
+        "percent": 0.0,
+        "total_features": 1,
+        "implementation_unit_features": 0,
+        "verified_features": 0,
+        "validated_features": 0,
+        "complete_features": 0,
+        "features": [
+          {
+            "id": "LEGACY-CAP-011",
+            "summary": "CV and achievement evidence",
+            "scope": "all",
+            "owner": "Product/Systems Engineering",
+            "gates": {
+              "implementation_unit": false,
+              "verification": false,
+              "validation": false
+            },
+            "components": {
+              "profile": {
+                "scope": "profile",
+                "implementation_unit": false,
+                "verification": false,
+                "validation": false,
+                "implementation_evidence_ids": [],
+                "unit_test_evidence_ids": [],
+                "implementation_unit_evidence": [],
+                "verification_evidence_ids": [],
+                "validation_evidence_ids": []
+              }
+            },
+            "implementation_unit_evidence": [],
+            "score": 0,
+            "percent": 0.0,
+            "complete": false,
+            "functionality_verification": null,
+            "implemented": null
+          }
+        ]
+      },
+      "social": {
+        "percent": 0.0,
+        "total_features": 1,
+        "implementation_unit_features": 0,
+        "verified_features": 0,
+        "validated_features": 0,
+        "complete_features": 0,
+        "features": [
+          {
+            "id": "LEGACY-CAP-014",
+            "summary": "Family and opt-in social collaboration",
+            "scope": "all",
+            "owner": "Product/Systems Engineering",
+            "gates": {
+              "implementation_unit": false,
+              "verification": false,
+              "validation": false
+            },
+            "components": {
+              "social": {
+                "scope": "social",
+                "implementation_unit": false,
+                "verification": false,
+                "validation": false,
+                "implementation_evidence_ids": [],
+                "unit_test_evidence_ids": [],
+                "implementation_unit_evidence": [],
+                "verification_evidence_ids": [],
+                "validation_evidence_ids": []
+              }
+            },
+            "implementation_unit_evidence": [],
+            "score": 0,
+            "percent": 0.0,
+            "complete": false,
+            "functionality_verification": null,
+            "implemented": null
+          }
+        ]
+      },
+      "today": {
+        "percent": 0.0,
+        "total_features": 1,
+        "implementation_unit_features": 0,
+        "verified_features": 0,
+        "validated_features": 0,
+        "complete_features": 0,
+        "features": [
+          {
+            "id": "LEGACY-CAP-002",
+            "summary": "Today, schedule and daily execution",
+            "scope": "all",
+            "owner": "Product/Systems Engineering",
+            "gates": {
+              "implementation_unit": false,
+              "verification": false,
+              "validation": false
+            },
+            "components": {
+              "today": {
+                "scope": "today",
+                "implementation_unit": false,
+                "verification": false,
+                "validation": false,
+                "implementation_evidence_ids": [],
+                "unit_test_evidence_ids": [],
+                "implementation_unit_evidence": [],
+                "verification_evidence_ids": [],
+                "validation_evidence_ids": []
+              }
+            },
+            "implementation_unit_evidence": [],
+            "score": 0,
+            "percent": 0.0,
+            "complete": false,
+            "functionality_verification": null,
+            "implemented": null
+          }
+        ]
+      },
+      "verification": {
+        "percent": 0.0,
+        "total_features": 0,
+        "implementation_unit_features": 0,
+        "verified_features": 0,
+        "validated_features": 0,
+        "complete_features": 0,
+        "features": []
+      }
+    }
   }
 }
