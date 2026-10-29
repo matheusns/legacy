@@ -61,5 +61,50 @@
       "x": 760,
       "y": 800
     }
-  }
+  },
+  "groups": [
+    {
+      "id": "platform",
+      "label": "Platform & access",
+      "description": "Shared access, privacy and application shell.",
+      "node_ids": [
+        "capability.identity-access",
+        "capability.app-shell"
+      ]
+    },
+    {
+      "id": "planning",
+      "label": "Planning & progress",
+      "description": "Daily execution, goals, habits and focus.",
+      "node_ids": [
+        "capability.today",
+        "capability.goals-map",
+        "capability.gamification",
+        "capability.focus"
+      ]
+    },
+    {
+      "id": "life",
+      "label": "Life domains",
+      "description": "Finance, learning, media, memory, profile and health.",
+      "node_ids": [
+        "capability.finance",
+        "capability.learning",
+        "capability.media-library",
+        "capability.memory",
+        "capability.profile",
+        "capability.health"
+      ]
+    },
+    {
+      "id": "connections",
+      "label": "Assistance & connections",
+      "description": "AI governance, opt-in collaboration and external data.",
+      "node_ids": [
+        "capability.ai-governance",
+        "capability.social",
+        "capability.integration"
+      ]
+    }
+  ]
 }
