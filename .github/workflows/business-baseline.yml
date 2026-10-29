@@ -7,6 +7,7 @@ on:
       - "docs/work_packages/**"
       - "traceability/**"
       - "tools/validate_business_baseline.py"
+      - "tools/test_validate_business_baseline.py"
       - ".github/workflows/business-baseline.yml"
   pull_request:
     paths:
@@ -14,6 +15,7 @@ on:
       - "docs/work_packages/**"
       - "traceability/**"
       - "tools/validate_business_baseline.py"
+      - "tools/test_validate_business_baseline.py"
       - ".github/workflows/business-baseline.yml"
 permissions:
   contents: read
@@ -28,5 +30,7 @@ jobs:
           python-version: "3.12"
       - name: Validate baseline JSON and references
         run: python3 tools/validate_business_baseline.py
+      - name: Validate lifecycle regression cases
+        run: python3 -m unittest discover -s tools -p test_validate_business_baseline.py -v
       - name: Validate Python syntax
         run: python3 -m py_compile tools/validate_business_baseline.py

@@ -6,6 +6,13 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 M = json.loads((ROOT/"traceability/manifest.json").read_text(encoding="utf-8"))
 B = json.loads((ROOT/"traceability/business_baseline.json").read_text(encoding="utf-8"))
+# Lifecycle validity is independent of product approval. Completing a work package
+# must not invalidate the baseline or silently promote candidate requirements.
+WORK_PACKAGE_STATUSES = {
+    "Backlog", "In Development", "In Progress", "In Review",
+    "Blocked", "Deferred", "Done", "Archived",
+}
+
 def unique(items, label):
     ids = [x["id"] for x in items]
     assert len(ids)==len(set(ids)), f"Duplicate {label} IDs"
@@ -26,7 +33,10 @@ for f in M["functionalities"]:
 for w in M["work_packages"]:
     assert set(w["functionality_ids"])<=caps
     assert set(w.get("depends_on",[]))<=wps
-    assert w["status"]=="Backlog"
+    assert w.get("status") in WORK_PACKAGE_STATUSES, (
+        f"Invalid work package status for {w['id']}: {w.get('status')!r}; "
+        f"expected one of {', '.join(sorted(WORK_PACKAGE_STATUSES))}"
+    )
     assert (ROOT/w["path"]).is_file(), f"Missing WP document {w['path']}"
     assert all(repo.startswith("matheusns/") for repo in w["target_repositories"])
 for u in B["use_cases"]:
