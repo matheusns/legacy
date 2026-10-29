@@ -1,0 +1,65 @@
+{
+  "schema_version": 2,
+  "positions": {
+    "capability.identity-access": {
+      "x": 40,
+      "y": 40
+    },
+    "capability.today": {
+      "x": 400,
+      "y": 40
+    },
+    "capability.goals-map": {
+      "x": 760,
+      "y": 40
+    },
+    "capability.gamification": {
+      "x": 40,
+      "y": 230
+    },
+    "capability.app-shell": {
+      "x": 400,
+      "y": 230
+    },
+    "capability.finance": {
+      "x": 760,
+      "y": 230
+    },
+    "capability.learning": {
+      "x": 40,
+      "y": 420
+    },
+    "capability.focus": {
+      "x": 400,
+      "y": 420
+    },
+    "capability.media-library": {
+      "x": 760,
+      "y": 420
+    },
+    "capability.memory": {
+      "x": 40,
+      "y": 610
+    },
+    "capability.profile": {
+      "x": 400,
+      "y": 610
+    },
+    "capability.health": {
+      "x": 760,
+      "y": 610
+    },
+    "capability.ai-governance": {
+      "x": 40,
+      "y": 800
+    },
+    "capability.social": {
+      "x": 400,
+      "y": 800
+    },
+    "capability.integration": {
+      "x": 760,
+      "y": 800
+    }
+  }
+}
