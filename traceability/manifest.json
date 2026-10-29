@@ -3786,7 +3786,11 @@
             "--disallowedTools",
             "mcp__*"
           ],
-          "models": [],
+          "models": [
+            "sonnet",
+            "opus",
+            "haiku"
+          ],
           "model_argument": [
             "--model",
             "{model}"
@@ -3844,7 +3848,11 @@
             "--disallowedTools",
             "mcp__*"
           ],
-          "models": [],
+          "models": [
+            "sonnet",
+            "opus",
+            "haiku"
+          ],
           "model_argument": [
             "--model",
             "{model}"
@@ -3924,7 +3932,11 @@
             "--disallowedTools",
             "mcp__*"
           ],
-          "models": [],
+          "models": [
+            "sonnet",
+            "opus",
+            "haiku"
+          ],
           "model_argument": [
             "--model",
             "{model}"
@@ -3982,7 +3994,11 @@
             "--disallowedTools",
             "mcp__*"
           ],
-          "models": [],
+          "models": [
+            "sonnet",
+            "opus",
+            "haiku"
+          ],
           "model_argument": [
             "--model",
             "{model}"
@@ -4040,7 +4056,11 @@
             "--disallowedTools",
             "mcp__*"
           ],
-          "models": [],
+          "models": [
+            "sonnet",
+            "opus",
+            "haiku"
+          ],
           "model_argument": [
             "--model",
             "{model}"
@@ -4098,7 +4118,11 @@
             "--disallowedTools",
             "mcp__*"
           ],
-          "models": [],
+          "models": [
+            "sonnet",
+            "opus",
+            "haiku"
+          ],
           "model_argument": [
             "--model",
             "{model}"
@@ -4156,7 +4180,11 @@
             "--disallowedTools",
             "mcp__*"
           ],
-          "models": [],
+          "models": [
+            "sonnet",
+            "opus",
+            "haiku"
+          ],
           "model_argument": [
             "--model",
             "{model}"
@@ -4214,7 +4242,11 @@
             "--disallowedTools",
             "mcp__*"
           ],
-          "models": [],
+          "models": [
+            "sonnet",
+            "opus",
+            "haiku"
+          ],
           "model_argument": [
             "--model",
             "{model}"
@@ -4392,9 +4424,23 @@
         "model_candidates": [
           {
             "id": "default",
-            "label": "Claude Code configured default"
+            "label": "Claude configured default"
+          },
+          {
+            "id": "sonnet",
+            "label": "Claude Sonnet"
+          },
+          {
+            "id": "opus",
+            "label": "Claude Opus"
+          },
+          {
+            "id": "haiku",
+            "label": "Claude Haiku"
           }
-        ]
+        ],
+        "allow_model_selection": true,
+        "model_query_timeout_seconds": 30
       },
       {
         "id": "codex",
@@ -4405,7 +4451,8 @@
             "id": "default",
             "label": "Host configured model"
           }
-        ]
+        ],
+        "allow_model_selection": false
       }
     ],
     "developer_agent_v2": {
@@ -4413,7 +4460,8 @@
       "verification_strategy": "registered_commands",
       "repair_attempts": 0,
       "max_context_chars": 48000
-    }
+    },
+    "allow_model_selection": true
   },
   "collaboration_execution": {
     "enabled": true,
