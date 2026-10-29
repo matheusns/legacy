@@ -3742,7 +3742,7 @@
   "agent_roles": {
     "architecture": {
       "label": "Systems Engineering executor",
-      "provider": "codex",
+      "provider": "claude",
       "mode": "write",
       "contract": "agents/systems-engineering.md",
       "timeout_seconds": 1800,
@@ -3767,12 +3767,40 @@
             "--add-dir",
             "{path}"
           ]
+        },
+        "claude": {
+          "command": [
+            "claude",
+            "--print",
+            "--input-format",
+            "text",
+            "--output-format",
+            "stream-json",
+            "--verbose",
+            "--permission-mode",
+            "dontAsk",
+            "--tools",
+            "Read,Glob,Grep,Edit,Write,Bash",
+            "--allowedTools",
+            "Read,Glob,Grep,Edit,Write,Bash",
+            "--disallowedTools",
+            "mcp__*"
+          ],
+          "models": [],
+          "model_argument": [
+            "--model",
+            "{model}"
+          ],
+          "write_directory_argument": [
+            "--add-dir",
+            "{path}"
+          ]
         }
       }
     },
     "ux": {
       "label": "UX designer and UI implementer",
-      "provider": "codex",
+      "provider": "claude",
       "mode": "write",
       "contract": "agents/ux.md",
       "timeout_seconds": 1800,
@@ -3787,6 +3815,34 @@
             "workspace-write",
             "--json",
             "-"
+          ],
+          "models": [],
+          "model_argument": [
+            "--model",
+            "{model}"
+          ],
+          "write_directory_argument": [
+            "--add-dir",
+            "{path}"
+          ]
+        },
+        "claude": {
+          "command": [
+            "claude",
+            "--print",
+            "--input-format",
+            "text",
+            "--output-format",
+            "stream-json",
+            "--verbose",
+            "--permission-mode",
+            "dontAsk",
+            "--tools",
+            "Read,Glob,Grep,Edit,Write,Bash",
+            "--allowedTools",
+            "Read,Glob,Grep,Edit,Write,Bash",
+            "--disallowedTools",
+            "mcp__*"
           ],
           "models": [],
           "model_argument": [
@@ -3824,7 +3880,7 @@
     },
     "development": {
       "label": "Application developer",
-      "provider": "codex",
+      "provider": "claude",
       "mode": "write",
       "contract": "agents/development.md",
       "timeout_seconds": 1800,
@@ -3849,12 +3905,40 @@
             "--add-dir",
             "{path}"
           ]
+        },
+        "claude": {
+          "command": [
+            "claude",
+            "--print",
+            "--input-format",
+            "text",
+            "--output-format",
+            "stream-json",
+            "--verbose",
+            "--permission-mode",
+            "dontAsk",
+            "--tools",
+            "Read,Glob,Grep,Edit,Write,Bash",
+            "--allowedTools",
+            "Read,Glob,Grep,Edit,Write,Bash",
+            "--disallowedTools",
+            "mcp__*"
+          ],
+          "models": [],
+          "model_argument": [
+            "--model",
+            "{model}"
+          ],
+          "write_directory_argument": [
+            "--add-dir",
+            "{path}"
+          ]
         }
       }
     },
     "verification": {
       "label": "Independent verification implementer",
-      "provider": "codex",
+      "provider": "claude",
       "mode": "write",
       "contract": "agents/verification.md",
       "timeout_seconds": 1800,
@@ -3879,12 +3963,40 @@
             "--add-dir",
             "{path}"
           ]
+        },
+        "claude": {
+          "command": [
+            "claude",
+            "--print",
+            "--input-format",
+            "text",
+            "--output-format",
+            "stream-json",
+            "--verbose",
+            "--permission-mode",
+            "dontAsk",
+            "--tools",
+            "Read,Glob,Grep,Edit,Write,Bash",
+            "--allowedTools",
+            "Read,Glob,Grep,Edit,Write,Bash",
+            "--disallowedTools",
+            "mcp__*"
+          ],
+          "models": [],
+          "model_argument": [
+            "--model",
+            "{model}"
+          ],
+          "write_directory_argument": [
+            "--add-dir",
+            "{path}"
+          ]
         }
       }
     },
     "architecture_review": {
       "label": "Architecture reviewer",
-      "provider": "codex",
+      "provider": "claude",
       "mode": "read_only",
       "contract": "agents/architecture-review.md",
       "timeout_seconds": 600,
@@ -3909,12 +4021,40 @@
             "--add-dir",
             "{path}"
           ]
+        },
+        "claude": {
+          "command": [
+            "claude",
+            "--print",
+            "--input-format",
+            "text",
+            "--output-format",
+            "stream-json",
+            "--verbose",
+            "--permission-mode",
+            "dontAsk",
+            "--tools",
+            "Read,Glob,Grep",
+            "--allowedTools",
+            "Read,Glob,Grep",
+            "--disallowedTools",
+            "mcp__*"
+          ],
+          "models": [],
+          "model_argument": [
+            "--model",
+            "{model}"
+          ],
+          "write_directory_argument": [
+            "--add-dir",
+            "{path}"
+          ]
         }
       }
     },
     "ux_review": {
       "label": "UX fidelity reviewer",
-      "provider": "codex",
+      "provider": "claude",
       "mode": "read_only",
       "contract": "agents/ux-review.md",
       "timeout_seconds": 600,
@@ -3939,12 +4079,40 @@
             "--add-dir",
             "{path}"
           ]
+        },
+        "claude": {
+          "command": [
+            "claude",
+            "--print",
+            "--input-format",
+            "text",
+            "--output-format",
+            "stream-json",
+            "--verbose",
+            "--permission-mode",
+            "dontAsk",
+            "--tools",
+            "Read,Glob,Grep",
+            "--allowedTools",
+            "Read,Glob,Grep",
+            "--disallowedTools",
+            "mcp__*"
+          ],
+          "models": [],
+          "model_argument": [
+            "--model",
+            "{model}"
+          ],
+          "write_directory_argument": [
+            "--add-dir",
+            "{path}"
+          ]
         }
       }
     },
     "code_style": {
       "label": "Code quality reviewer",
-      "provider": "codex",
+      "provider": "claude",
       "mode": "read_only",
       "contract": "agents/code-review.md",
       "timeout_seconds": 600,
@@ -3969,12 +4137,40 @@
             "--add-dir",
             "{path}"
           ]
+        },
+        "claude": {
+          "command": [
+            "claude",
+            "--print",
+            "--input-format",
+            "text",
+            "--output-format",
+            "stream-json",
+            "--verbose",
+            "--permission-mode",
+            "dontAsk",
+            "--tools",
+            "Read,Glob,Grep",
+            "--allowedTools",
+            "Read,Glob,Grep",
+            "--disallowedTools",
+            "mcp__*"
+          ],
+          "models": [],
+          "model_argument": [
+            "--model",
+            "{model}"
+          ],
+          "write_directory_argument": [
+            "--add-dir",
+            "{path}"
+          ]
         }
       }
     },
     "design": {
       "label": "Design and integration reviewer",
-      "provider": "codex",
+      "provider": "claude",
       "mode": "read_only",
       "contract": "agents/architecture-review.md",
       "timeout_seconds": 600,
@@ -3989,6 +4185,34 @@
             "read-only",
             "--json",
             "-"
+          ],
+          "models": [],
+          "model_argument": [
+            "--model",
+            "{model}"
+          ],
+          "write_directory_argument": [
+            "--add-dir",
+            "{path}"
+          ]
+        },
+        "claude": {
+          "command": [
+            "claude",
+            "--print",
+            "--input-format",
+            "text",
+            "--output-format",
+            "stream-json",
+            "--verbose",
+            "--permission-mode",
+            "dontAsk",
+            "--tools",
+            "Read,Glob,Grep",
+            "--allowedTools",
+            "Read,Glob,Grep",
+            "--disallowedTools",
+            "mcp__*"
           ],
           "models": [],
           "model_argument": [
@@ -4157,9 +4381,21 @@
   "development_execution": {
     "runtime_dir": ".sdlc/runtime/development",
     "agent_id": "development",
-    "default_agent_provider": "codex",
+    "default_agent_provider": "claude",
     "requires_clean_repositories": true,
     "agent_providers": [
+      {
+        "id": "claude",
+        "label": "Claude Code (primary)",
+        "binary": "claude",
+        "binary_env": "CLAUDE_BIN",
+        "model_candidates": [
+          {
+            "id": "default",
+            "label": "Claude Code configured default"
+          }
+        ]
+      },
       {
         "id": "codex",
         "label": "Codex CLI",
