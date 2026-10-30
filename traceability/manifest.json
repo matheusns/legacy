@@ -3807,6 +3807,7 @@
             "--output-format",
             "stream-json",
             "--verbose",
+            "--include-partial-messages",
             "--permission-mode",
             "dontAsk",
             "--tools",
@@ -3869,6 +3870,7 @@
             "--output-format",
             "stream-json",
             "--verbose",
+            "--include-partial-messages",
             "--permission-mode",
             "dontAsk",
             "--tools",
@@ -3953,6 +3955,7 @@
             "--output-format",
             "stream-json",
             "--verbose",
+            "--include-partial-messages",
             "--permission-mode",
             "dontAsk",
             "--tools",
@@ -4015,6 +4018,7 @@
             "--output-format",
             "stream-json",
             "--verbose",
+            "--include-partial-messages",
             "--permission-mode",
             "dontAsk",
             "--tools",
@@ -4077,6 +4081,7 @@
             "--output-format",
             "stream-json",
             "--verbose",
+            "--include-partial-messages",
             "--permission-mode",
             "dontAsk",
             "--tools",
@@ -4139,6 +4144,7 @@
             "--output-format",
             "stream-json",
             "--verbose",
+            "--include-partial-messages",
             "--permission-mode",
             "dontAsk",
             "--tools",
@@ -4201,6 +4207,7 @@
             "--output-format",
             "stream-json",
             "--verbose",
+            "--include-partial-messages",
             "--permission-mode",
             "dontAsk",
             "--tools",
@@ -4230,7 +4237,7 @@
       "label": "Design and integration reviewer",
       "provider": "claude",
       "mode": "read_only",
-      "contract": "agents/architecture-review.md",
+      "contract": "agents/design-review.md",
       "timeout_seconds": 600,
       "providers": {
         "codex": {
@@ -4263,6 +4270,133 @@
             "--output-format",
             "stream-json",
             "--verbose",
+            "--include-partial-messages",
+            "--permission-mode",
+            "dontAsk",
+            "--tools",
+            "Read,Glob,Grep",
+            "--allowedTools",
+            "Read,Glob,Grep",
+            "--disallowedTools",
+            "mcp__*"
+          ],
+          "models": [
+            "sonnet",
+            "opus",
+            "haiku"
+          ],
+          "model_argument": [
+            "--model",
+            "{model}"
+          ],
+          "write_directory_argument": [
+            "--add-dir",
+            "{path}"
+          ]
+        }
+      }
+    },
+    "analysis": {
+      "label": "Work Package analyst and planner",
+      "provider": "claude",
+      "mode": "read_only",
+      "contract": "agents/analysis.md",
+      "timeout_seconds": 600,
+      "providers": {
+        "codex": {
+          "command": [
+            "codex",
+            "--ask-for-approval",
+            "never",
+            "exec",
+            "--sandbox",
+            "read-only",
+            "--json",
+            "-"
+          ],
+          "models": [],
+          "model_argument": [
+            "--model",
+            "{model}"
+          ],
+          "write_directory_argument": [
+            "--add-dir",
+            "{path}"
+          ]
+        },
+        "claude": {
+          "command": [
+            "claude",
+            "--print",
+            "--input-format",
+            "text",
+            "--output-format",
+            "stream-json",
+            "--verbose",
+            "--include-partial-messages",
+            "--permission-mode",
+            "dontAsk",
+            "--tools",
+            "Read,Glob,Grep",
+            "--allowedTools",
+            "Read,Glob,Grep",
+            "--disallowedTools",
+            "mcp__*"
+          ],
+          "models": [
+            "sonnet",
+            "opus",
+            "haiku"
+          ],
+          "model_argument": [
+            "--model",
+            "{model}"
+          ],
+          "write_directory_argument": [
+            "--add-dir",
+            "{path}"
+          ]
+        }
+      }
+    },
+    "verification_review": {
+      "label": "Verification evidence reviewer",
+      "provider": "claude",
+      "mode": "read_only",
+      "contract": "agents/verification-review.md",
+      "timeout_seconds": 600,
+      "providers": {
+        "codex": {
+          "command": [
+            "codex",
+            "--ask-for-approval",
+            "never",
+            "exec",
+            "--sandbox",
+            "read-only",
+            "--json",
+            "-"
+          ],
+          "models": [],
+          "model_argument": [
+            "--model",
+            "{model}"
+          ],
+          "write_directory_argument": [
+            "--add-dir",
+            "{path}"
+          ]
+        },
+        "claude": {
+          "command": [
+            "claude",
+            "--print",
+            "--input-format",
+            "text",
+            "--output-format",
+            "stream-json",
+            "--verbose",
+            "--include-partial-messages",
             "--permission-mode",
             "dontAsk",
             "--tools",
@@ -4491,7 +4625,26 @@
       "repair_attempts": 0,
       "max_context_chars": 48000
     },
-    "allow_model_selection": true
+    "allow_model_selection": true,
+    "stage_roles": {
+      "analysis": "analysis",
+      "reviewers_by_executor": {
+        "architecture": [
+          "architecture_review"
+        ],
+        "development": [
+          "code_style",
+          "design"
+        ],
+        "ux": [
+          "code_style",
+          "ux_review"
+        ],
+        "verification": [
+          "verification_review"
+        ]
+      }
+    }
   },
   "collaboration_execution": {
     "enabled": true,
