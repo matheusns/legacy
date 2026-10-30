@@ -3099,7 +3099,7 @@
       "summary": "Architecture decisions and secure domain skeleton",
       "scope": "all",
       "work_package_type": "systems_engineering",
-      "status": "Backlog",
+      "status": "Done",
       "priority": "P0",
       "functionality_ids": [
         "LEGACY-CAP-001",
@@ -3112,7 +3112,7 @@
       "target_repositories": [
         "matheusns/legacy"
       ],
-      "path": "docs/work_packages/LEGACY-WORK-002.md",
+      "path": "work/done/LEGACY-WORK-002.md",
       "acceptance_criteria": [
         "Accepted ADRs for identity/tenancy, source of truth, event idempotency, app stack, assets, hosting and testability."
       ],
@@ -3136,7 +3136,37 @@
       "target_profile_ids": [
         "desktop-browser",
         "mobile-browser"
-      ]
+      ],
+      "review": {
+        "disposition": "Accepted",
+        "run_id": "DEV-20261030T185520Z-751CB5",
+        "reviewed_at": "2026-10-30T19:18:55.521966Z",
+        "review_note": null,
+        "acceptance_criteria_confirmed": [],
+        "attention_acknowledged": false,
+        "completion_boundary_acknowledged": true,
+        "git_reconciliation_acknowledged": false,
+        "git_reconciliation": null,
+        "demo_command_promotion": null,
+        "fvt_gate": {
+          "required": false,
+          "ready": true,
+          "state": "Not configured",
+          "test_id": null,
+          "detail": "No controlled FVT is linked to this Work Package."
+        },
+        "unit_test_disposition": "Not Applicable",
+        "unit_test_rationale": "Systems Engineering controlled-document review; no executable unit test applicable.",
+        "unit_test_evidence_passed": false,
+        "unit_test_run_id": null,
+        "unit_test_candidate_fingerprint": null,
+        "engineering_review_ids": [],
+        "engineering_decision_ids": [],
+        "engineering_review_outcomes": {},
+        "engineering_review_manual_approval": null
+      },
+      "lesson_ids_reviewed": [],
+      "latest_development_run_id": "DEV-20261030T185520Z-751CB5"
     },
     {
       "id": "LEGACY-WORK-003",
