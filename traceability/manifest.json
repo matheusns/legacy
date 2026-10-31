@@ -2,7 +2,7 @@
   "schema_version": 2,
   "project": {
     "id": "LEGAVIA",
-    "name": "Legavia \u2014 Web & Mobile Life Management",
+    "name": "Legavia — Web & Mobile Life Management",
     "description": "Candidate business baseline; responsive web/mobile product; GitHub as primary VCS",
     "status": "Candidate",
     "baseline_version": "0.1.0",
@@ -11,7 +11,7 @@
   "requirements": [
     {
       "id": "LEGACY-BIZ-001",
-      "summary": "The product shall provide one unified life-management environment spanning multiple domains\u2026",
+      "summary": "The product shall provide one unified life-management environment spanning multiple domains…",
       "statement": "The product shall provide one unified life-management environment spanning multiple domains while preserving a consistent interaction model.",
       "level": "Business",
       "priority": "P0",
@@ -30,7 +30,7 @@
     },
     {
       "id": "LEGACY-BIZ-002",
-      "summary": "Gamification shall reinforce completion of meaningful real-world objectives and shall not\u2026",
+      "summary": "Gamification shall reinforce completion of meaningful real-world objectives and shall not…",
       "statement": "Gamification shall reinforce completion of meaningful real-world objectives and shall not require separate game-only maintenance to preserve progress.",
       "level": "Business",
       "priority": "P0",
@@ -49,7 +49,7 @@
     },
     {
       "id": "LEGACY-BIZ-003",
-      "summary": "Each user shall have a private workspace, with explicit sharing controls for family or\u2026",
+      "summary": "Each user shall have a private workspace, with explicit sharing controls for family or…",
       "statement": "Each user shall have a private workspace, with explicit sharing controls for family or collaborative features.",
       "level": "Business",
       "priority": "P0",
@@ -68,7 +68,7 @@
     },
     {
       "id": "LEGACY-BIZ-004",
-      "summary": "The product shall support adding new life modules without changing the top-level interaction\u2026",
+      "summary": "The product shall support adding new life modules without changing the top-level interaction…",
       "statement": "The product shall support adding new life modules without changing the top-level interaction principles or duplicating core domain entities.",
       "level": "Business",
       "priority": "P1",
@@ -87,7 +87,7 @@
     },
     {
       "id": "LEGACY-BIZ-005",
-      "summary": "Feature requests generated from user input may be proposed by AI but shall require explicit\u2026",
+      "summary": "Feature requests generated from user input may be proposed by AI but shall require explicit…",
       "statement": "Feature requests generated from user input may be proposed by AI but shall require explicit authorized approval before becoming a production baseline item.",
       "level": "Business",
       "priority": "P1",
@@ -127,7 +127,7 @@
     },
     {
       "id": "LEGACY-FNC-002",
-      "summary": "The Today view shall aggregate due habits, tasks, calendar context, and the next recommended\u2026",
+      "summary": "The Today view shall aggregate due habits, tasks, calendar context, and the next recommended…",
       "statement": "The Today view shall aggregate due habits, tasks, calendar context, and the next recommended action without requiring navigation into each module.",
       "level": "Functional",
       "priority": "P0",
@@ -148,7 +148,7 @@
     },
     {
       "id": "LEGACY-FNC-003",
-      "summary": "The system shall represent goals using long-term, mid-term, and short-term relationships and\u2026",
+      "summary": "The system shall represent goals using long-term, mid-term, and short-term relationships and…",
       "statement": "The system shall represent goals using long-term, mid-term, and short-term relationships and allow decomposition into phases and milestones.",
       "level": "Functional",
       "priority": "P0",
@@ -170,7 +170,7 @@
     },
     {
       "id": "LEGACY-FNC-004",
-      "summary": "The Map view shall visualize phases/milestones as navigable nodes and indicate locked,\u2026",
+      "summary": "The Map view shall visualize phases/milestones as navigable nodes and indicate locked,…",
       "statement": "The Map view shall visualize phases/milestones as navigable nodes and indicate locked, available, in-progress, and completed states.",
       "level": "Functional",
       "priority": "P0",
@@ -191,7 +191,7 @@
     },
     {
       "id": "LEGACY-FNC-005",
-      "summary": "The Map shall support distinct visual themes by phase/island while retaining a consistent\u2026",
+      "summary": "The Map shall support distinct visual themes by phase/island while retaining a consistent…",
       "statement": "The Map shall support distinct visual themes by phase/island while retaining a consistent interaction grammar.",
       "level": "Functional",
       "priority": "P1",
@@ -213,7 +213,7 @@
     },
     {
       "id": "LEGACY-FNC-006",
-      "summary": "Users shall be able to create recurring habits using daily, selected-day, interval, and\u2026",
+      "summary": "Users shall be able to create recurring habits using daily, selected-day, interval, and…",
       "statement": "Users shall be able to create recurring habits using daily, selected-day, interval, and target-per-period schedules.",
       "level": "Functional",
       "priority": "P0",
@@ -232,7 +232,7 @@
     },
     {
       "id": "LEGACY-FNC-007",
-      "summary": "Users shall be able to create one-off tasks with due date, optional checklist, priority, and\u2026",
+      "summary": "Users shall be able to create one-off tasks with due date, optional checklist, priority, and…",
       "statement": "Users shall be able to create one-off tasks with due date, optional checklist, priority, and linkage to a goal or module.",
       "level": "Functional",
       "priority": "P0",
@@ -272,7 +272,7 @@
     },
     {
       "id": "LEGACY-FNC-009",
-      "summary": "A completion action shall update the underlying item, relevant milestone progress, analytics,\u2026",
+      "summary": "A completion action shall update the underlying item, relevant milestone progress, analytics,…",
       "statement": "A completion action shall update the underlying item, relevant milestone progress, analytics, and gamification state atomically.",
       "level": "Functional",
       "priority": "P0",
@@ -316,7 +316,7 @@
     },
     {
       "id": "LEGACY-FNC-011",
-      "summary": "The system shall calculate a continuity metric that preserves historical progress after isolated\u2026",
+      "summary": "The system shall calculate a continuity metric that preserves historical progress after isolated…",
       "statement": "The system shall calculate a continuity metric that preserves historical progress after isolated misses rather than relying only on a reset-to-zero streak.",
       "level": "Functional",
       "priority": "P0",
@@ -337,7 +337,7 @@
     },
     {
       "id": "LEGACY-FNC-012",
-      "summary": "The system may show traditional streaks in addition to the continuity metric, with\u2026",
+      "summary": "The system may show traditional streaks in addition to the continuity metric, with…",
       "statement": "The system may show traditional streaks in addition to the continuity metric, with user-configurable grace or recovery behavior.",
       "level": "Functional",
       "priority": "P1",
@@ -379,7 +379,7 @@
     },
     {
       "id": "LEGACY-FNC-014",
-      "summary": "The system shall support achievements and milestone unlocks with in-progress and completed\u2026",
+      "summary": "The system shall support achievements and milestone unlocks with in-progress and completed…",
       "statement": "The system shall support achievements and milestone unlocks with in-progress and completed states.",
       "level": "Functional",
       "priority": "P1",
@@ -398,7 +398,7 @@
     },
     {
       "id": "LEGACY-FNC-015",
-      "summary": "The system shall support optional virtual currency and user-defined rewards without gating core\u2026",
+      "summary": "The system shall support optional virtual currency and user-defined rewards without gating core…",
       "statement": "The system shall support optional virtual currency and user-defined rewards without gating core task/habit functionality.",
       "level": "Functional",
       "priority": "P1",
@@ -436,7 +436,7 @@
     },
     {
       "id": "LEGACY-FNC-017",
-      "summary": "Users shall be able to access Personal, Work, Health, Finance, Learning, and future modules\u2026",
+      "summary": "Users shall be able to access Personal, Work, Health, Finance, Learning, and future modules…",
       "statement": "Users shall be able to access Personal, Work, Health, Finance, Learning, and future modules through a common module hub.",
       "level": "Functional",
       "priority": "P0",
@@ -457,7 +457,7 @@
     },
     {
       "id": "LEGACY-FNC-018",
-      "summary": "The system shall provide a global search entry point capable of locating goals, tasks, habits,\u2026",
+      "summary": "The system shall provide a global search entry point capable of locating goals, tasks, habits,…",
       "statement": "The system shall provide a global search entry point capable of locating goals, tasks, habits, modules, lessons, and other indexed entities.",
       "level": "Functional",
       "priority": "P1",
@@ -476,7 +476,7 @@
     },
     {
       "id": "LEGACY-FNC-019",
-      "summary": "The system shall support context-aware reminders that can be snoozed, completed, or opened\u2026",
+      "summary": "The system shall support context-aware reminders that can be snoozed, completed, or opened…",
       "statement": "The system shall support context-aware reminders that can be snoozed, completed, or opened directly to the relevant item.",
       "level": "Functional",
       "priority": "P1",
@@ -495,7 +495,7 @@
     },
     {
       "id": "LEGACY-FNC-020",
-      "summary": "The system shall support glanceable widgets for a small set of high-value signals and deep-link\u2026",
+      "summary": "The system shall support glanceable widgets for a small set of high-value signals and deep-link…",
       "statement": "The system shall support glanceable widgets for a small set of high-value signals and deep-link widget interactions to the relevant app context.",
       "level": "Functional",
       "priority": "P1",
@@ -533,7 +533,7 @@
     },
     {
       "id": "LEGACY-FNC-022",
-      "summary": "Where authorized, the system shall ingest eligible external signals such as calendar and health\u2026",
+      "summary": "Where authorized, the system shall ingest eligible external signals such as calendar and health…",
       "statement": "Where authorized, the system shall ingest eligible external signals such as calendar and health data to reduce manual logging.",
       "level": "Functional",
       "priority": "P1",
@@ -571,7 +571,7 @@
     },
     {
       "id": "LEGACY-FNC-024",
-      "summary": "Family/social features shall be opt-in and support cooperative goals without requiring public\u2026",
+      "summary": "Family/social features shall be opt-in and support cooperative goals without requiring public…",
       "statement": "Family/social features shall be opt-in and support cooperative goals without requiring public leaderboard participation.",
       "level": "Functional",
       "priority": "P1",
@@ -592,7 +592,7 @@
     },
     {
       "id": "LEGACY-FNC-025",
-      "summary": "Users shall be able to submit a feature request by text or voice and receive an AI-generated\u2026",
+      "summary": "Users shall be able to submit a feature request by text or voice and receive an AI-generated…",
       "statement": "Users shall be able to submit a feature request by text or voice and receive an AI-generated structured proposal containing scope, rationale, dependencies, and acceptance criteria.",
       "level": "Functional",
       "priority": "P1",
@@ -613,7 +613,7 @@
     },
     {
       "id": "LEGACY-FNC-026",
-      "summary": "An authorized administrator shall be able to approve or reject an AI-generated feature proposal\u2026",
+      "summary": "An authorized administrator shall be able to approve or reject an AI-generated feature proposal…",
       "statement": "An authorized administrator shall be able to approve or reject an AI-generated feature proposal and route approved proposals into a beta/release workflow.",
       "level": "Functional",
       "priority": "P1",
@@ -634,7 +634,7 @@
     },
     {
       "id": "LEGACY-FNC-027",
-      "summary": "The Learning module shall represent courses, modules, lessons, and activities and support\u2026",
+      "summary": "The Learning module shall represent courses, modules, lessons, and activities and support…",
       "statement": "The Learning module shall represent courses, modules, lessons, and activities and support importing source links for AI-assisted content extraction subject to user review.",
       "level": "Functional",
       "priority": "P1",
@@ -655,7 +655,7 @@
     },
     {
       "id": "LEGACY-FNC-028",
-      "summary": "The Finance module shall support goal-linked projections and preserve separation between\u2026",
+      "summary": "The Finance module shall support goal-linked projections and preserve separation between…",
       "statement": "The Finance module shall support goal-linked projections and preserve separation between user-entered assumptions and imported financial data.",
       "level": "Functional",
       "priority": "P1",
@@ -693,7 +693,7 @@
     },
     {
       "id": "LEGACY-UX-002",
-      "summary": "Top-level navigation controls shall navigate between sections and shall not be repurposed as\u2026",
+      "summary": "Top-level navigation controls shall navigate between sections and shall not be repurposed as…",
       "statement": "Top-level navigation controls shall navigate between sections and shall not be repurposed as action buttons.",
       "level": "UX",
       "priority": "P0",
@@ -731,7 +731,7 @@
     },
     {
       "id": "LEGACY-UX-004",
-      "summary": "Advanced or infrequently used options shall be progressively disclosed rather than presented in\u2026",
+      "summary": "Advanced or infrequently used options shall be progressively disclosed rather than presented in…",
       "statement": "Advanced or infrequently used options shall be progressively disclosed rather than presented in the default daily workflow.",
       "level": "UX",
       "priority": "P0",
@@ -750,7 +750,7 @@
     },
     {
       "id": "LEGACY-UX-005",
-      "summary": "Each high-frequency screen shall present one clearly identifiable primary action and visually\u2026",
+      "summary": "Each high-frequency screen shall present one clearly identifiable primary action and visually…",
       "statement": "Each high-frequency screen shall present one clearly identifiable primary action and visually subordinate secondary actions.",
       "level": "UX",
       "priority": "P0",
@@ -769,8 +769,8 @@
     },
     {
       "id": "LEGACY-UX-006",
-      "summary": "Primary touch targets shall provide at least a 44\u00d744 pt hit region on iOS-class",
-      "statement": "Primary touch targets shall provide at least a 44\u00d744 pt hit region on iOS-class interfaces.",
+      "summary": "Primary touch targets shall provide at least a 44×44 pt hit region on iOS-class",
+      "statement": "Primary touch targets shall provide at least a 44×44 pt hit region on iOS-class interfaces.",
       "level": "UX",
       "priority": "P0",
       "source": "R15",
@@ -788,7 +788,7 @@
     },
     {
       "id": "LEGACY-UX-007",
-      "summary": "The interface shall provide visible feedback for success, failure, disabled actions, and\u2026",
+      "summary": "The interface shall provide visible feedback for success, failure, disabled actions, and…",
       "statement": "The interface shall provide visible feedback for success, failure, disabled actions, and recoverable errors, including an explanation when an action cannot proceed.",
       "level": "UX",
       "priority": "P0",
@@ -807,7 +807,7 @@
     },
     {
       "id": "LEGACY-UX-008",
-      "summary": "No essential state or instruction shall be communicated by color alone, and reduced-motion\u2026",
+      "summary": "No essential state or instruction shall be communicated by color alone, and reduced-motion…",
       "statement": "No essential state or instruction shall be communicated by color alone, and reduced-motion preferences shall be honored.",
       "level": "UX",
       "priority": "P0",
@@ -845,7 +845,7 @@
     },
     {
       "id": "LEGACY-UX-010",
-      "summary": "The user shall be able to switch between any two top-level destinations with one tap/click from\u2026",
+      "summary": "The user shall be able to switch between any two top-level destinations with one tap/click from…",
       "statement": "The user shall be able to switch between any two top-level destinations with one tap/click from the app shell.",
       "level": "UX",
       "priority": "P0",
@@ -864,7 +864,7 @@
     },
     {
       "id": "LEGACY-UX-011",
-      "summary": "The interface shall support a low-gamification presentation mode that preserves productivity\u2026",
+      "summary": "The interface shall support a low-gamification presentation mode that preserves productivity…",
       "statement": "The interface shall support a low-gamification presentation mode that preserves productivity functionality while reducing decorative game elements.",
       "level": "UX",
       "priority": "P1",
@@ -883,7 +883,7 @@
     },
     {
       "id": "LEGACY-UX-012",
-      "summary": "Empty states shall contain an explanation and at least one valid next action when the user has\u2026",
+      "summary": "Empty states shall contain an explanation and at least one valid next action when the user has…",
       "statement": "Empty states shall contain an explanation and at least one valid next action when the user has permission to create or configure content.",
       "level": "UX",
       "priority": "P0",
@@ -921,7 +921,7 @@
     },
     {
       "id": "LEGACY-NFR-002",
-      "summary": "User and workspace authorization boundaries shall be enforced server-side for every data access\u2026",
+      "summary": "User and workspace authorization boundaries shall be enforced server-side for every data access…",
       "statement": "User and workspace authorization boundaries shall be enforced server-side for every data access path.",
       "level": "Quality",
       "priority": "P0",
@@ -959,7 +959,7 @@
     },
     {
       "id": "LEGACY-NFR-004",
-      "summary": "Critical daily actions shall remain usable under intermittent connectivity and synchronize\u2026",
+      "summary": "Critical daily actions shall remain usable under intermittent connectivity and synchronize…",
       "statement": "Critical daily actions shall remain usable under intermittent connectivity and synchronize safely when connectivity returns.",
       "level": "Quality",
       "priority": "P1",
@@ -978,7 +978,7 @@
     },
     {
       "id": "LEGACY-NFR-005",
-      "summary": "Synchronization shall be idempotent for repeated completion/update requests and shall prevent\u2026",
+      "summary": "Synchronization shall be idempotent for repeated completion/update requests and shall prevent…",
       "statement": "Synchronization shall be idempotent for repeated completion/update requests and shall prevent duplicate XP/reward issuance.",
       "level": "Quality",
       "priority": "P0",
@@ -997,7 +997,7 @@
     },
     {
       "id": "LEGACY-NFR-006",
-      "summary": "The system shall keep an auditable history for admin approval of AI-generated feature proposals\u2026",
+      "summary": "The system shall keep an auditable history for admin approval of AI-generated feature proposals…",
       "statement": "The system shall keep an auditable history for admin approval of AI-generated feature proposals and beta promotion decisions.",
       "level": "Quality",
       "priority": "P1",
@@ -1016,7 +1016,7 @@
     },
     {
       "id": "LEGACY-NFR-007",
-      "summary": "High-frequency completion interactions shall provide perceived feedback immediately; any\u2026",
+      "summary": "High-frequency completion interactions shall provide perceived feedback immediately; any…",
       "statement": "High-frequency completion interactions shall provide perceived feedback immediately; any longer-running operation shall expose visible progress/state.",
       "level": "Quality",
       "priority": "P0",
@@ -1035,7 +1035,7 @@
     },
     {
       "id": "LEGACY-NFR-008",
-      "summary": "Product analytics shall minimize collection to events required for UX/product decisions and\u2026",
+      "summary": "Product analytics shall minimize collection to events required for UX/product decisions and…",
       "statement": "Product analytics shall minimize collection to events required for UX/product decisions and shall distinguish telemetry from user content.",
       "level": "Quality",
       "priority": "P1",
@@ -1054,7 +1054,7 @@
     },
     {
       "id": "LEGACY-FNC-029",
-      "summary": "Support multiple accounts/cards across UAE and Brazil with type, currency, opening balance,\u2026",
+      "summary": "Support multiple accounts/cards across UAE and Brazil with type, currency, opening balance,…",
       "statement": "Support multiple accounts/cards across UAE and Brazil with type, currency, opening balance, as-of date, status, issuer, and ownership/workspace.",
       "level": "Functional",
       "priority": "P0",
@@ -1076,7 +1076,7 @@
     },
     {
       "id": "LEGACY-FNC-030",
-      "summary": "Capture, edit, split, undo and batch-create categorized transactions, with essential flag\u2026",
+      "summary": "Capture, edit, split, undo and batch-create categorized transactions, with essential flag…",
       "statement": "Capture, edit, split, undo and batch-create categorized transactions, with essential flag independent of category, payment source, date, status, and provenance.",
       "level": "Functional",
       "priority": "P0",
@@ -1097,7 +1097,7 @@
     },
     {
       "id": "LEGACY-FNC-031",
-      "summary": "Support weekly review of card and account activity including duplicate preview, classification,\u2026",
+      "summary": "Support weekly review of card and account activity including duplicate preview, classification,…",
       "statement": "Support weekly review of card and account activity including duplicate preview, classification, bulk approval, and statement reconciliation.",
       "level": "Functional",
       "priority": "P0",
@@ -1119,7 +1119,7 @@
     },
     {
       "id": "LEGACY-FNC-032",
-      "summary": "Correctly model credit-card purchases as expenses and card liabilities, while card payments\u2026",
+      "summary": "Correctly model credit-card purchases as expenses and card liabilities, while card payments…",
       "statement": "Correctly model credit-card purchases as expenses and card liabilities, while card payments settle liabilities without creating duplicate expenses.",
       "level": "Functional",
       "priority": "P0",
@@ -1140,7 +1140,7 @@
     },
     {
       "id": "LEGACY-FNC-033",
-      "summary": "Track balances for debit/savings accounts through posted activity, transfers, adjustments, and\u2026",
+      "summary": "Track balances for debit/savings accounts through posted activity, transfers, adjustments, and…",
       "statement": "Track balances for debit/savings accounts through posted activity, transfers, adjustments, and reconciliation with independently supplied statements.",
       "level": "Functional",
       "priority": "P0",
@@ -1162,7 +1162,7 @@
     },
     {
       "id": "LEGACY-FNC-034",
-      "summary": "Represent cross-border remittances and account transfers as linked legs; preserve native\u2026",
+      "summary": "Represent cross-border remittances and account transfers as linked legs; preserve native…",
       "statement": "Represent cross-border remittances and account transfers as linked legs; preserve native amounts/currencies, fees, actual conversion rate, rate timestamp/source, and FX impact.",
       "level": "Functional",
       "priority": "P0",
@@ -1183,7 +1183,7 @@
     },
     {
       "id": "LEGACY-FNC-035",
-      "summary": "Summarize monthly and annual income, expenses, savings/savings rate, budget variance and\u2026",
+      "summary": "Summarize monthly and annual income, expenses, savings/savings rate, budget variance and…",
       "statement": "Summarize monthly and annual income, expenses, savings/savings rate, budget variance and essential/non-essential spending by country, account and category.",
       "level": "Functional",
       "priority": "P0",
@@ -1204,7 +1204,7 @@
     },
     {
       "id": "LEGACY-FNC-036",
-      "summary": "Maintain monthly budgets and planned/recurring/fixed/variable/installment commitments, with\u2026",
+      "summary": "Maintain monthly budgets and planned/recurring/fixed/variable/installment commitments, with…",
       "statement": "Maintain monthly budgets and planned/recurring/fixed/variable/installment commitments, with actual vs forecast cash flow and bill reminders.",
       "level": "Functional",
       "priority": "P1",
@@ -1225,7 +1225,7 @@
     },
     {
       "id": "LEGACY-FNC-037",
-      "summary": "Track vehicle costs as ownership/rental operating expenses separately from financing principal,\u2026",
+      "summary": "Track vehicle costs as ownership/rental operating expenses separately from financing principal,…",
       "statement": "Track vehicle costs as ownership/rental operating expenses separately from financing principal, depreciation and one-time acquisition costs.",
       "level": "Functional",
       "priority": "P1",
@@ -1246,7 +1246,7 @@
     },
     {
       "id": "LEGACY-FNC-038",
-      "summary": "Track apartment-related payments, property asset valuation, related debt, equity and optional\u2026",
+      "summary": "Track apartment-related payments, property asset valuation, related debt, equity and optional…",
       "statement": "Track apartment-related payments, property asset valuation, related debt, equity and optional rental revenue while avoiding double counting.",
       "level": "Functional",
       "priority": "P1",
@@ -1267,7 +1267,7 @@
     },
     {
       "id": "LEGACY-FNC-039",
-      "summary": "Project one-to-five-year cash flow, saving potential, net worth and goal trajectories,\u2026",
+      "summary": "Project one-to-five-year cash flow, saving potential, net worth and goal trajectories,…",
       "statement": "Project one-to-five-year cash flow, saving potential, net worth and goal trajectories, supporting multiple scenarios and recorded assumptions.",
       "level": "Functional",
       "priority": "P1",
@@ -1288,7 +1288,7 @@
     },
     {
       "id": "LEGACY-FNC-040",
-      "summary": "Preview and map spreadsheet/CSV/Google Sheets financial data, support manual adjustment and\u2026",
+      "summary": "Preview and map spreadsheet/CSV/Google Sheets financial data, support manual adjustment and…",
       "statement": "Preview and map spreadsheet/CSV/Google Sheets financial data, support manual adjustment and explicit import approval, and suppress duplicate import rows.",
       "level": "Functional",
       "priority": "P0",
@@ -1309,7 +1309,7 @@
     },
     {
       "id": "LEGACY-FNC-041",
-      "summary": "Expose source/provenance, creation/edit history, reconciliation status and reversible correction\u2026",
+      "summary": "Expose source/provenance, creation/edit history, reconciliation status and reversible correction…",
       "statement": "Expose source/provenance, creation/edit history, reconciliation status and reversible correction for imported and manually entered transactions.",
       "level": "Functional",
       "priority": "P0",
@@ -1331,7 +1331,7 @@
     },
     {
       "id": "LEGACY-FNC-042",
-      "summary": "Calculate account-level balances and a consolidated balance/net-worth view in selectable\u2026",
+      "summary": "Calculate account-level balances and a consolidated balance/net-worth view in selectable…",
       "statement": "Calculate account-level balances and a consolidated balance/net-worth view in selectable presentation currency without overwriting native-currency ledger entries.",
       "level": "Functional",
       "priority": "P1",
@@ -1353,7 +1353,7 @@
     },
     {
       "id": "LEGACY-FNC-043",
-      "summary": "Distinguish earned income, refunds, reimbursements, investment profit/loss\u2026",
+      "summary": "Distinguish earned income, refunds, reimbursements, investment profit/loss…",
       "statement": "Distinguish earned income, refunds, reimbursements, investment profit/loss (realized/unrealized), internal transfers and valuation changes in reporting.",
       "level": "Functional",
       "priority": "P0",
@@ -1375,7 +1375,7 @@
     },
     {
       "id": "LEGACY-UX-013",
-      "summary": "Weekly reconciliation supports efficient multi-row review; classify multiple transactions\u2026",
+      "summary": "Weekly reconciliation supports efficient multi-row review; classify multiple transactions…",
       "statement": "Weekly reconciliation supports efficient multi-row review; classify multiple transactions without reopening a modal for every field.",
       "level": "UX",
       "priority": "P0",
@@ -1394,7 +1394,7 @@
     },
     {
       "id": "LEGACY-UX-014",
-      "summary": "Overview metrics have drill-downs to the constituent transactions, accounts and calculation\u2026",
+      "summary": "Overview metrics have drill-downs to the constituent transactions, accounts and calculation…",
       "statement": "Overview metrics have drill-downs to the constituent transactions, accounts and calculation definitions; the displayed reporting currency and FX assumptions remain visible.",
       "level": "UX",
       "priority": "P0",
@@ -1413,7 +1413,7 @@
     },
     {
       "id": "LEGACY-UX-015",
-      "summary": "Present actuals, commitments, projections and uncertainty as distinguishable states; do not\u2026",
+      "summary": "Present actuals, commitments, projections and uncertainty as distinguishable states; do not…",
       "statement": "Present actuals, commitments, projections and uncertainty as distinguishable states; do not present forecasts as account balances.",
       "level": "UX",
       "priority": "P0",
@@ -1432,7 +1432,7 @@
     },
     {
       "id": "LEGACY-UX-016",
-      "summary": "Saving, discarding and undoing a batch must have explicit feedback and guard against loss of\u2026",
+      "summary": "Saving, discarding and undoing a batch must have explicit feedback and guard against loss of…",
       "statement": "Saving, discarding and undoing a batch must have explicit feedback and guard against loss of partially reviewed work.",
       "level": "UX",
       "priority": "P0",
@@ -1451,7 +1451,7 @@
     },
     {
       "id": "LEGACY-NFR-009",
-      "summary": "Financial transactions are private by default; workspace permissions must be enforced\u2026",
+      "summary": "Financial transactions are private by default; workspace permissions must be enforced…",
       "statement": "Financial transactions are private by default; workspace permissions must be enforced server-side and data encrypted in transit and at rest.",
       "level": "Quality",
       "priority": "P0",
@@ -1470,7 +1470,7 @@
     },
     {
       "id": "LEGACY-NFR-010",
-      "summary": "Posting/importing transactions and transfer legs must be idempotent; partial failures cannot\u2026",
+      "summary": "Posting/importing transactions and transfer legs must be idempotent; partial failures cannot…",
       "statement": "Posting/importing transactions and transfer legs must be idempotent; partial failures cannot leave inconsistent account or card balances.",
       "level": "Quality",
       "priority": "P0",
@@ -1489,7 +1489,7 @@
     },
     {
       "id": "LEGACY-NFR-011",
-      "summary": "Amount arithmetic uses deterministic decimal/fixed-point values with explicit per-currency\u2026",
+      "summary": "Amount arithmetic uses deterministic decimal/fixed-point values with explicit per-currency…",
       "statement": "Amount arithmetic uses deterministic decimal/fixed-point values with explicit per-currency scale; reporting FX conversions preserve provenance and rounding.",
       "level": "Quality",
       "priority": "P0",
@@ -1508,7 +1508,7 @@
     },
     {
       "id": "LEGACY-NFR-012",
-      "summary": "Imported statements and personal finance data must not be committed to public code repositories\u2026",
+      "summary": "Imported statements and personal finance data must not be committed to public code repositories…",
       "statement": "Imported statements and personal finance data must not be committed to public code repositories or exposed through telemetry/logs; support data export and deletion.",
       "level": "Quality",
       "priority": "P0",
@@ -1527,7 +1527,7 @@
     },
     {
       "id": "LEGACY-BIZ-006",
-      "summary": "Legavia shall expose the same core user journeys through a responsive browser experience on\u2026",
+      "summary": "Legavia shall expose the same core user journeys through a responsive browser experience on…",
       "statement": "Legavia shall expose the same core user journeys through a responsive browser experience on mobile and desktop before considering native-client dependencies.",
       "level": "Business",
       "priority": "P0",
@@ -1546,7 +1546,7 @@
     },
     {
       "id": "LEGACY-BIZ-007",
-      "summary": "The product shall support a coherent life-management history across productivity, focus, health,\u2026",
+      "summary": "The product shall support a coherent life-management history across productivity, focus, health,…",
       "statement": "The product shall support a coherent life-management history across productivity, focus, health, learning, media, finance and memories without requiring all modules to be enabled.",
       "level": "Business",
       "priority": "P1",
@@ -1565,7 +1565,7 @@
     },
     {
       "id": "LEGACY-BIZ-008",
-      "summary": "Access to another person's data shall be granted at resource level and shall not arise\u2026",
+      "summary": "Access to another person's data shall be granted at resource level and shall not arise…",
       "statement": "Access to another person's data shall be granted at resource level and shall not arise implicitly from friendship, household membership or an invitation.",
       "level": "Business",
       "priority": "P0",
@@ -1584,7 +1584,7 @@
     },
     {
       "id": "LEGACY-BIZ-009",
-      "summary": "External integrations and AI recommendations shall require explicit user authorization, show\u2026",
+      "summary": "External integrations and AI recommendations shall require explicit user authorization, show…",
       "statement": "External integrations and AI recommendations shall require explicit user authorization, show data provenance and remain usable through manual alternatives.",
       "level": "Business",
       "priority": "P1",
@@ -1603,7 +1603,7 @@
     },
     {
       "id": "LEGACY-BIZ-010",
-      "summary": "The development program shall require approved use-case, requirement, UX and verification\u2026",
+      "summary": "The development program shall require approved use-case, requirement, UX and verification…",
       "statement": "The development program shall require approved use-case, requirement, UX and verification evidence before production promotion.",
       "level": "Business",
       "priority": "P0",
@@ -1622,7 +1622,7 @@
     },
     {
       "id": "LEGACY-FNC-044",
-      "summary": "The Today surface shall let the user log, correct and review daily water consumption against a\u2026",
+      "summary": "The Today surface shall let the user log, correct and review daily water consumption against a…",
       "statement": "The Today surface shall let the user log, correct and review daily water consumption against a configurable daily target.",
       "level": "Functional",
       "priority": "P1",
@@ -1643,7 +1643,7 @@
     },
     {
       "id": "LEGACY-FNC-045",
-      "summary": "A focus session shall have a named timer, start, pause, resume and stop actions, and optional\u2026",
+      "summary": "A focus session shall have a named timer, start, pause, resume and stop actions, and optional…",
       "statement": "A focus session shall have a named timer, start, pause, resume and stop actions, and optional association with a task or goal.",
       "level": "Functional",
       "priority": "P1",
@@ -1664,7 +1664,7 @@
     },
     {
       "id": "LEGACY-FNC-046",
-      "summary": "Completed focus time shall generate a configurable forest or plant progression projection and\u2026",
+      "summary": "Completed focus time shall generate a configurable forest or plant progression projection and…",
       "statement": "Completed focus time shall generate a configurable forest or plant progression projection and period-based focus statistics without duplicating time events.",
       "level": "Functional",
       "priority": "P1",
@@ -1685,7 +1685,7 @@
     },
     {
       "id": "LEGACY-FNC-047",
-      "summary": "The Books module shall record reading status, total pages, pages completed, dated reading events\u2026",
+      "summary": "The Books module shall record reading status, total pages, pages completed, dated reading events…",
       "statement": "The Books module shall record reading status, total pages, pages completed, dated reading events and completed-book history.",
       "level": "Functional",
       "priority": "P1",
@@ -1706,7 +1706,7 @@
     },
     {
       "id": "LEGACY-FNC-048",
-      "summary": "The Games module shall maintain a game library and distinct start, pause, resume and stop\u2026",
+      "summary": "The Games module shall maintain a game library and distinct start, pause, resume and stop…",
       "statement": "The Games module shall maintain a game library and distinct start, pause, resume and stop playtime events with aggregated playtime.",
       "level": "Functional",
       "priority": "P2",
@@ -1725,7 +1725,7 @@
     },
     {
       "id": "LEGACY-FNC-049",
-      "summary": "The Movies module shall capture a recommendation, recommender, recommendation date and watching\u2026",
+      "summary": "The Movies module shall capture a recommendation, recommender, recommendation date and watching…",
       "statement": "The Movies module shall capture a recommendation, recommender, recommendation date and watching status through text or reviewed voice capture.",
       "level": "Functional",
       "priority": "P1",
@@ -1746,7 +1746,7 @@
     },
     {
       "id": "LEGACY-FNC-050",
-      "summary": "The Memory module shall accept text, voice, photos and linked note sources and support\u2026",
+      "summary": "The Memory module shall accept text, voice, photos and linked note sources and support…",
       "statement": "The Memory module shall accept text, voice, photos and linked note sources and support navigating memories through a searchable timeline and mind-map projection.",
       "level": "Functional",
       "priority": "P1",
@@ -1767,7 +1767,7 @@
     },
     {
       "id": "LEGACY-FNC-051",
-      "summary": "The user shall be able to maintain an interactive CV or portfolio with evidence-linked\u2026",
+      "summary": "The user shall be able to maintain an interactive CV or portfolio with evidence-linked…",
       "statement": "The user shall be able to maintain an interactive CV or portfolio with evidence-linked achievements and explicitly approved updates generated from milestones.",
       "level": "Functional",
       "priority": "P2",
@@ -1786,7 +1786,7 @@
     },
     {
       "id": "LEGACY-FNC-052",
-      "summary": "The Health module shall track user-entered exercise and wellness events and optionally ingest\u2026",
+      "summary": "The Health module shall track user-entered exercise and wellness events and optionally ingest…",
       "statement": "The Health module shall track user-entered exercise and wellness events and optionally ingest authorized health signals without making diagnostic claims.",
       "level": "Functional",
       "priority": "P1",
@@ -1805,7 +1805,7 @@
     },
     {
       "id": "LEGACY-FNC-053",
-      "summary": "The user shall be able to view task schedules alongside authorized calendar events and plan\u2026",
+      "summary": "The user shall be able to view task schedules alongside authorized calendar events and plan…",
       "statement": "The user shall be able to view task schedules alongside authorized calendar events and plan daily or weekly actions without silently editing the external calendar.",
       "level": "Functional",
       "priority": "P1",
@@ -1824,7 +1824,7 @@
     },
     {
       "id": "LEGACY-FNC-054",
-      "summary": "Text or voice commands shall create reviewable proposals for tasks, goals, habits or journal\u2026",
+      "summary": "Text or voice commands shall create reviewable proposals for tasks, goals, habits or journal…",
       "statement": "Text or voice commands shall create reviewable proposals for tasks, goals, habits or journal entries; no persistent change shall occur until confirmed by an authorized user.",
       "level": "Functional",
       "priority": "P1",
@@ -1846,7 +1846,7 @@
     },
     {
       "id": "LEGACY-FNC-055",
-      "summary": "AI-proposed changes shall have preview, modify, approve and reject states and an auditable\u2026",
+      "summary": "AI-proposed changes shall have preview, modify, approve and reject states and an auditable…",
       "statement": "AI-proposed changes shall have preview, modify, approve and reject states and an auditable provenance record.",
       "level": "Functional",
       "priority": "P1",
@@ -1868,7 +1868,7 @@
     },
     {
       "id": "LEGACY-FNC-056",
-      "summary": "The application shall expose user-configurable permissions for optional family or shared\u2026",
+      "summary": "The application shall expose user-configurable permissions for optional family or shared…",
       "statement": "The application shall expose user-configurable permissions for optional family or shared workspaces and enforce invitations, revocation and isolation.",
       "level": "Functional",
       "priority": "P1",
@@ -1890,7 +1890,7 @@
     },
     {
       "id": "LEGACY-FNC-057",
-      "summary": "Shared goals, social events and challenges shall use explicit resource-level visibility\u2026",
+      "summary": "Shared goals, social events and challenges shall use explicit resource-level visibility…",
       "statement": "Shared goals, social events and challenges shall use explicit resource-level visibility (private, selected users, friends, party or public) with private as default.",
       "level": "Functional",
       "priority": "P2",
@@ -1911,7 +1911,7 @@
     },
     {
       "id": "LEGACY-FNC-058",
-      "summary": "Administrators shall be able to enable and roll back approved features for designated beta\u2026",
+      "summary": "Administrators shall be able to enable and roll back approved features for designated beta…",
       "statement": "Administrators shall be able to enable and roll back approved features for designated beta cohorts without exposing unauthorized workspace content.",
       "level": "Functional",
       "priority": "P2",
@@ -1933,7 +1933,7 @@
     },
     {
       "id": "LEGACY-FNC-059",
-      "summary": "Administrators shall be able to monitor configured per-user storage quotas and manage retention\u2026",
+      "summary": "Administrators shall be able to monitor configured per-user storage quotas and manage retention…",
       "statement": "Administrators shall be able to monitor configured per-user storage quotas and manage retention without seeing users' private content by default.",
       "level": "Functional",
       "priority": "P2",
@@ -1954,7 +1954,7 @@
     },
     {
       "id": "LEGACY-FNC-060",
-      "summary": "The user shall be able to switch an explicit Auto, Mobile or Desktop presentation mode, with\u2026",
+      "summary": "The user shall be able to switch an explicit Auto, Mobile or Desktop presentation mode, with…",
       "statement": "The user shall be able to switch an explicit Auto, Mobile or Desktop presentation mode, with Auto adapting to viewport and input characteristics.",
       "level": "Functional",
       "priority": "P0",
@@ -1977,7 +1977,7 @@
     },
     {
       "id": "LEGACY-FNC-061",
-      "summary": "Users shall be able to create and manage separate personal and invited workspaces with a\u2026",
+      "summary": "Users shall be able to create and manage separate personal and invited workspaces with a…",
       "statement": "Users shall be able to create and manage separate personal and invited workspaces with a documented owner, member and administrator role model.",
       "level": "Functional",
       "priority": "P0",
@@ -1999,7 +1999,7 @@
     },
     {
       "id": "LEGACY-FNC-062",
-      "summary": "The application shall support user-controlled export and deletion requests for supported\u2026",
+      "summary": "The application shall support user-controlled export and deletion requests for supported…",
       "statement": "The application shall support user-controlled export and deletion requests for supported personal data and attachments, subject to disclosed retention constraints.",
       "level": "Functional",
       "priority": "P1",
@@ -2020,7 +2020,7 @@
     },
     {
       "id": "LEGACY-FNC-063",
-      "summary": "Notifications and reminders shall be permission-based, user-configurable and deep-link to the\u2026",
+      "summary": "Notifications and reminders shall be permission-based, user-configurable and deep-link to the…",
       "statement": "Notifications and reminders shall be permission-based, user-configurable and deep-link to the related entity when supported.",
       "level": "Functional",
       "priority": "P1",
@@ -2039,7 +2039,7 @@
     },
     {
       "id": "LEGACY-FNC-064",
-      "summary": "The web application shall provide installable mobile-friendly behavior and preserve session\u2026",
+      "summary": "The web application shall provide installable mobile-friendly behavior and preserve session…",
       "statement": "The web application shall provide installable mobile-friendly behavior and preserve session navigation and allowed local draft state on reload.",
       "level": "Functional",
       "priority": "P0",
@@ -2061,7 +2061,7 @@
     },
     {
       "id": "LEGACY-FNC-065",
-      "summary": "An invited user shall be able to participate in a selected collaborative challenge without\u2026",
+      "summary": "An invited user shall be able to participate in a selected collaborative challenge without…",
       "statement": "An invited user shall be able to participate in a selected collaborative challenge without gaining access to other private modules.",
       "level": "Functional",
       "priority": "P2",
@@ -2080,7 +2080,7 @@
     },
     {
       "id": "LEGACY-FNC-066",
-      "summary": "An authorized GitHub connection may suggest daily or weekly tasks from selected project issues,\u2026",
+      "summary": "An authorized GitHub connection may suggest daily or weekly tasks from selected project issues,…",
       "statement": "An authorized GitHub connection may suggest daily or weekly tasks from selected project issues, with source links and explicit approval before importing them.",
       "level": "Functional",
       "priority": "P2",
@@ -2101,7 +2101,7 @@
     },
     {
       "id": "LEGACY-FNC-067",
-      "summary": "The Learning module shall capture course progress and permit reviewed AI extraction of modules\u2026",
+      "summary": "The Learning module shall capture course progress and permit reviewed AI extraction of modules…",
       "statement": "The Learning module shall capture course progress and permit reviewed AI extraction of modules and lessons from approved links or supplied materials.",
       "level": "Functional",
       "priority": "P1",
@@ -2122,7 +2122,7 @@
     },
     {
       "id": "LEGACY-FNC-068",
-      "summary": "Habits shall support positive or negative polarity, configurable severity, recovery policy and\u2026",
+      "summary": "Habits shall support positive or negative polarity, configurable severity, recovery policy and…",
       "statement": "Habits shall support positive or negative polarity, configurable severity, recovery policy and transparent non-destructive consequences.",
       "level": "Functional",
       "priority": "P1",
@@ -2143,7 +2143,7 @@
     },
     {
       "id": "LEGACY-FNC-069",
-      "summary": "XP, levels, badges and virtual currency shall be computed from a deterministic event ledger with\u2026",
+      "summary": "XP, levels, badges and virtual currency shall be computed from a deterministic event ledger with…",
       "statement": "XP, levels, badges and virtual currency shall be computed from a deterministic event ledger with visible explanations of rewards and reversals.",
       "level": "Functional",
       "priority": "P0",
@@ -2164,7 +2164,7 @@
     },
     {
       "id": "LEGACY-FNC-070",
-      "summary": "The Books module shall recalculate an estimated reading completion date from dated page-progress\u2026",
+      "summary": "The Books module shall recalculate an estimated reading completion date from dated page-progress…",
       "statement": "The Books module shall recalculate an estimated reading completion date from dated page-progress observations and show insufficient-data uncertainty.",
       "level": "Functional",
       "priority": "P1",
@@ -2185,7 +2185,7 @@
     },
     {
       "id": "LEGACY-FNC-071",
-      "summary": "The Movies watchlist may rank candidate titles by a timestamped external rating when licensed\u2026",
+      "summary": "The Movies watchlist may rank candidate titles by a timestamped external rating when licensed…",
       "statement": "The Movies watchlist may rank candidate titles by a timestamped external rating when licensed data is available, retaining a manual order fallback.",
       "level": "Functional",
       "priority": "P2",
@@ -2206,7 +2206,7 @@
     },
     {
       "id": "LEGACY-FNC-072",
-      "summary": "The user shall be able to record goal-linked financial objectives without mistaking projections\u2026",
+      "summary": "The user shall be able to record goal-linked financial objectives without mistaking projections…",
       "statement": "The user shall be able to record goal-linked financial objectives without mistaking projections for actual account balances.",
       "level": "Functional",
       "priority": "P1",
@@ -2225,7 +2225,7 @@
     },
     {
       "id": "LEGACY-FNC-073",
-      "summary": "The Today dashboard shall let the user see assigned actions, reminders, active focus session and\u2026",
+      "summary": "The Today dashboard shall let the user see assigned actions, reminders, active focus session and…",
       "statement": "The Today dashboard shall let the user see assigned actions, reminders, active focus session and hydration status without entering individual modules.",
       "level": "Functional",
       "priority": "P1",
@@ -2246,7 +2246,7 @@
     },
     {
       "id": "LEGACY-FNC-074",
-      "summary": "Every domain mutation affecting progress or finances shall retain a stable event identity,\u2026",
+      "summary": "Every domain mutation affecting progress or finances shall retain a stable event identity,…",
       "statement": "Every domain mutation affecting progress or finances shall retain a stable event identity, origin and reversible or compensating correction history.",
       "level": "Functional",
       "priority": "P0",
@@ -2269,7 +2269,7 @@
     },
     {
       "id": "LEGACY-UX-017",
-      "summary": "Pixel-art fantasy RPG theming shall closely follow the accepted Legavia visual references on\u2026",
+      "summary": "Pixel-art fantasy RPG theming shall closely follow the accepted Legavia visual references on…",
       "statement": "Pixel-art fantasy RPG theming shall closely follow the accepted Legavia visual references on progression surfaces while preserving readable, accessible operational views.",
       "level": "UX",
       "priority": "P0",
@@ -2288,7 +2288,7 @@
     },
     {
       "id": "LEGACY-UX-018",
-      "summary": "The app shall provide consistent responsive layouts for mobile and desktop, including a\u2026",
+      "summary": "The app shall provide consistent responsive layouts for mobile and desktop, including a…",
       "statement": "The app shall provide consistent responsive layouts for mobile and desktop, including a persistent Auto/Mobile/Desktop preview override.",
       "level": "UX",
       "priority": "P0",
@@ -2307,7 +2307,7 @@
     },
     {
       "id": "LEGACY-UX-019",
-      "summary": "The design system shall define typography, contrast, icon scale, artwork placement, spacing,\u2026",
+      "summary": "The design system shall define typography, contrast, icon scale, artwork placement, spacing,…",
       "statement": "The design system shall define typography, contrast, icon scale, artwork placement, spacing, focus states and reusable components; decorative icons shall not crowd core controls.",
       "level": "UX",
       "priority": "P0",
@@ -2326,7 +2326,7 @@
     },
     {
       "id": "LEGACY-UX-020",
-      "summary": "Every approved journey shall have matching mobile and desktop UX states and\u2026",
+      "summary": "Every approved journey shall have matching mobile and desktop UX states and…",
       "statement": "Every approved journey shall have matching mobile and desktop UX states and reference-versus-actual visual-regression evidence.",
       "level": "UX",
       "priority": "P0",
@@ -2345,7 +2345,7 @@
     },
     {
       "id": "LEGACY-UX-021",
-      "summary": "Gamification state shall always expose a textual explanation for progression, currency and\u2026",
+      "summary": "Gamification state shall always expose a textual explanation for progression, currency and…",
       "statement": "Gamification state shall always expose a textual explanation for progression, currency and penalties.",
       "level": "UX",
       "priority": "P1",
@@ -2364,7 +2364,7 @@
     },
     {
       "id": "LEGACY-UX-022",
-      "summary": "Permission requests for microphone, camera, health and calendar integrations shall be\u2026",
+      "summary": "Permission requests for microphone, camera, health and calendar integrations shall be…",
       "statement": "Permission requests for microphone, camera, health and calendar integrations shall be contextual, revocable and accompanied by a manual fallback.",
       "level": "UX",
       "priority": "P1",
@@ -2383,7 +2383,7 @@
     },
     {
       "id": "LEGACY-UX-023",
-      "summary": "User-selected low-gamification and reduced-motion presentation preferences shall not alter\u2026",
+      "summary": "User-selected low-gamification and reduced-motion presentation preferences shall not alter…",
       "statement": "User-selected low-gamification and reduced-motion presentation preferences shall not alter domain correctness.",
       "level": "UX",
       "priority": "P1",
@@ -2402,7 +2402,7 @@
     },
     {
       "id": "LEGACY-NFR-013",
-      "summary": "Authentication and authorization tests shall cover every API and storage lookup, including\u2026",
+      "summary": "Authentication and authorization tests shall cover every API and storage lookup, including…",
       "statement": "Authentication and authorization tests shall cover every API and storage lookup, including nested object access and workspace reassignment attempts.",
       "level": "Quality",
       "priority": "P0",
@@ -2421,7 +2421,7 @@
     },
     {
       "id": "LEGACY-NFR-014",
-      "summary": "Repeated completion, focus and financial event submissions shall produce one logical event and\u2026",
+      "summary": "Repeated completion, focus and financial event submissions shall produce one logical event and…",
       "statement": "Repeated completion, focus and financial event submissions shall produce one logical event and one reward or ledger effect.",
       "level": "Quality",
       "priority": "P0",
@@ -2440,7 +2440,7 @@
     },
     {
       "id": "LEGACY-NFR-015",
-      "summary": "Imported files and private media shall be segregated from public code repositories, development\u2026",
+      "summary": "Imported files and private media shall be segregated from public code repositories, development…",
       "statement": "Imported files and private media shall be segregated from public code repositories, development fixtures and observability logs.",
       "level": "Quality",
       "priority": "P0",
@@ -2459,7 +2459,7 @@
     },
     {
       "id": "LEGACY-NFR-016",
-      "summary": "The product shall offer a recoverable draft or retry state for interrupted network requests and\u2026",
+      "summary": "The product shall offer a recoverable draft or retry state for interrupted network requests and…",
       "statement": "The product shall offer a recoverable draft or retry state for interrupted network requests and shall not claim offline synchronization until independently verified.",
       "level": "Quality",
       "priority": "P0",
@@ -2478,7 +2478,7 @@
     },
     {
       "id": "LEGACY-NFR-017",
-      "summary": "Production infrastructure shall document backup, restore, retention and recovery testing before\u2026",
+      "summary": "Production infrastructure shall document backup, restore, retention and recovery testing before…",
       "statement": "Production infrastructure shall document backup, restore, retention and recovery testing before storing irreplaceable personal memories or financial records.",
       "level": "Quality",
       "priority": "P0",
@@ -2497,7 +2497,7 @@
     },
     {
       "id": "LEGACY-NFR-018",
-      "summary": "The team shall establish measured mobile/desktop interaction and startup performance budgets\u2026",
+      "summary": "The team shall establish measured mobile/desktop interaction and startup performance budgets…",
       "statement": "The team shall establish measured mobile/desktop interaction and startup performance budgets using representative devices before release acceptance.",
       "level": "Quality",
       "priority": "P1",
@@ -2516,7 +2516,7 @@
     },
     {
       "id": "LEGACY-NFR-019",
-      "summary": "AI providers shall receive only authorized minimum necessary content and shall not hold\u2026",
+      "summary": "AI providers shall receive only authorized minimum necessary content and shall not hold…",
       "statement": "AI providers shall receive only authorized minimum necessary content and shall not hold privileged direct-write credentials to production data.",
       "level": "Quality",
       "priority": "P1",
@@ -2535,7 +2535,7 @@
     },
     {
       "id": "LEGACY-NFR-020",
-      "summary": "Development releases shall include automated build, unit, integration, authorization and\u2026",
+      "summary": "Development releases shall include automated build, unit, integration, authorization and…",
       "statement": "Development releases shall include automated build, unit, integration, authorization and representative mobile/desktop visual tests with candidate fingerprints.",
       "level": "Quality",
       "priority": "P0",
@@ -2554,7 +2554,7 @@
     },
     {
       "id": "LEGACY-NFR-021",
-      "summary": "Attachment quotas, virus/content validation and bounded upload size shall be enforced before\u2026",
+      "summary": "Attachment quotas, virus/content validation and bounded upload size shall be enforced before…",
       "statement": "Attachment quotas, virus/content validation and bounded upload size shall be enforced before files become available to other users.",
       "level": "Quality",
       "priority": "P1",
@@ -2573,7 +2573,7 @@
     },
     {
       "id": "LEGACY-NFR-022",
-      "summary": "The system shall store timestamps with timezone semantics and handle DST, local-date scheduling,\u2026",
+      "summary": "The system shall store timestamps with timezone semantics and handle DST, local-date scheduling,…",
       "statement": "The system shall store timestamps with timezone semantics and handle DST, local-date scheduling, currency precision and historical revisions deterministically.",
       "level": "Quality",
       "priority": "P0",
@@ -4578,7 +4578,7 @@
     "suites": [
       {
         "id": "tooling-fixture",
-        "label": "Tooling fixture \u00b7 desktop and phone",
+        "label": "Tooling fixture · desktop and phone",
         "kind": "integration",
         "repository_id": "verification",
         "component_ids": [
@@ -4838,7 +4838,7 @@
     },
     {
       "id": "mobile-pwa",
-      "label": "Installed mobile PWA \u00b7 adapter pending",
+      "label": "Installed mobile PWA · adapter pending",
       "kind": "installed_pwa",
       "viewport": {
         "width": 390,
@@ -4973,7 +4973,7 @@
     },
     "scopes": {
       "all": {
-        "percent": 0.0,
+        "percent": 0,
         "total_features": 15,
         "implementation_unit_features": 0,
         "verified_features": 0,
@@ -5005,7 +5005,7 @@
             },
             "implementation_unit_evidence": [],
             "score": 0,
-            "percent": 0.0,
+            "percent": 0,
             "complete": false,
             "functionality_verification": null,
             "implemented": null
@@ -5035,7 +5035,7 @@
             },
             "implementation_unit_evidence": [],
             "score": 0,
-            "percent": 0.0,
+            "percent": 0,
             "complete": false,
             "functionality_verification": null,
             "implemented": null
@@ -5065,7 +5065,7 @@
             },
             "implementation_unit_evidence": [],
             "score": 0,
-            "percent": 0.0,
+            "percent": 0,
             "complete": false,
             "functionality_verification": null,
             "implemented": null
@@ -5095,7 +5095,7 @@
             },
             "implementation_unit_evidence": [],
             "score": 0,
-            "percent": 0.0,
+            "percent": 0,
             "complete": false,
             "functionality_verification": null,
             "implemented": null
@@ -5125,7 +5125,7 @@
             },
             "implementation_unit_evidence": [],
             "score": 0,
-            "percent": 0.0,
+            "percent": 0,
             "complete": false,
             "functionality_verification": null,
             "implemented": null
@@ -5155,7 +5155,7 @@
             },
             "implementation_unit_evidence": [],
             "score": 0,
-            "percent": 0.0,
+            "percent": 0,
             "complete": false,
             "functionality_verification": null,
             "implemented": null
@@ -5185,7 +5185,7 @@
             },
             "implementation_unit_evidence": [],
             "score": 0,
-            "percent": 0.0,
+            "percent": 0,
             "complete": false,
             "functionality_verification": null,
             "implemented": null
@@ -5215,7 +5215,7 @@
             },
             "implementation_unit_evidence": [],
             "score": 0,
-            "percent": 0.0,
+            "percent": 0,
             "complete": false,
             "functionality_verification": null,
             "implemented": null
@@ -5245,7 +5245,7 @@
             },
             "implementation_unit_evidence": [],
             "score": 0,
-            "percent": 0.0,
+            "percent": 0,
             "complete": false,
             "functionality_verification": null,
             "implemented": null
@@ -5275,7 +5275,7 @@
             },
             "implementation_unit_evidence": [],
             "score": 0,
-            "percent": 0.0,
+            "percent": 0,
             "complete": false,
             "functionality_verification": null,
             "implemented": null
@@ -5305,7 +5305,7 @@
             },
             "implementation_unit_evidence": [],
             "score": 0,
-            "percent": 0.0,
+            "percent": 0,
             "complete": false,
             "functionality_verification": null,
             "implemented": null
@@ -5335,7 +5335,7 @@
             },
             "implementation_unit_evidence": [],
             "score": 0,
-            "percent": 0.0,
+            "percent": 0,
             "complete": false,
             "functionality_verification": null,
             "implemented": null
@@ -5365,7 +5365,7 @@
             },
             "implementation_unit_evidence": [],
             "score": 0,
-            "percent": 0.0,
+            "percent": 0,
             "complete": false,
             "functionality_verification": null,
             "implemented": null
@@ -5395,7 +5395,7 @@
             },
             "implementation_unit_evidence": [],
             "score": 0,
-            "percent": 0.0,
+            "percent": 0,
             "complete": false,
             "functionality_verification": null,
             "implemented": null
@@ -5425,7 +5425,7 @@
             },
             "implementation_unit_evidence": [],
             "score": 0,
-            "percent": 0.0,
+            "percent": 0,
             "complete": false,
             "functionality_verification": null,
             "implemented": null
@@ -5433,7 +5433,7 @@
         ]
       },
       "ai-governance": {
-        "percent": 0.0,
+        "percent": 0,
         "total_features": 1,
         "implementation_unit_features": 0,
         "verified_features": 0,
@@ -5465,7 +5465,7 @@
             },
             "implementation_unit_evidence": [],
             "score": 0,
-            "percent": 0.0,
+            "percent": 0,
             "complete": false,
             "functionality_verification": null,
             "implemented": null
@@ -5473,7 +5473,7 @@
         ]
       },
       "app-shell": {
-        "percent": 0.0,
+        "percent": 0,
         "total_features": 1,
         "implementation_unit_features": 0,
         "verified_features": 0,
@@ -5505,7 +5505,7 @@
             },
             "implementation_unit_evidence": [],
             "score": 0,
-            "percent": 0.0,
+            "percent": 0,
             "complete": false,
             "functionality_verification": null,
             "implemented": null
@@ -5513,7 +5513,7 @@
         ]
       },
       "finance": {
-        "percent": 0.0,
+        "percent": 0,
         "total_features": 1,
         "implementation_unit_features": 0,
         "verified_features": 0,
@@ -5545,7 +5545,7 @@
             },
             "implementation_unit_evidence": [],
             "score": 0,
-            "percent": 0.0,
+            "percent": 0,
             "complete": false,
             "functionality_verification": null,
             "implemented": null
@@ -5553,7 +5553,7 @@
         ]
       },
       "focus": {
-        "percent": 0.0,
+        "percent": 0,
         "total_features": 1,
         "implementation_unit_features": 0,
         "verified_features": 0,
@@ -5585,7 +5585,7 @@
             },
             "implementation_unit_evidence": [],
             "score": 0,
-            "percent": 0.0,
+            "percent": 0,
             "complete": false,
             "functionality_verification": null,
             "implemented": null
@@ -5593,7 +5593,7 @@
         ]
       },
       "gamification": {
-        "percent": 0.0,
+        "percent": 0,
         "total_features": 1,
         "implementation_unit_features": 0,
         "verified_features": 0,
@@ -5625,7 +5625,7 @@
             },
             "implementation_unit_evidence": [],
             "score": 0,
-            "percent": 0.0,
+            "percent": 0,
             "complete": false,
             "functionality_verification": null,
             "implemented": null
@@ -5633,7 +5633,7 @@
         ]
       },
       "goals-map": {
-        "percent": 0.0,
+        "percent": 0,
         "total_features": 1,
         "implementation_unit_features": 0,
         "verified_features": 0,
@@ -5665,7 +5665,7 @@
             },
             "implementation_unit_evidence": [],
             "score": 0,
-            "percent": 0.0,
+            "percent": 0,
             "complete": false,
             "functionality_verification": null,
             "implemented": null
@@ -5673,7 +5673,7 @@
         ]
       },
       "health": {
-        "percent": 0.0,
+        "percent": 0,
         "total_features": 1,
         "implementation_unit_features": 0,
         "verified_features": 0,
@@ -5705,7 +5705,7 @@
             },
             "implementation_unit_evidence": [],
             "score": 0,
-            "percent": 0.0,
+            "percent": 0,
             "complete": false,
             "functionality_verification": null,
             "implemented": null
@@ -5713,7 +5713,7 @@
         ]
       },
       "identity-access": {
-        "percent": 0.0,
+        "percent": 0,
         "total_features": 1,
         "implementation_unit_features": 0,
         "verified_features": 0,
@@ -5745,7 +5745,7 @@
             },
             "implementation_unit_evidence": [],
             "score": 0,
-            "percent": 0.0,
+            "percent": 0,
             "complete": false,
             "functionality_verification": null,
             "implemented": null
@@ -5753,7 +5753,7 @@
         ]
       },
       "integration": {
-        "percent": 0.0,
+        "percent": 0,
         "total_features": 1,
         "implementation_unit_features": 0,
         "verified_features": 0,
@@ -5785,7 +5785,7 @@
             },
             "implementation_unit_evidence": [],
             "score": 0,
-            "percent": 0.0,
+            "percent": 0,
             "complete": false,
             "functionality_verification": null,
             "implemented": null
@@ -5793,7 +5793,7 @@
         ]
       },
       "learning": {
-        "percent": 0.0,
+        "percent": 0,
         "total_features": 1,
         "implementation_unit_features": 0,
         "verified_features": 0,
@@ -5825,7 +5825,7 @@
             },
             "implementation_unit_evidence": [],
             "score": 0,
-            "percent": 0.0,
+            "percent": 0,
             "complete": false,
             "functionality_verification": null,
             "implemented": null
@@ -5833,7 +5833,7 @@
         ]
       },
       "media-library": {
-        "percent": 0.0,
+        "percent": 0,
         "total_features": 1,
         "implementation_unit_features": 0,
         "verified_features": 0,
@@ -5865,7 +5865,7 @@
             },
             "implementation_unit_evidence": [],
             "score": 0,
-            "percent": 0.0,
+            "percent": 0,
             "complete": false,
             "functionality_verification": null,
             "implemented": null
@@ -5873,7 +5873,7 @@
         ]
       },
       "memory": {
-        "percent": 0.0,
+        "percent": 0,
         "total_features": 1,
         "implementation_unit_features": 0,
         "verified_features": 0,
@@ -5905,7 +5905,7 @@
             },
             "implementation_unit_evidence": [],
             "score": 0,
-            "percent": 0.0,
+            "percent": 0,
             "complete": false,
             "functionality_verification": null,
             "implemented": null
@@ -5913,7 +5913,7 @@
         ]
       },
       "profile": {
-        "percent": 0.0,
+        "percent": 0,
         "total_features": 1,
         "implementation_unit_features": 0,
         "verified_features": 0,
@@ -5945,7 +5945,7 @@
             },
             "implementation_unit_evidence": [],
             "score": 0,
-            "percent": 0.0,
+            "percent": 0,
             "complete": false,
             "functionality_verification": null,
             "implemented": null
@@ -5953,7 +5953,7 @@
         ]
       },
       "social": {
-        "percent": 0.0,
+        "percent": 0,
         "total_features": 1,
         "implementation_unit_features": 0,
         "verified_features": 0,
@@ -5985,7 +5985,7 @@
             },
             "implementation_unit_evidence": [],
             "score": 0,
-            "percent": 0.0,
+            "percent": 0,
             "complete": false,
             "functionality_verification": null,
             "implemented": null
@@ -5993,7 +5993,7 @@
         ]
       },
       "today": {
-        "percent": 0.0,
+        "percent": 0,
         "total_features": 1,
         "implementation_unit_features": 0,
         "verified_features": 0,
@@ -6025,7 +6025,7 @@
             },
             "implementation_unit_evidence": [],
             "score": 0,
-            "percent": 0.0,
+            "percent": 0,
             "complete": false,
             "functionality_verification": null,
             "implemented": null
@@ -6033,7 +6033,7 @@
         ]
       },
       "verification": {
-        "percent": 0.0,
+        "percent": 0,
         "total_features": 0,
         "implementation_unit_features": 0,
         "verified_features": 0,
@@ -6042,5 +6042,10 @@
         "features": []
       }
     }
+  },
+  "work_package_publication": {
+    "enabled": true,
+    "remote": "origin",
+    "branch": "main"
   }
 }
