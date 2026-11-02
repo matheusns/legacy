@@ -3862,7 +3862,7 @@
             "never",
             "exec",
             "--sandbox",
-            "workspace-write",
+            "danger-full-access",
             "--json",
             "-"
           ],
@@ -4156,7 +4156,7 @@
             "never",
             "exec",
             "--sandbox",
-            "read-only",
+            "danger-full-access",
             "--json",
             "-"
           ],
@@ -4428,7 +4428,7 @@
             "never",
             "exec",
             "--sandbox",
-            "read-only",
+            "danger-full-access",
             "--json",
             "-"
           ],
