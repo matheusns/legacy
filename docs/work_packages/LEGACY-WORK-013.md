@@ -14,7 +14,7 @@ review_gate: Systems Engineering approval required
 **Status:** Backlog  
 **Type:** Technical  
 **Priority:** P0  
-**Depends on:** LEGACY-WORK-002  
+**Depends on:** LEGACY-WORK-002, LEGACY-WORK-014  
 **Target repositories:** matheusns/legavia_sdlc_gui, matheusns/legacy, matheusns/legacy_verification_tooling
 
 ## Required capabilities
@@ -34,3 +34,7 @@ review_gate: Systems Engineering approval required
 
 ## Gate
 The GUI's current read-only manifest import is available, but **Development/QA/Preview activation is blocked** until this package is accepted. This package itself requires a passing candidate-bound unit test gate and Systems Engineering review.
+
+## Contract and verification prerequisite
+
+LEGACY-WORK-014 owns resolution of the legacy/schema-2 compatibility conflict and complete registered verification coverage. This package remains pending until that SE predecessor and any technical prerequisites it maps are accepted. Prepare a fresh prompt from the resulting baseline; do not resume the frozen failed run DEV-20261102T104129Z-8F4D14. Existing acceptance criteria remain in force until explicitly dispositioned through that SE work.
