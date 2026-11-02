@@ -3651,7 +3651,8 @@
         "LEGACY-CAP-005"
       ],
       "depends_on": [
-        "LEGACY-WORK-002"
+        "LEGACY-WORK-002",
+        "LEGACY-WORK-014"
       ],
       "target_repositories": [
         "matheusns/legavia_sdlc_gui",
@@ -3687,6 +3688,53 @@
         "mobile-browser"
       ],
       "migration_note": "Approved dedicated-fork adaptation uses schema 2. Old schema-1 inputs require explicit migration; issued business IDs, wording, candidate status and dependencies are preserved. This record is not auto-accepted by the implementation PR."
+    },
+    {
+      "id": "LEGACY-WORK-014",
+      "title": "Resolve GUI adaptation contract and verification prerequisites",
+      "summary": "Resolve the schema compatibility conflict and establish complete registered verification coverage before a fresh WP-013 execution.",
+      "scope": "all",
+      "work_package_type": "systems_engineering",
+      "status": "Backlog",
+      "priority": "P0",
+      "functionality_ids": [
+        "LEGACY-CAP-001",
+        "LEGACY-CAP-005"
+      ],
+      "depends_on": [
+        "LEGACY-WORK-002"
+      ],
+      "target_repositories": [
+        "matheusns/legacy"
+      ],
+      "path": "docs/work_packages/LEGACY-WORK-014.md",
+      "acceptance_criteria": [
+        "Record an explicit SE disposition of WP-013 legacy-manifest compatibility versus schema-2-only loading; synchronize the manifest, WP-013 document and adaptation handoff without silently waiving compatibility.",
+        "Define and register real deterministic verification suites for every non-read-only WP-013 repository (gui, control, verification), including GUI Python/JS and GitHub adapter regressions, control ingestion/validation, and harness checks.",
+        "Specify executable commands, prerequisites, source repository coverage, desktop/mobile applicability, schema-version-1 result reports and candidate freshness; tooling-fixture evidence must not imply product acceptance.",
+        "Demonstrate suite selection covers WP-013's full allocation before a fresh preparation. If adapters are missing, create separately allocated technical predecessor WPs with an executable verification bootstrap, link them to WP-013 and retain the blocker until they are accepted.",
+        "Record independent SE review and operator acceptance of the reconciled contract; retain WP-013's unit-test and product execution gates and require a fresh WP-013 prompt after prerequisite acceptance."
+      ],
+      "unit_test_gate": {
+        "required": false,
+        "rationale": "Control-only SE definition and review; executable adapter implementation belongs in separately allocated technical predecessors with required tests.",
+        "test_description": "Validate business baseline, GUI manifest ingestion and dependency graph; inspect WP-013 suite allocation and report contracts; record independent SE review."
+      },
+      "repository_ids": [
+        "control"
+      ],
+      "repository_access": {
+        "control": "write"
+      },
+      "component_ids": [
+        "identity-access",
+        "app-shell"
+      ],
+      "executor_agent_id": "architecture",
+      "target_profile_ids": [
+        "desktop-browser",
+        "mobile-browser"
+      ]
     }
   ],
   "artifacts": [
