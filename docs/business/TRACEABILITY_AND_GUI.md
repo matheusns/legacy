@@ -1,8 +1,8 @@
 ---
 project: LEGAVIA
 artifact_status: baseline-candidate
-version: 0.1.0
-date: 2026-10-29
+version: 0.1.1
+date: 2026-11-02
 control_repository: matheusns/legacy
 review_gate: Systems Engineering approval required
 ---
@@ -18,7 +18,7 @@ The product definition is owned by `matheusns/legacy`. `traceability/manifest.js
 Before executing application Work Packages from the GUI, implement and accept **LEGACY-WORK-013** (project component/device filters, native use-case/ConOps panels, GitHub PR provider and application runner integration). Read-only manifest visualization is possible independently; the historical ROS/GitLab execution behavior is not an approved Legavia workflow.
 
 ## Engineering schema migration
-The dedicated Legavia GUI now uses engineering schema 2 with the declared native application components and separate desktop/mobile profiles. The schema-1 business manifest was migrated explicitly. All issued IDs, requirement wording, Candidate/Backlog/Planned status, target-repository references, use-case/FVT links, and work dependencies remain unchanged. Old schema-1 inputs require migration; the approved fork adaptation does not retain robotics executor compatibility.
+The dedicated Legavia GUI now uses engineering schema 2 with the declared native application components and separate desktop/mobile profiles. The schema-1 business manifest was migrated explicitly. All issued IDs, requirement wording, Candidate/Backlog/Planned status, target-repository references, use-case/FVT links, and work dependencies remain unchanged. Old schema-1 inputs require migration; the approved fork adaptation does not retain robotics executor compatibility. The Systems Engineering disposition of this behaviour against LEGACY-WORK-013's original compatibility wording is drafted in `docs/reviews/LEGACY-SE-REVIEW-003.md` (schema-2-only loading with explicit rejection and migration guidance); it is effective on human signature, and no schema-1 manifest exists in this repository.
 
 `component_ids` references native business capabilities, `repository_ids` and `repository_access` define execution authority, and target profiles distinguish desktop browser, mobile browser, and an installed-PWA adapter that remains unavailable. The local role adapters are configured, while actual product commands and approved screenshot references remain pending. The existing acceptance gate on LEGACY-WORK-013 remains in force.
 

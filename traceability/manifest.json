@@ -3652,7 +3652,8 @@
       ],
       "depends_on": [
         "LEGACY-WORK-002",
-        "LEGACY-WORK-014"
+        "LEGACY-WORK-014",
+        "LEGACY-WORK-015"
       ],
       "target_repositories": [
         "matheusns/legavia_sdlc_gui",
@@ -3661,7 +3662,7 @@
       ],
       "path": "docs/work_packages/LEGACY-WORK-013.md",
       "acceptance_criteria": [
-        "GUI displays native application components and mobile/desktop profiles without ROS/library/node semantics; reads and links business use cases, ConOps and controlled requirement documents; GitHub PR/status adapters replace GitLab defaults; deterministic application test runners and candidate-stamped evidence are registered; legacy manifest validation remains supported."
+        "GUI displays native application components and mobile/desktop profiles without ROS/library/node semantics; reads and links business use cases, ConOps and controlled requirement documents; GitHub PR/status adapters replace GitLab defaults; deterministic application test runners and candidate-stamped evidence are registered; validation of the canonical schema-2 manifest remains supported and schema-1 inputs are rejected with explicit migration guidance (LEGACY-SE-REVIEW-003 disposition, effective on human signature)."
       ],
       "unit_test_gate": {
         "required": true,
@@ -3687,7 +3688,7 @@
         "desktop-browser",
         "mobile-browser"
       ],
-      "migration_note": "Approved dedicated-fork adaptation uses schema 2. Old schema-1 inputs require explicit migration; issued business IDs, wording, candidate status and dependencies are preserved. This record is not auto-accepted by the implementation PR."
+      "migration_note": "Approved dedicated-fork adaptation uses schema 2. Old schema-1 inputs require explicit migration and are rejected by the loader with migration guidance; issued business IDs, wording, candidate status and dependencies are preserved. LEGACY-SE-REVIEW-003 drafts this disposition (Option A) and records Option B (schema-1 read path) as evaluated and not recommended; it takes effect on human signature. Suites gui-checks and control-checks bind to wrappers delivered by LEGACY-WORK-015; until that predecessor is accepted, their readiness reports a missing prerequisite by design. This record is not auto-accepted by the implementation PR."
     },
     {
       "id": "LEGACY-WORK-014",
@@ -3735,6 +3736,57 @@
         "desktop-browser",
         "mobile-browser"
       ]
+    },
+    {
+      "id": "LEGACY-WORK-015",
+      "title": "Deliver schema-version-1 report wrappers for the GUI and control verification suites",
+      "summary": "Make the registered gui-checks and control-checks suites executable by delivering tested report wrappers in the GUI and control repositories; technical predecessor of LEGACY-WORK-013.",
+      "scope": "all",
+      "work_package_type": "technical",
+      "status": "Backlog",
+      "priority": "P0",
+      "functionality_ids": [
+        "LEGACY-CAP-001",
+        "LEGACY-CAP-005"
+      ],
+      "depends_on": [
+        "LEGACY-WORK-002"
+      ],
+      "target_repositories": [
+        "matheusns/legavia_sdlc_gui",
+        "matheusns/legacy"
+      ],
+      "path": "docs/work_packages/LEGACY-WORK-015.md",
+      "acceptance_criteria": [
+        "legavia_sdlc_gui tools/report_checks.py runs the Python unittest discovery and the JavaScript node --test suites, writes one schema-version-1 case per real test with actual status and duration to SDLC_RESULT_PATH, exits nonzero on any failure, error or empty discovery, and never fabricates cases.",
+        "legacy tools/report_control_checks.py runs the business-baseline validator, the control tools unittest discovery and the GUI --validate-only ingestion of traceability/manifest.json with the same report contract; an unavailable GUI package is an error case, never a silent skip.",
+        "Wrapper unit tests exist in both repositories and cover passing, failing, erroring and missing-runner paths plus the report schema; GUI CI keeps running the wrapper-free commands.",
+        "At the delivered candidate the GUI verification status reports gui-checks and control-checks as available, and a WP-015 acceptance run covering gui and control completes with outcome Pass and a recorded candidate fingerprint.",
+        "No Work Package ID appears in product source; tooling-fixture, the product execution gate and LEGACY-WORK-013's status and acceptance criteria are unchanged."
+      ],
+      "unit_test_gate": {
+        "required": true,
+        "rationale": "The wrappers are executable verification adapters; their own report contract must be exercised by registered checks and unit tests before any package depends on them.",
+        "test_description": "Run gui-checks and control-checks through the runner; execute the wrapper unit tests in both repositories; inspect the schema-version-1 reports and candidate fingerprint."
+      },
+      "repository_ids": [
+        "gui",
+        "control"
+      ],
+      "repository_access": {
+        "gui": "write",
+        "control": "write"
+      },
+      "component_ids": [
+        "identity-access",
+        "app-shell"
+      ],
+      "executor_agent_id": "development",
+      "target_profile_ids": [
+        "desktop-browser",
+        "mobile-browser"
+      ],
+      "migration_note": "Technical predecessor created by LEGACY-WORK-014. It depends only on LEGACY-WORK-002 and must never depend on LEGACY-WORK-013. Suite registrations are owned by Systems Engineering; implementation deviations are reported, not applied silently."
     }
   ],
   "artifacts": [
@@ -4674,6 +4726,52 @@
   },
   "verification_execution": {
     "suites": [
+      {
+        "id": "gui-checks",
+        "label": "GUI Python/JS and GitHub adapter regression · desktop/mobile not applicable",
+        "kind": "unit",
+        "repository_id": "gui",
+        "component_ids": [],
+        "target_profile_ids": [],
+        "command": [
+          "{python}",
+          "tools/report_checks.py"
+        ],
+        "required_paths": [
+          "tools/report_checks.py",
+          "src/sdlc_gui",
+          "tests"
+        ],
+        "source_repository_ids": [
+          "gui"
+        ],
+        "result_file": "result.json",
+        "timeout_seconds": 900
+      },
+      {
+        "id": "control-checks",
+        "label": "Control baseline validation and GUI manifest ingestion · desktop/mobile not applicable",
+        "kind": "unit",
+        "repository_id": "control",
+        "component_ids": [],
+        "target_profile_ids": [],
+        "command": [
+          "{python}",
+          "tools/report_control_checks.py"
+        ],
+        "required_paths": [
+          "tools/report_control_checks.py",
+          "tools/validate_business_baseline.py",
+          "traceability/manifest.json",
+          "traceability/business_baseline.json"
+        ],
+        "source_repository_ids": [
+          "control",
+          "gui"
+        ],
+        "result_file": "result.json",
+        "timeout_seconds": 300
+      },
       {
         "id": "tooling-fixture",
         "label": "Tooling fixture · desktop and phone",
