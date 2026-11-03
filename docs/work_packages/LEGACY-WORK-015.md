@@ -3,8 +3,8 @@ project: LEGAVIA
 artifact_id: LEGACY-WORK-015
 artifact_type: work_package
 artifact_status: baseline-candidate
-version: 0.1.0
-date: 2026-11-02
+version: 0.1.1
+date: 2026-11-03
 control_repository: matheusns/legacy
 review_gate: Systems Engineering approval required
 ---
@@ -40,7 +40,7 @@ Until these wrappers exist, `command_readiness` reports `Registered prerequisite
 
 ### control: `tools/report_control_checks.py`
 
-1. Run, from the control repository root: `tools/validate_business_baseline.py` as a subprocess (the module validates on import); `python -m unittest discover -s tools -p "test_*.py"`; and the GUI ingestion `python -m sdlc_gui.cli --manifest traceability/manifest.json --validate-only` with `sys.path`/`PYTHONPATH` extended by `<gui repository path>/src`, where the GUI path is resolved from `repositories[].path` of the manifest (`../legavia_sdlc_gui`).
+1. Run, from the control repository root: `tools/validate_business_baseline.py` as a subprocess (the module validates on import); `python -m unittest discover -s tools -p "test_*.py"`; and the GUI ingestion `python -m sdlc_gui --manifest traceability/manifest.json --validate-only` (the package `__main__`, or an in-process call of `sdlc_gui.cli.main`) with `sys.path`/`PYTHONPATH` extended by `<gui repository path>/src`, where the GUI path is resolved from `repositories[].path` of the manifest (`../legavia_sdlc_gui`). Do not invoke `python -m sdlc_gui.cli`: that module has no `__main__` guard, so it imports and exits 0 without validating anything (LEGACY-SE-REVIEW-003 finding SE3-F-009). The wrapper test must prove the ingestion case fails on an invalid manifest.
 2. Emit the same schema-version-1 report to `$SDLC_RESULT_PATH`: one case for the validator, one per unittest case, one for GUI ingestion. If the `sdlc_gui` package cannot be imported, record an `error` case `gui-ingestion: sdlc_gui unavailable` and exit 1; never skip silently.
 3. Add `tools/test_report_control_checks.py` covering the schema, the error mapping for a failing validator, a missing GUI package, and the result path contract.
 4. Do not introduce third-party dependencies in either wrapper (standard library only, consistent with `validate_business_baseline.py`).

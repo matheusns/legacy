@@ -49,3 +49,7 @@ Run python3 tools/validate_business_baseline.py and the GUI manifest validator a
 The SE unit-test gate is Not Applicable only because this WP changes controlled definitions, not executable adapters. It is not a waiver for WP-013 or any new technical predecessor. Independent architecture review and explicit operator acceptance remain required.
 
 WP-014 may complete with explicitly mapped technical prerequisites, but WP-013 remains blocked until all of its predecessors are accepted and runnable suite coverage is demonstrated. Do not mark WP-013 Done, promote product requirements, remove application_execution_gate, claim tooling-fixture product acceptance, or resume the frozen failed run. After all prerequisites are accepted and published, update the workspace to main and generate a fresh WP-013 prompt.
+
+## Git publication
+
+- Operator accepted the fingerprinted WP file set. The runner commits and pushes it after this disposition; publication status is tracked separately from approval.
