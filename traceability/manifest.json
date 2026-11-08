@@ -4124,9 +4124,9 @@
       "id": "LEGACY-SE-REVIEW-003",
       "type": "review_record",
       "scope": "all",
-      "status": "Draft",
+      "status": "Signed",
       "path": "docs/reviews/LEGACY-SE-REVIEW-003.md",
-      "title": "SE disposition of GUI adaptation compatibility and verification coverage (unsigned draft)",
+      "title": "SE disposition of GUI adaptation compatibility and verification coverage (signed)",
       "work_package_ids": [
         "LEGACY-WORK-014"
       ]
