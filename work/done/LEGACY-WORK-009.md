@@ -31,3 +31,7 @@ Bootstrap controlled browser and visual regression adapters. Changes shall follo
 
 ## Done definition
 Never infer Done from generated text or commit alone. This package is Done only when Systems Engineering records accepted candidate evidence in the GUI/control manifest.
+
+## Git publication
+
+- Operator accepted the fingerprinted WP file set. The runner commits and pushes it after this disposition; publication status is tracked separately from approval.
