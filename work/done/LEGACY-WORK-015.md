@@ -68,3 +68,7 @@ Candidate-bound unit test gate required. The runner's registered-check stage sel
 ## Verification and completion boundary
 
 Evidence: the runner-owned verification run for this package (schema-version-1 reports for both suites, candidate fingerprint, source snapshot), the GUI CI results for the implementation PR, and the independent reviews. Fixture and tooling passes are tooling evidence only. After acceptance and publication to `origin/main` in both repositories, follow `docs/engineering/WP013_READINESS_CHECKLIST.md` before preparing a fresh LEGACY-WORK-013 prompt.
+
+## Git publication
+
+- Operator accepted the fingerprinted WP file set. The runner commits and pushes it after this disposition; publication status is tracked separately from approval.

@@ -13,8 +13,9 @@ ROOT = Path(__file__).resolve().parents[1]
 
 
 def ingestion(root, artifacts):
-    for suffix in ('.stdout.log', '.stderr.log'):
-        (artifacts / ('gui-ingestion' + suffix)).unlink(missing_ok=True)
+    for label in ('gui-import', 'gui-ingestion'):
+        for suffix in ('.stdout.log', '.stderr.log'):
+            (artifacts / (label + suffix)).unlink(missing_ok=True)
     started = time.perf_counter()
     manifest = root / 'traceability/manifest.json'
     try:
@@ -31,8 +32,17 @@ def ingestion(root, artifacts):
     env = dict(os.environ)
     # Do not fall back to another installed GUI or inherited source checkout.
     env['PYTHONPATH'] = str(source)
-    _, outcome = command([sys.executable, '-m', 'sdlc_gui', '--manifest',
+    # Import the entry point without invoking its guarded CLI. This separates
+    # an unusable package/dependency from a rejected manifest. Safe-path mode
+    # prevents a package in the control working directory shadowing this source.
+    result, _ = command([sys.executable, '-P', '-c', 'import sdlc_gui.__main__'],
+                        root, artifacts, 'gui-import', env)
+    if result is None or result.returncode != 0:
+        return case('gui-ingestion', 'error', time.perf_counter() - started,
+                    'Manifest-resolved GUI package is unavailable; see gui-import logs')
+    _, outcome = command([sys.executable, '-P', '-m', 'sdlc_gui', '--manifest',
                            str(manifest), '--validate-only'], root, artifacts, 'gui-ingestion', env)
+    outcome['duration_seconds'] = time.perf_counter() - started
     return outcome
 
 
@@ -42,7 +52,7 @@ def main(root=ROOT):
                           root, artifacts, 'business-baseline')
     cases = [baseline, *python_cases(root, root / 'tools', artifacts), ingestion(root, artifacts)]
     return write_report(output, cases, report_artifacts(
-        artifacts, ['business-baseline', 'python', 'gui-ingestion']))
+        artifacts, ['business-baseline', 'python', 'gui-import', 'gui-ingestion']))
 
 
 if __name__ == '__main__':

@@ -100,6 +100,32 @@ class Cases(unittest.TestCase):
         self.assertEqual(case['status'], 'failed')
         self.assertTrue((self.artifacts / 'gui-ingestion.stderr.log').is_file())
 
+    def test_existing_unimportable_gui_is_error(self):
+        package = self.root / 'gui/src/sdlc_gui'
+        for filename, body in (
+                ('__init__.py', 'import missing_gui_fixture_dependency\n'),
+                ('__main__.py', 'raise ImportError("broken entry point")\n'),
+                ('__main__.py', 'invalid syntax here!\n')):
+            with self.subTest(filename=filename, body=body):
+                (package / '__init__.py').write_text('')
+                (package / '__main__.py').write_text('')
+                (package / filename).write_text(body)
+                status, cases = self.run_wrapper()
+                self.assertEqual(status, 1)
+                self.assertEqual(cases[-1]['status'], 'error')
+                self.assertIn('unavailable', cases[-1]['message'])
+                report = json.loads(self.output.read_text())
+                self.assertIn(str(self.artifacts / 'gui-import.stderr.log'), report['artifacts'])
+                self.assertFalse((self.artifacts / 'gui-ingestion.stdout.log').exists())
+
+    def test_control_directory_cannot_shadow_manifest_gui(self):
+        shadow = self.root / 'sdlc_gui'
+        shadow.mkdir()
+        (shadow / '__init__.py').write_text('raise RuntimeError("wrong checkout")\n')
+        status, cases = self.run_wrapper()
+        self.assertEqual(status, 0)
+        self.assertEqual(cases[-1]['status'], 'passed')
+
     def test_report_consumable_by_gui(self):
         control = Path(__file__).resolve().parents[1]
         data = json.loads((control / 'traceability/manifest.json').read_text())
@@ -136,6 +162,7 @@ class Cases(unittest.TestCase):
         self.run_wrapper()
         report = json.loads(self.output.read_text())
         self.assertFalse(any('gui-ingestion.' in p for p in report['artifacts']))
+        self.assertFalse(any('gui-import.' in p for p in report['artifacts']))
 
     def test_malformed_worker_reports_are_error_cases(self):
         valid = support.case('fixture', 'passed', 0.01)
