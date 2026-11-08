@@ -3644,7 +3644,7 @@
       "summary": "Implement Legavia application component/device filters and GitHub-backed development, verification, review and evidence integration.",
       "scope": "all",
       "work_package_type": "technical",
-      "status": "Backlog",
+      "status": "Done",
       "priority": "P0",
       "functionality_ids": [
         "LEGACY-CAP-001",
@@ -3660,7 +3660,7 @@
         "matheusns/legacy",
         "matheusns/legacy_verification_tooling"
       ],
-      "path": "docs/work_packages/LEGACY-WORK-013.md",
+      "path": "work/done/LEGACY-WORK-013.md",
       "acceptance_criteria": [
         "GUI displays native application components and mobile/desktop profiles without ROS/library/node semantics; reads and links business use cases, ConOps and controlled requirement documents; GitHub PR/status adapters replace GitLab defaults; deterministic application test runners and candidate-stamped evidence are registered; validation of the canonical schema-2 manifest remains supported and schema-1 inputs are rejected with explicit migration guidance (LEGACY-SE-REVIEW-003 disposition, effective on human signature)."
       ],
@@ -3688,7 +3688,492 @@
         "desktop-browser",
         "mobile-browser"
       ],
-      "migration_note": "Approved dedicated-fork adaptation uses schema 2. Old schema-1 inputs require explicit migration and are rejected by the loader with migration guidance; issued business IDs, wording, candidate status and dependencies are preserved. LEGACY-SE-REVIEW-003 drafts this disposition (Option A) and records Option B (schema-1 read path) as evaluated and not recommended; it takes effect on human signature. Suites gui-checks and control-checks bind to wrappers delivered by LEGACY-WORK-015; until that predecessor is accepted, their readiness reports a missing prerequisite by design. This record is not auto-accepted by the implementation PR."
+      "migration_note": "Approved dedicated-fork adaptation uses schema 2. Old schema-1 inputs require explicit migration and are rejected by the loader with migration guidance; issued business IDs, wording, candidate status and dependencies are preserved. LEGACY-SE-REVIEW-003 drafts this disposition (Option A) and records Option B (schema-1 read path) as evaluated and not recommended; it takes effect on human signature. Suites gui-checks and control-checks bind to wrappers delivered by LEGACY-WORK-015; until that predecessor is accepted, their readiness reports a missing prerequisite by design. This record is not auto-accepted by the implementation PR.",
+      "review": {
+        "disposition": "Accepted",
+        "run_id": "DEV-20261108T160612Z-F18C40",
+        "reviewed_at": "2026-11-08T19:53:16.198227Z",
+        "review_note": null,
+        "acceptance_criteria_confirmed": [],
+        "attention_acknowledged": false,
+        "completion_boundary_acknowledged": true,
+        "git_reconciliation_acknowledged": true,
+        "git_reconciliation": {
+          "available": true,
+          "enforced": true,
+          "automatic_publication": true,
+          "ready_for_acceptance": true,
+          "blocking_reasons": [],
+          "repositories": [
+            {
+              "id": "gui",
+              "head": "b606b46f246a830ede668da803a9a96b873d93ad",
+              "files": {
+                "docs/TRACEABILITY_MODEL.md": "7db8178242809181f7a9cd840ebf1023ed0500ef6b628b05d8825ae5dd5b2122:100644",
+                "src/sdlc_gui/architecture.py": "337d4ceedea36e60dfab2f9d00940f377d7395b7cb0a4aaed3c52405932adf75:100644",
+                "src/sdlc_gui/cli.py": "c83a4f8070c3f9d1a65d4597442f1ddc4543d1648131c5cdb040fa3a9d81c172:100644",
+                "src/sdlc_gui/code_review.py": "6612fe51cdb820f5d2e7b1ceb57f1f8b7d688a78d6fba36e4024af68c199b7f3:100644",
+                "src/sdlc_gui/development.py": "95e2f4f93046d7141ff6399fc282d4cf4e2aa1f9d3eb498a4094bff70e780377:100644",
+                "src/sdlc_gui/ux.py": "3e366aae05bb8f0dd28dc4c1be14a489f3b10625337f975203320bab1fd7d101:100644",
+                "tests/test_business.py": "fdd3ede0564e0bc79931ee6c4f3df7e7a9cb128252af1dbdfdc3cf14f20fb19d:100644",
+                "tests/test_cli.py": "52b56dcd1b53c4e53c9e527f02ebaf69712863beb92dc9fb5c1e35199ff64110:100644",
+                "tests/test_code_review.py": "c23073b6f67a6ca180858bf05f7272770daf6a448a04e88d141d61ddd3101058:100644",
+                "tests/test_code_review_status.js": "b756cdd000532294a3b32649217b0fcdddfa24f3a95c7d14a2e3527620017fb9:100644",
+                "tests/test_preview_ux.py": "ad7e2978b9e2c087a2527831cecddfc71fe48fb15730b9c186d907d07c486c90:100644",
+                "tests/test_web_assets.py": "29e17d244e04ecaa1d044027f2ea524f2071c3ee14c53660b3f5cc5ae0129745:100644",
+                "web/code_review.js": "5d03e7f131a69919daa9d8ca815f71a52af2cd2516b934f5c85b401dde6ad95b:100644",
+                "web/code_review_status.js": "aee4eb4beba2c4663dde6add06a0e7c8ed4cb5bac34faf002d8079b9f55766e8:100644",
+                "web/index.html": "a7ca173c7d6619da5af6c55802310a9268b9424ac7039ea57dcf03dddbd95670:100644",
+                "web/styles.css": "d4e26aeccc02ce8910f3e887b2e98760f0bfc7d588d19d63cba1225e636013e0:100644"
+              },
+              "current_head": "b606b46f246a830ede668da803a9a96b873d93ad",
+              "baseline_commit": "b606b46f246a830ede668da803a9a96b873d93ad",
+              "current_branch": "main",
+              "expected_branch": "main",
+              "branch_matches": true,
+              "baseline_is_ancestor": true,
+              "working_tree_clean": false,
+              "manual_commits": [],
+              "effective_changes": [
+                {
+                  "repository": "gui",
+                  "path": "docs/TRACEABILITY_MODEL.md",
+                  "change_type": "modified"
+                },
+                {
+                  "repository": "gui",
+                  "path": "src/sdlc_gui/architecture.py",
+                  "change_type": "modified"
+                },
+                {
+                  "repository": "gui",
+                  "path": "src/sdlc_gui/cli.py",
+                  "change_type": "modified"
+                },
+                {
+                  "repository": "gui",
+                  "path": "src/sdlc_gui/code_review.py",
+                  "change_type": "modified"
+                },
+                {
+                  "repository": "gui",
+                  "path": "src/sdlc_gui/development.py",
+                  "change_type": "modified"
+                },
+                {
+                  "repository": "gui",
+                  "path": "src/sdlc_gui/ux.py",
+                  "change_type": "modified"
+                },
+                {
+                  "repository": "gui",
+                  "path": "tests/test_business.py",
+                  "change_type": "modified"
+                },
+                {
+                  "repository": "gui",
+                  "path": "tests/test_cli.py",
+                  "change_type": "created"
+                },
+                {
+                  "repository": "gui",
+                  "path": "tests/test_code_review.py",
+                  "change_type": "modified"
+                },
+                {
+                  "repository": "gui",
+                  "path": "tests/test_code_review_status.js",
+                  "change_type": "modified"
+                },
+                {
+                  "repository": "gui",
+                  "path": "tests/test_preview_ux.py",
+                  "change_type": "modified"
+                },
+                {
+                  "repository": "gui",
+                  "path": "tests/test_web_assets.py",
+                  "change_type": "modified"
+                },
+                {
+                  "repository": "gui",
+                  "path": "web/code_review.js",
+                  "change_type": "modified"
+                },
+                {
+                  "repository": "gui",
+                  "path": "web/code_review_status.js",
+                  "change_type": "modified"
+                },
+                {
+                  "repository": "gui",
+                  "path": "web/index.html",
+                  "change_type": "modified"
+                },
+                {
+                  "repository": "gui",
+                  "path": "web/styles.css",
+                  "change_type": "modified"
+                }
+              ],
+              "patch_sha256": "7e8d83a392f0af887654ad548e52777ed823f085c21a9c2fb9486cf0bd45cfed",
+              "automatic_publication": true
+            },
+            {
+              "id": "verification",
+              "head": "7b7973b6dd463a5a050695eb34288fad52d749ee",
+              "files": {
+                "harness/capture.cjs": "63ab49fd39b83f5071a517bc2caf52f9ec8b4f3f3b3282a882d873c3aa755965:100644",
+                "tests/harness.test.cjs": "f664b6582cfd302042038c861ad68e2b774efcd1bd801ca2dea2df8e97922d82:100644"
+              },
+              "current_head": "7b7973b6dd463a5a050695eb34288fad52d749ee",
+              "baseline_commit": "7b7973b6dd463a5a050695eb34288fad52d749ee",
+              "current_branch": "main",
+              "expected_branch": "main",
+              "branch_matches": true,
+              "baseline_is_ancestor": true,
+              "working_tree_clean": false,
+              "manual_commits": [],
+              "effective_changes": [
+                {
+                  "repository": "verification",
+                  "path": "harness/capture.cjs",
+                  "change_type": "modified"
+                },
+                {
+                  "repository": "verification",
+                  "path": "tests/harness.test.cjs",
+                  "change_type": "modified"
+                }
+              ],
+              "patch_sha256": "a01be325efcf37a817269d387d6a8fcfa146a518090516a6f8d164b7ceb5e0e5",
+              "automatic_publication": true
+            },
+            {
+              "id": "control",
+              "head": "8629ae3e930455846220b527cbb8fcf097e785d9",
+              "files": {
+                "docs/engineering/ADAPTATION_HANDOFF.md": "13bbc989bfa84c9d9ed06508b563126de41cd2efd1639588ef16dd451318aaf8:100644"
+              },
+              "current_head": "8629ae3e930455846220b527cbb8fcf097e785d9",
+              "baseline_commit": "8629ae3e930455846220b527cbb8fcf097e785d9",
+              "current_branch": "main",
+              "expected_branch": "main",
+              "branch_matches": true,
+              "baseline_is_ancestor": true,
+              "working_tree_clean": false,
+              "manual_commits": [],
+              "effective_changes": [
+                {
+                  "repository": "control",
+                  "path": "docs/engineering/ADAPTATION_HANDOFF.md",
+                  "change_type": "modified"
+                }
+              ],
+              "patch_sha256": "096552066a576953f767f3cd51e6216705414cea84e1593541c3f01c69841d6a",
+              "automatic_publication": true
+            }
+          ],
+          "manual_commits": [],
+          "effective_changes": [
+            {
+              "repository": "gui",
+              "path": "docs/TRACEABILITY_MODEL.md",
+              "change_type": "modified"
+            },
+            {
+              "repository": "gui",
+              "path": "src/sdlc_gui/architecture.py",
+              "change_type": "modified"
+            },
+            {
+              "repository": "gui",
+              "path": "src/sdlc_gui/cli.py",
+              "change_type": "modified"
+            },
+            {
+              "repository": "gui",
+              "path": "src/sdlc_gui/code_review.py",
+              "change_type": "modified"
+            },
+            {
+              "repository": "gui",
+              "path": "src/sdlc_gui/development.py",
+              "change_type": "modified"
+            },
+            {
+              "repository": "gui",
+              "path": "src/sdlc_gui/ux.py",
+              "change_type": "modified"
+            },
+            {
+              "repository": "gui",
+              "path": "tests/test_business.py",
+              "change_type": "modified"
+            },
+            {
+              "repository": "gui",
+              "path": "tests/test_cli.py",
+              "change_type": "created"
+            },
+            {
+              "repository": "gui",
+              "path": "tests/test_code_review.py",
+              "change_type": "modified"
+            },
+            {
+              "repository": "gui",
+              "path": "tests/test_code_review_status.js",
+              "change_type": "modified"
+            },
+            {
+              "repository": "gui",
+              "path": "tests/test_preview_ux.py",
+              "change_type": "modified"
+            },
+            {
+              "repository": "gui",
+              "path": "tests/test_web_assets.py",
+              "change_type": "modified"
+            },
+            {
+              "repository": "gui",
+              "path": "web/code_review.js",
+              "change_type": "modified"
+            },
+            {
+              "repository": "gui",
+              "path": "web/code_review_status.js",
+              "change_type": "modified"
+            },
+            {
+              "repository": "gui",
+              "path": "web/index.html",
+              "change_type": "modified"
+            },
+            {
+              "repository": "gui",
+              "path": "web/styles.css",
+              "change_type": "modified"
+            },
+            {
+              "repository": "verification",
+              "path": "harness/capture.cjs",
+              "change_type": "modified"
+            },
+            {
+              "repository": "verification",
+              "path": "tests/harness.test.cjs",
+              "change_type": "modified"
+            },
+            {
+              "repository": "control",
+              "path": "docs/engineering/ADAPTATION_HANDOFF.md",
+              "change_type": "modified"
+            }
+          ],
+          "manual_commit_count": 0,
+          "effective_change_count": 19,
+          "adjustments": [],
+          "fingerprint": "ad0e740e34e9686abc8f4dea7c86117e732e13242f2eb243081987fe2661ed5b",
+          "publication_plan": {
+            "work_package_id": "LEGACY-WORK-013",
+            "run_id": "DEV-20261108T160612Z-F18C40",
+            "remote": "origin",
+            "branch": "main",
+            "repositories": [
+              {
+                "id": "gui",
+                "head": "b606b46f246a830ede668da803a9a96b873d93ad",
+                "files": {
+                  "docs/TRACEABILITY_MODEL.md": "7db8178242809181f7a9cd840ebf1023ed0500ef6b628b05d8825ae5dd5b2122:100644",
+                  "src/sdlc_gui/architecture.py": "337d4ceedea36e60dfab2f9d00940f377d7395b7cb0a4aaed3c52405932adf75:100644",
+                  "src/sdlc_gui/cli.py": "c83a4f8070c3f9d1a65d4597442f1ddc4543d1648131c5cdb040fa3a9d81c172:100644",
+                  "src/sdlc_gui/code_review.py": "6612fe51cdb820f5d2e7b1ceb57f1f8b7d688a78d6fba36e4024af68c199b7f3:100644",
+                  "src/sdlc_gui/development.py": "95e2f4f93046d7141ff6399fc282d4cf4e2aa1f9d3eb498a4094bff70e780377:100644",
+                  "src/sdlc_gui/ux.py": "3e366aae05bb8f0dd28dc4c1be14a489f3b10625337f975203320bab1fd7d101:100644",
+                  "tests/test_business.py": "fdd3ede0564e0bc79931ee6c4f3df7e7a9cb128252af1dbdfdc3cf14f20fb19d:100644",
+                  "tests/test_cli.py": "52b56dcd1b53c4e53c9e527f02ebaf69712863beb92dc9fb5c1e35199ff64110:100644",
+                  "tests/test_code_review.py": "c23073b6f67a6ca180858bf05f7272770daf6a448a04e88d141d61ddd3101058:100644",
+                  "tests/test_code_review_status.js": "b756cdd000532294a3b32649217b0fcdddfa24f3a95c7d14a2e3527620017fb9:100644",
+                  "tests/test_preview_ux.py": "ad7e2978b9e2c087a2527831cecddfc71fe48fb15730b9c186d907d07c486c90:100644",
+                  "tests/test_web_assets.py": "29e17d244e04ecaa1d044027f2ea524f2071c3ee14c53660b3f5cc5ae0129745:100644",
+                  "web/code_review.js": "5d03e7f131a69919daa9d8ca815f71a52af2cd2516b934f5c85b401dde6ad95b:100644",
+                  "web/code_review_status.js": "aee4eb4beba2c4663dde6add06a0e7c8ed4cb5bac34faf002d8079b9f55766e8:100644",
+                  "web/index.html": "a7ca173c7d6619da5af6c55802310a9268b9424ac7039ea57dcf03dddbd95670:100644",
+                  "web/styles.css": "d4e26aeccc02ce8910f3e887b2e98760f0bfc7d588d19d63cba1225e636013e0:100644"
+                },
+                "current_head": "b606b46f246a830ede668da803a9a96b873d93ad",
+                "baseline_commit": "b606b46f246a830ede668da803a9a96b873d93ad",
+                "current_branch": "main",
+                "expected_branch": "main",
+                "branch_matches": true,
+                "baseline_is_ancestor": true,
+                "working_tree_clean": false,
+                "manual_commits": [],
+                "effective_changes": [
+                  {
+                    "repository": "gui",
+                    "path": "docs/TRACEABILITY_MODEL.md",
+                    "change_type": "modified"
+                  },
+                  {
+                    "repository": "gui",
+                    "path": "src/sdlc_gui/architecture.py",
+                    "change_type": "modified"
+                  },
+                  {
+                    "repository": "gui",
+                    "path": "src/sdlc_gui/cli.py",
+                    "change_type": "modified"
+                  },
+                  {
+                    "repository": "gui",
+                    "path": "src/sdlc_gui/code_review.py",
+                    "change_type": "modified"
+                  },
+                  {
+                    "repository": "gui",
+                    "path": "src/sdlc_gui/development.py",
+                    "change_type": "modified"
+                  },
+                  {
+                    "repository": "gui",
+                    "path": "src/sdlc_gui/ux.py",
+                    "change_type": "modified"
+                  },
+                  {
+                    "repository": "gui",
+                    "path": "tests/test_business.py",
+                    "change_type": "modified"
+                  },
+                  {
+                    "repository": "gui",
+                    "path": "tests/test_cli.py",
+                    "change_type": "created"
+                  },
+                  {
+                    "repository": "gui",
+                    "path": "tests/test_code_review.py",
+                    "change_type": "modified"
+                  },
+                  {
+                    "repository": "gui",
+                    "path": "tests/test_code_review_status.js",
+                    "change_type": "modified"
+                  },
+                  {
+                    "repository": "gui",
+                    "path": "tests/test_preview_ux.py",
+                    "change_type": "modified"
+                  },
+                  {
+                    "repository": "gui",
+                    "path": "tests/test_web_assets.py",
+                    "change_type": "modified"
+                  },
+                  {
+                    "repository": "gui",
+                    "path": "web/code_review.js",
+                    "change_type": "modified"
+                  },
+                  {
+                    "repository": "gui",
+                    "path": "web/code_review_status.js",
+                    "change_type": "modified"
+                  },
+                  {
+                    "repository": "gui",
+                    "path": "web/index.html",
+                    "change_type": "modified"
+                  },
+                  {
+                    "repository": "gui",
+                    "path": "web/styles.css",
+                    "change_type": "modified"
+                  }
+                ],
+                "patch_sha256": "7e8d83a392f0af887654ad548e52777ed823f085c21a9c2fb9486cf0bd45cfed",
+                "automatic_publication": true
+              },
+              {
+                "id": "verification",
+                "head": "7b7973b6dd463a5a050695eb34288fad52d749ee",
+                "files": {
+                  "harness/capture.cjs": "63ab49fd39b83f5071a517bc2caf52f9ec8b4f3f3b3282a882d873c3aa755965:100644",
+                  "tests/harness.test.cjs": "f664b6582cfd302042038c861ad68e2b774efcd1bd801ca2dea2df8e97922d82:100644"
+                },
+                "current_head": "7b7973b6dd463a5a050695eb34288fad52d749ee",
+                "baseline_commit": "7b7973b6dd463a5a050695eb34288fad52d749ee",
+                "current_branch": "main",
+                "expected_branch": "main",
+                "branch_matches": true,
+                "baseline_is_ancestor": true,
+                "working_tree_clean": false,
+                "manual_commits": [],
+                "effective_changes": [
+                  {
+                    "repository": "verification",
+                    "path": "harness/capture.cjs",
+                    "change_type": "modified"
+                  },
+                  {
+                    "repository": "verification",
+                    "path": "tests/harness.test.cjs",
+                    "change_type": "modified"
+                  }
+                ],
+                "patch_sha256": "a01be325efcf37a817269d387d6a8fcfa146a518090516a6f8d164b7ceb5e0e5",
+                "automatic_publication": true
+              },
+              {
+                "id": "control",
+                "head": "8629ae3e930455846220b527cbb8fcf097e785d9",
+                "files": {
+                  "docs/engineering/ADAPTATION_HANDOFF.md": "13bbc989bfa84c9d9ed06508b563126de41cd2efd1639588ef16dd451318aaf8:100644"
+                },
+                "current_head": "8629ae3e930455846220b527cbb8fcf097e785d9",
+                "baseline_commit": "8629ae3e930455846220b527cbb8fcf097e785d9",
+                "current_branch": "main",
+                "expected_branch": "main",
+                "branch_matches": true,
+                "baseline_is_ancestor": true,
+                "working_tree_clean": false,
+                "manual_commits": [],
+                "effective_changes": [
+                  {
+                    "repository": "control",
+                    "path": "docs/engineering/ADAPTATION_HANDOFF.md",
+                    "change_type": "modified"
+                  }
+                ],
+                "patch_sha256": "096552066a576953f767f3cd51e6216705414cea84e1593541c3f01c69841d6a",
+                "automatic_publication": true
+              }
+            ]
+          },
+          "reason": "The approved file set is committed and pushed by the runner after acceptance."
+        },
+        "demo_command_promotion": null,
+        "fvt_gate": {
+          "required": false,
+          "ready": true,
+          "state": "Not configured",
+          "test_id": null,
+          "detail": "No controlled FVT is linked to this Work Package."
+        },
+        "unit_test_disposition": "Passed",
+        "unit_test_rationale": "GUI changes require native test suite and web UI regression evidence.",
+        "unit_test_evidence_passed": true,
+        "unit_test_run_id": "UT-20261108T193538Z-2BFE51",
+        "unit_test_candidate_fingerprint": "ad0e740e34e9686abc8f4dea7c86117e732e13242f2eb243081987fe2661ed5b",
+        "engineering_review_ids": [],
+        "engineering_decision_ids": [],
+        "engineering_review_outcomes": {},
+        "engineering_review_manual_approval": null
+      },
+      "lesson_ids_reviewed": [],
+      "latest_development_run_id": "DEV-20261108T160612Z-F18C40"
     },
     {
       "id": "LEGACY-WORK-014",
@@ -5449,7 +5934,7 @@
     "artifact_status": {
       "Candidate": 5,
       "Planned": 1,
-      "Draft": 1
+      "Signed": 1
     },
     "lesson_status": {},
     "scope_counts": {
@@ -5480,9 +5965,9 @@
     },
     "scopes": {
       "all": {
-        "percent": 0.0,
+        "percent": 4.4,
         "total_features": 15,
-        "implementation_unit_features": 0,
+        "implementation_unit_features": 2,
         "verified_features": 0,
         "validated_features": 0,
         "complete_features": 0,
@@ -5493,26 +5978,47 @@
             "scope": "all",
             "owner": "Product/Systems Engineering",
             "gates": {
-              "implementation_unit": false,
+              "implementation_unit": true,
               "verification": false,
               "validation": false
             },
             "components": {
               "identity-access": {
                 "scope": "identity-access",
-                "implementation_unit": false,
+                "implementation_unit": true,
                 "verification": false,
                 "validation": false,
                 "implementation_evidence_ids": [],
                 "unit_test_evidence_ids": [],
-                "implementation_unit_evidence": [],
+                "implementation_unit_evidence": [
+                  {
+                    "source": "accepted_work_package",
+                    "work_package_id": "LEGACY-WORK-015",
+                    "development_run_id": "DEV-20261108T140747Z-24A41F",
+                    "unit_test_run_id": "UT-20261108T141622Z-0E7A45",
+                    "candidate_fingerprint": "8d08e1936d67a639f9ab634b10e62258da63e814e530a5b1d52000e0c72295dd",
+                    "acceptance_policy": "current",
+                    "production_change_count": 2
+                  }
+                ],
                 "verification_evidence_ids": [],
                 "validation_evidence_ids": []
               }
             },
-            "implementation_unit_evidence": [],
-            "score": 0,
-            "percent": 0.0,
+            "implementation_unit_evidence": [
+              {
+                "source": "accepted_work_package",
+                "work_package_id": "LEGACY-WORK-015",
+                "development_run_id": "DEV-20261108T140747Z-24A41F",
+                "unit_test_run_id": "UT-20261108T141622Z-0E7A45",
+                "candidate_fingerprint": "8d08e1936d67a639f9ab634b10e62258da63e814e530a5b1d52000e0c72295dd",
+                "acceptance_policy": "current",
+                "production_change_count": 2,
+                "scope": "identity-access"
+              }
+            ],
+            "score": 0.333333,
+            "percent": 33.3,
             "complete": false,
             "functionality_verification": null,
             "implemented": null
@@ -5613,26 +6119,47 @@
             "scope": "all",
             "owner": "Product/Systems Engineering",
             "gates": {
-              "implementation_unit": false,
+              "implementation_unit": true,
               "verification": false,
               "validation": false
             },
             "components": {
               "app-shell": {
                 "scope": "app-shell",
-                "implementation_unit": false,
+                "implementation_unit": true,
                 "verification": false,
                 "validation": false,
                 "implementation_evidence_ids": [],
                 "unit_test_evidence_ids": [],
-                "implementation_unit_evidence": [],
+                "implementation_unit_evidence": [
+                  {
+                    "source": "accepted_work_package",
+                    "work_package_id": "LEGACY-WORK-015",
+                    "development_run_id": "DEV-20261108T140747Z-24A41F",
+                    "unit_test_run_id": "UT-20261108T141622Z-0E7A45",
+                    "candidate_fingerprint": "8d08e1936d67a639f9ab634b10e62258da63e814e530a5b1d52000e0c72295dd",
+                    "acceptance_policy": "current",
+                    "production_change_count": 2
+                  }
+                ],
                 "verification_evidence_ids": [],
                 "validation_evidence_ids": []
               }
             },
-            "implementation_unit_evidence": [],
-            "score": 0,
-            "percent": 0.0,
+            "implementation_unit_evidence": [
+              {
+                "source": "accepted_work_package",
+                "work_package_id": "LEGACY-WORK-015",
+                "development_run_id": "DEV-20261108T140747Z-24A41F",
+                "unit_test_run_id": "UT-20261108T141622Z-0E7A45",
+                "candidate_fingerprint": "8d08e1936d67a639f9ab634b10e62258da63e814e530a5b1d52000e0c72295dd",
+                "acceptance_policy": "current",
+                "production_change_count": 2,
+                "scope": "app-shell"
+              }
+            ],
+            "score": 0.333333,
+            "percent": 33.3,
             "complete": false,
             "functionality_verification": null,
             "implemented": null
@@ -5980,9 +6507,9 @@
         ]
       },
       "app-shell": {
-        "percent": 0.0,
+        "percent": 33.3,
         "total_features": 1,
-        "implementation_unit_features": 0,
+        "implementation_unit_features": 1,
         "verified_features": 0,
         "validated_features": 0,
         "complete_features": 0,
@@ -5993,26 +6520,47 @@
             "scope": "all",
             "owner": "Product/Systems Engineering",
             "gates": {
-              "implementation_unit": false,
+              "implementation_unit": true,
               "verification": false,
               "validation": false
             },
             "components": {
               "app-shell": {
                 "scope": "app-shell",
-                "implementation_unit": false,
+                "implementation_unit": true,
                 "verification": false,
                 "validation": false,
                 "implementation_evidence_ids": [],
                 "unit_test_evidence_ids": [],
-                "implementation_unit_evidence": [],
+                "implementation_unit_evidence": [
+                  {
+                    "source": "accepted_work_package",
+                    "work_package_id": "LEGACY-WORK-015",
+                    "development_run_id": "DEV-20261108T140747Z-24A41F",
+                    "unit_test_run_id": "UT-20261108T141622Z-0E7A45",
+                    "candidate_fingerprint": "8d08e1936d67a639f9ab634b10e62258da63e814e530a5b1d52000e0c72295dd",
+                    "acceptance_policy": "current",
+                    "production_change_count": 2
+                  }
+                ],
                 "verification_evidence_ids": [],
                 "validation_evidence_ids": []
               }
             },
-            "implementation_unit_evidence": [],
-            "score": 0,
-            "percent": 0.0,
+            "implementation_unit_evidence": [
+              {
+                "source": "accepted_work_package",
+                "work_package_id": "LEGACY-WORK-015",
+                "development_run_id": "DEV-20261108T140747Z-24A41F",
+                "unit_test_run_id": "UT-20261108T141622Z-0E7A45",
+                "candidate_fingerprint": "8d08e1936d67a639f9ab634b10e62258da63e814e530a5b1d52000e0c72295dd",
+                "acceptance_policy": "current",
+                "production_change_count": 2,
+                "scope": "app-shell"
+              }
+            ],
+            "score": 0.333333,
+            "percent": 33.3,
             "complete": false,
             "functionality_verification": null,
             "implemented": null
@@ -6220,9 +6768,9 @@
         ]
       },
       "identity-access": {
-        "percent": 0.0,
+        "percent": 33.3,
         "total_features": 1,
-        "implementation_unit_features": 0,
+        "implementation_unit_features": 1,
         "verified_features": 0,
         "validated_features": 0,
         "complete_features": 0,
@@ -6233,26 +6781,47 @@
             "scope": "all",
             "owner": "Product/Systems Engineering",
             "gates": {
-              "implementation_unit": false,
+              "implementation_unit": true,
               "verification": false,
               "validation": false
             },
             "components": {
               "identity-access": {
                 "scope": "identity-access",
-                "implementation_unit": false,
+                "implementation_unit": true,
                 "verification": false,
                 "validation": false,
                 "implementation_evidence_ids": [],
                 "unit_test_evidence_ids": [],
-                "implementation_unit_evidence": [],
+                "implementation_unit_evidence": [
+                  {
+                    "source": "accepted_work_package",
+                    "work_package_id": "LEGACY-WORK-015",
+                    "development_run_id": "DEV-20261108T140747Z-24A41F",
+                    "unit_test_run_id": "UT-20261108T141622Z-0E7A45",
+                    "candidate_fingerprint": "8d08e1936d67a639f9ab634b10e62258da63e814e530a5b1d52000e0c72295dd",
+                    "acceptance_policy": "current",
+                    "production_change_count": 2
+                  }
+                ],
                 "verification_evidence_ids": [],
                 "validation_evidence_ids": []
               }
             },
-            "implementation_unit_evidence": [],
-            "score": 0,
-            "percent": 0.0,
+            "implementation_unit_evidence": [
+              {
+                "source": "accepted_work_package",
+                "work_package_id": "LEGACY-WORK-015",
+                "development_run_id": "DEV-20261108T140747Z-24A41F",
+                "unit_test_run_id": "UT-20261108T141622Z-0E7A45",
+                "candidate_fingerprint": "8d08e1936d67a639f9ab634b10e62258da63e814e530a5b1d52000e0c72295dd",
+                "acceptance_policy": "current",
+                "production_change_count": 2,
+                "scope": "identity-access"
+              }
+            ],
+            "score": 0.333333,
+            "percent": 33.3,
             "complete": false,
             "functionality_verification": null,
             "implemented": null

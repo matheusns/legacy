@@ -38,3 +38,7 @@ The GUI's current read-only manifest import is available, but **Development/QA/P
 ## Contract and verification prerequisite
 
 LEGACY-WORK-014 owns resolution of the legacy/schema-2 compatibility conflict and complete registered verification coverage. Its drafted disposition (`docs/reviews/LEGACY-SE-REVIEW-003.md`) selects schema-2-only loading with explicit migration guidance; the compatibility wording above was reconciled to that draft and takes effect only when the record is signed. The registered suites `gui-checks` (gui), `control-checks` (control) and `tooling-fixture` (verification) cover this package's full allocation, but `gui-checks` and `control-checks` bind to wrapper scripts delivered by the technical predecessor LEGACY-WORK-015. This package remains pending until LEGACY-WORK-014 and LEGACY-WORK-015 are accepted and published, and until the readiness checklist in `docs/engineering/WP013_READINESS_CHECKLIST.md` is satisfied. Prepare a fresh prompt from the resulting baseline; do not resume the frozen failed run DEV-20261102T104129Z-8F4D14. The unit-test gate and the product execution gate remain in force; this reconciliation does not accept this package or any product requirement.
+
+## Git publication
+
+- Operator accepted the fingerprinted WP file set. The runner commits and pushes it after this disposition; publication status is tracked separately from approval.
