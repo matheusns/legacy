@@ -3166,7 +3166,16 @@
         "engineering_review_manual_approval": null
       },
       "lesson_ids_reviewed": [],
-      "latest_development_run_id": "DEV-20261030T185520Z-751CB5"
+      "latest_development_run_id": "DEV-20261030T185520Z-751CB5",
+      "adr_ids": [
+        "ADR-001",
+        "ADR-002",
+        "ADR-003",
+        "ADR-004",
+        "ADR-005",
+        "ADR-006",
+        "ADR-007"
+      ]
     },
     {
       "id": "LEGACY-WORK-003",
@@ -3213,6 +3222,15 @@
       "target_profile_ids": [
         "desktop-browser",
         "mobile-browser"
+      ],
+      "adr_ids": [
+        "ADR-001",
+        "ADR-002",
+        "ADR-003",
+        "ADR-004",
+        "ADR-005",
+        "ADR-006",
+        "ADR-007"
       ]
     },
     {
@@ -5011,6 +5029,275 @@
       "work_package_ids": [
         "LEGACY-WORK-014"
       ]
+    },
+    {
+      "id": "ADR-001",
+      "type": "design",
+      "name": "Application stack, hosting model and persistence",
+      "repository": "legacy",
+      "scope": "all",
+      "path": "docs/architecture/adr/ADR-001-application-stack-hosting-persistence.md",
+      "ref": "main",
+      "status": "Proposed",
+      "requirement_ids": [
+        "LEGACY-BIZ-001",
+        "LEGACY-BIZ-004",
+        "LEGACY-BIZ-006",
+        "LEGACY-FNC-064",
+        "LEGACY-NFR-003",
+        "LEGACY-NFR-007",
+        "LEGACY-NFR-011",
+        "LEGACY-NFR-017",
+        "LEGACY-NFR-018",
+        "LEGACY-NFR-020",
+        "LEGACY-NFR-022"
+      ],
+      "functionality_ids": [
+        "LEGACY-CAP-001",
+        "LEGACY-CAP-003",
+        "LEGACY-CAP-004",
+        "LEGACY-CAP-005"
+      ],
+      "work_package_ids": [
+        "LEGACY-WORK-002"
+      ]
+    },
+    {
+      "id": "ADR-002",
+      "type": "design",
+      "name": "Identity, workspace tenancy, resource-level authorization and threat model",
+      "repository": "legacy",
+      "scope": "all",
+      "path": "docs/architecture/adr/ADR-002-identity-tenancy-authorization.md",
+      "ref": "main",
+      "status": "Proposed",
+      "requirement_ids": [
+        "LEGACY-BIZ-003",
+        "LEGACY-BIZ-008",
+        "LEGACY-FNC-001",
+        "LEGACY-FNC-024",
+        "LEGACY-FNC-056",
+        "LEGACY-FNC-057",
+        "LEGACY-FNC-058",
+        "LEGACY-FNC-059",
+        "LEGACY-FNC-061",
+        "LEGACY-NFR-002",
+        "LEGACY-NFR-003",
+        "LEGACY-NFR-009",
+        "LEGACY-NFR-013",
+        "LEGACY-NFR-019"
+      ],
+      "functionality_ids": [
+        "LEGACY-CAP-001",
+        "LEGACY-CAP-014"
+      ],
+      "work_package_ids": [
+        "LEGACY-WORK-002"
+      ]
+    },
+    {
+      "id": "ADR-003",
+      "type": "design",
+      "name": "Source of truth, immutable domain events, idempotency, projections, undo and rewards",
+      "repository": "legacy",
+      "scope": "all",
+      "path": "docs/architecture/adr/ADR-003-source-of-truth-events-idempotency-rewards.md",
+      "ref": "main",
+      "status": "Proposed",
+      "requirement_ids": [
+        "LEGACY-BIZ-002",
+        "LEGACY-FNC-003",
+        "LEGACY-FNC-004",
+        "LEGACY-FNC-009",
+        "LEGACY-FNC-010",
+        "LEGACY-FNC-011",
+        "LEGACY-FNC-013",
+        "LEGACY-FNC-014",
+        "LEGACY-FNC-015",
+        "LEGACY-FNC-016",
+        "LEGACY-FNC-068",
+        "LEGACY-FNC-069",
+        "LEGACY-FNC-074",
+        "LEGACY-NFR-005",
+        "LEGACY-NFR-010",
+        "LEGACY-NFR-014",
+        "LEGACY-NFR-022",
+        "LEGACY-UX-021"
+      ],
+      "functionality_ids": [
+        "LEGACY-CAP-003",
+        "LEGACY-CAP-004",
+        "LEGACY-CAP-002"
+      ],
+      "work_package_ids": [
+        "LEGACY-WORK-002"
+      ]
+    },
+    {
+      "id": "ADR-004",
+      "type": "design",
+      "name": "Pixel-art asset provenance and versioning, responsive design system, visual golden baseline and comparison method",
+      "repository": "legacy",
+      "scope": "all",
+      "path": "docs/architecture/adr/ADR-004-visual-assets-design-system-golden-baseline.md",
+      "ref": "main",
+      "status": "Proposed",
+      "requirement_ids": [
+        "LEGACY-FNC-004",
+        "LEGACY-FNC-005",
+        "LEGACY-FNC-060",
+        "LEGACY-UX-001",
+        "LEGACY-UX-005",
+        "LEGACY-UX-006",
+        "LEGACY-UX-008",
+        "LEGACY-UX-009",
+        "LEGACY-UX-011",
+        "LEGACY-UX-017",
+        "LEGACY-UX-018",
+        "LEGACY-UX-019",
+        "LEGACY-UX-020",
+        "LEGACY-UX-023",
+        "LEGACY-NFR-001",
+        "LEGACY-NFR-015"
+      ],
+      "functionality_ids": [
+        "LEGACY-CAP-005",
+        "LEGACY-CAP-003",
+        "LEGACY-CAP-004"
+      ],
+      "work_package_ids": [
+        "LEGACY-WORK-002"
+      ]
+    },
+    {
+      "id": "ADR-005",
+      "type": "design",
+      "name": "Testability: test adapters, deterministic fixtures, candidate fingerprints, verification vocabulary and GitHub check integration",
+      "repository": "legacy",
+      "scope": "all",
+      "path": "docs/architecture/adr/ADR-005-testability-verification-adapters-fingerprints.md",
+      "ref": "main",
+      "status": "Proposed",
+      "requirement_ids": [
+        "LEGACY-BIZ-010",
+        "LEGACY-NFR-013",
+        "LEGACY-NFR-014",
+        "LEGACY-NFR-015",
+        "LEGACY-NFR-018",
+        "LEGACY-NFR-020",
+        "LEGACY-UX-020",
+        "LEGACY-FNC-009",
+        "LEGACY-FNC-069"
+      ],
+      "functionality_ids": [
+        "LEGACY-CAP-001",
+        "LEGACY-CAP-003",
+        "LEGACY-CAP-004",
+        "LEGACY-CAP-005"
+      ],
+      "work_package_ids": [
+        "LEGACY-WORK-002"
+      ]
+    },
+    {
+      "id": "ADR-006",
+      "type": "design",
+      "name": "Intermittent connectivity, drafts and retry, conflict resolution, backup, restore, retention and deletion",
+      "repository": "legacy",
+      "scope": "all",
+      "path": "docs/architecture/adr/ADR-006-connectivity-drafts-conflicts-backup-deletion.md",
+      "ref": "main",
+      "status": "Proposed",
+      "requirement_ids": [
+        "LEGACY-FNC-009",
+        "LEGACY-FNC-010",
+        "LEGACY-FNC-023",
+        "LEGACY-FNC-062",
+        "LEGACY-FNC-064",
+        "LEGACY-FNC-074",
+        "LEGACY-NFR-004",
+        "LEGACY-NFR-005",
+        "LEGACY-NFR-012",
+        "LEGACY-NFR-016",
+        "LEGACY-NFR-017",
+        "LEGACY-NFR-021"
+      ],
+      "functionality_ids": [
+        "LEGACY-CAP-001",
+        "LEGACY-CAP-002",
+        "LEGACY-CAP-004"
+      ],
+      "work_package_ids": [
+        "LEGACY-WORK-002"
+      ]
+    },
+    {
+      "id": "ADR-007",
+      "type": "design",
+      "name": "AI boundary: consent, provider scopes, staged proposals, approval workflow and speech-input privacy",
+      "repository": "legacy",
+      "scope": "all",
+      "path": "docs/architecture/adr/ADR-007-ai-consent-provider-scopes-approval-speech-privacy.md",
+      "ref": "main",
+      "status": "Proposed",
+      "requirement_ids": [
+        "LEGACY-BIZ-005",
+        "LEGACY-BIZ-009",
+        "LEGACY-FNC-025",
+        "LEGACY-FNC-026",
+        "LEGACY-FNC-049",
+        "LEGACY-FNC-054",
+        "LEGACY-FNC-055",
+        "LEGACY-FNC-058",
+        "LEGACY-FNC-066",
+        "LEGACY-FNC-067",
+        "LEGACY-NFR-006",
+        "LEGACY-NFR-008",
+        "LEGACY-NFR-019",
+        "LEGACY-UX-022"
+      ],
+      "functionality_ids": [
+        "LEGACY-CAP-013",
+        "LEGACY-CAP-015",
+        "LEGACY-CAP-001"
+      ],
+      "work_package_ids": [
+        "LEGACY-WORK-002"
+      ]
+    },
+    {
+      "id": "LEGACY-ARCH-SKELETON-001",
+      "type": "specification",
+      "scope": "all",
+      "path": "docs/architecture/SECURE_DOMAIN_SKELETON.md",
+      "status": "Candidate",
+      "title": "Secure domain skeleton",
+      "work_package_ids": [
+        "LEGACY-WORK-002",
+        "LEGACY-WORK-003"
+      ]
+    },
+    {
+      "id": "LEGACY-SE-REVIEW-001",
+      "type": "review_record",
+      "scope": "all",
+      "path": "docs/reviews/LEGACY-SE-REVIEW-001.md",
+      "status": "Draft",
+      "title": "Systems Engineering review of the product baseline",
+      "work_package_ids": [
+        "LEGACY-WORK-001"
+      ]
+    },
+    {
+      "id": "LEGACY-SE-REVIEW-002",
+      "type": "review_record",
+      "scope": "all",
+      "path": "docs/reviews/LEGACY-SE-REVIEW-002.md",
+      "status": "Draft",
+      "title": "Systems Engineering review of the architecture decisions",
+      "work_package_ids": [
+        "LEGACY-WORK-002"
+      ]
     }
   ],
   "legavia_extension": {
@@ -5971,6 +6258,26 @@
         ],
         "result_file": "result.json",
         "timeout_seconds": 120
+      },
+      {
+        "id": "app-unit",
+        "label": "Application unit and API checks",
+        "kind": "unit",
+        "repository_id": "app",
+        "component_ids": [],
+        "target_profile_ids": [],
+        "command": [
+          "node",
+          "scripts/report-app-tests.mjs"
+        ],
+        "required_paths": [
+          "scripts/report-app-tests.mjs"
+        ],
+        "source_repository_ids": [
+          "app"
+        ],
+        "result_file": "result.json",
+        "timeout_seconds": 900
       }
     ]
   },
@@ -6093,7 +6400,8 @@
     "model_file": "architecture/model.json",
     "layout_file": "architecture/layout.json",
     "documents": [
-      "docs/engineering/WORKFLOW.md"
+      "docs/engineering/WORKFLOW.md",
+      "docs/architecture/SECURE_DOMAIN_SKELETON.md"
     ]
   },
   "control_git_sync": {
@@ -6316,7 +6624,7 @@
       "work_packages": 15,
       "archived_work_packages": 0,
       "lessons_learned": 0,
-      "artifacts": 7,
+      "artifacts": 17,
       "tests": 0,
       "classes": 0,
       "commits": 0
@@ -6328,9 +6636,11 @@
       "Candidate": 15
     },
     "artifact_status": {
-      "Candidate": 5,
+      "Candidate": 6,
       "Planned": 1,
-      "Signed": 1
+      "Signed": 1,
+      "Proposed": 7,
+      "Draft": 2
     },
     "lesson_status": {},
     "scope_counts": {
