@@ -2,7 +2,7 @@
 
 ## Status
 
-Proposed — 2026-10-30. Awaiting explicit Systems Engineering acceptance; this record is not accepted and grants nothing until a human reviewer changes this section and the control manifest records the artifact.
+Accepted — 2026-11-09. Matheus Nascimento approved this decision under the conditions in [Systems Engineering review 002, section 10](../../reviews/LEGACY-SE-REVIEW-002.md#10-signature).
 
 Resolves candidate register item `ADR-CAND-003` and decision `DEC-003` of LEGACY-SE-REVIEW-001. Governs the design of FVT-LEGACY-001, FVT-LEGACY-015, FVT-LEGACY-019 and FVT-LEGACY-023.
 
@@ -22,6 +22,8 @@ The baseline requires that a completion updates the item, milestone progress, an
 The exploratory mockups keep state in browser `localStorage`; `legacy_mockups` explicitly disclaims backend or security meaning. The reference baseline principle DP-02 ("one core graph, many views") and invariant 2 (no game-only maintenance) constrain how rewards may be derived.
 
 ## Decision
+
+The proposed receipt retention period in D2 requires separate owner confirmation. Receipts must outlast the supported retry window.
 
 ### D1. Source of truth
 

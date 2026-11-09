@@ -2,7 +2,7 @@
 
 ## Status
 
-Proposed — 2026-10-30. Awaiting explicit Systems Engineering acceptance; this record is not accepted and grants nothing until a human reviewer changes this section and the control manifest records the artifact.
+Accepted — 2026-11-09. Matheus Nascimento approved this decision under the conditions in [Systems Engineering review 002, section 10](../../reviews/LEGACY-SE-REVIEW-002.md#10-signature).
 
 Resolves candidate register item `ADR-CAND-007` and decision `DEC-007` of LEGACY-SE-REVIEW-001. Scope note: fixes the boundary the S1 skeleton must reserve and the S5 policy; selects no AI vendor or model.
 

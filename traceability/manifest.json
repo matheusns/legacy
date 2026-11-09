@@ -5038,7 +5038,7 @@
       "scope": "all",
       "path": "docs/architecture/adr/ADR-001-application-stack-hosting-persistence.md",
       "ref": "main",
-      "status": "Proposed",
+      "status": "Accepted",
       "requirement_ids": [
         "LEGACY-BIZ-001",
         "LEGACY-BIZ-004",
@@ -5070,7 +5070,7 @@
       "scope": "all",
       "path": "docs/architecture/adr/ADR-002-identity-tenancy-authorization.md",
       "ref": "main",
-      "status": "Proposed",
+      "status": "Accepted",
       "requirement_ids": [
         "LEGACY-BIZ-003",
         "LEGACY-BIZ-008",
@@ -5103,7 +5103,7 @@
       "scope": "all",
       "path": "docs/architecture/adr/ADR-003-source-of-truth-events-idempotency-rewards.md",
       "ref": "main",
-      "status": "Proposed",
+      "status": "Accepted",
       "requirement_ids": [
         "LEGACY-BIZ-002",
         "LEGACY-FNC-003",
@@ -5141,7 +5141,7 @@
       "scope": "all",
       "path": "docs/architecture/adr/ADR-004-visual-assets-design-system-golden-baseline.md",
       "ref": "main",
-      "status": "Proposed",
+      "status": "Accepted",
       "requirement_ids": [
         "LEGACY-FNC-004",
         "LEGACY-FNC-005",
@@ -5177,7 +5177,7 @@
       "scope": "all",
       "path": "docs/architecture/adr/ADR-005-testability-verification-adapters-fingerprints.md",
       "ref": "main",
-      "status": "Proposed",
+      "status": "Accepted",
       "requirement_ids": [
         "LEGACY-BIZ-010",
         "LEGACY-NFR-013",
@@ -5207,7 +5207,7 @@
       "scope": "all",
       "path": "docs/architecture/adr/ADR-006-connectivity-drafts-conflicts-backup-deletion.md",
       "ref": "main",
-      "status": "Proposed",
+      "status": "Accepted",
       "requirement_ids": [
         "LEGACY-FNC-009",
         "LEGACY-FNC-010",
@@ -5239,7 +5239,7 @@
       "scope": "all",
       "path": "docs/architecture/adr/ADR-007-ai-consent-provider-scopes-approval-speech-privacy.md",
       "ref": "main",
-      "status": "Proposed",
+      "status": "Accepted",
       "requirement_ids": [
         "LEGACY-BIZ-005",
         "LEGACY-BIZ-009",
@@ -5270,7 +5270,7 @@
       "type": "specification",
       "scope": "all",
       "path": "docs/architecture/SECURE_DOMAIN_SKELETON.md",
-      "status": "Candidate",
+      "status": "Accepted",
       "title": "Secure domain skeleton",
       "work_package_ids": [
         "LEGACY-WORK-002",
@@ -5293,7 +5293,7 @@
       "type": "review_record",
       "scope": "all",
       "path": "docs/reviews/LEGACY-SE-REVIEW-002.md",
-      "status": "Draft",
+      "status": "Signed",
       "title": "Systems Engineering review of the architecture decisions",
       "work_package_ids": [
         "LEGACY-WORK-002"
@@ -6067,7 +6067,7 @@
   "application": {
     "name": "Legavia",
     "delivery_target": "responsive_web_pwa",
-    "status": "architecture_pending",
+    "status": "architecture_accepted",
     "preview": {},
     "repository_ids": [
       "app"
@@ -6636,11 +6636,11 @@
       "Candidate": 15
     },
     "artifact_status": {
-      "Candidate": 6,
+      "Candidate": 5,
       "Planned": 1,
-      "Signed": 1,
-      "Proposed": 7,
-      "Draft": 2
+      "Signed": 2,
+      "Accepted": 8,
+      "Draft": 1
     },
     "lesson_status": {},
     "scope_counts": {

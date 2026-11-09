@@ -2,7 +2,7 @@
 
 ## Status
 
-Proposed — 2026-10-30. Awaiting explicit Systems Engineering acceptance; this record is not accepted and grants nothing until a human reviewer changes this section and the control manifest records the artifact.
+Accepted — 2026-11-09. Matheus Nascimento approved this decision under the conditions in [Systems Engineering review 002, section 10](../../reviews/LEGACY-SE-REVIEW-002.md#10-signature).
 
 Resolves candidate register item `ADR-CAND-004` and decisions `DEC-004` and `DEC-008` of LEGACY-SE-REVIEW-001. Does **not** approve any reference image (`DEC-010` remains an owner plus UX-reviewer action).
 
@@ -21,6 +21,8 @@ Resolves candidate register item `ADR-CAND-004` and decisions `DEC-004` and `DEC
 The exploratory `legacy_mockups` repository holds four reference screens (`assets/screens/{home,world-map,island-career,focus}.webp`) and a composite board (`docs/references/geek-ui-reference-board.webp`) produced in a design session; the repository records no licence, author, generation tool or source for them. The verification harness `capture.cjs` already implements a comparison: pixelmatch with per-pixel colour `threshold: 0.1`, `includeAA: true`, a dimension mismatch counted as 100 % difference, reduced motion forced, animations disabled, fonts awaited, and a `diff_ratio` metric reported without a pass/fail verdict. The reference baseline fixes the design-system and accessibility constraints (sections 5–6, UX-001..012, NFR-001).
 
 ## Decision
+
+The visual comparison method is accepted. The proposed numerical comparison bands in D4 require separate owner confirmation before the verifier can use them to accept or reject a candidate.
 
 ### D1. Asset provenance and licensing
 

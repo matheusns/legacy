@@ -2,7 +2,7 @@
 
 ## Status
 
-Proposed — 2026-10-30. Awaiting explicit Systems Engineering acceptance; this record is not accepted and grants nothing until a human reviewer changes this section and the control manifest records the artifact.
+Accepted — 2026-11-09. Matheus Nascimento approved this decision under the conditions in [Systems Engineering review 002, section 10](../../reviews/LEGACY-SE-REVIEW-002.md#10-signature).
 
 Resolves candidate register item `ADR-CAND-001` (DELIVERY_ROADMAP section "ADR decisions required before S1/S2") and decision `DEC-001` of LEGACY-SE-REVIEW-001. Also fixes the method for `DEC-009` (performance budgets) jointly with ADR-005.
 
@@ -32,6 +32,8 @@ Constraints that the stack must satisfy:
 The roadmap asked to avoid backend/frontend lock-in "before trade study". The trade study is summarised under *Considered alternatives*; it is a documentary comparison, not a prototype benchmark.
 
 ## Decision
+
+The owner will select the hosting provider and region before the first hosted environment. The proposed performance targets and recovery or retention periods in D5–D6 require separate owner confirmation before they can set acceptance criteria.
 
 ### D1. Language and repository layout
 

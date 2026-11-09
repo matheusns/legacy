@@ -2,7 +2,7 @@
 
 ## Status
 
-Proposed — 2026-10-30. Awaiting explicit Systems Engineering acceptance; this record is not accepted and grants nothing until a human reviewer changes this section and the control manifest records the artifact.
+Accepted — 2026-11-09. Matheus Nascimento approved this decision under the conditions in [Systems Engineering review 002, section 10](../../reviews/LEGACY-SE-REVIEW-002.md#10-signature).
 
 Resolves candidate register item `ADR-CAND-002` and decision `DEC-002` of LEGACY-SE-REVIEW-001. Governs the design of FVT-LEGACY-005, FVT-LEGACY-021 and FVT-LEGACY-024.
 

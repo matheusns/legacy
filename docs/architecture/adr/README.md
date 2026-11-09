@@ -1,6 +1,6 @@
 # Architecture Decision Register
 
-This directory holds Legavia architecture decision records in the format the local SDLC workbench discovers (`ADR-NNN-<slug>.md`, a `## Status` section, a `## Traceability` block naming `LEGACY-*` IDs). The workbench treats an ADR as accepted **only** when its Status section begins with `Accepted` **and** the control manifest registers it under `artifacts[]` with an accepted status. Every record here is currently **Proposed**; nothing in this directory is approved until a human Systems Engineering reviewer changes the Status section, records the disposition in `docs/reviews/`, and the manifest is updated by a human-controlled commit.
+This directory holds Legavia architecture decision records in the format the local SDLC workbench discovers (`ADR-NNN-<slug>.md`, a `## Status` section, a `## Traceability` block naming `LEGACY-*` IDs). The workbench treats an ADR as accepted **only** when its Status section begins with `Accepted` **and** the control manifest registers it under `artifacts[]` with an accepted status. On 2026-11-09 Matheus Nascimento accepted ADR-001 through ADR-007 and the secure domain skeleton. Hosting provider and region selection is deferred. Proposed performance, visual, recovery and retention numbers await separate confirmation. [Signed review](../../reviews/LEGACY-SE-REVIEW-002.md#10-signature)
 
 ## Identifier mapping
 
@@ -8,13 +8,13 @@ The business baseline issued the candidate register IDs `ADR-CAND-001..007` (DEL
 
 | ADR | Title | Resolves | Decisions | LEGACY-WORK-002 topic | Status |
 | --- | --- | --- | --- | --- | --- |
-| [ADR-001](ADR-001-application-stack-hosting-persistence.md) | Application stack, hosting model and persistence | ADR-CAND-001 | DEC-001, DEC-009 (method) | app stack, hosting | Proposed |
-| [ADR-002](ADR-002-identity-tenancy-authorization.md) | Identity, workspace tenancy, resource-level authorization and threat model | ADR-CAND-002 | DEC-002 | identity/tenancy | Proposed |
-| [ADR-003](ADR-003-source-of-truth-events-idempotency-rewards.md) | Source of truth, immutable domain events, idempotency, projections, undo and rewards | ADR-CAND-003 | DEC-003 | source of truth, event idempotency | Proposed |
-| [ADR-004](ADR-004-visual-assets-design-system-golden-baseline.md) | Pixel-art asset provenance and versioning, design system, golden baseline and comparison method | ADR-CAND-004 | DEC-004, DEC-008 | assets | Proposed |
-| [ADR-005](ADR-005-testability-verification-adapters-fingerprints.md) | Testability: adapters, fixtures, candidate fingerprints, verification vocabulary, GitHub checks | ADR-CAND-005 | DEC-005, DEC-011, DEC-009 (method) | testability | Proposed |
-| [ADR-006](ADR-006-connectivity-drafts-conflicts-backup-deletion.md) | Intermittent connectivity, drafts/retry, conflicts, backup, restore, retention, deletion | ADR-CAND-006 | DEC-006 | (supporting: NFR-004/016/017) | Proposed |
-| [ADR-007](ADR-007-ai-consent-provider-scopes-approval-speech-privacy.md) | AI boundary: consent, provider scopes, staged proposals, approval, speech privacy | ADR-CAND-007 | DEC-007 | (supporting: NFR-019) | Proposed |
+| [ADR-001](ADR-001-application-stack-hosting-persistence.md) | Application stack, hosting model and persistence | ADR-CAND-001 | DEC-001, DEC-009 (method) | app stack, hosting | Accepted |
+| [ADR-002](ADR-002-identity-tenancy-authorization.md) | Identity, workspace tenancy, resource-level authorization and threat model | ADR-CAND-002 | DEC-002 | identity/tenancy | Accepted |
+| [ADR-003](ADR-003-source-of-truth-events-idempotency-rewards.md) | Source of truth, immutable domain events, idempotency, projections, undo and rewards | ADR-CAND-003 | DEC-003 | source of truth, event idempotency | Accepted |
+| [ADR-004](ADR-004-visual-assets-design-system-golden-baseline.md) | Pixel-art asset provenance and versioning, design system, golden baseline and comparison method | ADR-CAND-004 | DEC-004, DEC-008 | assets | Accepted |
+| [ADR-005](ADR-005-testability-verification-adapters-fingerprints.md) | Testability: adapters, fixtures, candidate fingerprints, verification vocabulary, GitHub checks | ADR-CAND-005 | DEC-005, DEC-011, DEC-009 (method) | testability | Accepted |
+| [ADR-006](ADR-006-connectivity-drafts-conflicts-backup-deletion.md) | Intermittent connectivity, drafts/retry, conflicts, backup, restore, retention, deletion | ADR-CAND-006 | DEC-006 | (supporting: NFR-004/016/017) | Accepted |
+| [ADR-007](ADR-007-ai-consent-provider-scopes-approval-speech-privacy.md) | AI boundary: consent, provider scopes, staged proposals, approval, speech privacy | ADR-CAND-007 | DEC-007 | (supporting: NFR-019) | Accepted |
 
 Companion definition: [`../SECURE_DOMAIN_SKELETON.md`](../SECURE_DOMAIN_SKELETON.md) (LEGACY-ARCH-SKELETON-001) describes the `legacy_app` skeleton that implements these decisions in `LEGACY-WORK-003`.
 
@@ -32,7 +32,7 @@ Companion definition: [`../SECURE_DOMAIN_SKELETON.md`](../SECURE_DOMAIN_SKELETON
 
 ## Lifecycle
 
-1. **Proposed**: authored as a reviewable candidate (this state).
+1. **Proposed**: authored as a reviewable candidate.
 2. **Accepted**: human Systems Engineering decision; Status section rewritten to `Accepted — <date>`, manifest `artifacts[]` entry added with `type: design`, `status: Accepted`, `requirement_ids`, `functionality_ids`, and `work_packages[LEGACY-WORK-002].adr_ids` populated.
 3. **Superseded / Deprecated**: a new ADR references the old one; historical records are never rewritten.
 
