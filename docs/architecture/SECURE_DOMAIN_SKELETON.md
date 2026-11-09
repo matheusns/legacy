@@ -2,18 +2,18 @@
 project: LEGAVIA
 artifact_id: LEGACY-ARCH-SKELETON-001
 artifact_type: architecture_definition
-artifact_status: proposed-candidate
-version: 0.1.0
-date: 2026-10-30
+artifact_status: accepted
+version: 0.1.1
+date: 2026-11-09
 control_repository: matheusns/legacy
 work_package: LEGACY-WORK-002
 run_id: DEV-20261030T185520Z-751CB5
-review_gate: Systems Engineering acceptance required
+review_gate: Accepted with conditions in LEGACY-SE-REVIEW-002
 ---
 
 # Secure domain skeleton — controlled definition for `legacy_app`
 
-> **Proposed candidate.** This document defines the skeleton that `LEGACY-WORK-003` implements once ADR-001..ADR-007 are accepted. It is a control-plane definition, not code; no product repository was modified. Where it names a file or package it describes the required shape, and the implementing work package may propose adjustments through Systems Engineering.
+> **Accepted for the application bootstrap on 2026-11-09.** LEGACY-WORK-003 implements this definition under the conditions of ADR-001 through ADR-007. Implementation changes to the definition go through Systems Engineering. [Signed review](../reviews/LEGACY-SE-REVIEW-002.md#10-signature)
 
 ## 1. Purpose and boundaries
 
@@ -127,7 +127,7 @@ Finance ledger and computation contracts (`DEC-013`, deferred to a `LEGACY-WORK-
 
 ## 12. Trace to work package acceptance criteria
 
-| LEGACY-WORK-002 criterion | Where satisfied (proposed) |
+| LEGACY-WORK-002 criterion | Architecture definition |
 | --- | --- |
 | Accepted ADRs for identity/tenancy | ADR-002 |
 | … source of truth | ADR-003 D1 (+ ADR-001 D4) |

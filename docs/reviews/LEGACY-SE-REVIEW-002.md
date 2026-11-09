@@ -2,20 +2,21 @@
 project: LEGAVIA
 artifact_id: LEGACY-SE-REVIEW-002
 artifact_type: se_review_record
-artifact_status: review-draft-unsigned
-version: 0.1.0
-date: 2026-10-30
+artifact_status: signed
+version: 0.1.1
+date: 2026-11-09
 control_repository: matheusns/legacy
 work_package: LEGACY-WORK-002
 run_id: DEV-20261030T185520Z-751CB5
 resumed_from_run_id: DEV-20261029T133455Z-DF9AA5
 reviewed_control_commit: caca50c7e23a892d37e63cc14091f8cf725374d6
-review_gate: Human Systems Engineering signature required
+approved_candidate_commit: 03d159d55e736df01d1ff0706d7dcfa5166c2f6d
+review_gate: Approved with conditions by the Systems Engineering owner on 2026-11-09
 ---
 
 # LEGACY-SE-REVIEW-002 — Architecture decision set and secure domain skeleton for LEGACY-WORK-002
 
-> **Unsigned draft.** Prepared by the Systems Engineering control-plane agent. It proposes seven ADRs and one skeleton definition and recommends a disposition; it does not grant one. No ADR is accepted, no work package status changes, and no requirement is verified until a human Systems Engineering reviewer completes section 10 and the control manifest is updated by a human-controlled commit. Nothing here is execution evidence for any product FVT.
+> **Owner-approved architecture baseline.** Matheus Nascimento accepted the seven ADRs and the secure domain skeleton with conditions on 2026-11-09. Section 10 records the decision. Sections 1–9 preserve the original candidate assessment and recommendations.
 
 ## 1. Baseline identification
 
@@ -78,7 +79,7 @@ No baseline invariant conflict was found. No requirement statement, reference ar
 
 ### SE2-F-001 — LEGACY-WORK-001 is `Done` in the manifest while LEGACY-SE-REVIEW-001 remains an unsigned draft (Condition)
 
-`traceability/manifest.json` records `LEGACY-WORK-001.status = Done` with `review.disposition = Accepted` (commit `0b63e1e`), but `docs/reviews/LEGACY-SE-REVIEW-001.md` still carries `artifact_status: review-draft-unsigned` with an empty signature table, and the manifest `artifacts[]` does not register the review record (its section 9 item 1). The dependency of WORK-002 on WORK-001 is therefore satisfied in the manifest but not evidenced in the controlled document. **Proposed resolution:** the human reviewer completes section 10 of REVIEW-001 (or records the GUI acceptance there), and the manifest `artifacts[]` gains the `LEGACY-SE-REVIEW-001` entry. This does not block reviewing the ADRs; it blocks treating WORK-001's conditions (SE-F-001/002/006/009) as tracked.
+`traceability/manifest.json` records `LEGACY-WORK-001.status = Done` with `review.disposition = Accepted` (commit `0b63e1e`), but `docs/reviews/LEGACY-SE-REVIEW-001.md` still carries `artifact_status: signed` with an empty signature table, and the manifest `artifacts[]` does not register the review record (its section 9 item 1). The dependency of WORK-002 on WORK-001 is therefore satisfied in the manifest but not evidenced in the controlled document. **Proposed resolution:** the human reviewer completes section 10 of REVIEW-001 (or records the GUI acceptance there), and the manifest `artifacts[]` gains the `LEGACY-SE-REVIEW-001` entry. This does not block reviewing the ADRs; it blocks treating WORK-001's conditions (SE-F-001/002/006/009) as tracked.
 
 ### SE2-F-002 — ADR identifier scheme differs from the candidate register (Observation, resolved by mapping)
 
@@ -167,8 +168,25 @@ Accepting an ADR establishes its Decision section as a constraint that outranks 
 
 ## 10. Signature
 
-| Role | Name | Decision (Accept / Accept with conditions / Reject / Defer) per ADR | Date | Reviewed commit |
+| Role | Name | Decision | Date | Reviewed control commit |
 | --- | --- | --- | --- | --- |
-| Systems Engineering owner | | ADR-001: · ADR-002: · ADR-003: · ADR-004: · ADR-005: · ADR-006: · ADR-007: · Skeleton: | | `caca50c7e23a892d37e63cc14091f8cf725374d6` |
+| Systems Engineering owner | Matheus Nascimento | Accept with conditions | 2026-11-09 | `03d159d55e736df01d1ff0706d7dcfa5166c2f6d` |
 
-Unsigned. Prepared by the Systems Engineering control-plane agent in run DEV-20261030T185520Z-751CB5 (Claude Fable 5.1, Claude Code). The agent did not and may not accept its own work.
+The owner explicitly approved ADR-001, ADR-002, ADR-003, ADR-004, ADR-005, ADR-006, ADR-007 and LEGACY-ARCH-SKELETON-001 as the architecture baseline for the application bootstrap.
+
+- The owner will select the hosting provider and region in a separate decision before the first hosted environment.
+- Proposed performance targets, visual comparison bands, recovery objectives and retention periods require separate owner confirmation before use as acceptance criteria. This condition applies to the same values wherever an ADR, test plan or implementation refers to them.
+
+The candidate files at the reviewed commit match the hashes in section 1.1. The following hashes identify the published architecture files with this disposition applied.
+
+| File | SHA-256 |
+| --- | --- |
+| `docs/architecture/adr/ADR-001-application-stack-hosting-persistence.md` | `2ddcd8683395d252015dd1a5dda2fea3502b12c4eeb885d01bd08ada6229669a` |
+| `docs/architecture/adr/ADR-002-identity-tenancy-authorization.md` | `4c2e2fc2432d0107c9396c71596bb1050ee5726d7d8ac0fa9903d1eba4f61ac7` |
+| `docs/architecture/adr/ADR-003-source-of-truth-events-idempotency-rewards.md` | `37fb29458ff25a11a5cdd2adc848235d753e7820f7191dcbff0a8696314a0b0f` |
+| `docs/architecture/adr/ADR-004-visual-assets-design-system-golden-baseline.md` | `c5f0a2730049095df041bef4719e161006eeeed6b94a270af55375436e9a9a51` |
+| `docs/architecture/adr/ADR-005-testability-verification-adapters-fingerprints.md` | `c9ddc8ec8f1010bc7c41112c74e1fdfcc5aa0d186097d15cbb61b63dce7f0fe7` |
+| `docs/architecture/adr/ADR-006-connectivity-drafts-conflicts-backup-deletion.md` | `d0f9582acce7e500cb6106e6160f1b6e1208d08f7c480f2c6c5fc7406af20415` |
+| `docs/architecture/adr/ADR-007-ai-consent-provider-scopes-approval-speech-privacy.md` | `174639806af8a2c74cdf4fe9459a4348255b540399348ce806adc7dcf1ce6e1f` |
+| `docs/architecture/adr/README.md` | `12d4e34a5f43b2be45215e1c384cd69466ddfcad3ac0f68ce4c18b36d34a3644` |
+| `docs/architecture/SECURE_DOMAIN_SKELETON.md` | `0fc196fc71ba313d4f394509738da5878fcd97838666fdb8395da8cdc1334c01` |

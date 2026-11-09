@@ -2,7 +2,7 @@
 
 ## Status
 
-Proposed — 2026-10-30. Awaiting explicit Systems Engineering acceptance; this record is not accepted and grants nothing until a human reviewer changes this section and the control manifest records the artifact.
+Accepted — 2026-11-09. Matheus Nascimento approved this decision under the conditions in [Systems Engineering review 002, section 10](../../reviews/LEGACY-SE-REVIEW-002.md#10-signature).
 
 Resolves candidate register item `ADR-CAND-006` and decision `DEC-006` of LEGACY-SE-REVIEW-001. Scope note: this ADR fixes the invariants the S1/S2 skeleton must honour and the policy for S3; it does not claim offline synchronisation capability.
 
@@ -21,6 +21,8 @@ The baseline distinguishes two things that are easy to conflate: a **recoverable
 
 ## Decision
 
+The recovery and retention policies are accepted. The proposed numerical objectives, intervals and periods for recovery and retention, including linked draft retry, receipt and deletion windows, require separate owner confirmation. These values remain provisional wherever they appear below.
+
 ### D1. Connectivity model for S1–S3
 
 1. **Online-first with durable drafts.** The client never pretends a mutation succeeded. A user action creates a **draft** record in IndexedDB `{ idempotency_key, command, created_at, status ∈ pending|sending|acknowledged|conflict|rejected, attempts, last_error }` *before* the request. The UI renders the item optimistically with a visible **"pending"** marker (text and icon, not colour alone) until the server acknowledges; acknowledged drafts are deleted.
@@ -37,7 +39,7 @@ The baseline distinguishes two things that are easy to conflate: a **recoverable
 ### D3. Backup, restore and recovery (`LEGACY-NFR-017`)
 
 8. The managed PostgreSQL of ADR-001 D5 must provide **daily automated snapshots and point-in-time recovery with at least 7 days** of WAL retention; object storage uses versioning with 30-day retention of overwritten or deleted objects. A **weekly logical dump** (`pg_dump`) and an object-storage inventory are exported to a second provider or offline location controlled by the owner, encrypted at rest.
-9. A **restore drill** (`RESTORE-DRILL-001` in ADR-005 D6) restores the latest snapshot plus PITR to a point within the last 24 hours into a throwaway environment, runs the schema integrity and projection-rebuild checks, and records duration and data loss window. The drill is required **before** the first production environment that stores finance records, memories or media, and repeated at least every 6 months or after a major infrastructure change. Recovery objectives for that first environment: **RPO ≤ 24 h, RTO ≤ 8 h**; these are the documented commitments, tightened only by a revision with evidence.
+9. A **restore drill** (`RESTORE-DRILL-001` in ADR-005 D6) restores the latest snapshot plus PITR to a point within the last 24 hours into a throwaway environment, runs the schema integrity and projection-rebuild checks, and records duration and data loss window. The drill is required **before** the first production environment that stores finance records, memories or media, and repeated at least every 6 months or after a major infrastructure change. Recovery objectives for that first environment: **RPO ≤ 24 h, RTO ≤ 8 h**; these proposed objectives await separate owner confirmation.
 10. Backups contain Restricted data and are themselves Restricted: access is logged, and backups are never copied to developer machines or fixtures (`LEGACY-NFR-015`).
 
 ### D4. Retention

@@ -2,7 +2,7 @@
 
 ## Status
 
-Proposed — 2026-10-30. Awaiting explicit Systems Engineering acceptance; this record is not accepted and grants nothing until a human reviewer changes this section and the control manifest records the artifact.
+Accepted — 2026-11-09. Matheus Nascimento approved this decision under the conditions in [Systems Engineering review 002, section 10](../../reviews/LEGACY-SE-REVIEW-002.md#10-signature).
 
 Resolves candidate register item `ADR-CAND-005` and decisions `DEC-005` and `DEC-011` of LEGACY-SE-REVIEW-001; fixes the measurement method for `DEC-009` with ADR-001. Provides the decision basis for findings SE-F-002 and SE-F-003 of that review. It does not register any product command in the manifest; that is a control change after acceptance.
 
@@ -21,6 +21,8 @@ Resolves candidate register item `ADR-CAND-005` and decisions `DEC-005` and `DEC
 LEGACY-SE-REVIEW-001 found that 74 of 129 requirements have no verification record (SE-F-002), that 37 distinct verification-method strings are in use (SE-F-003), and that performance budgets must be measured (`DEC-009`). Verification allocation is architecture-adjacent and was assigned to this work package.
 
 ## Decision
+
+The measurement and verification methods are accepted. Proposed performance, visual, recovery and retention figures referenced by the test plan require separate owner confirmation before use as acceptance criteria.
 
 ### D1. Test levels and ownership
 
