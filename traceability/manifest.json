@@ -3183,7 +3183,7 @@
       "summary": "Bootstrap web/mobile application and persistence",
       "scope": "all",
       "work_package_type": "technical",
-      "status": "Backlog",
+      "status": "Done",
       "priority": "P0",
       "functionality_ids": [
         "LEGACY-CAP-001",
@@ -3197,7 +3197,7 @@
         "matheusns/legacy_app",
         "matheusns/legacy_verification_tooling"
       ],
-      "path": "docs/work_packages/LEGACY-WORK-003.md",
+      "path": "work/done/LEGACY-WORK-003.md",
       "acceptance_criteria": [
         "Reproducible local startup and CI; isolated accounts; secured CRUD API; deterministic fixtures and unit tests."
       ],
@@ -3231,7 +3231,1370 @@
         "ADR-005",
         "ADR-006",
         "ADR-007"
-      ]
+      ],
+      "review": {
+        "disposition": "Accepted",
+        "run_id": "DEV-20261111T075250Z-926FCC",
+        "reviewed_at": "2026-11-12T06:06:59.045562Z",
+        "review_note": null,
+        "acceptance_criteria_confirmed": [],
+        "attention_acknowledged": false,
+        "completion_boundary_acknowledged": true,
+        "git_reconciliation_acknowledged": true,
+        "git_reconciliation": {
+          "available": true,
+          "enforced": true,
+          "automatic_publication": true,
+          "ready_for_acceptance": true,
+          "blocking_reasons": [],
+          "repositories": [
+            {
+              "id": "app",
+              "head": "50c806ff54e76cfa2cfdba74c2eca1c9742a6abe",
+              "files": {
+                ".env.example": "c06098a97a95bee850f2f4ab246a99891a1fc8c0735e7b4f90bcd3b8d194faf1:100644",
+                ".github/workflows/ci.yml": "a83d6d6aea27f2a020bd5243271e15b185f664704718cbb910e03ba9130641d2:100644",
+                ".gitignore": "ecc31790f46048aa0290059a032cb3eee32da3ca145c139adae7044c9bbf18a1:100644",
+                ".write-probe.tmp": null,
+                "README.md": "49a5d98e89144ae53685280516112967ce0f6916e604677c91512062329d22b7:100644",
+                "apps/api/package.json": "e393faf1d48c6c6cd5d1fd90d15bd3ae25f07c2db890215a95243314b29e0729:100644",
+                "apps/api/src/app.ts": "e9a6c56612c5bba31f21fa38a79f9318f22ab6eeee3399c27672351788b28c74:100644",
+                "apps/api/src/auth/password.ts": "1e3cc8578acdded41275a11ebe38f7c73538da4afa7ff56679190aff40077bb5:100644",
+                "apps/api/src/auth/session-service.ts": "09c8e6cdd59e3b28c45d171f53bf92ee9f8b434dd9db75b32dabad4d585a6bd1:100644",
+                "apps/api/src/cli/fixture-load.ts": "43845420767bbbe55a03fc40703dba47b2a5252ffe7197d72f35be117c339cb6:100644",
+                "apps/api/src/cli/migrate.ts": "0e00e9278fca8ec7ed245512012805d5815308386dd50dab506e872896ad18a1:100644",
+                "apps/api/src/commands/bus.ts": "fb136246eaec64d55fd7991fc5bcfbea7b3c485deb2b5d916c43c1c2661f031a:100644",
+                "apps/api/src/commands/identity-handlers.ts": "8f78de8faa5424c2b9196c739b78fbe0a0052eb4ca32b6f17e04aa8cac616552:100644",
+                "apps/api/src/http/problems.ts": "4153756897c89eea400e24752bda7eee8b97eb0f19be4082360cb327cd1c42a0:100644",
+                "apps/api/src/persistence/db.ts": "4de2e0a0c2826185631d9cd4ea932576f41a3f1bfccf2583dcc9036ce38086b7:100644",
+                "apps/api/src/persistence/fixture-loader.ts": "07c4415c1f02ed9f64e0fd41ac49ca077002d2d20591737ab40554dd471def24:100644",
+                "apps/api/src/persistence/repositories.ts": "301f5f878082a5ace90003ac38e10336a6c774bdc4d067b17f2d27c2d2e09a56:100644",
+                "apps/api/src/routes/views.ts": "d3ecdb88e925441dd9b87488809faca8c38b920c7b3968a817da36debb221c38:100644",
+                "apps/api/src/server.ts": "cadd3806f2bf234cc29f9f16a26ccf6bdb66524fd2cbbb37b2ce4cc454a7255f:100644",
+                "apps/api/test/auth.test.ts": "7361abd18609f9fbe3382446a7dbd9d53ea2c852f7365a4cbffcea48961e9140:100644",
+                "apps/api/test/authz-matrix.test.ts": "2127ef84770d34af1f385cf90ee95d3d5e98cbd957ef5aff62fef3ce88fcae36:100644",
+                "apps/api/test/global-setup.ts": "5b0ec6d3f7f330c75e5c5e15bbae2d242e28c1fd70f4aa24660cae7e128dc3a3:100644",
+                "apps/api/test/helpers.ts": "71976778cf5a898563707bde427118a927acc38177afa308320b13db777abcd0:100644",
+                "apps/api/test/idempotency.test.ts": "50ac46a1087d5a2eef1cece141105069687f039bb9b11e126607400fc0926edd:100644",
+                "apps/api/test/isolation.test.ts": "7b93cd94b5a1772583b6826724971c70a456f5ab4f52e591d4c24f8c85a9a5ae:100644",
+                "apps/api/test/projection.test.ts": "667f6a55dd1fafc7b2e88bef83c09cebc74b5b52f186c2d0aaa0a8044e7c9ee8:100644",
+                "apps/api/test/startup.test.ts": "727d60df509c496f6083cd5c06f4ec83a36543414b8c4bdbfe8795565ab8ea97:100644",
+                "apps/web/index.html": "62371d4796c81df9a711079c75208b3ccaa54dc384e9c226e46e7e9295f88493:100644",
+                "apps/web/package.json": "09d6418d1d58d04da8d1c5baa89d0513be5c2e65f0de6a40ac129185c415381e:100644",
+                "apps/web/src/App.test.tsx": "045cb4f4e1fd47b511c464bbc1c15281acf17019783b8accbb5fb9b02903bd54:100644",
+                "apps/web/src/App.tsx": "a103275e324c25f4a1481caf20234c83f1ad12f771180f30706186bc8c3a4dc7:100644",
+                "apps/web/src/api/client.ts": "0abbdf8c718ccf240e65ec010c0c42efc8f2eb9ac9290fad701edddc3bc4394e:100644",
+                "apps/web/src/auth/AuthProvider.tsx": "677620a3a0266a4dcf1f7feef0a9fcbd64129439d32d746030da5a7bd576a913:100644",
+                "apps/web/src/auth/AuthScreens.tsx": "6f6adbf2db8477ab5961aa5b02c6556761741fa2ec63c4500abc99b08281849c:100644",
+                "apps/web/src/drafts/DraftsProvider.tsx": "b5c96fa3f49fb7b30c2057162480fed089e996523ad29abeea1c0c47fea81c07:100644",
+                "apps/web/src/drafts/queue.test.ts": "0ba3921b3013562409f6f759dd416c6e77acdc791d6b60e962bfe1548353fa7a:100644",
+                "apps/web/src/drafts/queue.ts": "a6b099978ad58952c3678af16eaace4f119845de04f0f7f86d8f96596d283623:100644",
+                "apps/web/src/drafts/store.ts": "a8124b7887e11833181e3a0cd61b17a49c8b0dc3019c64d32496069e14621310:100644",
+                "apps/web/src/main.tsx": "2165fd6497f6f84813a97cb390bde3ded275700231e465937d84c8b9ef5675f0:100644",
+                "apps/web/src/preferences/PresentationProvider.tsx": "5c0771412893c7c3260bc4e989541caa2d5365b7f4c7532565334d2600fbfe3c:100644",
+                "apps/web/src/preferences/PresentationSettings.tsx": "6aa61a7ac49014a2efccbb8dbdf149b4d03cff3a5c15d1d1fdfb4df558faf3da:100644",
+                "apps/web/src/preferences/presentation.test.tsx": "5e80624797bce94fed55b76d2ea22afbeaa13159d772d62377a811fc822e36ad:100644",
+                "apps/web/src/preferences/presentation.ts": "4b173311e5bb9592711fd95ee62c8195bc09755f74a91948a2033d68663d9bb5:100644",
+                "apps/web/src/shell/Shell.test.tsx": "7c4a5a90c0deaa38b8771c2f3c3fb27409fdb12e216dcf5f41c7cae5cdba5f95:100644",
+                "apps/web/src/shell/Shell.tsx": "8fa47ec1906f032e76059ec64ccc53916a8de0d310f2efea0395a1cdce3153b4:100644",
+                "apps/web/src/shell/navigation-memory.ts": "8efdeeed1c9c2036be0db3eeb988427fb2b2a55336b8c8729fc21615bf17e2d2:100644",
+                "apps/web/src/shell/surfaces.ts": "c24fa356ca1996ad3e0d199f3d251e490c1eeb23829d91909d615ddec37c545e:100644",
+                "apps/web/src/state/StatePanel.test.tsx": "69927f701bd76e698df67af2d4dd5d43f2062898fa9ddf976dabe29ed7c0d10f:100644",
+                "apps/web/src/state/StatePanel.tsx": "d1f0240e20bf11bc26ec1b2612260b2ac4631aca0a902e22703bd0d67fbe1eae:100644",
+                "apps/web/src/styles.css": "a26c6e07bc1a4af1061fdcd6d8186059c620a66521c31a5736dfb94509dfcf1f:100644",
+                "apps/web/src/surfaces/Surfaces.tsx": "8595f4c928d83283b6b6357a3195a382ec638f433cef7f28341eac672b7da315:100644",
+                "apps/web/src/test/setup.ts": "d20ddfad21d06bbe3169119b5118d99ec821b7e106d20b2aaad5997e3c9a2c17:100644",
+                "apps/web/tsconfig.json": "c63cbf651f5fa9bdc840ab55d6bb0c5896539b39e7c37202c513d971c3668432:100644",
+                "apps/web/vite.config.ts": "2d53bf8f5ea8b5c192c57f9f22d7dab4387e866084e72cf1bef49eeeb82adc4d:100644",
+                "apps/web/vitest.config.ts": "ec9e4a20d967370b2ca8deba1a3e3032c7b31c7669a1692915ee08eed7c13648:100644",
+                "assets/ASSET_MANIFEST.json": "de73bc1075a4322a99370ae66aed5194151dc2c1dda43ad70b62160b93d4c61d:100644",
+                "assets/README.md": "9b7ce221156cc340393f221058431f2773417a1c52143706e11c22f0674670e8:100644",
+                "docs/CONFIGURATION.md": "db7dcca36809218ff248ab16734125f9090b7b25b1c72e1e39dafb1b68ab6666:100644",
+                "infra/Dockerfile": "84f0870065c4fe5f5cd375fcdff1ff1836c75442697571552feb35ff8e3edc82:100644",
+                "infra/docker-compose.yml": "ff5ca05e6648b8c48c6ec271a327a2d5b5c094dd74f6c11b604b6ad204893f56:100644",
+                "packages/contracts/src/queries.ts": "372778686ed9f581894c3b20333c84b6316e8515a113f8b42888966666e1022e:100644",
+                "packages/domain/src/identity/preferences.ts": "1c640c4097aad686fcf1700d265b5b1671eced01c388ca908418b8ee454a5a04:100644",
+                "packages/domain/src/identity/workspace.ts": "6a70d2bdd2c56b768a0165b4861d66745ed7c17ef4c4d0cb4cc25e200950b824:100644",
+                "packages/domain/src/projections/reducer.ts": "da52ecf80bf9db6e7d89778899329fc6c9a1d24821dc3bb7a5adfffeb30e518d:100644",
+                "packages/domain/src/values/money.test.ts": "18ab9d5cc8cb546efd63322b3f5dc9b26ef97b2fbdbba858ae13a03407409cd5:100644",
+                "packages/testkit/src/scenario.ts": "dbb58e2923bc85fead833bcf285e802a5e7d424bb2676d2dd11b3f14ede29d06:100644",
+                "pnpm-lock.yaml": "a4809fc6941cf07f5e0cae0c6c0aea407303e77f26ae37b6fbc5d4e7a09855f8:100644",
+                "pnpm-workspace.yaml": "52ba03cdd3ce08d553adf0e8a4a45476a6a544f05aa7afe0f19cde63d7b6999a:100644",
+                "scripts/check-asset-manifest.mjs": "4e1af47ba775d95d998495ce904a2b16cb83e0b616d2d8931693f3eaef4586ec:100644",
+                "scripts/check-boundaries.mjs": "e488ba69a4baf39806dff5a879565039bffc613f07f0ee04148b8224e4cf720b:100644",
+                "scripts/check-product-identifiers.mjs": "c761693a45b40cb50691a354a3cfd95ef91b12ce34da39a853a38a16c9014597:100644",
+                "scripts/report-app-tests.mjs": "635dee3dcf24cb511383deda08c0349a7f506ebf0d284fc6ac1a54d5a77cee9b:100644",
+                "scripts/write-candidate.mjs": "0cba1c8943fd0593f83ff456730891d1937bdcfd013f5aae1f4e1a5868726a95:100644"
+              },
+              "current_head": "50c806ff54e76cfa2cfdba74c2eca1c9742a6abe",
+              "baseline_commit": "50c806ff54e76cfa2cfdba74c2eca1c9742a6abe",
+              "current_branch": "main",
+              "expected_branch": "main",
+              "branch_matches": true,
+              "baseline_is_ancestor": true,
+              "working_tree_clean": false,
+              "manual_commits": [],
+              "effective_changes": [
+                {
+                  "repository": "app",
+                  "path": ".env.example",
+                  "change_type": "modified"
+                },
+                {
+                  "repository": "app",
+                  "path": ".github/workflows/ci.yml",
+                  "change_type": "created"
+                },
+                {
+                  "repository": "app",
+                  "path": ".gitignore",
+                  "change_type": "modified"
+                },
+                {
+                  "repository": "app",
+                  "path": ".write-probe.tmp",
+                  "change_type": "deleted"
+                },
+                {
+                  "repository": "app",
+                  "path": "README.md",
+                  "change_type": "modified"
+                },
+                {
+                  "repository": "app",
+                  "path": "apps/api/package.json",
+                  "change_type": "modified"
+                },
+                {
+                  "repository": "app",
+                  "path": "apps/api/src/app.ts",
+                  "change_type": "created"
+                },
+                {
+                  "repository": "app",
+                  "path": "apps/api/src/auth/password.ts",
+                  "change_type": "modified"
+                },
+                {
+                  "repository": "app",
+                  "path": "apps/api/src/auth/session-service.ts",
+                  "change_type": "modified"
+                },
+                {
+                  "repository": "app",
+                  "path": "apps/api/src/cli/fixture-load.ts",
+                  "change_type": "created"
+                },
+                {
+                  "repository": "app",
+                  "path": "apps/api/src/cli/migrate.ts",
+                  "change_type": "created"
+                },
+                {
+                  "repository": "app",
+                  "path": "apps/api/src/commands/bus.ts",
+                  "change_type": "created"
+                },
+                {
+                  "repository": "app",
+                  "path": "apps/api/src/commands/identity-handlers.ts",
+                  "change_type": "created"
+                },
+                {
+                  "repository": "app",
+                  "path": "apps/api/src/http/problems.ts",
+                  "change_type": "created"
+                },
+                {
+                  "repository": "app",
+                  "path": "apps/api/src/persistence/db.ts",
+                  "change_type": "modified"
+                },
+                {
+                  "repository": "app",
+                  "path": "apps/api/src/persistence/fixture-loader.ts",
+                  "change_type": "created"
+                },
+                {
+                  "repository": "app",
+                  "path": "apps/api/src/persistence/repositories.ts",
+                  "change_type": "modified"
+                },
+                {
+                  "repository": "app",
+                  "path": "apps/api/src/routes/views.ts",
+                  "change_type": "created"
+                },
+                {
+                  "repository": "app",
+                  "path": "apps/api/src/server.ts",
+                  "change_type": "created"
+                },
+                {
+                  "repository": "app",
+                  "path": "apps/api/test/auth.test.ts",
+                  "change_type": "created"
+                },
+                {
+                  "repository": "app",
+                  "path": "apps/api/test/authz-matrix.test.ts",
+                  "change_type": "created"
+                },
+                {
+                  "repository": "app",
+                  "path": "apps/api/test/global-setup.ts",
+                  "change_type": "created"
+                },
+                {
+                  "repository": "app",
+                  "path": "apps/api/test/helpers.ts",
+                  "change_type": "created"
+                },
+                {
+                  "repository": "app",
+                  "path": "apps/api/test/idempotency.test.ts",
+                  "change_type": "created"
+                },
+                {
+                  "repository": "app",
+                  "path": "apps/api/test/isolation.test.ts",
+                  "change_type": "created"
+                },
+                {
+                  "repository": "app",
+                  "path": "apps/api/test/projection.test.ts",
+                  "change_type": "created"
+                },
+                {
+                  "repository": "app",
+                  "path": "apps/api/test/startup.test.ts",
+                  "change_type": "created"
+                },
+                {
+                  "repository": "app",
+                  "path": "apps/web/index.html",
+                  "change_type": "created"
+                },
+                {
+                  "repository": "app",
+                  "path": "apps/web/package.json",
+                  "change_type": "created"
+                },
+                {
+                  "repository": "app",
+                  "path": "apps/web/src/App.test.tsx",
+                  "change_type": "created"
+                },
+                {
+                  "repository": "app",
+                  "path": "apps/web/src/App.tsx",
+                  "change_type": "created"
+                },
+                {
+                  "repository": "app",
+                  "path": "apps/web/src/api/client.ts",
+                  "change_type": "created"
+                },
+                {
+                  "repository": "app",
+                  "path": "apps/web/src/auth/AuthProvider.tsx",
+                  "change_type": "created"
+                },
+                {
+                  "repository": "app",
+                  "path": "apps/web/src/auth/AuthScreens.tsx",
+                  "change_type": "created"
+                },
+                {
+                  "repository": "app",
+                  "path": "apps/web/src/drafts/DraftsProvider.tsx",
+                  "change_type": "created"
+                },
+                {
+                  "repository": "app",
+                  "path": "apps/web/src/drafts/queue.test.ts",
+                  "change_type": "created"
+                },
+                {
+                  "repository": "app",
+                  "path": "apps/web/src/drafts/queue.ts",
+                  "change_type": "created"
+                },
+                {
+                  "repository": "app",
+                  "path": "apps/web/src/drafts/store.ts",
+                  "change_type": "created"
+                },
+                {
+                  "repository": "app",
+                  "path": "apps/web/src/main.tsx",
+                  "change_type": "created"
+                },
+                {
+                  "repository": "app",
+                  "path": "apps/web/src/preferences/PresentationProvider.tsx",
+                  "change_type": "created"
+                },
+                {
+                  "repository": "app",
+                  "path": "apps/web/src/preferences/PresentationSettings.tsx",
+                  "change_type": "created"
+                },
+                {
+                  "repository": "app",
+                  "path": "apps/web/src/preferences/presentation.test.tsx",
+                  "change_type": "created"
+                },
+                {
+                  "repository": "app",
+                  "path": "apps/web/src/preferences/presentation.ts",
+                  "change_type": "created"
+                },
+                {
+                  "repository": "app",
+                  "path": "apps/web/src/shell/Shell.test.tsx",
+                  "change_type": "created"
+                },
+                {
+                  "repository": "app",
+                  "path": "apps/web/src/shell/Shell.tsx",
+                  "change_type": "created"
+                },
+                {
+                  "repository": "app",
+                  "path": "apps/web/src/shell/navigation-memory.ts",
+                  "change_type": "created"
+                },
+                {
+                  "repository": "app",
+                  "path": "apps/web/src/shell/surfaces.ts",
+                  "change_type": "created"
+                },
+                {
+                  "repository": "app",
+                  "path": "apps/web/src/state/StatePanel.test.tsx",
+                  "change_type": "created"
+                },
+                {
+                  "repository": "app",
+                  "path": "apps/web/src/state/StatePanel.tsx",
+                  "change_type": "created"
+                },
+                {
+                  "repository": "app",
+                  "path": "apps/web/src/styles.css",
+                  "change_type": "created"
+                },
+                {
+                  "repository": "app",
+                  "path": "apps/web/src/surfaces/Surfaces.tsx",
+                  "change_type": "created"
+                },
+                {
+                  "repository": "app",
+                  "path": "apps/web/src/test/setup.ts",
+                  "change_type": "created"
+                },
+                {
+                  "repository": "app",
+                  "path": "apps/web/tsconfig.json",
+                  "change_type": "created"
+                },
+                {
+                  "repository": "app",
+                  "path": "apps/web/vite.config.ts",
+                  "change_type": "created"
+                },
+                {
+                  "repository": "app",
+                  "path": "apps/web/vitest.config.ts",
+                  "change_type": "created"
+                },
+                {
+                  "repository": "app",
+                  "path": "assets/ASSET_MANIFEST.json",
+                  "change_type": "created"
+                },
+                {
+                  "repository": "app",
+                  "path": "assets/README.md",
+                  "change_type": "created"
+                },
+                {
+                  "repository": "app",
+                  "path": "docs/CONFIGURATION.md",
+                  "change_type": "created"
+                },
+                {
+                  "repository": "app",
+                  "path": "infra/Dockerfile",
+                  "change_type": "created"
+                },
+                {
+                  "repository": "app",
+                  "path": "infra/docker-compose.yml",
+                  "change_type": "created"
+                },
+                {
+                  "repository": "app",
+                  "path": "packages/contracts/src/queries.ts",
+                  "change_type": "modified"
+                },
+                {
+                  "repository": "app",
+                  "path": "packages/domain/src/identity/preferences.ts",
+                  "change_type": "modified"
+                },
+                {
+                  "repository": "app",
+                  "path": "packages/domain/src/identity/workspace.ts",
+                  "change_type": "modified"
+                },
+                {
+                  "repository": "app",
+                  "path": "packages/domain/src/projections/reducer.ts",
+                  "change_type": "modified"
+                },
+                {
+                  "repository": "app",
+                  "path": "packages/domain/src/values/money.test.ts",
+                  "change_type": "modified"
+                },
+                {
+                  "repository": "app",
+                  "path": "packages/testkit/src/scenario.ts",
+                  "change_type": "modified"
+                },
+                {
+                  "repository": "app",
+                  "path": "pnpm-lock.yaml",
+                  "change_type": "created"
+                },
+                {
+                  "repository": "app",
+                  "path": "pnpm-workspace.yaml",
+                  "change_type": "modified"
+                },
+                {
+                  "repository": "app",
+                  "path": "scripts/check-asset-manifest.mjs",
+                  "change_type": "created"
+                },
+                {
+                  "repository": "app",
+                  "path": "scripts/check-boundaries.mjs",
+                  "change_type": "created"
+                },
+                {
+                  "repository": "app",
+                  "path": "scripts/check-product-identifiers.mjs",
+                  "change_type": "created"
+                },
+                {
+                  "repository": "app",
+                  "path": "scripts/report-app-tests.mjs",
+                  "change_type": "created"
+                },
+                {
+                  "repository": "app",
+                  "path": "scripts/write-candidate.mjs",
+                  "change_type": "created"
+                }
+              ],
+              "patch_sha256": "95a1fcff57e7162ff65d91c692fb69f4667a67ba6d17672ee0b21c1853511f11",
+              "automatic_publication": true
+            },
+            {
+              "id": "control",
+              "head": "9b2624c6ed2a1abcbbcb93b47a5e0beb42c5232e",
+              "files": {},
+              "current_head": "9b2624c6ed2a1abcbbcb93b47a5e0beb42c5232e",
+              "baseline_commit": "9b2624c6ed2a1abcbbcb93b47a5e0beb42c5232e",
+              "current_branch": "main",
+              "expected_branch": "main",
+              "branch_matches": true,
+              "baseline_is_ancestor": true,
+              "working_tree_clean": true,
+              "manual_commits": [],
+              "effective_changes": [],
+              "patch_sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+              "automatic_publication": true
+            }
+          ],
+          "manual_commits": [],
+          "effective_changes": [
+            {
+              "repository": "app",
+              "path": ".env.example",
+              "change_type": "modified"
+            },
+            {
+              "repository": "app",
+              "path": ".github/workflows/ci.yml",
+              "change_type": "created"
+            },
+            {
+              "repository": "app",
+              "path": ".gitignore",
+              "change_type": "modified"
+            },
+            {
+              "repository": "app",
+              "path": ".write-probe.tmp",
+              "change_type": "deleted"
+            },
+            {
+              "repository": "app",
+              "path": "README.md",
+              "change_type": "modified"
+            },
+            {
+              "repository": "app",
+              "path": "apps/api/package.json",
+              "change_type": "modified"
+            },
+            {
+              "repository": "app",
+              "path": "apps/api/src/app.ts",
+              "change_type": "created"
+            },
+            {
+              "repository": "app",
+              "path": "apps/api/src/auth/password.ts",
+              "change_type": "modified"
+            },
+            {
+              "repository": "app",
+              "path": "apps/api/src/auth/session-service.ts",
+              "change_type": "modified"
+            },
+            {
+              "repository": "app",
+              "path": "apps/api/src/cli/fixture-load.ts",
+              "change_type": "created"
+            },
+            {
+              "repository": "app",
+              "path": "apps/api/src/cli/migrate.ts",
+              "change_type": "created"
+            },
+            {
+              "repository": "app",
+              "path": "apps/api/src/commands/bus.ts",
+              "change_type": "created"
+            },
+            {
+              "repository": "app",
+              "path": "apps/api/src/commands/identity-handlers.ts",
+              "change_type": "created"
+            },
+            {
+              "repository": "app",
+              "path": "apps/api/src/http/problems.ts",
+              "change_type": "created"
+            },
+            {
+              "repository": "app",
+              "path": "apps/api/src/persistence/db.ts",
+              "change_type": "modified"
+            },
+            {
+              "repository": "app",
+              "path": "apps/api/src/persistence/fixture-loader.ts",
+              "change_type": "created"
+            },
+            {
+              "repository": "app",
+              "path": "apps/api/src/persistence/repositories.ts",
+              "change_type": "modified"
+            },
+            {
+              "repository": "app",
+              "path": "apps/api/src/routes/views.ts",
+              "change_type": "created"
+            },
+            {
+              "repository": "app",
+              "path": "apps/api/src/server.ts",
+              "change_type": "created"
+            },
+            {
+              "repository": "app",
+              "path": "apps/api/test/auth.test.ts",
+              "change_type": "created"
+            },
+            {
+              "repository": "app",
+              "path": "apps/api/test/authz-matrix.test.ts",
+              "change_type": "created"
+            },
+            {
+              "repository": "app",
+              "path": "apps/api/test/global-setup.ts",
+              "change_type": "created"
+            },
+            {
+              "repository": "app",
+              "path": "apps/api/test/helpers.ts",
+              "change_type": "created"
+            },
+            {
+              "repository": "app",
+              "path": "apps/api/test/idempotency.test.ts",
+              "change_type": "created"
+            },
+            {
+              "repository": "app",
+              "path": "apps/api/test/isolation.test.ts",
+              "change_type": "created"
+            },
+            {
+              "repository": "app",
+              "path": "apps/api/test/projection.test.ts",
+              "change_type": "created"
+            },
+            {
+              "repository": "app",
+              "path": "apps/api/test/startup.test.ts",
+              "change_type": "created"
+            },
+            {
+              "repository": "app",
+              "path": "apps/web/index.html",
+              "change_type": "created"
+            },
+            {
+              "repository": "app",
+              "path": "apps/web/package.json",
+              "change_type": "created"
+            },
+            {
+              "repository": "app",
+              "path": "apps/web/src/App.test.tsx",
+              "change_type": "created"
+            },
+            {
+              "repository": "app",
+              "path": "apps/web/src/App.tsx",
+              "change_type": "created"
+            },
+            {
+              "repository": "app",
+              "path": "apps/web/src/api/client.ts",
+              "change_type": "created"
+            },
+            {
+              "repository": "app",
+              "path": "apps/web/src/auth/AuthProvider.tsx",
+              "change_type": "created"
+            },
+            {
+              "repository": "app",
+              "path": "apps/web/src/auth/AuthScreens.tsx",
+              "change_type": "created"
+            },
+            {
+              "repository": "app",
+              "path": "apps/web/src/drafts/DraftsProvider.tsx",
+              "change_type": "created"
+            },
+            {
+              "repository": "app",
+              "path": "apps/web/src/drafts/queue.test.ts",
+              "change_type": "created"
+            },
+            {
+              "repository": "app",
+              "path": "apps/web/src/drafts/queue.ts",
+              "change_type": "created"
+            },
+            {
+              "repository": "app",
+              "path": "apps/web/src/drafts/store.ts",
+              "change_type": "created"
+            },
+            {
+              "repository": "app",
+              "path": "apps/web/src/main.tsx",
+              "change_type": "created"
+            },
+            {
+              "repository": "app",
+              "path": "apps/web/src/preferences/PresentationProvider.tsx",
+              "change_type": "created"
+            },
+            {
+              "repository": "app",
+              "path": "apps/web/src/preferences/PresentationSettings.tsx",
+              "change_type": "created"
+            },
+            {
+              "repository": "app",
+              "path": "apps/web/src/preferences/presentation.test.tsx",
+              "change_type": "created"
+            },
+            {
+              "repository": "app",
+              "path": "apps/web/src/preferences/presentation.ts",
+              "change_type": "created"
+            },
+            {
+              "repository": "app",
+              "path": "apps/web/src/shell/Shell.test.tsx",
+              "change_type": "created"
+            },
+            {
+              "repository": "app",
+              "path": "apps/web/src/shell/Shell.tsx",
+              "change_type": "created"
+            },
+            {
+              "repository": "app",
+              "path": "apps/web/src/shell/navigation-memory.ts",
+              "change_type": "created"
+            },
+            {
+              "repository": "app",
+              "path": "apps/web/src/shell/surfaces.ts",
+              "change_type": "created"
+            },
+            {
+              "repository": "app",
+              "path": "apps/web/src/state/StatePanel.test.tsx",
+              "change_type": "created"
+            },
+            {
+              "repository": "app",
+              "path": "apps/web/src/state/StatePanel.tsx",
+              "change_type": "created"
+            },
+            {
+              "repository": "app",
+              "path": "apps/web/src/styles.css",
+              "change_type": "created"
+            },
+            {
+              "repository": "app",
+              "path": "apps/web/src/surfaces/Surfaces.tsx",
+              "change_type": "created"
+            },
+            {
+              "repository": "app",
+              "path": "apps/web/src/test/setup.ts",
+              "change_type": "created"
+            },
+            {
+              "repository": "app",
+              "path": "apps/web/tsconfig.json",
+              "change_type": "created"
+            },
+            {
+              "repository": "app",
+              "path": "apps/web/vite.config.ts",
+              "change_type": "created"
+            },
+            {
+              "repository": "app",
+              "path": "apps/web/vitest.config.ts",
+              "change_type": "created"
+            },
+            {
+              "repository": "app",
+              "path": "assets/ASSET_MANIFEST.json",
+              "change_type": "created"
+            },
+            {
+              "repository": "app",
+              "path": "assets/README.md",
+              "change_type": "created"
+            },
+            {
+              "repository": "app",
+              "path": "docs/CONFIGURATION.md",
+              "change_type": "created"
+            },
+            {
+              "repository": "app",
+              "path": "infra/Dockerfile",
+              "change_type": "created"
+            },
+            {
+              "repository": "app",
+              "path": "infra/docker-compose.yml",
+              "change_type": "created"
+            },
+            {
+              "repository": "app",
+              "path": "packages/contracts/src/queries.ts",
+              "change_type": "modified"
+            },
+            {
+              "repository": "app",
+              "path": "packages/domain/src/identity/preferences.ts",
+              "change_type": "modified"
+            },
+            {
+              "repository": "app",
+              "path": "packages/domain/src/identity/workspace.ts",
+              "change_type": "modified"
+            },
+            {
+              "repository": "app",
+              "path": "packages/domain/src/projections/reducer.ts",
+              "change_type": "modified"
+            },
+            {
+              "repository": "app",
+              "path": "packages/domain/src/values/money.test.ts",
+              "change_type": "modified"
+            },
+            {
+              "repository": "app",
+              "path": "packages/testkit/src/scenario.ts",
+              "change_type": "modified"
+            },
+            {
+              "repository": "app",
+              "path": "pnpm-lock.yaml",
+              "change_type": "created"
+            },
+            {
+              "repository": "app",
+              "path": "pnpm-workspace.yaml",
+              "change_type": "modified"
+            },
+            {
+              "repository": "app",
+              "path": "scripts/check-asset-manifest.mjs",
+              "change_type": "created"
+            },
+            {
+              "repository": "app",
+              "path": "scripts/check-boundaries.mjs",
+              "change_type": "created"
+            },
+            {
+              "repository": "app",
+              "path": "scripts/check-product-identifiers.mjs",
+              "change_type": "created"
+            },
+            {
+              "repository": "app",
+              "path": "scripts/report-app-tests.mjs",
+              "change_type": "created"
+            },
+            {
+              "repository": "app",
+              "path": "scripts/write-candidate.mjs",
+              "change_type": "created"
+            }
+          ],
+          "manual_commit_count": 0,
+          "effective_change_count": 73,
+          "adjustments": [],
+          "fingerprint": "ce0de6dcc73965ebeb1cf0d2b9bcf5089a11e3e7b440b89f35aa24cd323743ef",
+          "publication_plan": {
+            "work_package_id": "LEGACY-WORK-003",
+            "run_id": "DEV-20261111T075250Z-926FCC",
+            "remote": "origin",
+            "branch": "main",
+            "repositories": [
+              {
+                "id": "app",
+                "head": "50c806ff54e76cfa2cfdba74c2eca1c9742a6abe",
+                "files": {
+                  ".env.example": "c06098a97a95bee850f2f4ab246a99891a1fc8c0735e7b4f90bcd3b8d194faf1:100644",
+                  ".github/workflows/ci.yml": "a83d6d6aea27f2a020bd5243271e15b185f664704718cbb910e03ba9130641d2:100644",
+                  ".gitignore": "ecc31790f46048aa0290059a032cb3eee32da3ca145c139adae7044c9bbf18a1:100644",
+                  ".write-probe.tmp": null,
+                  "README.md": "49a5d98e89144ae53685280516112967ce0f6916e604677c91512062329d22b7:100644",
+                  "apps/api/package.json": "e393faf1d48c6c6cd5d1fd90d15bd3ae25f07c2db890215a95243314b29e0729:100644",
+                  "apps/api/src/app.ts": "e9a6c56612c5bba31f21fa38a79f9318f22ab6eeee3399c27672351788b28c74:100644",
+                  "apps/api/src/auth/password.ts": "1e3cc8578acdded41275a11ebe38f7c73538da4afa7ff56679190aff40077bb5:100644",
+                  "apps/api/src/auth/session-service.ts": "09c8e6cdd59e3b28c45d171f53bf92ee9f8b434dd9db75b32dabad4d585a6bd1:100644",
+                  "apps/api/src/cli/fixture-load.ts": "43845420767bbbe55a03fc40703dba47b2a5252ffe7197d72f35be117c339cb6:100644",
+                  "apps/api/src/cli/migrate.ts": "0e00e9278fca8ec7ed245512012805d5815308386dd50dab506e872896ad18a1:100644",
+                  "apps/api/src/commands/bus.ts": "fb136246eaec64d55fd7991fc5bcfbea7b3c485deb2b5d916c43c1c2661f031a:100644",
+                  "apps/api/src/commands/identity-handlers.ts": "8f78de8faa5424c2b9196c739b78fbe0a0052eb4ca32b6f17e04aa8cac616552:100644",
+                  "apps/api/src/http/problems.ts": "4153756897c89eea400e24752bda7eee8b97eb0f19be4082360cb327cd1c42a0:100644",
+                  "apps/api/src/persistence/db.ts": "4de2e0a0c2826185631d9cd4ea932576f41a3f1bfccf2583dcc9036ce38086b7:100644",
+                  "apps/api/src/persistence/fixture-loader.ts": "07c4415c1f02ed9f64e0fd41ac49ca077002d2d20591737ab40554dd471def24:100644",
+                  "apps/api/src/persistence/repositories.ts": "301f5f878082a5ace90003ac38e10336a6c774bdc4d067b17f2d27c2d2e09a56:100644",
+                  "apps/api/src/routes/views.ts": "d3ecdb88e925441dd9b87488809faca8c38b920c7b3968a817da36debb221c38:100644",
+                  "apps/api/src/server.ts": "cadd3806f2bf234cc29f9f16a26ccf6bdb66524fd2cbbb37b2ce4cc454a7255f:100644",
+                  "apps/api/test/auth.test.ts": "7361abd18609f9fbe3382446a7dbd9d53ea2c852f7365a4cbffcea48961e9140:100644",
+                  "apps/api/test/authz-matrix.test.ts": "2127ef84770d34af1f385cf90ee95d3d5e98cbd957ef5aff62fef3ce88fcae36:100644",
+                  "apps/api/test/global-setup.ts": "5b0ec6d3f7f330c75e5c5e15bbae2d242e28c1fd70f4aa24660cae7e128dc3a3:100644",
+                  "apps/api/test/helpers.ts": "71976778cf5a898563707bde427118a927acc38177afa308320b13db777abcd0:100644",
+                  "apps/api/test/idempotency.test.ts": "50ac46a1087d5a2eef1cece141105069687f039bb9b11e126607400fc0926edd:100644",
+                  "apps/api/test/isolation.test.ts": "7b93cd94b5a1772583b6826724971c70a456f5ab4f52e591d4c24f8c85a9a5ae:100644",
+                  "apps/api/test/projection.test.ts": "667f6a55dd1fafc7b2e88bef83c09cebc74b5b52f186c2d0aaa0a8044e7c9ee8:100644",
+                  "apps/api/test/startup.test.ts": "727d60df509c496f6083cd5c06f4ec83a36543414b8c4bdbfe8795565ab8ea97:100644",
+                  "apps/web/index.html": "62371d4796c81df9a711079c75208b3ccaa54dc384e9c226e46e7e9295f88493:100644",
+                  "apps/web/package.json": "09d6418d1d58d04da8d1c5baa89d0513be5c2e65f0de6a40ac129185c415381e:100644",
+                  "apps/web/src/App.test.tsx": "045cb4f4e1fd47b511c464bbc1c15281acf17019783b8accbb5fb9b02903bd54:100644",
+                  "apps/web/src/App.tsx": "a103275e324c25f4a1481caf20234c83f1ad12f771180f30706186bc8c3a4dc7:100644",
+                  "apps/web/src/api/client.ts": "0abbdf8c718ccf240e65ec010c0c42efc8f2eb9ac9290fad701edddc3bc4394e:100644",
+                  "apps/web/src/auth/AuthProvider.tsx": "677620a3a0266a4dcf1f7feef0a9fcbd64129439d32d746030da5a7bd576a913:100644",
+                  "apps/web/src/auth/AuthScreens.tsx": "6f6adbf2db8477ab5961aa5b02c6556761741fa2ec63c4500abc99b08281849c:100644",
+                  "apps/web/src/drafts/DraftsProvider.tsx": "b5c96fa3f49fb7b30c2057162480fed089e996523ad29abeea1c0c47fea81c07:100644",
+                  "apps/web/src/drafts/queue.test.ts": "0ba3921b3013562409f6f759dd416c6e77acdc791d6b60e962bfe1548353fa7a:100644",
+                  "apps/web/src/drafts/queue.ts": "a6b099978ad58952c3678af16eaace4f119845de04f0f7f86d8f96596d283623:100644",
+                  "apps/web/src/drafts/store.ts": "a8124b7887e11833181e3a0cd61b17a49c8b0dc3019c64d32496069e14621310:100644",
+                  "apps/web/src/main.tsx": "2165fd6497f6f84813a97cb390bde3ded275700231e465937d84c8b9ef5675f0:100644",
+                  "apps/web/src/preferences/PresentationProvider.tsx": "5c0771412893c7c3260bc4e989541caa2d5365b7f4c7532565334d2600fbfe3c:100644",
+                  "apps/web/src/preferences/PresentationSettings.tsx": "6aa61a7ac49014a2efccbb8dbdf149b4d03cff3a5c15d1d1fdfb4df558faf3da:100644",
+                  "apps/web/src/preferences/presentation.test.tsx": "5e80624797bce94fed55b76d2ea22afbeaa13159d772d62377a811fc822e36ad:100644",
+                  "apps/web/src/preferences/presentation.ts": "4b173311e5bb9592711fd95ee62c8195bc09755f74a91948a2033d68663d9bb5:100644",
+                  "apps/web/src/shell/Shell.test.tsx": "7c4a5a90c0deaa38b8771c2f3c3fb27409fdb12e216dcf5f41c7cae5cdba5f95:100644",
+                  "apps/web/src/shell/Shell.tsx": "8fa47ec1906f032e76059ec64ccc53916a8de0d310f2efea0395a1cdce3153b4:100644",
+                  "apps/web/src/shell/navigation-memory.ts": "8efdeeed1c9c2036be0db3eeb988427fb2b2a55336b8c8729fc21615bf17e2d2:100644",
+                  "apps/web/src/shell/surfaces.ts": "c24fa356ca1996ad3e0d199f3d251e490c1eeb23829d91909d615ddec37c545e:100644",
+                  "apps/web/src/state/StatePanel.test.tsx": "69927f701bd76e698df67af2d4dd5d43f2062898fa9ddf976dabe29ed7c0d10f:100644",
+                  "apps/web/src/state/StatePanel.tsx": "d1f0240e20bf11bc26ec1b2612260b2ac4631aca0a902e22703bd0d67fbe1eae:100644",
+                  "apps/web/src/styles.css": "a26c6e07bc1a4af1061fdcd6d8186059c620a66521c31a5736dfb94509dfcf1f:100644",
+                  "apps/web/src/surfaces/Surfaces.tsx": "8595f4c928d83283b6b6357a3195a382ec638f433cef7f28341eac672b7da315:100644",
+                  "apps/web/src/test/setup.ts": "d20ddfad21d06bbe3169119b5118d99ec821b7e106d20b2aaad5997e3c9a2c17:100644",
+                  "apps/web/tsconfig.json": "c63cbf651f5fa9bdc840ab55d6bb0c5896539b39e7c37202c513d971c3668432:100644",
+                  "apps/web/vite.config.ts": "2d53bf8f5ea8b5c192c57f9f22d7dab4387e866084e72cf1bef49eeeb82adc4d:100644",
+                  "apps/web/vitest.config.ts": "ec9e4a20d967370b2ca8deba1a3e3032c7b31c7669a1692915ee08eed7c13648:100644",
+                  "assets/ASSET_MANIFEST.json": "de73bc1075a4322a99370ae66aed5194151dc2c1dda43ad70b62160b93d4c61d:100644",
+                  "assets/README.md": "9b7ce221156cc340393f221058431f2773417a1c52143706e11c22f0674670e8:100644",
+                  "docs/CONFIGURATION.md": "db7dcca36809218ff248ab16734125f9090b7b25b1c72e1e39dafb1b68ab6666:100644",
+                  "infra/Dockerfile": "84f0870065c4fe5f5cd375fcdff1ff1836c75442697571552feb35ff8e3edc82:100644",
+                  "infra/docker-compose.yml": "ff5ca05e6648b8c48c6ec271a327a2d5b5c094dd74f6c11b604b6ad204893f56:100644",
+                  "packages/contracts/src/queries.ts": "372778686ed9f581894c3b20333c84b6316e8515a113f8b42888966666e1022e:100644",
+                  "packages/domain/src/identity/preferences.ts": "1c640c4097aad686fcf1700d265b5b1671eced01c388ca908418b8ee454a5a04:100644",
+                  "packages/domain/src/identity/workspace.ts": "6a70d2bdd2c56b768a0165b4861d66745ed7c17ef4c4d0cb4cc25e200950b824:100644",
+                  "packages/domain/src/projections/reducer.ts": "da52ecf80bf9db6e7d89778899329fc6c9a1d24821dc3bb7a5adfffeb30e518d:100644",
+                  "packages/domain/src/values/money.test.ts": "18ab9d5cc8cb546efd63322b3f5dc9b26ef97b2fbdbba858ae13a03407409cd5:100644",
+                  "packages/testkit/src/scenario.ts": "dbb58e2923bc85fead833bcf285e802a5e7d424bb2676d2dd11b3f14ede29d06:100644",
+                  "pnpm-lock.yaml": "a4809fc6941cf07f5e0cae0c6c0aea407303e77f26ae37b6fbc5d4e7a09855f8:100644",
+                  "pnpm-workspace.yaml": "52ba03cdd3ce08d553adf0e8a4a45476a6a544f05aa7afe0f19cde63d7b6999a:100644",
+                  "scripts/check-asset-manifest.mjs": "4e1af47ba775d95d998495ce904a2b16cb83e0b616d2d8931693f3eaef4586ec:100644",
+                  "scripts/check-boundaries.mjs": "e488ba69a4baf39806dff5a879565039bffc613f07f0ee04148b8224e4cf720b:100644",
+                  "scripts/check-product-identifiers.mjs": "c761693a45b40cb50691a354a3cfd95ef91b12ce34da39a853a38a16c9014597:100644",
+                  "scripts/report-app-tests.mjs": "635dee3dcf24cb511383deda08c0349a7f506ebf0d284fc6ac1a54d5a77cee9b:100644",
+                  "scripts/write-candidate.mjs": "0cba1c8943fd0593f83ff456730891d1937bdcfd013f5aae1f4e1a5868726a95:100644"
+                },
+                "current_head": "50c806ff54e76cfa2cfdba74c2eca1c9742a6abe",
+                "baseline_commit": "50c806ff54e76cfa2cfdba74c2eca1c9742a6abe",
+                "current_branch": "main",
+                "expected_branch": "main",
+                "branch_matches": true,
+                "baseline_is_ancestor": true,
+                "working_tree_clean": false,
+                "manual_commits": [],
+                "effective_changes": [
+                  {
+                    "repository": "app",
+                    "path": ".env.example",
+                    "change_type": "modified"
+                  },
+                  {
+                    "repository": "app",
+                    "path": ".github/workflows/ci.yml",
+                    "change_type": "created"
+                  },
+                  {
+                    "repository": "app",
+                    "path": ".gitignore",
+                    "change_type": "modified"
+                  },
+                  {
+                    "repository": "app",
+                    "path": ".write-probe.tmp",
+                    "change_type": "deleted"
+                  },
+                  {
+                    "repository": "app",
+                    "path": "README.md",
+                    "change_type": "modified"
+                  },
+                  {
+                    "repository": "app",
+                    "path": "apps/api/package.json",
+                    "change_type": "modified"
+                  },
+                  {
+                    "repository": "app",
+                    "path": "apps/api/src/app.ts",
+                    "change_type": "created"
+                  },
+                  {
+                    "repository": "app",
+                    "path": "apps/api/src/auth/password.ts",
+                    "change_type": "modified"
+                  },
+                  {
+                    "repository": "app",
+                    "path": "apps/api/src/auth/session-service.ts",
+                    "change_type": "modified"
+                  },
+                  {
+                    "repository": "app",
+                    "path": "apps/api/src/cli/fixture-load.ts",
+                    "change_type": "created"
+                  },
+                  {
+                    "repository": "app",
+                    "path": "apps/api/src/cli/migrate.ts",
+                    "change_type": "created"
+                  },
+                  {
+                    "repository": "app",
+                    "path": "apps/api/src/commands/bus.ts",
+                    "change_type": "created"
+                  },
+                  {
+                    "repository": "app",
+                    "path": "apps/api/src/commands/identity-handlers.ts",
+                    "change_type": "created"
+                  },
+                  {
+                    "repository": "app",
+                    "path": "apps/api/src/http/problems.ts",
+                    "change_type": "created"
+                  },
+                  {
+                    "repository": "app",
+                    "path": "apps/api/src/persistence/db.ts",
+                    "change_type": "modified"
+                  },
+                  {
+                    "repository": "app",
+                    "path": "apps/api/src/persistence/fixture-loader.ts",
+                    "change_type": "created"
+                  },
+                  {
+                    "repository": "app",
+                    "path": "apps/api/src/persistence/repositories.ts",
+                    "change_type": "modified"
+                  },
+                  {
+                    "repository": "app",
+                    "path": "apps/api/src/routes/views.ts",
+                    "change_type": "created"
+                  },
+                  {
+                    "repository": "app",
+                    "path": "apps/api/src/server.ts",
+                    "change_type": "created"
+                  },
+                  {
+                    "repository": "app",
+                    "path": "apps/api/test/auth.test.ts",
+                    "change_type": "created"
+                  },
+                  {
+                    "repository": "app",
+                    "path": "apps/api/test/authz-matrix.test.ts",
+                    "change_type": "created"
+                  },
+                  {
+                    "repository": "app",
+                    "path": "apps/api/test/global-setup.ts",
+                    "change_type": "created"
+                  },
+                  {
+                    "repository": "app",
+                    "path": "apps/api/test/helpers.ts",
+                    "change_type": "created"
+                  },
+                  {
+                    "repository": "app",
+                    "path": "apps/api/test/idempotency.test.ts",
+                    "change_type": "created"
+                  },
+                  {
+                    "repository": "app",
+                    "path": "apps/api/test/isolation.test.ts",
+                    "change_type": "created"
+                  },
+                  {
+                    "repository": "app",
+                    "path": "apps/api/test/projection.test.ts",
+                    "change_type": "created"
+                  },
+                  {
+                    "repository": "app",
+                    "path": "apps/api/test/startup.test.ts",
+                    "change_type": "created"
+                  },
+                  {
+                    "repository": "app",
+                    "path": "apps/web/index.html",
+                    "change_type": "created"
+                  },
+                  {
+                    "repository": "app",
+                    "path": "apps/web/package.json",
+                    "change_type": "created"
+                  },
+                  {
+                    "repository": "app",
+                    "path": "apps/web/src/App.test.tsx",
+                    "change_type": "created"
+                  },
+                  {
+                    "repository": "app",
+                    "path": "apps/web/src/App.tsx",
+                    "change_type": "created"
+                  },
+                  {
+                    "repository": "app",
+                    "path": "apps/web/src/api/client.ts",
+                    "change_type": "created"
+                  },
+                  {
+                    "repository": "app",
+                    "path": "apps/web/src/auth/AuthProvider.tsx",
+                    "change_type": "created"
+                  },
+                  {
+                    "repository": "app",
+                    "path": "apps/web/src/auth/AuthScreens.tsx",
+                    "change_type": "created"
+                  },
+                  {
+                    "repository": "app",
+                    "path": "apps/web/src/drafts/DraftsProvider.tsx",
+                    "change_type": "created"
+                  },
+                  {
+                    "repository": "app",
+                    "path": "apps/web/src/drafts/queue.test.ts",
+                    "change_type": "created"
+                  },
+                  {
+                    "repository": "app",
+                    "path": "apps/web/src/drafts/queue.ts",
+                    "change_type": "created"
+                  },
+                  {
+                    "repository": "app",
+                    "path": "apps/web/src/drafts/store.ts",
+                    "change_type": "created"
+                  },
+                  {
+                    "repository": "app",
+                    "path": "apps/web/src/main.tsx",
+                    "change_type": "created"
+                  },
+                  {
+                    "repository": "app",
+                    "path": "apps/web/src/preferences/PresentationProvider.tsx",
+                    "change_type": "created"
+                  },
+                  {
+                    "repository": "app",
+                    "path": "apps/web/src/preferences/PresentationSettings.tsx",
+                    "change_type": "created"
+                  },
+                  {
+                    "repository": "app",
+                    "path": "apps/web/src/preferences/presentation.test.tsx",
+                    "change_type": "created"
+                  },
+                  {
+                    "repository": "app",
+                    "path": "apps/web/src/preferences/presentation.ts",
+                    "change_type": "created"
+                  },
+                  {
+                    "repository": "app",
+                    "path": "apps/web/src/shell/Shell.test.tsx",
+                    "change_type": "created"
+                  },
+                  {
+                    "repository": "app",
+                    "path": "apps/web/src/shell/Shell.tsx",
+                    "change_type": "created"
+                  },
+                  {
+                    "repository": "app",
+                    "path": "apps/web/src/shell/navigation-memory.ts",
+                    "change_type": "created"
+                  },
+                  {
+                    "repository": "app",
+                    "path": "apps/web/src/shell/surfaces.ts",
+                    "change_type": "created"
+                  },
+                  {
+                    "repository": "app",
+                    "path": "apps/web/src/state/StatePanel.test.tsx",
+                    "change_type": "created"
+                  },
+                  {
+                    "repository": "app",
+                    "path": "apps/web/src/state/StatePanel.tsx",
+                    "change_type": "created"
+                  },
+                  {
+                    "repository": "app",
+                    "path": "apps/web/src/styles.css",
+                    "change_type": "created"
+                  },
+                  {
+                    "repository": "app",
+                    "path": "apps/web/src/surfaces/Surfaces.tsx",
+                    "change_type": "created"
+                  },
+                  {
+                    "repository": "app",
+                    "path": "apps/web/src/test/setup.ts",
+                    "change_type": "created"
+                  },
+                  {
+                    "repository": "app",
+                    "path": "apps/web/tsconfig.json",
+                    "change_type": "created"
+                  },
+                  {
+                    "repository": "app",
+                    "path": "apps/web/vite.config.ts",
+                    "change_type": "created"
+                  },
+                  {
+                    "repository": "app",
+                    "path": "apps/web/vitest.config.ts",
+                    "change_type": "created"
+                  },
+                  {
+                    "repository": "app",
+                    "path": "assets/ASSET_MANIFEST.json",
+                    "change_type": "created"
+                  },
+                  {
+                    "repository": "app",
+                    "path": "assets/README.md",
+                    "change_type": "created"
+                  },
+                  {
+                    "repository": "app",
+                    "path": "docs/CONFIGURATION.md",
+                    "change_type": "created"
+                  },
+                  {
+                    "repository": "app",
+                    "path": "infra/Dockerfile",
+                    "change_type": "created"
+                  },
+                  {
+                    "repository": "app",
+                    "path": "infra/docker-compose.yml",
+                    "change_type": "created"
+                  },
+                  {
+                    "repository": "app",
+                    "path": "packages/contracts/src/queries.ts",
+                    "change_type": "modified"
+                  },
+                  {
+                    "repository": "app",
+                    "path": "packages/domain/src/identity/preferences.ts",
+                    "change_type": "modified"
+                  },
+                  {
+                    "repository": "app",
+                    "path": "packages/domain/src/identity/workspace.ts",
+                    "change_type": "modified"
+                  },
+                  {
+                    "repository": "app",
+                    "path": "packages/domain/src/projections/reducer.ts",
+                    "change_type": "modified"
+                  },
+                  {
+                    "repository": "app",
+                    "path": "packages/domain/src/values/money.test.ts",
+                    "change_type": "modified"
+                  },
+                  {
+                    "repository": "app",
+                    "path": "packages/testkit/src/scenario.ts",
+                    "change_type": "modified"
+                  },
+                  {
+                    "repository": "app",
+                    "path": "pnpm-lock.yaml",
+                    "change_type": "created"
+                  },
+                  {
+                    "repository": "app",
+                    "path": "pnpm-workspace.yaml",
+                    "change_type": "modified"
+                  },
+                  {
+                    "repository": "app",
+                    "path": "scripts/check-asset-manifest.mjs",
+                    "change_type": "created"
+                  },
+                  {
+                    "repository": "app",
+                    "path": "scripts/check-boundaries.mjs",
+                    "change_type": "created"
+                  },
+                  {
+                    "repository": "app",
+                    "path": "scripts/check-product-identifiers.mjs",
+                    "change_type": "created"
+                  },
+                  {
+                    "repository": "app",
+                    "path": "scripts/report-app-tests.mjs",
+                    "change_type": "created"
+                  },
+                  {
+                    "repository": "app",
+                    "path": "scripts/write-candidate.mjs",
+                    "change_type": "created"
+                  }
+                ],
+                "patch_sha256": "95a1fcff57e7162ff65d91c692fb69f4667a67ba6d17672ee0b21c1853511f11",
+                "automatic_publication": true
+              },
+              {
+                "id": "control",
+                "head": "9b2624c6ed2a1abcbbcb93b47a5e0beb42c5232e",
+                "files": {},
+                "current_head": "9b2624c6ed2a1abcbbcb93b47a5e0beb42c5232e",
+                "baseline_commit": "9b2624c6ed2a1abcbbcb93b47a5e0beb42c5232e",
+                "current_branch": "main",
+                "expected_branch": "main",
+                "branch_matches": true,
+                "baseline_is_ancestor": true,
+                "working_tree_clean": true,
+                "manual_commits": [],
+                "effective_changes": [],
+                "patch_sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+                "automatic_publication": true
+              }
+            ]
+          },
+          "reason": "The approved file set is committed and pushed by the runner after acceptance."
+        },
+        "demo_command_promotion": null,
+        "fvt_gate": {
+          "required": false,
+          "ready": true,
+          "state": "Not configured",
+          "test_id": null,
+          "detail": "No controlled FVT is linked to this Work Package."
+        },
+        "unit_test_disposition": "Passed",
+        "unit_test_rationale": "Independent candidate-bound application unit tests required before acceptance.",
+        "unit_test_evidence_passed": true,
+        "unit_test_run_id": "UT-20261112T054055Z-793691",
+        "unit_test_candidate_fingerprint": "ce0de6dcc73965ebeb1cf0d2b9bcf5089a11e3e7b440b89f35aa24cd323743ef",
+        "engineering_review_ids": [],
+        "engineering_decision_ids": [],
+        "engineering_review_outcomes": {},
+        "engineering_review_manual_approval": null
+      },
+      "lesson_ids_reviewed": [],
+      "latest_development_run_id": "DEV-20261111T075250Z-926FCC"
     },
     {
       "id": "LEGACY-WORK-004",
@@ -6860,6 +8223,15 @@
                 "implementation_unit_evidence": [
                   {
                     "source": "accepted_work_package",
+                    "work_package_id": "LEGACY-WORK-009",
+                    "development_run_id": "DEV-20261108T195522Z-2B8EF7",
+                    "unit_test_run_id": "UT-20261108T201901Z-8DDFBA",
+                    "candidate_fingerprint": "dd8b1021a5a2d0eb6b06e6617015e3c2eafdf80ea7ab310e95010f738d60b583",
+                    "acceptance_policy": "current",
+                    "production_change_count": 14
+                  },
+                  {
+                    "source": "accepted_work_package",
                     "work_package_id": "LEGACY-WORK-013",
                     "development_run_id": "DEV-20261108T160612Z-F18C40",
                     "unit_test_run_id": "UT-20261108T193538Z-2BFE51",
@@ -6882,6 +8254,16 @@
               }
             },
             "implementation_unit_evidence": [
+              {
+                "source": "accepted_work_package",
+                "work_package_id": "LEGACY-WORK-009",
+                "development_run_id": "DEV-20261108T195522Z-2B8EF7",
+                "unit_test_run_id": "UT-20261108T201901Z-8DDFBA",
+                "candidate_fingerprint": "dd8b1021a5a2d0eb6b06e6617015e3c2eafdf80ea7ab310e95010f738d60b583",
+                "acceptance_policy": "current",
+                "production_change_count": 14,
+                "scope": "app-shell"
+              },
               {
                 "source": "accepted_work_package",
                 "work_package_id": "LEGACY-WORK-013",
@@ -7280,6 +8662,15 @@
                 "implementation_unit_evidence": [
                   {
                     "source": "accepted_work_package",
+                    "work_package_id": "LEGACY-WORK-009",
+                    "development_run_id": "DEV-20261108T195522Z-2B8EF7",
+                    "unit_test_run_id": "UT-20261108T201901Z-8DDFBA",
+                    "candidate_fingerprint": "dd8b1021a5a2d0eb6b06e6617015e3c2eafdf80ea7ab310e95010f738d60b583",
+                    "acceptance_policy": "current",
+                    "production_change_count": 14
+                  },
+                  {
+                    "source": "accepted_work_package",
                     "work_package_id": "LEGACY-WORK-013",
                     "development_run_id": "DEV-20261108T160612Z-F18C40",
                     "unit_test_run_id": "UT-20261108T193538Z-2BFE51",
@@ -7302,6 +8693,16 @@
               }
             },
             "implementation_unit_evidence": [
+              {
+                "source": "accepted_work_package",
+                "work_package_id": "LEGACY-WORK-009",
+                "development_run_id": "DEV-20261108T195522Z-2B8EF7",
+                "unit_test_run_id": "UT-20261108T201901Z-8DDFBA",
+                "candidate_fingerprint": "dd8b1021a5a2d0eb6b06e6617015e3c2eafdf80ea7ab310e95010f738d60b583",
+                "acceptance_policy": "current",
+                "production_change_count": 14,
+                "scope": "app-shell"
+              },
               {
                 "source": "accepted_work_package",
                 "work_package_id": "LEGACY-WORK-013",
