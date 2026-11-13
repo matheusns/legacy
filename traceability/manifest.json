@@ -4651,7 +4651,7 @@
       "summary": "Implement goal, phase, milestone and task domain",
       "scope": "all",
       "work_package_type": "technical",
-      "status": "Backlog",
+      "status": "Done",
       "priority": "P1",
       "functionality_ids": [
         "LEGACY-CAP-003",
@@ -4664,7 +4664,7 @@
         "matheusns/legacy_app",
         "matheusns/legacy_verification_tooling"
       ],
-      "path": "docs/work_packages/LEGACY-WORK-005.md",
+      "path": "work/done/LEGACY-WORK-005.md",
       "acceptance_criteria": [
         "Workspace-scoped goal hierarchy and task links with validation and persistence on reload."
       ],
@@ -4689,7 +4689,656 @@
       "target_profile_ids": [
         "desktop-browser",
         "mobile-browser"
-      ]
+      ],
+      "review": {
+        "disposition": "Accepted",
+        "run_id": "DEV-20261113T161013Z-5F1A43",
+        "reviewed_at": "2026-11-13T16:31:22.837930Z",
+        "review_note": null,
+        "acceptance_criteria_confirmed": [],
+        "attention_acknowledged": false,
+        "completion_boundary_acknowledged": true,
+        "git_reconciliation_acknowledged": true,
+        "git_reconciliation": {
+          "available": true,
+          "enforced": true,
+          "automatic_publication": true,
+          "ready_for_acceptance": true,
+          "blocking_reasons": [],
+          "repositories": [
+            {
+              "id": "app",
+              "head": "ced9d90eeb539a52cc9efeecfef8436d1e2980fa",
+              "files": {
+                "apps/api/migrations/0002_receipt_body_sensitivity.sql": "dc9d13fceecd425fddbbe065dbd7373be55033e6f9a51e73a7dc917f0215b180:100644",
+                "apps/api/src/app.ts": "f17579da05e1f58b02339d649b967def41b71cdad9f18ffd3b779762b81c14fd:100644",
+                "apps/api/src/commands/bus.ts": "5bc4cb9a890ada749b0e9872fb4dc91c7435bfc344749a6cb55c395ae80ed1a4:100644",
+                "apps/api/src/commands/goal-handlers.ts": "d5898e27bf62b0d8c8a4eb90b296ec18519959ce30fe89e76468d6c88714c932:100644",
+                "apps/api/src/commands/identity-handlers.ts": "be2d295ddc889cd5253a5c10eb8582e5d78044d66b8e5dc275a3c55e05727c14:100644",
+                "apps/api/src/persistence/fixture-loader.ts": "f021b8168e63413ee95788746881fc257e861aa1feeaecbef77c0145578dcd7c:100644",
+                "apps/api/src/persistence/repositories.ts": "96b8cc45a2312fe7e554fc076f78896db646819d4c72a878e3418251ab779326:100644",
+                "apps/api/src/persistence/sensitivity.ts": "fc14ec8f9f3ebdc00bad9a7bdc8e60e90a77f4930e651d3f8674b4b45062ab67:100644",
+                "apps/api/src/projections/milestone-progress.ts": "2c4049a695c171af7bc33c3d5416ccf0c6060162324524fa5e524f79920694e3:100644",
+                "apps/api/src/routes/views.ts": "ea18d8a8f41b9cbb2702f182c894786d88fff1ccb11a18780c2d3e388c31f170:100644",
+                "apps/api/test/authz-matrix.test.ts": "8de0e50fc34db4d4ee131f42c70d711929a7c1680eb60bcf667213badcc0e0bf:100644",
+                "apps/api/test/goal-hierarchy.test.ts": "ed5254fd6cfe4e5503d7258ce7b9f36637c3eb488a89eab6445dbd67f15fc2bd:100644",
+                "apps/api/test/helpers.ts": "3f7bc932fce1d3e404efde32acf6d7c2ea8b3ec2b20c00f13038444304a4ce7d:100644",
+                "apps/api/test/idempotency.test.ts": "999cf23738669cb628d2f80e469aa36119634595387036bc8ce0bf51e6f1b640:100644",
+                "packages/contracts/scripts/generate-openapi.ts": "f8b3282d681852b0c04e8b15183f32f5255b11b9fc3f0d6606998d24f172787f:100644",
+                "packages/contracts/src/commands/catalogue.ts": "681ee81c9083dea8ae02e0c6574b9d718aab66e11435432bbb5898268464fae8:100644",
+                "packages/contracts/src/commands/goals.ts": "c15c1c5a64d38f26bb64dec24eacdd97f8c92b6094e3a75c3069ee94ddf8d616:100644",
+                "packages/contracts/src/contracts.test.ts": "5f5a21314f0dbdd34d818e9463bcc0525c2acad290004f10688cad1379673ebc:100644",
+                "packages/contracts/src/index.ts": "c540b4ca818f8dc885873f97d70b632e22816084d421b0d58e001ad421b448ad:100644",
+                "packages/contracts/src/queries.ts": "d042dc3c5f4879e81a504b77fbbf82ec6780c3abfd48e5f4dcfeb2276811148e:100644",
+                "packages/contracts/src/routes.ts": "801b7a894f595f51b3adbe5a71131fdfd7d328ce402a7dc53114851bc7b6cdf4:100644",
+                "packages/domain/src/goals/action.ts": "f0216f5e646b5bd898c820eaabf75d23cd08156d56e194e3cc8767aa1ef0a989:100644",
+                "packages/domain/src/goals/goal.ts": "9e06b6f0d33712cb9c6ebad8215eefb403f8b4ddbda91de804d999029acf5e39:100644",
+                "packages/domain/src/goals/goals.test.ts": "8310c5d30357a103e019a18890159644776b45e9d925b01a15ba617cf3982263:100644",
+                "packages/domain/src/goals/milestone.ts": "e9a17de97b27a926cea7be200616d25d455665a566323069aef5e5eb8fa6c8ec:100644",
+                "packages/domain/src/goals/phase.ts": "cf4a5b439c3c508319c1397a62c06c668f8fb27c96756e96c9a25f6dbcb47874:100644",
+                "packages/domain/src/index.ts": "98a5978a226f64ee7f71475495f33a73901cee6293097dc344df5d9105e7947a:100644",
+                "packages/domain/src/projections/milestone-progress.test.ts": "23f17fe02439d0ad93c3f6fb80c946c7c7244fc834fb1eeee2a435446272c647:100644",
+                "packages/domain/src/projections/milestone-progress.ts": "2d70845528ff2a9154519ef9ce4093ec202c1978298e136afffbf76c378211b0:100644",
+                "packages/domain/src/rewards/policy.ts": "ebf72fb31489a5d7889826258ddef23c27e4e95e72d548a463ceff98b0ef200d:100644",
+                "packages/testkit/src/builders.ts": "5e557fdac2205b24e0d2ce4d4ccd60bd5a6a32fb2ea75e7a90dfe76c24e9dc72:100644"
+              },
+              "current_head": "ced9d90eeb539a52cc9efeecfef8436d1e2980fa",
+              "baseline_commit": "ced9d90eeb539a52cc9efeecfef8436d1e2980fa",
+              "current_branch": "main",
+              "expected_branch": "main",
+              "branch_matches": true,
+              "baseline_is_ancestor": true,
+              "working_tree_clean": false,
+              "manual_commits": [],
+              "effective_changes": [
+                {
+                  "repository": "app",
+                  "path": "apps/api/migrations/0002_receipt_body_sensitivity.sql",
+                  "change_type": "created"
+                },
+                {
+                  "repository": "app",
+                  "path": "apps/api/src/app.ts",
+                  "change_type": "modified"
+                },
+                {
+                  "repository": "app",
+                  "path": "apps/api/src/commands/bus.ts",
+                  "change_type": "modified"
+                },
+                {
+                  "repository": "app",
+                  "path": "apps/api/src/commands/goal-handlers.ts",
+                  "change_type": "created"
+                },
+                {
+                  "repository": "app",
+                  "path": "apps/api/src/commands/identity-handlers.ts",
+                  "change_type": "modified"
+                },
+                {
+                  "repository": "app",
+                  "path": "apps/api/src/persistence/fixture-loader.ts",
+                  "change_type": "modified"
+                },
+                {
+                  "repository": "app",
+                  "path": "apps/api/src/persistence/repositories.ts",
+                  "change_type": "modified"
+                },
+                {
+                  "repository": "app",
+                  "path": "apps/api/src/persistence/sensitivity.ts",
+                  "change_type": "modified"
+                },
+                {
+                  "repository": "app",
+                  "path": "apps/api/src/projections/milestone-progress.ts",
+                  "change_type": "created"
+                },
+                {
+                  "repository": "app",
+                  "path": "apps/api/src/routes/views.ts",
+                  "change_type": "modified"
+                },
+                {
+                  "repository": "app",
+                  "path": "apps/api/test/authz-matrix.test.ts",
+                  "change_type": "modified"
+                },
+                {
+                  "repository": "app",
+                  "path": "apps/api/test/goal-hierarchy.test.ts",
+                  "change_type": "created"
+                },
+                {
+                  "repository": "app",
+                  "path": "apps/api/test/helpers.ts",
+                  "change_type": "modified"
+                },
+                {
+                  "repository": "app",
+                  "path": "apps/api/test/idempotency.test.ts",
+                  "change_type": "modified"
+                },
+                {
+                  "repository": "app",
+                  "path": "packages/contracts/scripts/generate-openapi.ts",
+                  "change_type": "modified"
+                },
+                {
+                  "repository": "app",
+                  "path": "packages/contracts/src/commands/catalogue.ts",
+                  "change_type": "created"
+                },
+                {
+                  "repository": "app",
+                  "path": "packages/contracts/src/commands/goals.ts",
+                  "change_type": "created"
+                },
+                {
+                  "repository": "app",
+                  "path": "packages/contracts/src/contracts.test.ts",
+                  "change_type": "modified"
+                },
+                {
+                  "repository": "app",
+                  "path": "packages/contracts/src/index.ts",
+                  "change_type": "modified"
+                },
+                {
+                  "repository": "app",
+                  "path": "packages/contracts/src/queries.ts",
+                  "change_type": "modified"
+                },
+                {
+                  "repository": "app",
+                  "path": "packages/contracts/src/routes.ts",
+                  "change_type": "modified"
+                },
+                {
+                  "repository": "app",
+                  "path": "packages/domain/src/goals/action.ts",
+                  "change_type": "created"
+                },
+                {
+                  "repository": "app",
+                  "path": "packages/domain/src/goals/goal.ts",
+                  "change_type": "created"
+                },
+                {
+                  "repository": "app",
+                  "path": "packages/domain/src/goals/goals.test.ts",
+                  "change_type": "created"
+                },
+                {
+                  "repository": "app",
+                  "path": "packages/domain/src/goals/milestone.ts",
+                  "change_type": "created"
+                },
+                {
+                  "repository": "app",
+                  "path": "packages/domain/src/goals/phase.ts",
+                  "change_type": "created"
+                },
+                {
+                  "repository": "app",
+                  "path": "packages/domain/src/index.ts",
+                  "change_type": "modified"
+                },
+                {
+                  "repository": "app",
+                  "path": "packages/domain/src/projections/milestone-progress.test.ts",
+                  "change_type": "created"
+                },
+                {
+                  "repository": "app",
+                  "path": "packages/domain/src/projections/milestone-progress.ts",
+                  "change_type": "created"
+                },
+                {
+                  "repository": "app",
+                  "path": "packages/domain/src/rewards/policy.ts",
+                  "change_type": "modified"
+                },
+                {
+                  "repository": "app",
+                  "path": "packages/testkit/src/builders.ts",
+                  "change_type": "modified"
+                }
+              ],
+              "patch_sha256": "10d8787ab6d90fa4c9fe3b02b73e6efc536dac580c5059128124071dd874b5ea",
+              "automatic_publication": true
+            },
+            {
+              "id": "control",
+              "head": "bf32cdaceb110b6e9fe058e97e9cfac95869abda",
+              "files": {},
+              "current_head": "bf32cdaceb110b6e9fe058e97e9cfac95869abda",
+              "baseline_commit": "bf32cdaceb110b6e9fe058e97e9cfac95869abda",
+              "current_branch": "main",
+              "expected_branch": "main",
+              "branch_matches": true,
+              "baseline_is_ancestor": true,
+              "working_tree_clean": true,
+              "manual_commits": [],
+              "effective_changes": [],
+              "patch_sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+              "automatic_publication": true
+            }
+          ],
+          "manual_commits": [],
+          "effective_changes": [
+            {
+              "repository": "app",
+              "path": "apps/api/migrations/0002_receipt_body_sensitivity.sql",
+              "change_type": "created"
+            },
+            {
+              "repository": "app",
+              "path": "apps/api/src/app.ts",
+              "change_type": "modified"
+            },
+            {
+              "repository": "app",
+              "path": "apps/api/src/commands/bus.ts",
+              "change_type": "modified"
+            },
+            {
+              "repository": "app",
+              "path": "apps/api/src/commands/goal-handlers.ts",
+              "change_type": "created"
+            },
+            {
+              "repository": "app",
+              "path": "apps/api/src/commands/identity-handlers.ts",
+              "change_type": "modified"
+            },
+            {
+              "repository": "app",
+              "path": "apps/api/src/persistence/fixture-loader.ts",
+              "change_type": "modified"
+            },
+            {
+              "repository": "app",
+              "path": "apps/api/src/persistence/repositories.ts",
+              "change_type": "modified"
+            },
+            {
+              "repository": "app",
+              "path": "apps/api/src/persistence/sensitivity.ts",
+              "change_type": "modified"
+            },
+            {
+              "repository": "app",
+              "path": "apps/api/src/projections/milestone-progress.ts",
+              "change_type": "created"
+            },
+            {
+              "repository": "app",
+              "path": "apps/api/src/routes/views.ts",
+              "change_type": "modified"
+            },
+            {
+              "repository": "app",
+              "path": "apps/api/test/authz-matrix.test.ts",
+              "change_type": "modified"
+            },
+            {
+              "repository": "app",
+              "path": "apps/api/test/goal-hierarchy.test.ts",
+              "change_type": "created"
+            },
+            {
+              "repository": "app",
+              "path": "apps/api/test/helpers.ts",
+              "change_type": "modified"
+            },
+            {
+              "repository": "app",
+              "path": "apps/api/test/idempotency.test.ts",
+              "change_type": "modified"
+            },
+            {
+              "repository": "app",
+              "path": "packages/contracts/scripts/generate-openapi.ts",
+              "change_type": "modified"
+            },
+            {
+              "repository": "app",
+              "path": "packages/contracts/src/commands/catalogue.ts",
+              "change_type": "created"
+            },
+            {
+              "repository": "app",
+              "path": "packages/contracts/src/commands/goals.ts",
+              "change_type": "created"
+            },
+            {
+              "repository": "app",
+              "path": "packages/contracts/src/contracts.test.ts",
+              "change_type": "modified"
+            },
+            {
+              "repository": "app",
+              "path": "packages/contracts/src/index.ts",
+              "change_type": "modified"
+            },
+            {
+              "repository": "app",
+              "path": "packages/contracts/src/queries.ts",
+              "change_type": "modified"
+            },
+            {
+              "repository": "app",
+              "path": "packages/contracts/src/routes.ts",
+              "change_type": "modified"
+            },
+            {
+              "repository": "app",
+              "path": "packages/domain/src/goals/action.ts",
+              "change_type": "created"
+            },
+            {
+              "repository": "app",
+              "path": "packages/domain/src/goals/goal.ts",
+              "change_type": "created"
+            },
+            {
+              "repository": "app",
+              "path": "packages/domain/src/goals/goals.test.ts",
+              "change_type": "created"
+            },
+            {
+              "repository": "app",
+              "path": "packages/domain/src/goals/milestone.ts",
+              "change_type": "created"
+            },
+            {
+              "repository": "app",
+              "path": "packages/domain/src/goals/phase.ts",
+              "change_type": "created"
+            },
+            {
+              "repository": "app",
+              "path": "packages/domain/src/index.ts",
+              "change_type": "modified"
+            },
+            {
+              "repository": "app",
+              "path": "packages/domain/src/projections/milestone-progress.test.ts",
+              "change_type": "created"
+            },
+            {
+              "repository": "app",
+              "path": "packages/domain/src/projections/milestone-progress.ts",
+              "change_type": "created"
+            },
+            {
+              "repository": "app",
+              "path": "packages/domain/src/rewards/policy.ts",
+              "change_type": "modified"
+            },
+            {
+              "repository": "app",
+              "path": "packages/testkit/src/builders.ts",
+              "change_type": "modified"
+            }
+          ],
+          "manual_commit_count": 0,
+          "effective_change_count": 31,
+          "adjustments": [],
+          "fingerprint": "3e32e372d99120810882475817201359ecf40bc440eccc4efdbff5cc02b74746",
+          "publication_plan": {
+            "work_package_id": "LEGACY-WORK-005",
+            "run_id": "DEV-20261113T161013Z-5F1A43",
+            "remote": "origin",
+            "branch": "main",
+            "repositories": [
+              {
+                "id": "app",
+                "head": "ced9d90eeb539a52cc9efeecfef8436d1e2980fa",
+                "files": {
+                  "apps/api/migrations/0002_receipt_body_sensitivity.sql": "dc9d13fceecd425fddbbe065dbd7373be55033e6f9a51e73a7dc917f0215b180:100644",
+                  "apps/api/src/app.ts": "f17579da05e1f58b02339d649b967def41b71cdad9f18ffd3b779762b81c14fd:100644",
+                  "apps/api/src/commands/bus.ts": "5bc4cb9a890ada749b0e9872fb4dc91c7435bfc344749a6cb55c395ae80ed1a4:100644",
+                  "apps/api/src/commands/goal-handlers.ts": "d5898e27bf62b0d8c8a4eb90b296ec18519959ce30fe89e76468d6c88714c932:100644",
+                  "apps/api/src/commands/identity-handlers.ts": "be2d295ddc889cd5253a5c10eb8582e5d78044d66b8e5dc275a3c55e05727c14:100644",
+                  "apps/api/src/persistence/fixture-loader.ts": "f021b8168e63413ee95788746881fc257e861aa1feeaecbef77c0145578dcd7c:100644",
+                  "apps/api/src/persistence/repositories.ts": "96b8cc45a2312fe7e554fc076f78896db646819d4c72a878e3418251ab779326:100644",
+                  "apps/api/src/persistence/sensitivity.ts": "fc14ec8f9f3ebdc00bad9a7bdc8e60e90a77f4930e651d3f8674b4b45062ab67:100644",
+                  "apps/api/src/projections/milestone-progress.ts": "2c4049a695c171af7bc33c3d5416ccf0c6060162324524fa5e524f79920694e3:100644",
+                  "apps/api/src/routes/views.ts": "ea18d8a8f41b9cbb2702f182c894786d88fff1ccb11a18780c2d3e388c31f170:100644",
+                  "apps/api/test/authz-matrix.test.ts": "8de0e50fc34db4d4ee131f42c70d711929a7c1680eb60bcf667213badcc0e0bf:100644",
+                  "apps/api/test/goal-hierarchy.test.ts": "ed5254fd6cfe4e5503d7258ce7b9f36637c3eb488a89eab6445dbd67f15fc2bd:100644",
+                  "apps/api/test/helpers.ts": "3f7bc932fce1d3e404efde32acf6d7c2ea8b3ec2b20c00f13038444304a4ce7d:100644",
+                  "apps/api/test/idempotency.test.ts": "999cf23738669cb628d2f80e469aa36119634595387036bc8ce0bf51e6f1b640:100644",
+                  "packages/contracts/scripts/generate-openapi.ts": "f8b3282d681852b0c04e8b15183f32f5255b11b9fc3f0d6606998d24f172787f:100644",
+                  "packages/contracts/src/commands/catalogue.ts": "681ee81c9083dea8ae02e0c6574b9d718aab66e11435432bbb5898268464fae8:100644",
+                  "packages/contracts/src/commands/goals.ts": "c15c1c5a64d38f26bb64dec24eacdd97f8c92b6094e3a75c3069ee94ddf8d616:100644",
+                  "packages/contracts/src/contracts.test.ts": "5f5a21314f0dbdd34d818e9463bcc0525c2acad290004f10688cad1379673ebc:100644",
+                  "packages/contracts/src/index.ts": "c540b4ca818f8dc885873f97d70b632e22816084d421b0d58e001ad421b448ad:100644",
+                  "packages/contracts/src/queries.ts": "d042dc3c5f4879e81a504b77fbbf82ec6780c3abfd48e5f4dcfeb2276811148e:100644",
+                  "packages/contracts/src/routes.ts": "801b7a894f595f51b3adbe5a71131fdfd7d328ce402a7dc53114851bc7b6cdf4:100644",
+                  "packages/domain/src/goals/action.ts": "f0216f5e646b5bd898c820eaabf75d23cd08156d56e194e3cc8767aa1ef0a989:100644",
+                  "packages/domain/src/goals/goal.ts": "9e06b6f0d33712cb9c6ebad8215eefb403f8b4ddbda91de804d999029acf5e39:100644",
+                  "packages/domain/src/goals/goals.test.ts": "8310c5d30357a103e019a18890159644776b45e9d925b01a15ba617cf3982263:100644",
+                  "packages/domain/src/goals/milestone.ts": "e9a17de97b27a926cea7be200616d25d455665a566323069aef5e5eb8fa6c8ec:100644",
+                  "packages/domain/src/goals/phase.ts": "cf4a5b439c3c508319c1397a62c06c668f8fb27c96756e96c9a25f6dbcb47874:100644",
+                  "packages/domain/src/index.ts": "98a5978a226f64ee7f71475495f33a73901cee6293097dc344df5d9105e7947a:100644",
+                  "packages/domain/src/projections/milestone-progress.test.ts": "23f17fe02439d0ad93c3f6fb80c946c7c7244fc834fb1eeee2a435446272c647:100644",
+                  "packages/domain/src/projections/milestone-progress.ts": "2d70845528ff2a9154519ef9ce4093ec202c1978298e136afffbf76c378211b0:100644",
+                  "packages/domain/src/rewards/policy.ts": "ebf72fb31489a5d7889826258ddef23c27e4e95e72d548a463ceff98b0ef200d:100644",
+                  "packages/testkit/src/builders.ts": "5e557fdac2205b24e0d2ce4d4ccd60bd5a6a32fb2ea75e7a90dfe76c24e9dc72:100644"
+                },
+                "current_head": "ced9d90eeb539a52cc9efeecfef8436d1e2980fa",
+                "baseline_commit": "ced9d90eeb539a52cc9efeecfef8436d1e2980fa",
+                "current_branch": "main",
+                "expected_branch": "main",
+                "branch_matches": true,
+                "baseline_is_ancestor": true,
+                "working_tree_clean": false,
+                "manual_commits": [],
+                "effective_changes": [
+                  {
+                    "repository": "app",
+                    "path": "apps/api/migrations/0002_receipt_body_sensitivity.sql",
+                    "change_type": "created"
+                  },
+                  {
+                    "repository": "app",
+                    "path": "apps/api/src/app.ts",
+                    "change_type": "modified"
+                  },
+                  {
+                    "repository": "app",
+                    "path": "apps/api/src/commands/bus.ts",
+                    "change_type": "modified"
+                  },
+                  {
+                    "repository": "app",
+                    "path": "apps/api/src/commands/goal-handlers.ts",
+                    "change_type": "created"
+                  },
+                  {
+                    "repository": "app",
+                    "path": "apps/api/src/commands/identity-handlers.ts",
+                    "change_type": "modified"
+                  },
+                  {
+                    "repository": "app",
+                    "path": "apps/api/src/persistence/fixture-loader.ts",
+                    "change_type": "modified"
+                  },
+                  {
+                    "repository": "app",
+                    "path": "apps/api/src/persistence/repositories.ts",
+                    "change_type": "modified"
+                  },
+                  {
+                    "repository": "app",
+                    "path": "apps/api/src/persistence/sensitivity.ts",
+                    "change_type": "modified"
+                  },
+                  {
+                    "repository": "app",
+                    "path": "apps/api/src/projections/milestone-progress.ts",
+                    "change_type": "created"
+                  },
+                  {
+                    "repository": "app",
+                    "path": "apps/api/src/routes/views.ts",
+                    "change_type": "modified"
+                  },
+                  {
+                    "repository": "app",
+                    "path": "apps/api/test/authz-matrix.test.ts",
+                    "change_type": "modified"
+                  },
+                  {
+                    "repository": "app",
+                    "path": "apps/api/test/goal-hierarchy.test.ts",
+                    "change_type": "created"
+                  },
+                  {
+                    "repository": "app",
+                    "path": "apps/api/test/helpers.ts",
+                    "change_type": "modified"
+                  },
+                  {
+                    "repository": "app",
+                    "path": "apps/api/test/idempotency.test.ts",
+                    "change_type": "modified"
+                  },
+                  {
+                    "repository": "app",
+                    "path": "packages/contracts/scripts/generate-openapi.ts",
+                    "change_type": "modified"
+                  },
+                  {
+                    "repository": "app",
+                    "path": "packages/contracts/src/commands/catalogue.ts",
+                    "change_type": "created"
+                  },
+                  {
+                    "repository": "app",
+                    "path": "packages/contracts/src/commands/goals.ts",
+                    "change_type": "created"
+                  },
+                  {
+                    "repository": "app",
+                    "path": "packages/contracts/src/contracts.test.ts",
+                    "change_type": "modified"
+                  },
+                  {
+                    "repository": "app",
+                    "path": "packages/contracts/src/index.ts",
+                    "change_type": "modified"
+                  },
+                  {
+                    "repository": "app",
+                    "path": "packages/contracts/src/queries.ts",
+                    "change_type": "modified"
+                  },
+                  {
+                    "repository": "app",
+                    "path": "packages/contracts/src/routes.ts",
+                    "change_type": "modified"
+                  },
+                  {
+                    "repository": "app",
+                    "path": "packages/domain/src/goals/action.ts",
+                    "change_type": "created"
+                  },
+                  {
+                    "repository": "app",
+                    "path": "packages/domain/src/goals/goal.ts",
+                    "change_type": "created"
+                  },
+                  {
+                    "repository": "app",
+                    "path": "packages/domain/src/goals/goals.test.ts",
+                    "change_type": "created"
+                  },
+                  {
+                    "repository": "app",
+                    "path": "packages/domain/src/goals/milestone.ts",
+                    "change_type": "created"
+                  },
+                  {
+                    "repository": "app",
+                    "path": "packages/domain/src/goals/phase.ts",
+                    "change_type": "created"
+                  },
+                  {
+                    "repository": "app",
+                    "path": "packages/domain/src/index.ts",
+                    "change_type": "modified"
+                  },
+                  {
+                    "repository": "app",
+                    "path": "packages/domain/src/projections/milestone-progress.test.ts",
+                    "change_type": "created"
+                  },
+                  {
+                    "repository": "app",
+                    "path": "packages/domain/src/projections/milestone-progress.ts",
+                    "change_type": "created"
+                  },
+                  {
+                    "repository": "app",
+                    "path": "packages/domain/src/rewards/policy.ts",
+                    "change_type": "modified"
+                  },
+                  {
+                    "repository": "app",
+                    "path": "packages/testkit/src/builders.ts",
+                    "change_type": "modified"
+                  }
+                ],
+                "patch_sha256": "10d8787ab6d90fa4c9fe3b02b73e6efc536dac580c5059128124071dd874b5ea",
+                "automatic_publication": true
+              },
+              {
+                "id": "control",
+                "head": "bf32cdaceb110b6e9fe058e97e9cfac95869abda",
+                "files": {},
+                "current_head": "bf32cdaceb110b6e9fe058e97e9cfac95869abda",
+                "baseline_commit": "bf32cdaceb110b6e9fe058e97e9cfac95869abda",
+                "current_branch": "main",
+                "expected_branch": "main",
+                "branch_matches": true,
+                "baseline_is_ancestor": true,
+                "working_tree_clean": true,
+                "manual_commits": [],
+                "effective_changes": [],
+                "patch_sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+                "automatic_publication": true
+              }
+            ]
+          },
+          "reason": "The approved file set is committed and pushed by the runner after acceptance."
+        },
+        "demo_command_promotion": null,
+        "fvt_gate": {
+          "required": false,
+          "ready": true,
+          "state": "Not configured",
+          "test_id": null,
+          "detail": "No controlled FVT is linked to this Work Package."
+        },
+        "unit_test_disposition": "Passed",
+        "unit_test_rationale": "Independent candidate-bound application unit tests required before acceptance.",
+        "unit_test_evidence_passed": true,
+        "unit_test_run_id": "UT-20261113T162937Z-AB20BF",
+        "unit_test_candidate_fingerprint": "3e32e372d99120810882475817201359ecf40bc440eccc4efdbff5cc02b74746",
+        "engineering_review_ids": [],
+        "engineering_decision_ids": [],
+        "engineering_review_outcomes": {},
+        "engineering_review_manual_approval": null
+      },
+      "lesson_ids_reviewed": [],
+      "latest_development_run_id": "DEV-20261113T161013Z-5F1A43"
     },
     {
       "id": "LEGACY-WORK-006",
@@ -8063,6 +8712,15 @@
                 "implementation_unit_evidence": [
                   {
                     "source": "accepted_work_package",
+                    "work_package_id": "LEGACY-WORK-003",
+                    "development_run_id": "DEV-20261111T075250Z-926FCC",
+                    "unit_test_run_id": "UT-20261112T054055Z-793691",
+                    "candidate_fingerprint": "ce0de6dcc73965ebeb1cf0d2b9bcf5089a11e3e7b440b89f35aa24cd323743ef",
+                    "acceptance_policy": "current",
+                    "production_change_count": 73
+                  },
+                  {
+                    "source": "accepted_work_package",
                     "work_package_id": "LEGACY-WORK-013",
                     "development_run_id": "DEV-20261108T160612Z-F18C40",
                     "unit_test_run_id": "UT-20261108T193538Z-2BFE51",
@@ -8085,6 +8743,16 @@
               }
             },
             "implementation_unit_evidence": [
+              {
+                "source": "accepted_work_package",
+                "work_package_id": "LEGACY-WORK-003",
+                "development_run_id": "DEV-20261111T075250Z-926FCC",
+                "unit_test_run_id": "UT-20261112T054055Z-793691",
+                "candidate_fingerprint": "ce0de6dcc73965ebeb1cf0d2b9bcf5089a11e3e7b440b89f35aa24cd323743ef",
+                "acceptance_policy": "current",
+                "production_change_count": 73,
+                "scope": "identity-access"
+              },
               {
                 "source": "accepted_work_package",
                 "work_package_id": "LEGACY-WORK-013",
@@ -8223,6 +8891,15 @@
                 "implementation_unit_evidence": [
                   {
                     "source": "accepted_work_package",
+                    "work_package_id": "LEGACY-WORK-003",
+                    "development_run_id": "DEV-20261111T075250Z-926FCC",
+                    "unit_test_run_id": "UT-20261112T054055Z-793691",
+                    "candidate_fingerprint": "ce0de6dcc73965ebeb1cf0d2b9bcf5089a11e3e7b440b89f35aa24cd323743ef",
+                    "acceptance_policy": "current",
+                    "production_change_count": 73
+                  },
+                  {
+                    "source": "accepted_work_package",
                     "work_package_id": "LEGACY-WORK-009",
                     "development_run_id": "DEV-20261108T195522Z-2B8EF7",
                     "unit_test_run_id": "UT-20261108T201901Z-8DDFBA",
@@ -8254,6 +8931,16 @@
               }
             },
             "implementation_unit_evidence": [
+              {
+                "source": "accepted_work_package",
+                "work_package_id": "LEGACY-WORK-003",
+                "development_run_id": "DEV-20261111T075250Z-926FCC",
+                "unit_test_run_id": "UT-20261112T054055Z-793691",
+                "candidate_fingerprint": "ce0de6dcc73965ebeb1cf0d2b9bcf5089a11e3e7b440b89f35aa24cd323743ef",
+                "acceptance_policy": "current",
+                "production_change_count": 73,
+                "scope": "app-shell"
+              },
               {
                 "source": "accepted_work_package",
                 "work_package_id": "LEGACY-WORK-009",
@@ -8662,6 +9349,15 @@
                 "implementation_unit_evidence": [
                   {
                     "source": "accepted_work_package",
+                    "work_package_id": "LEGACY-WORK-003",
+                    "development_run_id": "DEV-20261111T075250Z-926FCC",
+                    "unit_test_run_id": "UT-20261112T054055Z-793691",
+                    "candidate_fingerprint": "ce0de6dcc73965ebeb1cf0d2b9bcf5089a11e3e7b440b89f35aa24cd323743ef",
+                    "acceptance_policy": "current",
+                    "production_change_count": 73
+                  },
+                  {
+                    "source": "accepted_work_package",
                     "work_package_id": "LEGACY-WORK-009",
                     "development_run_id": "DEV-20261108T195522Z-2B8EF7",
                     "unit_test_run_id": "UT-20261108T201901Z-8DDFBA",
@@ -8693,6 +9389,16 @@
               }
             },
             "implementation_unit_evidence": [
+              {
+                "source": "accepted_work_package",
+                "work_package_id": "LEGACY-WORK-003",
+                "development_run_id": "DEV-20261111T075250Z-926FCC",
+                "unit_test_run_id": "UT-20261112T054055Z-793691",
+                "candidate_fingerprint": "ce0de6dcc73965ebeb1cf0d2b9bcf5089a11e3e7b440b89f35aa24cd323743ef",
+                "acceptance_policy": "current",
+                "production_change_count": 73,
+                "scope": "app-shell"
+              },
               {
                 "source": "accepted_work_package",
                 "work_package_id": "LEGACY-WORK-009",
@@ -8961,6 +9667,15 @@
                 "implementation_unit_evidence": [
                   {
                     "source": "accepted_work_package",
+                    "work_package_id": "LEGACY-WORK-003",
+                    "development_run_id": "DEV-20261111T075250Z-926FCC",
+                    "unit_test_run_id": "UT-20261112T054055Z-793691",
+                    "candidate_fingerprint": "ce0de6dcc73965ebeb1cf0d2b9bcf5089a11e3e7b440b89f35aa24cd323743ef",
+                    "acceptance_policy": "current",
+                    "production_change_count": 73
+                  },
+                  {
+                    "source": "accepted_work_package",
                     "work_package_id": "LEGACY-WORK-013",
                     "development_run_id": "DEV-20261108T160612Z-F18C40",
                     "unit_test_run_id": "UT-20261108T193538Z-2BFE51",
@@ -8983,6 +9698,16 @@
               }
             },
             "implementation_unit_evidence": [
+              {
+                "source": "accepted_work_package",
+                "work_package_id": "LEGACY-WORK-003",
+                "development_run_id": "DEV-20261111T075250Z-926FCC",
+                "unit_test_run_id": "UT-20261112T054055Z-793691",
+                "candidate_fingerprint": "ce0de6dcc73965ebeb1cf0d2b9bcf5089a11e3e7b440b89f35aa24cd323743ef",
+                "acceptance_policy": "current",
+                "production_change_count": 73,
+                "scope": "identity-access"
+              },
               {
                 "source": "accepted_work_package",
                 "work_package_id": "LEGACY-WORK-013",
