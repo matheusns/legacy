@@ -4609,7 +4609,8 @@
         "LEGACY-CAP-002"
       ],
       "depends_on": [
-        "LEGACY-WORK-003"
+        "LEGACY-WORK-003",
+        "LEGACY-WORK-016"
       ],
       "target_repositories": [
         "matheusns/legacy_app",
@@ -4618,8 +4619,9 @@
       ],
       "path": "docs/work_packages/LEGACY-WORK-004.md",
       "acceptance_criteria": [
-        "Today/Map/Life/Insights/Me shell and Auto/Mobile/Desktop preference remain functional; record candidate phone and desktop captures for owner and UX-reviewer disposition.",
-        "Approved golden references are a separate owner and UX-reviewer decision (DEC-010). Do not infer reference approval or visual fidelity from candidate captures."
+        "Preserve Today/Map/Life/Insights/Me shell, Auto/Mobile/Desktop preference and accessible presentation behavior; refine UI within the UX allocated paths against the candidate design references.",
+        "Capture candidate phone and desktop application screens through the deterministic authenticated preview and fixtures delivered by LEGACY-WORK-016, preserving source/profile/fixture/browser/clock provenance for owner and UX-reviewer disposition.",
+        "Approved golden references require a separate owner and UX-reviewer decision (DEC-010). Do not infer baseline approval, visual fidelity or completed acceptance from candidate captures."
       ],
       "unit_test_gate": {
         "required": true,
@@ -6985,6 +6987,62 @@
       },
       "lesson_ids_reviewed": [],
       "latest_development_run_id": "DEV-20261108T140747Z-24A41F"
+    },
+    {
+      "id": "LEGACY-WORK-016",
+      "title": "Provision deterministic application UX capture fixtures",
+      "summary": "Deliver an isolated, reproducible preview/API fixture and authenticated desktop/phone capture readiness for the five existing application screens.",
+      "scope": "all",
+      "work_package_type": "technical",
+      "status": "Backlog",
+      "priority": "P0",
+      "functionality_ids": [
+        "LEGACY-CAP-005",
+        "LEGACY-CAP-002"
+      ],
+      "depends_on": [
+        "LEGACY-WORK-003"
+      ],
+      "target_repositories": [
+        "matheusns/legacy_app",
+        "matheusns/legacy_verification_tooling"
+      ],
+      "path": "docs/work_packages/LEGACY-WORK-016.md",
+      "acceptance_criteria": [
+        "Implement an isolated local preview + API + PostgreSQL startup and teardown for UX capture, using the existing S2-first-journey synthetic dataset and existing application authentication; prevent fixture resets on any non-local or production database.",
+        "Implement deterministic authenticated capture setup for Today, Map, Life, Insights and Me on desktop-browser and mobile-browser; record fixture id/hash, browser, profile, locale, timezone, clock and candidate source revision without leaking fixture credentials.",
+        "Provide automated integration evidence that the live application can authenticate and capture all five registered screens under a reproducible seeded state; failed authentication, wrong tenant, missing fixture, incomplete startup or browser errors must not pass.",
+        "Preserve existing application auth and workspace isolation, don't introduce unauthenticated screenshot routes or change authorization for capture. Keep previews and tests isolated from operator data.",
+        "Return a fixture-registration handoff describing the exact controlled manifest ux.screens fixture/steps, preview setup and readiness changes. Systems Engineering owns applying those control changes; the development role must not modify the read-only control repository.",
+        "Record a passing registered application test suite, capture-specific integration evidence, and independent review before operator acceptance. Candidate screenshots do not approve golden references (DEC-010)."
+      ],
+      "unit_test_gate": {
+        "required": true,
+        "rationale": "Production fixture and capture infrastructure requires executed application and integration checks.",
+        "test_description": "Execute registered app-unit and dedicated capture integration checks; verify source-bound screen evidence."
+      },
+      "repository_ids": [
+        "app",
+        "verification"
+      ],
+      "repository_access": {
+        "app": "write",
+        "verification": "verify_only"
+      },
+      "component_ids": [
+        "app-shell",
+        "today"
+      ],
+      "executor_agent_id": "development",
+      "target_profile_ids": [
+        "desktop-browser",
+        "mobile-browser"
+      ],
+      "adr_ids": [
+        "ADR-001",
+        "ADR-004",
+        "ADR-005"
+      ]
     }
   ],
   "artifacts": [

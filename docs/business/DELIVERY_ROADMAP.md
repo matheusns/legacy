@@ -43,7 +43,8 @@ Incorrect permission scopes, silently duplicated XP or finance postings, visual 
 | LEGACY-WORK-002 | systems_engineering | LEGACY-WORK-001 | legacy |
 | LEGACY-WORK-013 | technical | LEGACY-WORK-002 | legavia_sdlc_gui, legacy, legacy_verification_tooling |
 | LEGACY-WORK-003 | technical | LEGACY-WORK-002, LEGACY-WORK-013 | legacy_app, legacy_verification_tooling |
-| LEGACY-WORK-004 | technical | LEGACY-WORK-003 | legacy_app, legacy_mockups, legacy_verification_tooling |
+| LEGACY-WORK-004 | technical | LEGACY-WORK-003, LEGACY-WORK-016 | legacy_app, legacy_mockups, legacy_verification_tooling |
+| LEGACY-WORK-016 | technical | LEGACY-WORK-003 | legacy_app, legacy_verification_tooling |
 | LEGACY-WORK-005 | technical | LEGACY-WORK-003 | legacy_app, legacy_verification_tooling |
 | LEGACY-WORK-006 | technical | LEGACY-WORK-005 | legacy_app, legacy_verification_tooling |
 | LEGACY-WORK-007 | technical | LEGACY-WORK-004, LEGACY-WORK-006 | legacy_app, legacy_verification_tooling |
